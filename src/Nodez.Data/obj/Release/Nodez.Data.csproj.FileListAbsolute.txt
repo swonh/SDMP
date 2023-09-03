@@ -3,3 +3,8 @@ E:\Dev\Nodez\Nodez\Framework\Nodez.Data\bin\Release\Nodez.Data.pdb
 E:\Dev\Nodez\Nodez\Framework\Nodez.Data\obj\Release\Nodez.Data.csproj.CoreCompileInputs.cache
 E:\Dev\Nodez\Nodez\Framework\Nodez.Data\obj\Release\Nodez.Data.dll
 E:\Dev\Nodez\Nodez\Framework\Nodez.Data\obj\Release\Nodez.Data.pdb
+E:\Dev\SDMP\src\Nodez.Data\bin\Release\Nodez.Data.dll
+E:\Dev\SDMP\src\Nodez.Data\bin\Release\Nodez.Data.pdb
+E:\Dev\SDMP\src\Nodez.Data\obj\Release\Nodez.Data.csproj.CoreCompileInputs.cache
+E:\Dev\SDMP\src\Nodez.Data\obj\Release\Nodez.Data.dll
+E:\Dev\SDMP\src\Nodez.Data\obj\Release\Nodez.Data.pdb
