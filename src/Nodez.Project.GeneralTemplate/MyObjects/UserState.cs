@@ -10,6 +10,5 @@ namespace Nodez.Project.GeneralTemplate.MyObjects
     public class UserState : State
     {
         // Define user-specific state properties or methods here
-        // Git test.
     }
 }
