@@ -1,0 +1,5 @@
+E:\Dev\Nodez\Nodez\Framework\Nodez.Data\bin\Debug\Nodez.Data.dll
+E:\Dev\Nodez\Nodez\Framework\Nodez.Data\bin\Debug\Nodez.Data.pdb
+E:\Dev\Nodez\Nodez\Framework\Nodez.Data\obj\Debug\Nodez.Data.csproj.CoreCompileInputs.cache
+E:\Dev\Nodez\Nodez\Framework\Nodez.Data\obj\Debug\Nodez.Data.dll
+E:\Dev\Nodez\Nodez\Framework\Nodez.Data\obj\Debug\Nodez.Data.pdb

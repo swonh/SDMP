@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.ML.FastTree.2.0.1\build\netstandard2.0\Microsoft.ML.FastTree.props" Condition="Exists('..\packages\Microsoft.ML.FastTree.2.0.1\build\netstandard2.0\Microsoft.ML.FastTree.props')" />
+  <Import Project="..\packages\Microsoft.ML.2.0.1\build\netstandard2.0\Microsoft.ML.props" Condition="Exists('..\packages\Microsoft.ML.2.0.1\build\netstandard2.0\Microsoft.ML.props')" />
+  <Import Project="..\packages\Microsoft.ML.CpuMath.2.0.1\build\netstandard2.0\Microsoft.ML.CpuMath.props" Condition="Exists('..\packages\Microsoft.ML.CpuMath.2.0.1\build\netstandard2.0\Microsoft.ML.CpuMath.props')" />
+  <Import Project="..\packages\Obfuscar.2.2.37\build\obfuscar.props" Condition="Exists('..\packages\Obfuscar.2.2.37\build\obfuscar.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E7E85A02-2589-4C5F-BDF7-AFD164006282}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Nodez.Sdmp</RootNamespace>
+    <AssemblyName>Nodez.Sdmp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Combinatorics, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Combinatorics.2.0.0\lib\net461\Combinatorics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ML, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ML.2.0.1\lib\netstandard2.0\Microsoft.ML.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ML.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ML.2.0.1\lib\netstandard2.0\Microsoft.ML.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ML.CpuMath, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ML.CpuMath.2.0.1\lib\netstandard2.0\Microsoft.ML.CpuMath.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ML.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ML.2.0.1\lib\netstandard2.0\Microsoft.ML.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ML.DataView, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ML.DataView.2.0.1\lib\netstandard2.0\Microsoft.ML.DataView.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ML.FastTree, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ML.FastTree.2.0.1\lib\netstandard2.0\Microsoft.ML.FastTree.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ML.KMeansClustering, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ML.2.0.1\lib\netstandard2.0\Microsoft.ML.KMeansClustering.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ML.PCA, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ML.2.0.1\lib\netstandard2.0\Microsoft.ML.PCA.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ML.StandardTrainers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ML.2.0.1\lib\netstandard2.0\Microsoft.ML.StandardTrainers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ML.Transforms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ML.2.0.1\lib\netstandard2.0\Microsoft.ML.Transforms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PriorityQueue, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5e136dbf0437dacd, processorArchitecture=MSIL">
+      <HintPath>..\packages\OptimizedPriorityQueue.5.1.0\lib\net45\PriorityQueue.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.CodeDom, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.CodeDom.4.5.0\lib\net461\System.CodeDom.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=1.2.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.5.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Channels, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Channels.4.7.1\lib\net461\System.Threading.Channels.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Comparer\StateTransitionComparer.cs" />
+    <Compile Include="Constants\Constants.cs" />
+    <Compile Include="Constants\Messeges.cs" />
+    <Compile Include="Enum\StateFilteringType.cs" />
+    <Compile Include="Enum\ControlType.cs" />
+    <Compile Include="Enum\ManagerType.cs" />
+    <Compile Include="General\Controls\ApproximationControl.cs" />
+    <Compile Include="General\Controls\BoundControl.cs" />
+    <Compile Include="General\Controls\DataControl.cs" />
+    <Compile Include="General\Controls\EventControl.cs" />
+    <Compile Include="General\Controls\MachineLearningControl.cs" />
+    <Compile Include="General\Controls\StateTransitionControl.cs" />
+    <Compile Include="General\DataModel\MLInputDataSample.cs" />
+    <Compile Include="General\DataModel\StateLog.cs" />
+    <Compile Include="General\DataModel\StateTransition.cs" />
+    <Compile Include="General\Managers\ApproximationManager.cs" />
+    <Compile Include="General\Managers\MachineLearningManager.cs" />
+    <Compile Include="General\Managers\SolverManager.cs" />
+    <Compile Include="Interfaces\IRunConfig.cs" />
+    <Compile Include="Interfaces\ISolver.cs" />
+    <Compile Include="MachineLearningHelper\MLConsoleHelper.cs" />
+    <Compile Include="Routing\Controls\CustomerControl.cs" />
+    <Compile Include="General\Controls\SolverControl.cs" />
+    <Compile Include="General\Controls\StateControl.cs" />
+    <Compile Include="General\Controls\ActionControl.cs" />
+    <Compile Include="Routing\Controls\VehicleControl.cs" />
+    <Compile Include="Routing\DataModel\Customer.cs" />
+    <Compile Include="Routing\DataModel\Demand.cs" />
+    <Compile Include="Routing\DataModel\Depot.cs" />
+    <Compile Include="Routing\DataModel\DistanceInfo.cs" />
+    <Compile Include="Routing\DataModel\Product.cs" />
+    <Compile Include="Routing\DataModel\Resource.cs" />
+    <Compile Include="Routing\DataModel\RoutingProblem.cs" />
+    <Compile Include="Routing\DataModel\RoutingState.cs" />
+    <Compile Include="General\DataModel\Solution.cs" />
+    <Compile Include="General\DataModel\Stage.cs" />
+    <Compile Include="General\DataModel\State.cs" />
+    <Compile Include="General\DataModel\StateActionMap.cs" />
+    <Compile Include="Routing\DataModel\RunOption.cs" />
+    <Compile Include="Routing\DataModel\VehicleStateInfo.cs" />
+    <Compile Include="Routing\DataModel\Vehicle.cs" />
+    <Compile Include="Enum\ObjectiveFunctionType.cs" />
+    <Compile Include="Enum\PrimalHeuristicType.cs" />
+    <Compile Include="Routing\DataModel\RoutingData.cs" />
+    <Compile Include="Routing\Interfaces\ICustomerData.cs" />
+    <Compile Include="Routing\Interfaces\IDemandData.cs" />
+    <Compile Include="Routing\Interfaces\IDistanceInfoData.cs" />
+    <Compile Include="Routing\Interfaces\IProductData.cs" />
+    <Compile Include="Routing\Interfaces\IResourceData.cs" />
+    <Compile Include="Routing\Interfaces\IRunOptionData.cs" />
+    <Compile Include="Routing\Interfaces\IVehicleData.cs" />
+    <Compile Include="Routing\Interfaces\IVehicleResourceData.cs" />
+    <Compile Include="General\Logic\ABHeuristic.cs" />
+    <Compile Include="General\Managers\BoundManager.cs" />
+    <Compile Include="General\Managers\ControlManager.cs" />
+    <Compile Include="General\Controls\LogControl.cs" />
+    <Compile Include="General\Managers\SolutionManager.cs" />
+    <Compile Include="General\Managers\StateManager.cs" />
+    <Compile Include="General\Managers\StateTransitionManager.cs" />
+    <Compile Include="Routing\Logic\PrimAlgorithm.cs" />
+    <Compile Include="Routing\Managers\RoutingBoundManager.cs" />
+    <Compile Include="Routing\Managers\RoutingDataManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="General\Solver\GeneralSolver.cs" />
+    <Compile Include="Routing\Managers\RoutingActionManager.cs" />
+    <Compile Include="Routing\Solver\RoutingSolver.cs" />
+    <Compile Include="Scheduling\Controls\ProcessControl.cs" />
+    <Compile Include="Scheduling\Controls\SchedulingControl.cs" />
+    <Compile Include="Scheduling\DataModel\Arrange.cs" />
+    <Compile Include="Scheduling\DataModel\EqpGroup.cs" />
+    <Compile Include="Scheduling\DataModel\Job.cs" />
+    <Compile Include="Scheduling\DataModel\Equipment.cs" />
+    <Compile Include="Scheduling\DataModel\PlanInfo.cs" />
+    <Compile Include="Scheduling\DataModel\PMSchedule.cs" />
+    <Compile Include="Scheduling\DataModel\Process.cs" />
+    <Compile Include="Scheduling\DataModel\SchedulingData.cs" />
+    <Compile Include="Scheduling\DataModel\SchedulingProblem.cs" />
+    <Compile Include="Scheduling\DataModel\SchedulingState.cs" />
+    <Compile Include="Scheduling\DataModel\SetupInfo.cs" />
+    <Compile Include="Scheduling\DataModel\TargetInfo.cs" />
+    <Compile Include="Scheduling\Enum\ScheduleType.cs" />
+    <Compile Include="Scheduling\Interfaces\IArrangeData.cs" />
+    <Compile Include="Scheduling\Interfaces\IEqpGroupData.cs" />
+    <Compile Include="Scheduling\Interfaces\IJobData.cs" />
+    <Compile Include="Scheduling\Interfaces\IEqpData.cs" />
+    <Compile Include="Scheduling\Interfaces\IPlanInfoData.cs" />
+    <Compile Include="Scheduling\Interfaces\IPMScheduleData.cs" />
+    <Compile Include="Scheduling\Interfaces\IProcessData.cs" />
+    <Compile Include="Scheduling\Interfaces\ISetupInfoData.cs" />
+    <Compile Include="Scheduling\Interfaces\ITargetInfoData.cs" />
+    <Compile Include="Scheduling\Managers\SchedulingBoundManager.cs" />
+    <Compile Include="Scheduling\Managers\SchedulingDataManager.cs" />
+    <Compile Include="Scheduling\Managers\SchedulingActionManager.cs" />
+    <Compile Include="Scheduling\Solver\SchedulingSolver.cs" />
+    <Compile Include="UtilityHelper\UtilityHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Nodez.Data\Nodez.Data.csproj">
+      <Project>{2469a8bd-cce3-4f17-b700-50acf40cdcf4}</Project>
+      <Name>Nodez.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Scheduling\Logic\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Obfuscar.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(ProjectDir)bin\Debug\Nodez.Sdmp.*" "C:\Program Files (x86)\Nodez\SDMP\" /D /C /V /Y /R
+CD $(TargetDir)
+"$(Obfuscar)" obfuscar.xml</PostBuildEvent>
+  </PropertyGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>이 프로젝트는 이 컴퓨터에 없는 NuGet 패키지를 참조합니다. 해당 패키지를 다운로드하려면 NuGet 패키지 복원을 사용하십시오. 자세한 내용은 http://go.microsoft.com/fwlink/?LinkID=322105를 참조하십시오. 누락된 파일은 {0}입니다.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Obfuscar.2.2.37\build\obfuscar.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Obfuscar.2.2.37\build\obfuscar.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.ML.CpuMath.2.0.1\build\netstandard2.0\Microsoft.ML.CpuMath.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ML.CpuMath.2.0.1\build\netstandard2.0\Microsoft.ML.CpuMath.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.ML.2.0.1\build\netstandard2.0\Microsoft.ML.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ML.2.0.1\build\netstandard2.0\Microsoft.ML.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.ML.2.0.1\build\netstandard2.0\Microsoft.ML.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ML.2.0.1\build\netstandard2.0\Microsoft.ML.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.ML.FastTree.2.0.1\build\netstandard2.0\Microsoft.ML.FastTree.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ML.FastTree.2.0.1\build\netstandard2.0\Microsoft.ML.FastTree.props'))" />
+  </Target>
+  <Import Project="..\packages\Microsoft.ML.2.0.1\build\netstandard2.0\Microsoft.ML.targets" Condition="Exists('..\packages\Microsoft.ML.2.0.1\build\netstandard2.0\Microsoft.ML.targets')" />
+</Project>
