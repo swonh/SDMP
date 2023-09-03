@@ -10,4 +10,11 @@
 ## Documentation
 
 You can find the documentation at
-[https://swonh.gitbook.io/sdmp-kor/](https://swonh.gitbook.io/sdmp-kor/)
+
+English (ENG): [https://swonh.gitbook.io/sdmp-eng/](https://swonh.gitbook.io/sdmp-eng/)
+
+Korean (KOR): [https://swonh.gitbook.io/sdmp-kor/](https://swonh.gitbook.io/sdmp-kor/)
+
+## Help
+
+If you need help, please [open a GitHub issue](https://github.com/swonh/SDMP/issues/new).
