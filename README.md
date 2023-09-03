@@ -11,7 +11,7 @@
 
 You can find the documentation at
 
-English (ENG): [https://swonh.gitbook.io/sdmp-eng/](https://swonh.gitbook.io/sdmp-eng/)
+English (ENG): [https://swonh.gitbook.io/sdmp-eng/](https://swonh.gitbook.io/sdmp-kor/)
 
 Korean (KOR): [https://swonh.gitbook.io/sdmp-kor/](https://swonh.gitbook.io/sdmp-kor/)
 
