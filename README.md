@@ -18,3 +18,9 @@ Korean (KOR): [https://swonh.gitbook.io/sdmp-kor/](https://swonh.gitbook.io/sdmp
 ## Help
 
 If you need help, please [open a GitHub issue](https://github.com/swonh/SDMP/issues/new).
+
+## Consulting
+
+If you would like to discuss solving problems in your industry (manufacturing, logistics, etc.), please contact us at the email address below.
+
+E-mail: swonhong.github@gmail.com
