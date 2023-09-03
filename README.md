@@ -1,2 +1,2 @@
 # SDMP
-Sequential Decision Making Package
+SDMP is a Sequential Decision Making Package
