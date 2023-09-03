@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TdnBNVFV0Mx6FoYomwoTc2AuuIsiYX9Dzgyqf+LOQSbEBIAZU7AjTsJr/Q5wuBK+/C7ofA9KD7fisQ2ugg6ktg==",
+  "dgSpecHash": "7tYXPEk1QJqdEzEDU9hWIC7tAc0t4IJyFrDtXgigoc5kxt65BERI6RcW1Hj+aPHNGr+GWx95ZjKEH7v/fjZh9g==",
   "success": true,
-  "projectFilePath": "E:\\Dev\\Nodez\\Nodez\\Framework\\Nodez.Package\\Nodez.Package.csproj",
+  "projectFilePath": "E:\\Dev\\SDMP\\src\\Nodez.Package\\Nodez.Package.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\홍성원\\.nuget\\packages\\envdte\\8.0.2\\envdte.8.0.2.nupkg.sha512",
     "C:\\Users\\홍성원\\.nuget\\packages\\envdte100\\10.0.3\\envdte100.10.0.3.nupkg.sha512",
