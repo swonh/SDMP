@@ -25,7 +25,7 @@ IDE: Visual Studio 2019 or above
 
 To use `SDMP`, you must first install it.
 
-Download latest version: [SDMP-1.0.3-win64.zip](https://github.com/swonh/SDMP/releases/download/v1.0.3/SDMP-1.0.3-win64.zip)
+<b>Download latest version</b>: [SDMP-1.0.3-win64.zip](https://github.com/swonh/SDMP/releases/download/v1.0.3/SDMP-1.0.3-win64.zip)
 
 > **Note**
 > Run the <b>Install.bat</b> file, and it will install automatically. (Do not run any other files.)
