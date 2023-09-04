@@ -21,7 +21,7 @@ namespace SDMP.General.CRP.Controls
 
         public override List<StateTransition> GetStateTransitions(StateActionMap stateActionMap)
         {
-            return base.GetStateTransitions(stateActionMap);
+            return base.GetStateTransitions(stateActionMap); 
         }
     }
 }
