@@ -54,6 +54,7 @@
     <Compile Include="Controls\UserDataControl.cs" />
     <Compile Include="Controls\UserStateTransitionControl.cs" />
     <Compile Include="MyInputs\RunConfig.cs" />
+    <Compile Include="MyMethods\Helper.cs" />
     <Compile Include="MyObjects\Parameter.cs" />
     <Compile Include="MyInputs\SampleData.cs" />
     <Compile Include="MyObjects\UserState.cs" />
@@ -159,8 +160,6 @@
       <HintPath>C:\Program Files (x86)\Nodez\SDMP\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="MyMethods\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

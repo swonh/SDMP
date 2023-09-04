@@ -70,6 +70,7 @@
     <Compile Include="MyInputs\RunConfig.cs" />
     <Compile Include="MyInputs\RunOption.cs" />
     <Compile Include="MyInputs\VehicleResource.cs" />
+    <Compile Include="MyMethods\Helper.cs" />
     <Compile Include="MyObjects\Parameter.cs" />
     <Compile Include="MyInputs\Vehicle.cs" />
     <Compile Include="MyObjects\UserRoutingState.cs" />
@@ -175,8 +176,6 @@
       <HintPath>C:\Program Files (x86)\Nodez\SDMP\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="MyMethods\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
