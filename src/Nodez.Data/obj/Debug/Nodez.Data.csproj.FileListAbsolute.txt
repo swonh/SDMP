@@ -8,3 +8,9 @@ E:\Dev\SDMP\src\Nodez.Data\bin\Debug\Nodez.Data.pdb
 E:\Dev\SDMP\src\Nodez.Data\obj\Debug\Nodez.Data.csproj.CoreCompileInputs.cache
 E:\Dev\SDMP\src\Nodez.Data\obj\Debug\Nodez.Data.dll
 E:\Dev\SDMP\src\Nodez.Data\obj\Debug\Nodez.Data.pdb
+D:\Repository\SDMP\src\Nodez.Data\bin\Debug\Nodez.Data.dll
+D:\Repository\SDMP\src\Nodez.Data\bin\Debug\Nodez.Data.pdb
+D:\Repository\SDMP\src\Nodez.Data\obj\Debug\Nodez.Data.csproj.AssemblyReference.cache
+D:\Repository\SDMP\src\Nodez.Data\obj\Debug\Nodez.Data.csproj.CoreCompileInputs.cache
+D:\Repository\SDMP\src\Nodez.Data\obj\Debug\Nodez.Data.dll
+D:\Repository\SDMP\src\Nodez.Data\obj\Debug\Nodez.Data.pdb
