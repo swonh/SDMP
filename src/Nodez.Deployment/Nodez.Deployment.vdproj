@@ -628,7 +628,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_24B0306615BB549E3CB7386E42989A34"
+        "OwnerKey" = "8:_5232734D894D454D8FA91E4E1F03F784"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -736,7 +736,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_5232734D894D454D8FA91E4E1F03F784"
+        "OwnerKey" = "8:_24B0306615BB549E3CB7386E42989A34"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -757,6 +757,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -773,6 +781,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -1818,22 +1834,22 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:Nodez.Deployment"
-        "ProductCode" = "8:{CD64B792-157E-4763-AE1C-8EB65C1E1C66}"
-        "PackageCode" = "8:{7175145E-BF2F-4C75-8701-C6FC4888C626}"
+        "ProductName" = "8:SDMP"
+        "ProductCode" = "8:{909C3B72-A5E0-45AF-BB44-4B7279613DE2}"
+        "PackageCode" = "8:{631A0838-330F-47BF-94DB-4927618B565C}"
         "UpgradeCode" = "8:{68B95BE9-A50E-4263-965E-B5A5C213D91E}"
         "AspNetVersion" = "8:"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.0"
-        "Manufacturer" = "8:OptLab_Dell2"
+        "ProductVersion" = "8:1.0.3"
+        "Manufacturer" = "8:Nodez"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
         "Title" = "8:Nodez.Deployment"
         "Subject" = "8:"
-        "ARPCONTACT" = "8:OptLab_Dell2"
+        "ARPCONTACT" = "8:Sungwon Hong"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"

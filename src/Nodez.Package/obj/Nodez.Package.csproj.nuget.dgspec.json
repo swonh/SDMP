@@ -35,8 +35,10 @@
         "net472": {
           "dependencies": {
             "Microsoft.VSSDK.BuildTools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[17.7.2192, )"
+              "version": "[17.7.2196, )"
             },
             "Microsoft.VisualStudio.SDK": {
               "include": "Compile, Build, Native, ContentFiles, Analyzers, BuildTransitive",
