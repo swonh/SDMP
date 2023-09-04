@@ -19,7 +19,7 @@ Korean (KOR): [https://swonh.gitbook.io/sdmp-kor/](https://swonh.gitbook.io/sdmp
 
 OS: Windows 10 or above
 
-IDE: Visual Studio 2019
+IDE: Visual Studio 2019 or above
 
 ## Installation
 
