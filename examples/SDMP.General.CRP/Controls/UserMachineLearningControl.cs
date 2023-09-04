@@ -45,7 +45,7 @@ namespace SDMP.General.CRP.Controls
 
         public override bool IsApplyStateClustering()
         {
-            return true;
+            return false;
         }
 
         public override int GetClusterCount()

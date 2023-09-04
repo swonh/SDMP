@@ -89,8 +89,6 @@ D:\Repository\SDMP\examples\SDMP.General.CRP\bin\Debug\Microsoft.ML.PCA.xml
 D:\Repository\SDMP\examples\SDMP.General.CRP\bin\Debug\Microsoft.ML.StandardTrainers.xml
 D:\Repository\SDMP\examples\SDMP.General.CRP\bin\Debug\Microsoft.ML.Transforms.xml
 D:\Repository\SDMP\examples\SDMP.General.CRP\bin\Debug\Newtonsoft.Json.xml
-D:\Repository\SDMP\examples\SDMP.General.CRP\bin\Debug\Nodez.Data.pdb
-D:\Repository\SDMP\examples\SDMP.General.CRP\bin\Debug\Nodez.Sdmp.pdb
 D:\Repository\SDMP\examples\SDMP.General.CRP\bin\Debug\PriorityQueue.pdb
 D:\Repository\SDMP\examples\SDMP.General.CRP\bin\Debug\PriorityQueue.xml
 D:\Repository\SDMP\examples\SDMP.General.CRP\bin\Debug\System.Buffers.xml
