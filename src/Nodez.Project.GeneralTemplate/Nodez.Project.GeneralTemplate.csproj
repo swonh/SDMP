@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{D998A43C-7456-4AE7-B17E-A15034825637}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Nodez.Project.Template</RootNamespace>
-    <AssemblyName>Nodez.Project.Template</AssemblyName>
+    <RootNamespace>Nodez.Project.GeneralTemplate</RootNamespace>
+    <AssemblyName>Nodez.Project.GeneralTemplate</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
