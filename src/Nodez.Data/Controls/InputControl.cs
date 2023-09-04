@@ -1,4 +1,7 @@
-﻿using Nodez.Data.DataModel;
+﻿// Copyright (c) 2023 Sungwon Hong. All Rights Reserved. 
+// Licenced under the Mozilla Public License, Version 2.0.
+
+using Nodez.Data.DataModel;
 using Nodez.Data.Interface;
 using System;
 using System.Collections.Generic;

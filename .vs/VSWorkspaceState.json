@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\examples",
+    "\\src",
+    "\\src\\Nodez.Project.GeneralTemplate",
+    "\\src\\Nodez.Project.GeneralTemplate\\MyObjects"
   ],
-  "SelectedNode": "\\Nodez.sln",
+  "SelectedNode": "\\src\\Nodez.Project.GeneralTemplate\\MyObjects\\UserState.cs",
   "PreviewInSolutionExplorer": false
 }

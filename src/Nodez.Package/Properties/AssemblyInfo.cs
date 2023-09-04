@@ -1,4 +1,7 @@
-﻿using System.Reflection;
+﻿// Copyright (c) 2023 Sungwon Hong. All Rights Reserved. 
+// Licenced under the Mozilla Public License, Version 2.0.
+
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 

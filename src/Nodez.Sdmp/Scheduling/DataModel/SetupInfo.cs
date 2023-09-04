@@ -1,4 +1,7 @@
-﻿using Nodez.Sdmp.Scheduling.Interfaces;
+﻿// Copyright (c) 2023 Sungwon Hong. All Rights Reserved. 
+// Licenced under the Mozilla Public License, Version 2.0.
+
+using Nodez.Sdmp.Scheduling.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;

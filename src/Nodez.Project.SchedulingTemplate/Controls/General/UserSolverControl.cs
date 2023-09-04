@@ -1,4 +1,7 @@
-﻿using Nodez.Sdmp;
+﻿// Copyright (c) 2023 Sungwon Hong. All Rights Reserved. 
+// Licenced under the Mozilla Public License, Version 2.0.
+
+using Nodez.Sdmp;
 using Nodez.Sdmp.Constants;
 using Nodez.Sdmp.Enum;
 using Nodez.Sdmp.General.Controls;

@@ -1,4 +1,7 @@
-﻿using Priority_Queue;
+﻿// Copyright (c) 2023 Sungwon Hong. All Rights Reserved. 
+// Licenced under the Mozilla Public License, Version 2.0.
+
+using Priority_Queue;
 using Nodez.Data.Interface;
 using Nodez.Data.Managers;
 using Nodez.Sdmp.Comparer;

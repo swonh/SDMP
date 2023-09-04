@@ -1,4 +1,7 @@
-﻿using Nodez.Data.Interface;
+﻿// Copyright (c) 2023 Sungwon Hong. All Rights Reserved. 
+// Licenced under the Mozilla Public License, Version 2.0.
+
+using Nodez.Data.Interface;
 using Nodez.Sdmp.General.Controls;
 using System;
 using System.Collections.Generic;

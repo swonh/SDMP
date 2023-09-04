@@ -1,4 +1,7 @@
-﻿using Nodez.Sdmp.Routing.Controls;
+﻿// Copyright (c) 2023 Sungwon Hong. All Rights Reserved. 
+// Licenced under the Mozilla Public License, Version 2.0.
+
+using Nodez.Sdmp.Routing.Controls;
 using Nodez.Sdmp.Routing.DataModel;
 using Nodez.Sdmp.Routing.Managers;
 using System;

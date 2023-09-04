@@ -17,6 +17,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nodez.Project.RoutingTempla
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nodez.Project.SchedulingTemplate", "Nodez.Project.SchedulingTemplate\Nodez.Project.SchedulingTemplate.csproj", "{73C8EE0A-35A6-47BD-94D0-74A3F42313D9}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F4109031-6635-4CE6-BE75-1BD64561BFD7}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,32 +60,5 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8BA1B041-5710-4E0B-8E61-5089EC714E26}
-	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 8
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://dev.azure.com/sungwonhong
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = Nodez.Deployment\\Nodez.Deployment.vdproj
-		SccProjectName1 = Nodez.Deployment
-		SccLocalPath1 = Nodez.Deployment
-		SccProjectUniqueName2 = Nodez.Data\\Nodez.Data.csproj
-		SccProjectName2 = Nodez.Data
-		SccLocalPath2 = Nodez.Data
-		SccProjectUniqueName3 = Nodez.Package\\Nodez.Package.csproj
-		SccProjectName3 = Nodez.Package
-		SccLocalPath3 = Nodez.Package
-		SccProjectUniqueName4 = Nodez.Project.GeneralTemplate\\Nodez.Project.GeneralTemplate.csproj
-		SccProjectName4 = Nodez.Project.GeneralTemplate
-		SccLocalPath4 = Nodez.Project.GeneralTemplate
-		SccProjectUniqueName5 = Nodez.Project.RoutingTemplate\\Nodez.Project.RoutingTemplate.csproj
-		SccProjectName5 = Nodez.Project.RoutingTemplate
-		SccLocalPath5 = Nodez.Project.RoutingTemplate
-		SccProjectUniqueName6 = Nodez.Project.SchedulingTemplate\\Nodez.Project.SchedulingTemplate.csproj
-		SccProjectName6 = Nodez.Project.SchedulingTemplate
-		SccLocalPath6 = Nodez.Project.SchedulingTemplate
-		SccProjectUniqueName7 = Nodez.Sdmp\\Nodez.Sdmp.csproj
-		SccProjectName7 = Nodez.Sdmp
-		SccLocalPath7 = Nodez.Sdmp
 	EndGlobalSection
 EndGlobal
