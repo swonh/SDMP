@@ -54,7 +54,9 @@
         <ProjectItem ReplaceParameters="true" TargetFileName="RunConfig.cs">RunConfig.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="SetupInfo.cs">SetupInfo.cs</ProjectItem>
       </Folder>
-      <Folder Name="MyMethods" TargetFolderName="MyMethods" />
+      <Folder Name="MyMethods" TargetFolderName="MyMethods">
+        <ProjectItem ReplaceParameters="true" TargetFileName="Helper.cs">Helper.cs</ProjectItem>
+      </Folder>
       <Folder Name="MyObjects" TargetFolderName="MyObjects">
         <ProjectItem ReplaceParameters="true" TargetFileName="MLInputData.cs">MLInputData.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="MLOutputData.cs">MLOutputData.cs</ProjectItem>

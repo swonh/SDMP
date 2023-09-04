@@ -55,7 +55,9 @@
         <ProjectItem ReplaceParameters="true" TargetFileName="Vehicle.cs">Vehicle.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="VehicleResource.cs">VehicleResource.cs</ProjectItem>
       </Folder>
-      <Folder Name="MyMethods" TargetFolderName="MyMethods" />
+      <Folder Name="MyMethods" TargetFolderName="MyMethods">
+        <ProjectItem ReplaceParameters="true" TargetFileName="Helper.cs">Helper.cs</ProjectItem>
+      </Folder>
       <Folder Name="MyObjects" TargetFolderName="MyObjects">
         <ProjectItem ReplaceParameters="true" TargetFileName="Parameter.cs">Parameter.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="UserRoutingState.cs">UserRoutingState.cs</ProjectItem>
