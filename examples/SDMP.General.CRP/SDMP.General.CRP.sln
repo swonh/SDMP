@@ -5,11 +5,6 @@ VisualStudioVersion = 16.0.32802.440
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SDMP.General.CRP", "SDMP.General.CRP.csproj", "{F74E5EB4-C691-4E10-95F7-42459A3A1785}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{32EE9E54-0D17-41D2-A319-B99A4697A067}"
-	ProjectSection(SolutionItems) = preProject
-		.editorconfig = .editorconfig
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,5 +21,13 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {16FA28D1-56FE-4CDB-9533-9A317A631B5B}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dev.azure.com/sungwonhong
+		SccProjectUniqueName0 = SDMP.General.CRP.csproj
+		SccLocalPath0 = .
+		SccLocalPath1 = .
 	EndGlobalSection
 EndGlobal
