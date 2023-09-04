@@ -1,23 +1,29 @@
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
   <Metadata>
-    <Identity Id="Nodez.Package.2337b40b-dec2-4b3c-b70c-a5d121b4e754" Version="1.0" Language="en-US" Publisher="Sungwon Hong" />
+    <Identity Id="Nodez.Package.d8bfcbaa-7e33-438f-8f51-09cbb2e8b8b9" Version="1.0.3" Language="en-US" Publisher="Sungwon Hong" />
     <DisplayName>SDMP</DisplayName>
     <Description xml:space="preserve">SDMP Visual Studio Package</Description>
     <Icon>sdmp_main.png</Icon>
   </Metadata>
   <Installation>
-    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[16.0, 17.0]" />
-    <InstallationTarget Version="[16.0,17.0]" Id="Microsoft.VisualStudio.Enterprise" />
-    <InstallationTarget Version="[16.0,17.0]" Id="Microsoft.VisualStudio.Pro" />
+    <InstallationTarget Version="[16.0,18.0)" Id="Microsoft.VisualStudio.Community">
+      <ProductArchitecture>amd64</ProductArchitecture>
+    </InstallationTarget>
+    <InstallationTarget Version="[16.0,18.0)" Id="Microsoft.VisualStudio.Pro">
+      <ProductArchitecture>amd64</ProductArchitecture>
+    </InstallationTarget>
+    <InstallationTarget Version="[16.0,18.0)" Id="Microsoft.VisualStudio.Enterprise">
+      <ProductArchitecture>amd64</ProductArchitecture>
+    </InstallationTarget>
   </Installation>
   <Dependencies>
     <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" Version="[4.5,)" />
   </Dependencies>
+  <Prerequisites>
+    <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[17.0,18.0)" DisplayName="Visual Studio core editor" />
+  </Prerequisites>
   <Assets>
     <Asset Type="Microsoft.VisualStudio.ItemTemplate" Path="ItemTemplates" />
     <Asset Type="Microsoft.VisualStudio.ProjectTemplate" Path="ProjectTemplates" />
   </Assets>
-  <Prerequisites>
-    <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[16.0,17.0)" DisplayName="Visual Studio core editor" />
-  </Prerequisites>
 </PackageManifest>

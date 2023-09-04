@@ -36,12 +36,12 @@
           "dependencies": {
             "Microsoft.VSSDK.BuildTools": {
               "target": "Package",
-              "version": "[16.11.66, )"
+              "version": "[17.7.2192, )"
             },
             "Microsoft.VisualStudio.SDK": {
               "include": "Compile, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "target": "Package",
-              "version": "[16.0.208, )"
+              "version": "[17.0.32112.339, )"
             }
           }
         }
