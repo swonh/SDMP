@@ -15,6 +15,18 @@ English (ENG): [https://swonh.gitbook.io/sdmp-eng/](https://swonh.gitbook.io/sdm
 
 Korean (KOR): [https://swonh.gitbook.io/sdmp-kor/](https://swonh.gitbook.io/sdmp-user-manual-kor/)
 
+## Requirements
+
+OS: Windows 10 or above
+
+IDE: Visual Studio 2019
+
+## Installation
+
+To use SDMP, you must first install it.
+
+Download latest version: [SDMP v1.0.0.zip](https://github.com/swonh/SDMP/releases/download/v1.0.0/Install_v1.0.0.zip)
+
 ## Help
 
 If you need help, please [open a GitHub issue](https://github.com/swonh/SDMP/issues/new).
