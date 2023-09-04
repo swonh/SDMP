@@ -11,7 +11,7 @@
 
 You can find the documentation at
 
-English (ENG): [https://swonh.gitbook.io/sdmp-eng/](https://swonh.gitbook.io/sdmp-user-manual-kor/)
+English (ENG): To be updated
 
 Korean (KOR): [https://swonh.gitbook.io/sdmp-kor/](https://swonh.gitbook.io/sdmp-user-manual-kor/)
 
@@ -23,9 +23,9 @@ IDE: Visual Studio 2019
 
 ## Installation
 
-To use SDMP, you must first install it.
+To use `SDMP`, you must first install it.
 
-Download latest version: [SDMP v1.0.0.zip](https://github.com/swonh/SDMP/releases/download/v1.0.0/Install_v1.0.0.zip)
+Download latest version: [SDMP-1.0.1-win64.zip](https://github.com/swonh/SDMP/releases/download/v1.0.1/SDMP-1.0.1-win64.zip)
 
 ## Help
 
