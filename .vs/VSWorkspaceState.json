@@ -1,11 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\examples",
     "\\src",
-    "\\src\\Nodez.Project.GeneralTemplate",
-    "\\src\\Nodez.Project.GeneralTemplate\\MyObjects"
+    "\\src\\Nodez.Project.RoutingTemplate",
+    "\\src\\Nodez.Project.RoutingTemplate\\Controls",
+    "\\src\\Nodez.Project.RoutingTemplate\\Controls\\General"
   ],
-  "SelectedNode": "\\src\\Nodez.Project.GeneralTemplate\\MyObjects\\UserState.cs",
+  "SelectedNode": "\\src\\Nodez.Project.RoutingTemplate\\Controls\\General\\UserDataControl.cs",
   "PreviewInSolutionExplorer": false
 }
