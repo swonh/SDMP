@@ -157,23 +157,23 @@ Renamed Types:
 	System.Func`2<System.String,System.Int32> [Nodez.Sdmp]System.Func`2<System.String,System.Int32> Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c::<>9__15_0 ->  ⁫
 }
 
-[Nodez.Sdmp]Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c__DisplayClass8_0 -> [Nodez.Sdmp]Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/ 
-{
-	[Nodez.Sdmp]Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c__DisplayClass8_0::<CalculateStandardDeviation>b__0[1]( [mscorlib]System.Double ) ->  
-
-	[Nodez.Sdmp]Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c__DisplayClass8_0::.ctor[0]( ) skipped:  special name
-
-	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c__DisplayClass8_0::average ->  ⁬
-}
-
-[Nodez.Sdmp]Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c__DisplayClass13_0 -> [Nodez.Sdmp]Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/ 
+[Nodez.Sdmp]Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c__DisplayClass13_0 -> [Nodez.Sdmp]Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/ 
 {
 	[Nodez.Sdmp]Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c__DisplayClass13_0::<PeekVectorColumnDataInConsole>b__0[1]( [mscorlib]System.Single[] ) ->  
 
 	[Nodez.Sdmp]Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c__DisplayClass13_0::.ctor[0]( ) skipped:  special name
 
-	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c__DisplayClass13_0::currentRow ->  ⁭
-	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c__DisplayClass13_0::columnName ->  ⁮
+	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c__DisplayClass13_0::currentRow ->  ⁬
+	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c__DisplayClass13_0::columnName ->  ⁭
+}
+
+[Nodez.Sdmp]Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c__DisplayClass8_0 -> [Nodez.Sdmp]Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/ 
+{
+	[Nodez.Sdmp]Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c__DisplayClass8_0::<CalculateStandardDeviation>b__0[1]( [mscorlib]System.Double ) ->  
+
+	[Nodez.Sdmp]Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c__DisplayClass8_0::.ctor[0]( ) skipped:  special name
+
+	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c__DisplayClass8_0::average ->  ⁮
 }
 
 [Nodez.Sdmp]Nodez.Sdmp.Interfaces.ISolver/<>c -> [Nodez.Sdmp]Nodez.Sdmp.Interfaces.ISolver/ 

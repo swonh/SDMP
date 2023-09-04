@@ -75,10 +75,14 @@
       "Microsoft.Diagnostics.Tracing.EventSource.Redist/1.1.16-beta": {
         "type": "package",
         "compile": {
-          "lib/net45/Microsoft.Diagnostics.Tracing.EventSource.dll": {}
+          "lib/net45/Microsoft.Diagnostics.Tracing.EventSource.dll": {
+            "related": ".XML"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".XML"
+          }
         },
         "build": {
           "build/portable-net45+win8+wpa81/Microsoft.Diagnostics.Tracing.EventSource.Redist.targets": {}
@@ -100,10 +104,14 @@
           "Microsoft.VisualStudio.Shell.Interop.10.0": "10.0.30319"
         },
         "compile": {
-          "lib/net46/Microsoft.VisualStudio.ComponentModelHost.dll": {}
+          "lib/net46/Microsoft.VisualStudio.ComponentModelHost.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net46/_._": {}
+          "lib/net46/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.CoreUtility/16.0.467": {
@@ -125,7 +133,9 @@
           "Microsoft.VisualStudio.Debugger.InteropA": "9.0.21023"
         },
         "compile": {
-          "ref/net45/Microsoft.VisualStudio.Debugger.Engine.dll": {}
+          "ref/net45/Microsoft.VisualStudio.Debugger.Engine.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Debugger.Interop.10.0/10.0.30320": {
@@ -212,10 +222,14 @@
       "Microsoft.VisualStudio.Designer.Interfaces/1.1.4323": {
         "type": "package",
         "compile": {
-          "lib/net11/Microsoft.VisualStudio.Designer.Interfaces.dll": {}
+          "lib/net11/Microsoft.VisualStudio.Designer.Interfaces.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net11/_._": {}
+          "lib/net11/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Editor/16.0.467": {
@@ -242,10 +256,14 @@
       "Microsoft.VisualStudio.ImageCatalog/16.0.28727": {
         "type": "package",
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.ImageCatalog.dll": {}
+          "lib/net45/Microsoft.VisualStudio.ImageCatalog.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Imaging/16.0.28729": {
@@ -255,10 +273,14 @@
           "Microsoft.VisualStudio.Utilities": "16.0.28729"
         },
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.Imaging.dll": {}
+          "lib/net45/Microsoft.VisualStudio.Imaging.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime/14.3.26930": {
@@ -267,10 +289,14 @@
           "Microsoft.VisualStudio.SDK.EmbedInteropTypes": "15.0.16"
         },
         "compile": {
-          "lib/net20/Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime.dll": {}
+          "lib/net20/Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net20/_._": {}
+          "lib/net20/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Language/16.0.467": {
@@ -361,10 +387,14 @@
           "System.ValueTuple": "4.3.0"
         },
         "compile": {
-          "lib/net46/Microsoft.VisualStudio.LanguageServer.Client.dll": {}
+          "lib/net46/Microsoft.VisualStudio.LanguageServer.Client.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net46/_._": {}
+          "lib/net46/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.LanguageServer.Protocol/16.0.2264": {
@@ -373,10 +403,14 @@
           "Newtonsoft.Json": "9.0.1"
         },
         "compile": {
-          "lib/netstandard1.0/Microsoft.VisualStudio.LanguageServer.Protocol.dll": {}
+          "lib/netstandard1.0/Microsoft.VisualStudio.LanguageServer.Protocol.dll": {
+            "related": ".pdb;.xml"
+          }
         },
         "runtime": {
-          "lib/netstandard1.0/_._": {}
+          "lib/netstandard1.0/_._": {
+            "related": ".pdb;.xml"
+          }
         }
       },
       "Microsoft.VisualStudio.OLE.Interop/7.10.6071": {
@@ -394,19 +428,27 @@
           "Microsoft.VisualStudio.Shell.15.0": "16.0.28729"
         },
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.Package.LanguageService.15.0.dll": {}
+          "lib/net45/Microsoft.VisualStudio.Package.LanguageService.15.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.ProjectAggregator/8.0.50728": {
         "type": "package",
         "compile": {
-          "lib/net20/Microsoft.VisualStudio.ProjectAggregator.dll": {}
+          "lib/net20/Microsoft.VisualStudio.ProjectAggregator.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net20/_._": {}
+          "lib/net20/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.RemoteControl/14.1.2": {
@@ -415,10 +457,14 @@
           "Microsoft.VisualStudio.Utilities.Internal": "14.1.2"
         },
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.RemoteControl.dll": {}
+          "lib/net45/Microsoft.VisualStudio.RemoteControl.dll": {
+            "related": ".XML"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".XML"
+          }
         }
       },
       "Microsoft.VisualStudio.SDK/16.0.208": {
@@ -501,10 +547,14 @@
       "Microsoft.VisualStudio.Setup.Configuration.Interop/1.16.30": {
         "type": "package",
         "compile": {
-          "lib/net35/Microsoft.VisualStudio.Setup.Configuration.Interop.dll": {}
+          "lib/net35/Microsoft.VisualStudio.Setup.Configuration.Interop.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net35/_._": {}
+          "lib/net35/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.15.0/16.0.28729": {
@@ -521,10 +571,14 @@
           "Microsoft.VisualStudio.Threading": "16.0.102"
         },
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.Shell.15.0.dll": {}
+          "lib/net45/Microsoft.VisualStudio.Shell.15.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.Design/16.0.28729": {
@@ -535,10 +589,14 @@
           "Microsoft.VisualStudio.Shell.Interop.8.0": "8.0.50728"
         },
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.Shell.Design.dll": {}
+          "lib/net45/Microsoft.VisualStudio.Shell.Design.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.Embeddable/16.0.28727": {
@@ -547,10 +605,14 @@
           "Microsoft.VisualStudio.SDK.EmbedInteropTypes": "15.0.27"
         },
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.Shell.Embeddable.dll": {}
+          "lib/net45/Microsoft.VisualStudio.Shell.Embeddable.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.Framework/16.0.28729": {
@@ -561,10 +623,14 @@
           "Microsoft.VisualStudio.Utilities": "16.0.28729"
         },
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.Shell.Framework.dll": {}
+          "lib/net45/Microsoft.VisualStudio.Shell.Framework.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.Interop/7.10.6072": {
@@ -573,10 +639,14 @@
           "Microsoft.VisualStudio.TextManager.Interop": "7.10.6071"
         },
         "compile": {
-          "lib/net11/Microsoft.VisualStudio.Shell.Interop.dll": {}
+          "lib/net11/Microsoft.VisualStudio.Shell.Interop.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net11/_._": {}
+          "lib/net11/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.Interop.10.0/10.0.30320": {
@@ -585,10 +655,14 @@
           "Microsoft.VisualStudio.Shell.Interop.8.0": "8.0.50728"
         },
         "compile": {
-          "lib/net20/Microsoft.VisualStudio.Shell.Interop.10.0.dll": {}
+          "lib/net20/Microsoft.VisualStudio.Shell.Interop.10.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net20/_._": {}
+          "lib/net20/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.Interop.11.0/11.0.61031": {
@@ -597,10 +671,14 @@
           "Microsoft.VisualStudio.Shell.Interop.10.0": "10.0.30320"
         },
         "compile": {
-          "lib/net20/Microsoft.VisualStudio.Shell.Interop.11.0.dll": {}
+          "lib/net20/Microsoft.VisualStudio.Shell.Interop.11.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net20/_._": {}
+          "lib/net20/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.Interop.12.0/12.0.30111": {
@@ -609,10 +687,14 @@
           "Microsoft.VisualStudio.Shell.Interop.11.0": "11.0.61031"
         },
         "compile": {
-          "lib/net20/Microsoft.VisualStudio.Shell.Interop.12.0.dll": {}
+          "lib/net20/Microsoft.VisualStudio.Shell.Interop.12.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net20/_._": {}
+          "lib/net20/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.Interop.14.0.DesignTime/14.3.26929": {
@@ -623,10 +705,14 @@
           "Microsoft.VisualStudio.Shell.Interop.12.0": "12.0.30111"
         },
         "compile": {
-          "lib/net20/Microsoft.VisualStudio.Shell.Interop.14.0.DesignTime.dll": {}
+          "lib/net20/Microsoft.VisualStudio.Shell.Interop.14.0.DesignTime.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net20/_._": {}
+          "lib/net20/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.Interop.15.0.DesignTime/15.0.26932": {
@@ -636,10 +722,14 @@
           "Microsoft.VisualStudio.Shell.Interop.12.0": "12.0.30111"
         },
         "compile": {
-          "lib/net20/Microsoft.VisualStudio.Shell.Interop.15.0.DesignTime.dll": {}
+          "lib/net20/Microsoft.VisualStudio.Shell.Interop.15.0.DesignTime.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net20/_._": {}
+          "lib/net20/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.Interop.15.1.DesignTime/15.0.26929": {
@@ -726,10 +816,14 @@
           "Microsoft.VisualStudio.TextManager.Interop.8.0": "8.0.50728"
         },
         "compile": {
-          "lib/net11/Microsoft.VisualStudio.Shell.Interop.8.0.dll": {}
+          "lib/net11/Microsoft.VisualStudio.Shell.Interop.8.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net11/_._": {}
+          "lib/net11/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.Interop.9.0/9.0.30730": {
@@ -738,10 +832,14 @@
           "Microsoft.VisualStudio.Shell.Interop.8.0": "8.0.50728"
         },
         "compile": {
-          "lib/net11/Microsoft.VisualStudio.Shell.Interop.9.0.dll": {}
+          "lib/net11/Microsoft.VisualStudio.Shell.Interop.9.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net11/_._": {}
+          "lib/net11/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.TaskRunnerExplorer.14.0/14.0.0": {
@@ -761,10 +859,14 @@
           "Newtonsoft.Json": "9.0.1"
         },
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.Telemetry.dll": {}
+          "lib/net45/Microsoft.VisualStudio.Telemetry.dll": {
+            "related": ".XML"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".XML"
+          }
         }
       },
       "Microsoft.VisualStudio.Text.Data/16.0.467": {
@@ -830,10 +932,14 @@
           "Microsoft.VisualStudio.OLE.Interop": "7.10.6071"
         },
         "compile": {
-          "lib/net11/Microsoft.VisualStudio.TextManager.Interop.dll": {}
+          "lib/net11/Microsoft.VisualStudio.TextManager.Interop.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net11/_._": {}
+          "lib/net11/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.TextManager.Interop.12.1.DesignTime/12.1.30330": {
@@ -842,10 +948,14 @@
           "Microsoft.VisualStudio.SDK.EmbedInteropTypes": "15.0.16"
         },
         "compile": {
-          "lib/net20/Microsoft.VisualStudio.TextManager.Interop.12.1.DesignTime.dll": {}
+          "lib/net20/Microsoft.VisualStudio.TextManager.Interop.12.1.DesignTime.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net20/_._": {}
+          "lib/net20/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.TextManager.Interop.8.0/8.0.50728": {
@@ -854,10 +964,14 @@
           "Microsoft.VisualStudio.Shell.Interop": "7.10.6072"
         },
         "compile": {
-          "lib/net11/Microsoft.VisualStudio.TextManager.Interop.8.0.dll": {}
+          "lib/net11/Microsoft.VisualStudio.TextManager.Interop.8.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net11/_._": {}
+          "lib/net11/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.TextTemplating.15.0/16.0.28727": {
@@ -866,19 +980,27 @@
           "Microsoft.VisualStudio.TextTemplating.Interfaces.11.0": "11.0.50728"
         },
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.TextTemplating.15.0.dll": {}
+          "lib/net45/Microsoft.VisualStudio.TextTemplating.15.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.TextTemplating.Interfaces.10.0/10.0.30320": {
         "type": "package",
         "compile": {
-          "lib/net40/Microsoft.VisualStudio.TextTemplating.Interfaces.10.0.dll": {}
+          "lib/net40/Microsoft.VisualStudio.TextTemplating.Interfaces.10.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net40/_._": {}
+          "lib/net40/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.TextTemplating.Interfaces.11.0/11.0.50728": {
@@ -887,19 +1009,27 @@
           "Microsoft.VisualStudio.TextTemplating.Interfaces.10.0": "10.0.30320"
         },
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.TextTemplating.Interfaces.11.0.dll": {}
+          "lib/net45/Microsoft.VisualStudio.TextTemplating.Interfaces.11.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.TextTemplating.Interfaces.15.0/16.0.28727": {
         "type": "package",
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.TextTemplating.Interfaces.15.0.dll": {}
+          "lib/net45/Microsoft.VisualStudio.TextTemplating.Interfaces.15.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.TextTemplating.VSHost.15.0/16.0.28729": {
@@ -909,10 +1039,14 @@
           "Microsoft.VisualStudio.TextTemplating.15.0": "16.0.28727"
         },
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.TextTemplating.VSHost.15.0.dll": {}
+          "lib/net45/Microsoft.VisualStudio.TextTemplating.VSHost.15.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Threading/16.0.102": {
@@ -922,10 +1056,14 @@
           "System.Threading.Tasks.Extensions": "4.3.0"
         },
         "compile": {
-          "lib/net46/Microsoft.VisualStudio.Threading.dll": {}
+          "lib/net46/Microsoft.VisualStudio.Threading.dll": {
+            "related": ".pdb;.xml"
+          }
         },
         "runtime": {
-          "lib/net46/_._": {}
+          "lib/net46/_._": {
+            "related": ".pdb;.xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Threading.Analyzers/16.3.52": {
@@ -941,46 +1079,66 @@
           "StreamJsonRpc": "1.5.43"
         },
         "compile": {
-          "lib/net46/Microsoft.VisualStudio.Utilities.dll": {}
+          "lib/net46/Microsoft.VisualStudio.Utilities.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net46/_._": {}
+          "lib/net46/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Utilities.Internal/14.1.2": {
         "type": "package",
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.Utilities.Internal.dll": {}
+          "lib/net45/Microsoft.VisualStudio.Utilities.Internal.dll": {
+            "related": ".XML"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".XML"
+          }
         }
       },
       "Microsoft.VisualStudio.Validation/15.3.15": {
         "type": "package",
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.Validation.dll": {}
+          "lib/net45/Microsoft.VisualStudio.Validation.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Web.BrowserLink.12.0/12.0.0": {
         "type": "package",
         "compile": {
-          "lib/net40/Microsoft.VisualStudio.Web.BrowserLink.12.0.dll": {}
+          "lib/net40/Microsoft.VisualStudio.Web.BrowserLink.12.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net40/_._": {}
+          "lib/net40/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Workspace.VSIntegration/15.0.485": {
         "type": "package",
         "compile": {
-          "lib/net46/Microsoft.VisualStudio.Workspace.VSIntegration.Contracts.dll": {}
+          "lib/net46/Microsoft.VisualStudio.Workspace.VSIntegration.Contracts.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net46/_._": {}
+          "lib/net46/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VSSDK.BuildTools/16.11.66": {
@@ -1005,10 +1163,14 @@
       "Newtonsoft.Json/9.0.1": {
         "type": "package",
         "compile": {
-          "lib/net45/Newtonsoft.Json.dll": {}
+          "lib/net45/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "stdole/7.0.3302": {
@@ -1030,28 +1192,40 @@
           "System.Reflection.Emit": "4.3.0"
         },
         "compile": {
-          "lib/net46/StreamJsonRpc.dll": {}
+          "lib/net46/StreamJsonRpc.dll": {
+            "related": ".pdb;.xml"
+          }
         },
         "runtime": {
-          "lib/net46/_._": {}
+          "lib/net46/_._": {
+            "related": ".pdb;.xml"
+          }
         }
       },
       "System.Buffers/4.5.0": {
         "type": "package",
         "compile": {
-          "ref/net45/System.Buffers.dll": {}
+          "ref/net45/System.Buffers.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/_._": {}
+          "lib/netstandard2.0/_._": {
+            "related": ".xml"
+          }
         }
       },
       "System.Collections.Immutable/1.5.0": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/System.Collections.Immutable.dll": {}
+          "lib/netstandard2.0/System.Collections.Immutable.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/_._": {}
+          "lib/netstandard2.0/_._": {
+            "related": ".xml"
+          }
         }
       },
       "System.ComponentModel.Composition/4.5.0": {
@@ -1175,10 +1349,14 @@
       "System.Threading.Tasks.Extensions/4.3.0": {
         "type": "package",
         "compile": {
-          "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.dll": {}
+          "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/portable-net45+win8+wp8+wpa81/_._": {}
+          "lib/portable-net45+win8+wp8+wpa81/_._": {
+            "related": ".xml"
+          }
         }
       },
       "System.ValueTuple/4.3.0": {
@@ -1371,10 +1549,14 @@
       "Microsoft.Diagnostics.Tracing.EventSource.Redist/1.1.16-beta": {
         "type": "package",
         "compile": {
-          "lib/net45/Microsoft.Diagnostics.Tracing.EventSource.dll": {}
+          "lib/net45/Microsoft.Diagnostics.Tracing.EventSource.dll": {
+            "related": ".XML"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".XML"
+          }
         },
         "build": {
           "build/portable-net45+win8+wpa81/Microsoft.Diagnostics.Tracing.EventSource.Redist.targets": {}
@@ -1396,10 +1578,14 @@
           "Microsoft.VisualStudio.Shell.Interop.10.0": "10.0.30319"
         },
         "compile": {
-          "lib/net46/Microsoft.VisualStudio.ComponentModelHost.dll": {}
+          "lib/net46/Microsoft.VisualStudio.ComponentModelHost.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net46/_._": {}
+          "lib/net46/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.CoreUtility/16.0.467": {
@@ -1421,7 +1607,9 @@
           "Microsoft.VisualStudio.Debugger.InteropA": "9.0.21023"
         },
         "compile": {
-          "ref/net45/Microsoft.VisualStudio.Debugger.Engine.dll": {}
+          "ref/net45/Microsoft.VisualStudio.Debugger.Engine.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Debugger.Interop.10.0/10.0.30320": {
@@ -1508,10 +1696,14 @@
       "Microsoft.VisualStudio.Designer.Interfaces/1.1.4323": {
         "type": "package",
         "compile": {
-          "lib/net11/Microsoft.VisualStudio.Designer.Interfaces.dll": {}
+          "lib/net11/Microsoft.VisualStudio.Designer.Interfaces.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net11/_._": {}
+          "lib/net11/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Editor/16.0.467": {
@@ -1538,10 +1730,14 @@
       "Microsoft.VisualStudio.ImageCatalog/16.0.28727": {
         "type": "package",
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.ImageCatalog.dll": {}
+          "lib/net45/Microsoft.VisualStudio.ImageCatalog.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Imaging/16.0.28729": {
@@ -1551,10 +1747,14 @@
           "Microsoft.VisualStudio.Utilities": "16.0.28729"
         },
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.Imaging.dll": {}
+          "lib/net45/Microsoft.VisualStudio.Imaging.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime/14.3.26930": {
@@ -1563,10 +1763,14 @@
           "Microsoft.VisualStudio.SDK.EmbedInteropTypes": "15.0.16"
         },
         "compile": {
-          "lib/net20/Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime.dll": {}
+          "lib/net20/Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net20/_._": {}
+          "lib/net20/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Language/16.0.467": {
@@ -1657,10 +1861,14 @@
           "System.ValueTuple": "4.3.0"
         },
         "compile": {
-          "lib/net46/Microsoft.VisualStudio.LanguageServer.Client.dll": {}
+          "lib/net46/Microsoft.VisualStudio.LanguageServer.Client.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net46/_._": {}
+          "lib/net46/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.LanguageServer.Protocol/16.0.2264": {
@@ -1669,10 +1877,14 @@
           "Newtonsoft.Json": "9.0.1"
         },
         "compile": {
-          "lib/netstandard1.0/Microsoft.VisualStudio.LanguageServer.Protocol.dll": {}
+          "lib/netstandard1.0/Microsoft.VisualStudio.LanguageServer.Protocol.dll": {
+            "related": ".pdb;.xml"
+          }
         },
         "runtime": {
-          "lib/netstandard1.0/_._": {}
+          "lib/netstandard1.0/_._": {
+            "related": ".pdb;.xml"
+          }
         }
       },
       "Microsoft.VisualStudio.OLE.Interop/7.10.6071": {
@@ -1690,19 +1902,27 @@
           "Microsoft.VisualStudio.Shell.15.0": "16.0.28729"
         },
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.Package.LanguageService.15.0.dll": {}
+          "lib/net45/Microsoft.VisualStudio.Package.LanguageService.15.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.ProjectAggregator/8.0.50728": {
         "type": "package",
         "compile": {
-          "lib/net20/Microsoft.VisualStudio.ProjectAggregator.dll": {}
+          "lib/net20/Microsoft.VisualStudio.ProjectAggregator.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net20/_._": {}
+          "lib/net20/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.RemoteControl/14.1.2": {
@@ -1711,10 +1931,14 @@
           "Microsoft.VisualStudio.Utilities.Internal": "14.1.2"
         },
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.RemoteControl.dll": {}
+          "lib/net45/Microsoft.VisualStudio.RemoteControl.dll": {
+            "related": ".XML"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".XML"
+          }
         }
       },
       "Microsoft.VisualStudio.SDK/16.0.208": {
@@ -1797,10 +2021,14 @@
       "Microsoft.VisualStudio.Setup.Configuration.Interop/1.16.30": {
         "type": "package",
         "compile": {
-          "lib/net35/Microsoft.VisualStudio.Setup.Configuration.Interop.dll": {}
+          "lib/net35/Microsoft.VisualStudio.Setup.Configuration.Interop.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net35/_._": {}
+          "lib/net35/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.15.0/16.0.28729": {
@@ -1817,10 +2045,14 @@
           "Microsoft.VisualStudio.Threading": "16.0.102"
         },
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.Shell.15.0.dll": {}
+          "lib/net45/Microsoft.VisualStudio.Shell.15.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.Design/16.0.28729": {
@@ -1831,10 +2063,14 @@
           "Microsoft.VisualStudio.Shell.Interop.8.0": "8.0.50728"
         },
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.Shell.Design.dll": {}
+          "lib/net45/Microsoft.VisualStudio.Shell.Design.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.Embeddable/16.0.28727": {
@@ -1843,10 +2079,14 @@
           "Microsoft.VisualStudio.SDK.EmbedInteropTypes": "15.0.27"
         },
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.Shell.Embeddable.dll": {}
+          "lib/net45/Microsoft.VisualStudio.Shell.Embeddable.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.Framework/16.0.28729": {
@@ -1857,10 +2097,14 @@
           "Microsoft.VisualStudio.Utilities": "16.0.28729"
         },
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.Shell.Framework.dll": {}
+          "lib/net45/Microsoft.VisualStudio.Shell.Framework.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.Interop/7.10.6072": {
@@ -1869,10 +2113,14 @@
           "Microsoft.VisualStudio.TextManager.Interop": "7.10.6071"
         },
         "compile": {
-          "lib/net11/Microsoft.VisualStudio.Shell.Interop.dll": {}
+          "lib/net11/Microsoft.VisualStudio.Shell.Interop.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net11/_._": {}
+          "lib/net11/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.Interop.10.0/10.0.30320": {
@@ -1881,10 +2129,14 @@
           "Microsoft.VisualStudio.Shell.Interop.8.0": "8.0.50728"
         },
         "compile": {
-          "lib/net20/Microsoft.VisualStudio.Shell.Interop.10.0.dll": {}
+          "lib/net20/Microsoft.VisualStudio.Shell.Interop.10.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net20/_._": {}
+          "lib/net20/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.Interop.11.0/11.0.61031": {
@@ -1893,10 +2145,14 @@
           "Microsoft.VisualStudio.Shell.Interop.10.0": "10.0.30320"
         },
         "compile": {
-          "lib/net20/Microsoft.VisualStudio.Shell.Interop.11.0.dll": {}
+          "lib/net20/Microsoft.VisualStudio.Shell.Interop.11.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net20/_._": {}
+          "lib/net20/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.Interop.12.0/12.0.30111": {
@@ -1905,10 +2161,14 @@
           "Microsoft.VisualStudio.Shell.Interop.11.0": "11.0.61031"
         },
         "compile": {
-          "lib/net20/Microsoft.VisualStudio.Shell.Interop.12.0.dll": {}
+          "lib/net20/Microsoft.VisualStudio.Shell.Interop.12.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net20/_._": {}
+          "lib/net20/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.Interop.14.0.DesignTime/14.3.26929": {
@@ -1919,10 +2179,14 @@
           "Microsoft.VisualStudio.Shell.Interop.12.0": "12.0.30111"
         },
         "compile": {
-          "lib/net20/Microsoft.VisualStudio.Shell.Interop.14.0.DesignTime.dll": {}
+          "lib/net20/Microsoft.VisualStudio.Shell.Interop.14.0.DesignTime.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net20/_._": {}
+          "lib/net20/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.Interop.15.0.DesignTime/15.0.26932": {
@@ -1932,10 +2196,14 @@
           "Microsoft.VisualStudio.Shell.Interop.12.0": "12.0.30111"
         },
         "compile": {
-          "lib/net20/Microsoft.VisualStudio.Shell.Interop.15.0.DesignTime.dll": {}
+          "lib/net20/Microsoft.VisualStudio.Shell.Interop.15.0.DesignTime.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net20/_._": {}
+          "lib/net20/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.Interop.15.1.DesignTime/15.0.26929": {
@@ -2022,10 +2290,14 @@
           "Microsoft.VisualStudio.TextManager.Interop.8.0": "8.0.50728"
         },
         "compile": {
-          "lib/net11/Microsoft.VisualStudio.Shell.Interop.8.0.dll": {}
+          "lib/net11/Microsoft.VisualStudio.Shell.Interop.8.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net11/_._": {}
+          "lib/net11/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.Interop.9.0/9.0.30730": {
@@ -2034,10 +2306,14 @@
           "Microsoft.VisualStudio.Shell.Interop.8.0": "8.0.50728"
         },
         "compile": {
-          "lib/net11/Microsoft.VisualStudio.Shell.Interop.9.0.dll": {}
+          "lib/net11/Microsoft.VisualStudio.Shell.Interop.9.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net11/_._": {}
+          "lib/net11/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.TaskRunnerExplorer.14.0/14.0.0": {
@@ -2057,10 +2333,14 @@
           "Newtonsoft.Json": "9.0.1"
         },
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.Telemetry.dll": {}
+          "lib/net45/Microsoft.VisualStudio.Telemetry.dll": {
+            "related": ".XML"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".XML"
+          }
         }
       },
       "Microsoft.VisualStudio.Text.Data/16.0.467": {
@@ -2126,10 +2406,14 @@
           "Microsoft.VisualStudio.OLE.Interop": "7.10.6071"
         },
         "compile": {
-          "lib/net11/Microsoft.VisualStudio.TextManager.Interop.dll": {}
+          "lib/net11/Microsoft.VisualStudio.TextManager.Interop.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net11/_._": {}
+          "lib/net11/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.TextManager.Interop.12.1.DesignTime/12.1.30330": {
@@ -2138,10 +2422,14 @@
           "Microsoft.VisualStudio.SDK.EmbedInteropTypes": "15.0.16"
         },
         "compile": {
-          "lib/net20/Microsoft.VisualStudio.TextManager.Interop.12.1.DesignTime.dll": {}
+          "lib/net20/Microsoft.VisualStudio.TextManager.Interop.12.1.DesignTime.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net20/_._": {}
+          "lib/net20/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.TextManager.Interop.8.0/8.0.50728": {
@@ -2150,10 +2438,14 @@
           "Microsoft.VisualStudio.Shell.Interop": "7.10.6072"
         },
         "compile": {
-          "lib/net11/Microsoft.VisualStudio.TextManager.Interop.8.0.dll": {}
+          "lib/net11/Microsoft.VisualStudio.TextManager.Interop.8.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net11/_._": {}
+          "lib/net11/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.TextTemplating.15.0/16.0.28727": {
@@ -2162,19 +2454,27 @@
           "Microsoft.VisualStudio.TextTemplating.Interfaces.11.0": "11.0.50728"
         },
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.TextTemplating.15.0.dll": {}
+          "lib/net45/Microsoft.VisualStudio.TextTemplating.15.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.TextTemplating.Interfaces.10.0/10.0.30320": {
         "type": "package",
         "compile": {
-          "lib/net40/Microsoft.VisualStudio.TextTemplating.Interfaces.10.0.dll": {}
+          "lib/net40/Microsoft.VisualStudio.TextTemplating.Interfaces.10.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net40/_._": {}
+          "lib/net40/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.TextTemplating.Interfaces.11.0/11.0.50728": {
@@ -2183,19 +2483,27 @@
           "Microsoft.VisualStudio.TextTemplating.Interfaces.10.0": "10.0.30320"
         },
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.TextTemplating.Interfaces.11.0.dll": {}
+          "lib/net45/Microsoft.VisualStudio.TextTemplating.Interfaces.11.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.TextTemplating.Interfaces.15.0/16.0.28727": {
         "type": "package",
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.TextTemplating.Interfaces.15.0.dll": {}
+          "lib/net45/Microsoft.VisualStudio.TextTemplating.Interfaces.15.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.TextTemplating.VSHost.15.0/16.0.28729": {
@@ -2205,10 +2513,14 @@
           "Microsoft.VisualStudio.TextTemplating.15.0": "16.0.28727"
         },
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.TextTemplating.VSHost.15.0.dll": {}
+          "lib/net45/Microsoft.VisualStudio.TextTemplating.VSHost.15.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Threading/16.0.102": {
@@ -2218,10 +2530,14 @@
           "System.Threading.Tasks.Extensions": "4.3.0"
         },
         "compile": {
-          "lib/net46/Microsoft.VisualStudio.Threading.dll": {}
+          "lib/net46/Microsoft.VisualStudio.Threading.dll": {
+            "related": ".pdb;.xml"
+          }
         },
         "runtime": {
-          "lib/net46/_._": {}
+          "lib/net46/_._": {
+            "related": ".pdb;.xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Threading.Analyzers/16.3.52": {
@@ -2237,46 +2553,66 @@
           "StreamJsonRpc": "1.5.43"
         },
         "compile": {
-          "lib/net46/Microsoft.VisualStudio.Utilities.dll": {}
+          "lib/net46/Microsoft.VisualStudio.Utilities.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net46/_._": {}
+          "lib/net46/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Utilities.Internal/14.1.2": {
         "type": "package",
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.Utilities.Internal.dll": {}
+          "lib/net45/Microsoft.VisualStudio.Utilities.Internal.dll": {
+            "related": ".XML"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".XML"
+          }
         }
       },
       "Microsoft.VisualStudio.Validation/15.3.15": {
         "type": "package",
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.Validation.dll": {}
+          "lib/net45/Microsoft.VisualStudio.Validation.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Web.BrowserLink.12.0/12.0.0": {
         "type": "package",
         "compile": {
-          "lib/net40/Microsoft.VisualStudio.Web.BrowserLink.12.0.dll": {}
+          "lib/net40/Microsoft.VisualStudio.Web.BrowserLink.12.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net40/_._": {}
+          "lib/net40/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Workspace.VSIntegration/15.0.485": {
         "type": "package",
         "compile": {
-          "lib/net46/Microsoft.VisualStudio.Workspace.VSIntegration.Contracts.dll": {}
+          "lib/net46/Microsoft.VisualStudio.Workspace.VSIntegration.Contracts.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net46/_._": {}
+          "lib/net46/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VSSDK.BuildTools/16.11.66": {
@@ -2301,10 +2637,14 @@
       "Newtonsoft.Json/9.0.1": {
         "type": "package",
         "compile": {
-          "lib/net45/Newtonsoft.Json.dll": {}
+          "lib/net45/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "stdole/7.0.3302": {
@@ -2326,28 +2666,40 @@
           "System.Reflection.Emit": "4.3.0"
         },
         "compile": {
-          "lib/net46/StreamJsonRpc.dll": {}
+          "lib/net46/StreamJsonRpc.dll": {
+            "related": ".pdb;.xml"
+          }
         },
         "runtime": {
-          "lib/net46/_._": {}
+          "lib/net46/_._": {
+            "related": ".pdb;.xml"
+          }
         }
       },
       "System.Buffers/4.5.0": {
         "type": "package",
         "compile": {
-          "ref/net45/System.Buffers.dll": {}
+          "ref/net45/System.Buffers.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/_._": {}
+          "lib/netstandard2.0/_._": {
+            "related": ".xml"
+          }
         }
       },
       "System.Collections.Immutable/1.5.0": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/System.Collections.Immutable.dll": {}
+          "lib/netstandard2.0/System.Collections.Immutable.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/_._": {}
+          "lib/netstandard2.0/_._": {
+            "related": ".xml"
+          }
         }
       },
       "System.ComponentModel.Composition/4.5.0": {
@@ -2447,10 +2799,1464 @@
       "System.Threading.Tasks.Extensions/4.3.0": {
         "type": "package",
         "compile": {
-          "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.dll": {}
+          "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/portable-net45+win8+wp8+wpa81/_._": {}
+          "lib/portable-net45+win8+wp8+wpa81/_._": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.ValueTuple/4.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/System.ValueTuple.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "VSLangProj/7.0.3301": {
+        "type": "package",
+        "dependencies": {
+          "EnvDTE": "8.0.2"
+        },
+        "compile": {
+          "lib/net10/VSLangProj.dll": {}
+        },
+        "runtime": {
+          "lib/net10/_._": {}
+        }
+      },
+      "VSLangProj100/10.0.30320": {
+        "type": "package",
+        "compile": {
+          "lib/net20/VSLangProj100.dll": {}
+        },
+        "runtime": {
+          "lib/net20/_._": {}
+        }
+      },
+      "VSLangProj110/11.0.61031": {
+        "type": "package",
+        "dependencies": {
+          "VSLangProj80": "8.0.50728",
+          "VSLangProj90": "9.0.30730"
+        },
+        "compile": {
+          "lib/net20/VSLangProj110.dll": {}
+        },
+        "runtime": {
+          "lib/net20/_._": {}
+        }
+      },
+      "VSLangProj140/14.0.25030": {
+        "type": "package",
+        "dependencies": {
+          "VSLangProj80": "8.0.50728"
+        },
+        "compile": {
+          "lib/net20/VSLangProj140.dll": {}
+        },
+        "runtime": {
+          "lib/net20/_._": {}
+        }
+      },
+      "VSLangProj150/15.0.26229": {
+        "type": "package",
+        "compile": {
+          "lib/net20/VSLangProj150.dll": {}
+        },
+        "runtime": {
+          "lib/net20/_._": {}
+        }
+      },
+      "VSLangProj157/15.7.0": {
+        "type": "package",
+        "compile": {
+          "lib/net20/VSLangProj157.dll": {}
+        },
+        "runtime": {
+          "lib/net20/_._": {}
+        }
+      },
+      "VSLangProj158/15.8.0": {
+        "type": "package",
+        "compile": {
+          "lib/net20/VSLangProj158.dll": {}
+        },
+        "runtime": {
+          "lib/net20/_._": {}
+        }
+      },
+      "VSLangProj2/7.0.5001": {
+        "type": "package",
+        "dependencies": {
+          "VSLangProj": "7.0.3301"
+        },
+        "compile": {
+          "lib/net11/VSLangProj2.dll": {}
+        },
+        "runtime": {
+          "lib/net11/_._": {}
+        }
+      },
+      "VSLangProj80/8.0.50728": {
+        "type": "package",
+        "dependencies": {
+          "VSLangProj2": "7.0.5001"
+        },
+        "compile": {
+          "lib/net11/VSLangProj80.dll": {}
+        },
+        "runtime": {
+          "lib/net11/_._": {}
+        }
+      },
+      "VSLangProj90/9.0.30730": {
+        "type": "package",
+        "compile": {
+          "lib/net10/VSLangProj90.dll": {}
+        },
+        "runtime": {
+          "lib/net10/_._": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7.2/win-arm64": {
+      "EnvDTE/8.0.2": {
+        "type": "package",
+        "dependencies": {
+          "stdole": "7.0.3302"
+        },
+        "compile": {
+          "lib/net10/EnvDTE.dll": {}
+        },
+        "runtime": {
+          "lib/net10/_._": {}
+        }
+      },
+      "EnvDTE100/10.0.3": {
+        "type": "package",
+        "dependencies": {
+          "EnvDTE90a": "9.0.3",
+          "Microsoft.VisualStudio.SDK.EmbedInteropTypes": "15.0.16"
+        },
+        "compile": {
+          "lib/net20/EnvDTE100.dll": {}
+        },
+        "runtime": {
+          "lib/net20/_._": {}
+        }
+      },
+      "EnvDTE80/8.0.3": {
+        "type": "package",
+        "dependencies": {
+          "EnvDTE": "8.0.2",
+          "Microsoft.VisualStudio.SDK.EmbedInteropTypes": "15.0.16"
+        },
+        "compile": {
+          "lib/net10/EnvDTE80.dll": {}
+        },
+        "runtime": {
+          "lib/net10/_._": {}
+        }
+      },
+      "EnvDTE90/9.0.3": {
+        "type": "package",
+        "dependencies": {
+          "EnvDTE80": "8.0.3",
+          "Microsoft.VisualStudio.SDK.EmbedInteropTypes": "15.0.16"
+        },
+        "compile": {
+          "lib/net10/EnvDTE90.dll": {}
+        },
+        "runtime": {
+          "lib/net10/_._": {}
+        }
+      },
+      "EnvDTE90a/9.0.3": {
+        "type": "package",
+        "dependencies": {
+          "EnvDTE90": "9.0.3",
+          "Microsoft.VisualStudio.SDK.EmbedInteropTypes": "15.0.16"
+        },
+        "compile": {
+          "lib/net10/EnvDTE90a.dll": {}
+        },
+        "runtime": {
+          "lib/net10/_._": {}
+        }
+      },
+      "Microsoft.CodeAnalysis.BannedApiAnalyzers/2.9.4": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.CodeAnalysis.BannedApiAnalyzers.props": {}
+        }
+      },
+      "Microsoft.Diagnostics.Tracing.EventSource.Redist/1.1.16-beta": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Microsoft.Diagnostics.Tracing.EventSource.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net45/_._": {
+            "related": ".XML"
+          }
+        },
+        "build": {
+          "build/portable-net45+win8+wpa81/Microsoft.Diagnostics.Tracing.EventSource.Redist.targets": {}
+        }
+      },
+      "Microsoft.VisualStudio.CommandBars/8.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/Microsoft.VisualStudio.CommandBars.dll": {},
+          "lib/stdole.dll": {}
+        },
+        "runtime": {
+          "lib/_._": {}
+        }
+      },
+      "Microsoft.VisualStudio.ComponentModelHost/16.0.467": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.Shell.Interop.10.0": "10.0.30319"
+        },
+        "compile": {
+          "lib/net46/Microsoft.VisualStudio.ComponentModelHost.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net46/_._": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.CoreUtility/16.0.467": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.Threading": "15.8.192"
+        },
+        "compile": {
+          "lib/net472/Microsoft.VisualStudio.CoreUtility.dll": {}
+        },
+        "runtime": {
+          "lib/net472/_._": {}
+        }
+      },
+      "Microsoft.VisualStudio.Debugger.Engine/16.0.2032702": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.Debugger.Interop.11.0": "11.0.50728",
+          "Microsoft.VisualStudio.Debugger.InteropA": "9.0.21023"
+        },
+        "compile": {
+          "ref/net45/Microsoft.VisualStudio.Debugger.Engine.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.Debugger.Interop.10.0/10.0.30320": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.Debugger.InteropA": "9.0.21023"
+        },
+        "compile": {
+          "lib/net20/Microsoft.VisualStudio.Debugger.Interop.10.0.dll": {}
+        },
+        "runtime": {
+          "lib/net20/_._": {}
+        }
+      },
+      "Microsoft.VisualStudio.Debugger.Interop.11.0/11.0.50728": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.Debugger.InteropA": "9.0.21023"
+        },
+        "compile": {
+          "lib/net20/Microsoft.VisualStudio.Debugger.Interop.11.0.dll": {}
+        },
+        "runtime": {
+          "lib/net20/_._": {}
+        }
+      },
+      "Microsoft.VisualStudio.Debugger.Interop.12.0/12.0.21006": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.Debugger.InteropA": "9.0.21023"
+        },
+        "compile": {
+          "lib/net20/Microsoft.VisualStudio.Debugger.Interop.12.0.dll": {}
+        },
+        "runtime": {
+          "lib/net20/_._": {}
+        }
+      },
+      "Microsoft.VisualStudio.Debugger.Interop.14.0/14.3.25408": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.Debugger.Interop.11.0": "11.0.50728"
+        },
+        "compile": {
+          "lib/net20/Microsoft.VisualStudio.Debugger.Interop.14.0.dll": {}
+        },
+        "runtime": {
+          "lib/net20/_._": {}
+        }
+      },
+      "Microsoft.VisualStudio.Debugger.Interop.15.0/15.9.28307": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.Debugger.InteropA": "9.0.21023"
+        },
+        "compile": {
+          "lib/net20/Microsoft.VisualStudio.Debugger.Interop.15.0.dll": {}
+        },
+        "runtime": {
+          "lib/net20/_._": {}
+        }
+      },
+      "Microsoft.VisualStudio.Debugger.Interop.16.0/16.0.28727": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.Debugger.InteropA": "9.0.21023"
+        },
+        "compile": {
+          "lib/net20/Microsoft.VisualStudio.Debugger.Interop.16.0.dll": {}
+        },
+        "runtime": {
+          "lib/net20/_._": {}
+        }
+      },
+      "Microsoft.VisualStudio.Debugger.InteropA/9.0.21023": {
+        "type": "package",
+        "compile": {
+          "lib/net10/Microsoft.VisualStudio.Debugger.InteropA.dll": {}
+        },
+        "runtime": {
+          "lib/net10/_._": {}
+        }
+      },
+      "Microsoft.VisualStudio.Designer.Interfaces/1.1.4323": {
+        "type": "package",
+        "compile": {
+          "lib/net11/Microsoft.VisualStudio.Designer.Interfaces.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net11/_._": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.Editor/16.0.467": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.CoreUtility": "16.0.467",
+          "Microsoft.VisualStudio.Language": "16.0.467",
+          "Microsoft.VisualStudio.Shell.Interop.11.0": "11.0.61031",
+          "Microsoft.VisualStudio.Text.Data": "16.0.467",
+          "Microsoft.VisualStudio.Text.Logic": "16.0.467",
+          "Microsoft.VisualStudio.Text.UI": "16.0.467",
+          "Microsoft.VisualStudio.Text.UI.Wpf": "16.0.467",
+          "Microsoft.VisualStudio.TextManager.Interop": "7.10.6071",
+          "Microsoft.VisualStudio.TextManager.Interop.8.0": "8.0.50728",
+          "Microsoft.VisualStudio.Threading": "15.8.192"
+        },
+        "compile": {
+          "lib/net472/Microsoft.VisualStudio.Editor.dll": {}
+        },
+        "runtime": {
+          "lib/net472/_._": {}
+        }
+      },
+      "Microsoft.VisualStudio.ImageCatalog/16.0.28727": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Microsoft.VisualStudio.ImageCatalog.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.Imaging/16.0.28729": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.ImageCatalog": "16.0.28727",
+          "Microsoft.VisualStudio.Utilities": "16.0.28729"
+        },
+        "compile": {
+          "lib/net45/Microsoft.VisualStudio.Imaging.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime/14.3.26930": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.SDK.EmbedInteropTypes": "15.0.16"
+        },
+        "compile": {
+          "lib/net20/Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net20/_._": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.Language/16.0.467": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.CoreUtility": "16.0.467",
+          "Microsoft.VisualStudio.Text.Data": "16.0.467",
+          "Microsoft.VisualStudio.Text.Logic": "16.0.467",
+          "Microsoft.VisualStudio.Text.UI": "16.0.467",
+          "Newtonsoft.Json": "9.0.1",
+          "StreamJsonRpc": "1.3.23",
+          "System.Collections.Immutable": "1.3.1"
+        },
+        "compile": {
+          "lib/net472/Microsoft.VisualStudio.Language.dll": {}
+        },
+        "runtime": {
+          "lib/net472/_._": {}
+        }
+      },
+      "Microsoft.VisualStudio.Language.Intellisense/16.0.467": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.CoreUtility": "16.0.467",
+          "Microsoft.VisualStudio.ImageCatalog": "16.0.27828",
+          "Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime": "14.3.26930",
+          "Microsoft.VisualStudio.Language": "16.0.467",
+          "Microsoft.VisualStudio.Text.Data": "16.0.467",
+          "Microsoft.VisualStudio.Text.Logic": "16.0.467",
+          "Microsoft.VisualStudio.Text.UI": "16.0.467"
+        },
+        "compile": {
+          "lib/net472/Microsoft.VisualStudio.Language.Intellisense.dll": {}
+        },
+        "runtime": {
+          "lib/net472/_._": {}
+        }
+      },
+      "Microsoft.VisualStudio.Language.NavigateTo.Interfaces/16.0.467": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.ImageCatalog": "16.0.27828",
+          "Microsoft.VisualStudio.Imaging": "16.0.27828",
+          "Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime": "14.3.26930",
+          "Microsoft.VisualStudio.OLE.Interop": "7.10.6071",
+          "Microsoft.VisualStudio.Shell.Interop": "7.10.6072",
+          "Microsoft.VisualStudio.Shell.Interop.10.0": "10.0.30320",
+          "Microsoft.VisualStudio.Shell.Interop.11.0": "11.0.61031",
+          "Microsoft.VisualStudio.Shell.Interop.12.0": "12.0.30111",
+          "Microsoft.VisualStudio.Shell.Interop.14.0.DesignTime": "14.3.26929",
+          "Microsoft.VisualStudio.Shell.Interop.8.0": "8.0.50728",
+          "Microsoft.VisualStudio.Text.Logic": "15.8.519",
+          "Microsoft.VisualStudio.TextManager.Interop": "7.10.6071",
+          "Microsoft.VisualStudio.TextManager.Interop.8.0": "8.0.50728",
+          "Microsoft.VisualStudio.Utilities": "16.0.28315-pre"
+        },
+        "compile": {
+          "lib/net472/Microsoft.VisualStudio.Language.NavigateTo.Interfaces.dll": {}
+        },
+        "runtime": {
+          "lib/net472/_._": {}
+        }
+      },
+      "Microsoft.VisualStudio.Language.StandardClassification/16.0.467": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.Text.Logic": "16.0.467"
+        },
+        "compile": {
+          "lib/net472/Microsoft.VisualStudio.Language.StandardClassification.dll": {}
+        },
+        "runtime": {
+          "lib/net472/_._": {}
+        }
+      },
+      "Microsoft.VisualStudio.LanguageServer.Client/16.0.2264": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.CoreUtility": "16.0.127",
+          "Microsoft.VisualStudio.LanguageServer.Protocol": "16.0.2264",
+          "Microsoft.VisualStudio.OLE.Interop": "7.10.6070",
+          "Microsoft.VisualStudio.Shell.Framework": "15.0.26606",
+          "Microsoft.VisualStudio.Threading": "15.3.23",
+          "Microsoft.VisualStudio.Utilities": "15.0.26606",
+          "Microsoft.VisualStudio.Validation": "15.3.15",
+          "Newtonsoft.Json": "9.0.1",
+          "StreamJsonRpc": "1.3.23",
+          "System.ValueTuple": "4.3.0"
+        },
+        "compile": {
+          "lib/net46/Microsoft.VisualStudio.LanguageServer.Client.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net46/_._": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.LanguageServer.Protocol/16.0.2264": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.0/Microsoft.VisualStudio.LanguageServer.Protocol.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.OLE.Interop/7.10.6071": {
+        "type": "package",
+        "compile": {
+          "lib/Microsoft.VisualStudio.OLE.Interop.dll": {}
+        },
+        "runtime": {
+          "lib/_._": {}
+        }
+      },
+      "Microsoft.VisualStudio.Package.LanguageService.15.0/16.0.28729": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.Shell.15.0": "16.0.28729"
+        },
+        "compile": {
+          "lib/net45/Microsoft.VisualStudio.Package.LanguageService.15.0.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.ProjectAggregator/8.0.50728": {
+        "type": "package",
+        "compile": {
+          "lib/net20/Microsoft.VisualStudio.ProjectAggregator.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net20/_._": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.RemoteControl/14.1.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.Utilities.Internal": "14.1.2"
+        },
+        "compile": {
+          "lib/net45/Microsoft.VisualStudio.RemoteControl.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net45/_._": {
+            "related": ".XML"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.SDK/16.0.208": {
+        "type": "package",
+        "dependencies": {
+          "EnvDTE100": "10.0.3",
+          "Microsoft.VisualStudio.CommandBars": "8.0.0",
+          "Microsoft.VisualStudio.ComponentModelHost": "16.0.467",
+          "Microsoft.VisualStudio.CoreUtility": "16.0.467",
+          "Microsoft.VisualStudio.Debugger.Engine": "16.0.2032702",
+          "Microsoft.VisualStudio.Debugger.Interop.10.0": "10.0.30320",
+          "Microsoft.VisualStudio.Debugger.Interop.12.0": "12.0.21006",
+          "Microsoft.VisualStudio.Debugger.Interop.14.0": "14.3.25408",
+          "Microsoft.VisualStudio.Debugger.Interop.15.0": "15.9.28307",
+          "Microsoft.VisualStudio.Debugger.Interop.16.0": "16.0.28727",
+          "Microsoft.VisualStudio.Debugger.InteropA": "9.0.21023",
+          "Microsoft.VisualStudio.Designer.Interfaces": "1.1.4323",
+          "Microsoft.VisualStudio.Editor": "16.0.467",
+          "Microsoft.VisualStudio.ImageCatalog": "16.0.28727",
+          "Microsoft.VisualStudio.Imaging": "16.0.28729",
+          "Microsoft.VisualStudio.Language": "16.0.467",
+          "Microsoft.VisualStudio.Language.Intellisense": "16.0.467",
+          "Microsoft.VisualStudio.Language.NavigateTo.Interfaces": "16.0.467",
+          "Microsoft.VisualStudio.Language.StandardClassification": "16.0.467",
+          "Microsoft.VisualStudio.LanguageServer.Client": "16.0.2264",
+          "Microsoft.VisualStudio.OLE.Interop": "7.10.6071",
+          "Microsoft.VisualStudio.Package.LanguageService.15.0": "16.0.28729",
+          "Microsoft.VisualStudio.ProjectAggregator": "8.0.50728",
+          "Microsoft.VisualStudio.SDK.Analyzers": "16.3.14",
+          "Microsoft.VisualStudio.SDK.EmbedInteropTypes": "15.0.27",
+          "Microsoft.VisualStudio.Setup.Configuration.Interop": "1.16.30",
+          "Microsoft.VisualStudio.Shell.15.0": "16.0.28729",
+          "Microsoft.VisualStudio.Shell.Design": "16.0.28729",
+          "Microsoft.VisualStudio.Shell.Embeddable": "16.0.28727",
+          "Microsoft.VisualStudio.Shell.Interop": "7.10.6072",
+          "Microsoft.VisualStudio.Shell.Interop.15.1.DesignTime": "15.0.26929",
+          "Microsoft.VisualStudio.Shell.Interop.15.5.DesignTime": "15.6.27413",
+          "Microsoft.VisualStudio.Shell.Interop.15.7.DesignTime": "15.7.1",
+          "Microsoft.VisualStudio.Shell.Interop.15.8.DesignTime": "15.8.1",
+          "Microsoft.VisualStudio.TaskRunnerExplorer.14.0": "14.0.0",
+          "Microsoft.VisualStudio.Telemetry": "16.0.117-master",
+          "Microsoft.VisualStudio.Text.Logic": "16.0.467",
+          "Microsoft.VisualStudio.TextManager.Interop.12.1.DesignTime": "12.1.30330",
+          "Microsoft.VisualStudio.TextTemplating.15.0": "16.0.28727",
+          "Microsoft.VisualStudio.TextTemplating.Interfaces.15.0": "16.0.28727",
+          "Microsoft.VisualStudio.TextTemplating.VSHost.15.0": "16.0.28729",
+          "Microsoft.VisualStudio.Threading": "16.0.102",
+          "Microsoft.VisualStudio.Web.BrowserLink.12.0": "12.0.0",
+          "Microsoft.VisualStudio.Workspace.VSIntegration": "15.0.485",
+          "Microsoft.Win32.Primitives": "4.3.0",
+          "Newtonsoft.Json": "9.0.1",
+          "StreamJsonRpc": "1.5.43",
+          "System.Collections.Immutable": "1.5.0",
+          "System.ComponentModel.Composition": "4.5.0",
+          "VSLangProj100": "10.0.30320",
+          "VSLangProj110": "11.0.61031",
+          "VSLangProj140": "14.0.25030",
+          "VSLangProj150": "15.0.26229",
+          "VSLangProj157": "15.7.0",
+          "VSLangProj158": "15.8.0",
+          "VSLangProj2": "7.0.5001"
+        }
+      },
+      "Microsoft.VisualStudio.SDK.Analyzers/16.3.14": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CodeAnalysis.BannedApiAnalyzers": "2.9.4",
+          "Microsoft.VisualStudio.Threading.Analyzers": "16.3.52"
+        },
+        "build": {
+          "build/Microsoft.VisualStudio.SDK.Analyzers.targets": {}
+        }
+      },
+      "Microsoft.VisualStudio.SDK.EmbedInteropTypes/15.0.27": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.VisualStudio.SDK.EmbedInteropTypes.targets": {}
+        }
+      },
+      "Microsoft.VisualStudio.Setup.Configuration.Interop/1.16.30": {
+        "type": "package",
+        "compile": {
+          "lib/net35/Microsoft.VisualStudio.Setup.Configuration.Interop.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net35/_._": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.Shell.15.0/16.0.28729": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.Imaging": "16.0.28729",
+          "Microsoft.VisualStudio.SDK.EmbedInteropTypes": "15.0.27",
+          "Microsoft.VisualStudio.Shell.Framework": "16.0.28729",
+          "Microsoft.VisualStudio.Shell.Interop.14.0.DesignTime": "14.3.26929",
+          "Microsoft.VisualStudio.Shell.Interop.15.3.DesignTime": "15.0.26929",
+          "Microsoft.VisualStudio.Shell.Interop.15.6.DesignTime": "15.6.27413",
+          "Microsoft.VisualStudio.Shell.Interop.9.0": "9.0.30730",
+          "Microsoft.VisualStudio.Text.Data": "16.0.428",
+          "Microsoft.VisualStudio.Threading": "16.0.102"
+        },
+        "compile": {
+          "lib/net45/Microsoft.VisualStudio.Shell.15.0.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.Shell.Design/16.0.28729": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.Shell.15.0": "16.0.28729",
+          "Microsoft.VisualStudio.Shell.Framework": "16.0.28729",
+          "Microsoft.VisualStudio.Shell.Interop.8.0": "8.0.50728"
+        },
+        "compile": {
+          "lib/net45/Microsoft.VisualStudio.Shell.Design.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.Shell.Embeddable/16.0.28727": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.SDK.EmbedInteropTypes": "15.0.27"
+        },
+        "compile": {
+          "lib/net45/Microsoft.VisualStudio.Shell.Embeddable.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.Shell.Framework/16.0.28729": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.CoreUtility": "15.6.27740",
+          "Microsoft.VisualStudio.OLE.Interop": "7.10.6071",
+          "Microsoft.VisualStudio.Utilities": "16.0.28729"
+        },
+        "compile": {
+          "lib/net45/Microsoft.VisualStudio.Shell.Framework.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.Shell.Interop/7.10.6072": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.TextManager.Interop": "7.10.6071"
+        },
+        "compile": {
+          "lib/net11/Microsoft.VisualStudio.Shell.Interop.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net11/_._": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.Shell.Interop.10.0/10.0.30320": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.Shell.Interop.8.0": "8.0.50728"
+        },
+        "compile": {
+          "lib/net20/Microsoft.VisualStudio.Shell.Interop.10.0.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net20/_._": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.Shell.Interop.11.0/11.0.61031": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.Shell.Interop.10.0": "10.0.30320"
+        },
+        "compile": {
+          "lib/net20/Microsoft.VisualStudio.Shell.Interop.11.0.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net20/_._": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.Shell.Interop.12.0/12.0.30111": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.Shell.Interop.11.0": "11.0.61031"
+        },
+        "compile": {
+          "lib/net20/Microsoft.VisualStudio.Shell.Interop.12.0.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net20/_._": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.Shell.Interop.14.0.DesignTime/14.3.26929": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime": "14.3.26930",
+          "Microsoft.VisualStudio.SDK.EmbedInteropTypes": "15.0.16",
+          "Microsoft.VisualStudio.Shell.Interop.12.0": "12.0.30111"
+        },
+        "compile": {
+          "lib/net20/Microsoft.VisualStudio.Shell.Interop.14.0.DesignTime.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net20/_._": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.Shell.Interop.15.0.DesignTime/15.0.26932": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.SDK.EmbedInteropTypes": "15.0.16",
+          "Microsoft.VisualStudio.Shell.Interop.12.0": "12.0.30111"
+        },
+        "compile": {
+          "lib/net20/Microsoft.VisualStudio.Shell.Interop.15.0.DesignTime.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net20/_._": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.Shell.Interop.15.1.DesignTime/15.0.26929": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.SDK.EmbedInteropTypes": "15.0.16"
+        },
+        "compile": {
+          "lib/net20/Microsoft.VisualStudio.Shell.Interop.15.1.DesignTime.dll": {}
+        },
+        "runtime": {
+          "lib/net20/_._": {}
+        }
+      },
+      "Microsoft.VisualStudio.Shell.Interop.15.3.DesignTime/15.0.26929": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.SDK.EmbedInteropTypes": "15.0.12",
+          "Microsoft.VisualStudio.Shell.Interop.11.0": "11.0.61031"
+        },
+        "compile": {
+          "lib/net20/Microsoft.VisualStudio.Shell.Interop.15.3.DesignTime.dll": {}
+        },
+        "runtime": {
+          "lib/net20/_._": {}
+        }
+      },
+      "Microsoft.VisualStudio.Shell.Interop.15.5.DesignTime/15.6.27413": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.SDK.EmbedInteropTypes": "15.0.16",
+          "Microsoft.VisualStudio.Shell.Interop.12.0": "12.0.30111"
+        },
+        "compile": {
+          "lib/net20/Microsoft.VisualStudio.Shell.Interop.15.5.DesignTime.dll": {}
+        },
+        "runtime": {
+          "lib/net20/_._": {}
+        }
+      },
+      "Microsoft.VisualStudio.Shell.Interop.15.6.DesignTime/15.6.27413": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.SDK.EmbedInteropTypes": "15.0.16",
+          "Microsoft.VisualStudio.Shell.Interop.11.0": "11.0.61031"
+        },
+        "compile": {
+          "lib/net20/Microsoft.VisualStudio.Shell.Interop.15.6.DesignTime.dll": {}
+        },
+        "runtime": {
+          "lib/net20/_._": {}
+        }
+      },
+      "Microsoft.VisualStudio.Shell.Interop.15.7.DesignTime/15.7.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.SDK.EmbedInteropTypes": "15.0.16",
+          "Microsoft.VisualStudio.Shell.Interop.15.0.DesignTime": "15.0.26932"
+        },
+        "compile": {
+          "lib/net20/Microsoft.VisualStudio.Shell.Interop.15.7.DesignTime.dll": {}
+        },
+        "runtime": {
+          "lib/net20/_._": {}
+        }
+      },
+      "Microsoft.VisualStudio.Shell.Interop.15.8.DesignTime/15.8.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.SDK.EmbedInteropTypes": "15.0.16",
+          "Microsoft.VisualStudio.Shell.Interop.15.0.DesignTime": "15.0.26932"
+        },
+        "compile": {
+          "lib/net20/Microsoft.VisualStudio.Shell.Interop.15.8.DesignTime.dll": {}
+        },
+        "runtime": {
+          "lib/net20/_._": {}
+        }
+      },
+      "Microsoft.VisualStudio.Shell.Interop.8.0/8.0.50728": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.Shell.Interop": "7.10.6072",
+          "Microsoft.VisualStudio.TextManager.Interop.8.0": "8.0.50728"
+        },
+        "compile": {
+          "lib/net11/Microsoft.VisualStudio.Shell.Interop.8.0.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net11/_._": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.Shell.Interop.9.0/9.0.30730": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.Shell.Interop.8.0": "8.0.50728"
+        },
+        "compile": {
+          "lib/net11/Microsoft.VisualStudio.Shell.Interop.9.0.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net11/_._": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.TaskRunnerExplorer.14.0/14.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Microsoft.VisualStudio.TaskRunnerExplorer.14.0.dll": {}
+        },
+        "runtime": {
+          "lib/net40/_._": {}
+        }
+      },
+      "Microsoft.VisualStudio.Telemetry/16.0.117-master": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Diagnostics.Tracing.EventSource.Redist": "1.1.16-beta",
+          "Microsoft.VisualStudio.RemoteControl": "14.1.2",
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "lib/net45/Microsoft.VisualStudio.Telemetry.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net45/_._": {
+            "related": ".XML"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.Text.Data/16.0.467": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.CoreUtility": "16.0.467",
+          "Microsoft.VisualStudio.Threading": "15.8.192"
+        },
+        "compile": {
+          "lib/net472/Microsoft.VisualStudio.Text.Data.dll": {}
+        },
+        "runtime": {
+          "lib/net472/_._": {}
+        }
+      },
+      "Microsoft.VisualStudio.Text.Logic/16.0.467": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.CoreUtility": "16.0.467",
+          "Microsoft.VisualStudio.Text.Data": "16.0.467",
+          "System.Collections.Immutable": "1.3.1"
+        },
+        "compile": {
+          "lib/net472/Microsoft.VisualStudio.Text.Logic.dll": {}
+        },
+        "runtime": {
+          "lib/net472/_._": {}
+        }
+      },
+      "Microsoft.VisualStudio.Text.UI/16.0.467": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.CoreUtility": "16.0.467",
+          "Microsoft.VisualStudio.Text.Data": "16.0.467",
+          "Microsoft.VisualStudio.Text.Logic": "16.0.467"
+        },
+        "compile": {
+          "lib/net472/Microsoft.VisualStudio.Text.UI.dll": {}
+        },
+        "runtime": {
+          "lib/net472/_._": {}
+        }
+      },
+      "Microsoft.VisualStudio.Text.UI.Wpf/16.0.467": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.CoreUtility": "16.0.467",
+          "Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime": "14.3.26930",
+          "Microsoft.VisualStudio.Text.Data": "16.0.467",
+          "Microsoft.VisualStudio.Text.Logic": "16.0.467",
+          "Microsoft.VisualStudio.Text.UI": "16.0.467"
+        },
+        "compile": {
+          "lib/net472/Microsoft.VisualStudio.Text.UI.Wpf.dll": {}
+        },
+        "runtime": {
+          "lib/net472/_._": {}
+        }
+      },
+      "Microsoft.VisualStudio.TextManager.Interop/7.10.6071": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.OLE.Interop": "7.10.6071"
+        },
+        "compile": {
+          "lib/net11/Microsoft.VisualStudio.TextManager.Interop.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net11/_._": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.TextManager.Interop.12.1.DesignTime/12.1.30330": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.SDK.EmbedInteropTypes": "15.0.16"
+        },
+        "compile": {
+          "lib/net20/Microsoft.VisualStudio.TextManager.Interop.12.1.DesignTime.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net20/_._": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.TextManager.Interop.8.0/8.0.50728": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.Shell.Interop": "7.10.6072"
+        },
+        "compile": {
+          "lib/net11/Microsoft.VisualStudio.TextManager.Interop.8.0.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net11/_._": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.TextTemplating.15.0/16.0.28727": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.TextTemplating.Interfaces.11.0": "11.0.50728"
+        },
+        "compile": {
+          "lib/net45/Microsoft.VisualStudio.TextTemplating.15.0.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.TextTemplating.Interfaces.10.0/10.0.30320": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Microsoft.VisualStudio.TextTemplating.Interfaces.10.0.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net40/_._": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.TextTemplating.Interfaces.11.0/11.0.50728": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.TextTemplating.Interfaces.10.0": "10.0.30320"
+        },
+        "compile": {
+          "lib/net45/Microsoft.VisualStudio.TextTemplating.Interfaces.11.0.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.TextTemplating.Interfaces.15.0/16.0.28727": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Microsoft.VisualStudio.TextTemplating.Interfaces.15.0.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.TextTemplating.VSHost.15.0/16.0.28729": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.Shell.15.0": "16.0.28729",
+          "Microsoft.VisualStudio.TextTemplating.15.0": "16.0.28727"
+        },
+        "compile": {
+          "lib/net45/Microsoft.VisualStudio.TextTemplating.VSHost.15.0.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.Threading/16.0.102": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.Validation": "15.3.15",
+          "System.Threading.Tasks.Extensions": "4.3.0"
+        },
+        "compile": {
+          "lib/net46/Microsoft.VisualStudio.Threading.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net46/_._": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.Threading.Analyzers/16.3.52": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.VisualStudio.Threading.Analyzers.targets": {}
+        }
+      },
+      "Microsoft.VisualStudio.Utilities/16.0.28729": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.Threading": "16.0.102",
+          "StreamJsonRpc": "1.5.43"
+        },
+        "compile": {
+          "lib/net46/Microsoft.VisualStudio.Utilities.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net46/_._": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.Utilities.Internal/14.1.2": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Microsoft.VisualStudio.Utilities.Internal.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net45/_._": {
+            "related": ".XML"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.Validation/15.3.15": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Microsoft.VisualStudio.Validation.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.Web.BrowserLink.12.0/12.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Microsoft.VisualStudio.Web.BrowserLink.12.0.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net40/_._": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.Workspace.VSIntegration/15.0.485": {
+        "type": "package",
+        "compile": {
+          "lib/net46/Microsoft.VisualStudio.Workspace.VSIntegration.Contracts.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net46/_._": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.VSSDK.BuildTools/16.11.66": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.SDK.Analyzers": "15.8.33"
+        },
+        "build": {
+          "build/Microsoft.VSSDK.BuildTools.props": {},
+          "build/Microsoft.VSSDK.BuildTools.targets": {}
+        }
+      },
+      "Microsoft.Win32.Primitives/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/net46/Microsoft.Win32.Primitives.dll": {}
+        },
+        "runtime": {
+          "lib/net46/_._": {}
+        }
+      },
+      "Newtonsoft.Json/9.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
+        }
+      },
+      "stdole/7.0.3302": {
+        "type": "package",
+        "compile": {
+          "lib/net10/stdole.dll": {}
+        },
+        "runtime": {
+          "lib/net10/_._": {}
+        }
+      },
+      "StreamJsonRpc/1.5.43": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.Threading": "15.3.20",
+          "Newtonsoft.Json": "9.0.1",
+          "System.Buffers": "4.5.0",
+          "System.Net.Http": "4.3.3",
+          "System.Reflection.Emit": "4.3.0"
+        },
+        "compile": {
+          "lib/net46/StreamJsonRpc.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net46/_._": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "System.Buffers/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/net45/System.Buffers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/_._": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Collections.Immutable/1.5.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/System.Collections.Immutable.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/_._": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.ComponentModel.Composition/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
+        }
+      },
+      "System.IO/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/net462/System.IO.dll": {}
+        },
+        "runtime": {
+          "lib/net462/_._": {}
+        }
+      },
+      "System.Net.Http/4.3.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.Cryptography.X509Certificates": "4.3.0"
+        },
+        "compile": {
+          "ref/net46/System.Net.Http.dll": {}
+        },
+        "runtime": {
+          "lib/net46/_._": {}
+        }
+      },
+      "System.Reflection.Emit/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
+        }
+      },
+      "System.Runtime/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/net462/System.Runtime.dll": {}
+        },
+        "runtime": {
+          "lib/net462/_._": {}
+        }
+      },
+      "System.Security.Cryptography.Algorithms/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Security.Cryptography.Encoding": "4.3.0",
+          "System.Security.Cryptography.Primitives": "4.3.0"
+        },
+        "compile": {
+          "ref/net463/System.Security.Cryptography.Algorithms.dll": {}
+        },
+        "runtime": {
+          "lib/net463/_._": {}
+        }
+      },
+      "System.Security.Cryptography.Encoding/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/net46/System.Security.Cryptography.Encoding.dll": {}
+        },
+        "runtime": {
+          "lib/net46/_._": {}
+        }
+      },
+      "System.Security.Cryptography.Primitives/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/net46/System.Security.Cryptography.Primitives.dll": {}
+        },
+        "runtime": {
+          "lib/net46/_._": {}
+        }
+      },
+      "System.Security.Cryptography.X509Certificates/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.Cryptography.Algorithms": "4.3.0",
+          "System.Security.Cryptography.Encoding": "4.3.0"
+        },
+        "compile": {
+          "ref/net461/System.Security.Cryptography.X509Certificates.dll": {}
+        },
+        "runtime": {
+          "lib/net461/_._": {}
+        }
+      },
+      "System.Threading.Tasks.Extensions/4.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/portable-net45+win8+wp8+wpa81/_._": {
+            "related": ".xml"
+          }
         }
       },
       "System.ValueTuple/4.3.0": {
@@ -2643,10 +4449,14 @@
       "Microsoft.Diagnostics.Tracing.EventSource.Redist/1.1.16-beta": {
         "type": "package",
         "compile": {
-          "lib/net45/Microsoft.Diagnostics.Tracing.EventSource.dll": {}
+          "lib/net45/Microsoft.Diagnostics.Tracing.EventSource.dll": {
+            "related": ".XML"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".XML"
+          }
         },
         "build": {
           "build/portable-net45+win8+wpa81/Microsoft.Diagnostics.Tracing.EventSource.Redist.targets": {}
@@ -2668,10 +4478,14 @@
           "Microsoft.VisualStudio.Shell.Interop.10.0": "10.0.30319"
         },
         "compile": {
-          "lib/net46/Microsoft.VisualStudio.ComponentModelHost.dll": {}
+          "lib/net46/Microsoft.VisualStudio.ComponentModelHost.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net46/_._": {}
+          "lib/net46/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.CoreUtility/16.0.467": {
@@ -2693,7 +4507,9 @@
           "Microsoft.VisualStudio.Debugger.InteropA": "9.0.21023"
         },
         "compile": {
-          "ref/net45/Microsoft.VisualStudio.Debugger.Engine.dll": {}
+          "ref/net45/Microsoft.VisualStudio.Debugger.Engine.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Debugger.Interop.10.0/10.0.30320": {
@@ -2780,10 +4596,14 @@
       "Microsoft.VisualStudio.Designer.Interfaces/1.1.4323": {
         "type": "package",
         "compile": {
-          "lib/net11/Microsoft.VisualStudio.Designer.Interfaces.dll": {}
+          "lib/net11/Microsoft.VisualStudio.Designer.Interfaces.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net11/_._": {}
+          "lib/net11/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Editor/16.0.467": {
@@ -2810,10 +4630,14 @@
       "Microsoft.VisualStudio.ImageCatalog/16.0.28727": {
         "type": "package",
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.ImageCatalog.dll": {}
+          "lib/net45/Microsoft.VisualStudio.ImageCatalog.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Imaging/16.0.28729": {
@@ -2823,10 +4647,14 @@
           "Microsoft.VisualStudio.Utilities": "16.0.28729"
         },
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.Imaging.dll": {}
+          "lib/net45/Microsoft.VisualStudio.Imaging.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime/14.3.26930": {
@@ -2835,10 +4663,14 @@
           "Microsoft.VisualStudio.SDK.EmbedInteropTypes": "15.0.16"
         },
         "compile": {
-          "lib/net20/Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime.dll": {}
+          "lib/net20/Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net20/_._": {}
+          "lib/net20/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Language/16.0.467": {
@@ -2929,10 +4761,14 @@
           "System.ValueTuple": "4.3.0"
         },
         "compile": {
-          "lib/net46/Microsoft.VisualStudio.LanguageServer.Client.dll": {}
+          "lib/net46/Microsoft.VisualStudio.LanguageServer.Client.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net46/_._": {}
+          "lib/net46/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.LanguageServer.Protocol/16.0.2264": {
@@ -2941,10 +4777,14 @@
           "Newtonsoft.Json": "9.0.1"
         },
         "compile": {
-          "lib/netstandard1.0/Microsoft.VisualStudio.LanguageServer.Protocol.dll": {}
+          "lib/netstandard1.0/Microsoft.VisualStudio.LanguageServer.Protocol.dll": {
+            "related": ".pdb;.xml"
+          }
         },
         "runtime": {
-          "lib/netstandard1.0/_._": {}
+          "lib/netstandard1.0/_._": {
+            "related": ".pdb;.xml"
+          }
         }
       },
       "Microsoft.VisualStudio.OLE.Interop/7.10.6071": {
@@ -2962,19 +4802,27 @@
           "Microsoft.VisualStudio.Shell.15.0": "16.0.28729"
         },
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.Package.LanguageService.15.0.dll": {}
+          "lib/net45/Microsoft.VisualStudio.Package.LanguageService.15.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.ProjectAggregator/8.0.50728": {
         "type": "package",
         "compile": {
-          "lib/net20/Microsoft.VisualStudio.ProjectAggregator.dll": {}
+          "lib/net20/Microsoft.VisualStudio.ProjectAggregator.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net20/_._": {}
+          "lib/net20/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.RemoteControl/14.1.2": {
@@ -2983,10 +4831,14 @@
           "Microsoft.VisualStudio.Utilities.Internal": "14.1.2"
         },
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.RemoteControl.dll": {}
+          "lib/net45/Microsoft.VisualStudio.RemoteControl.dll": {
+            "related": ".XML"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".XML"
+          }
         }
       },
       "Microsoft.VisualStudio.SDK/16.0.208": {
@@ -3069,10 +4921,14 @@
       "Microsoft.VisualStudio.Setup.Configuration.Interop/1.16.30": {
         "type": "package",
         "compile": {
-          "lib/net35/Microsoft.VisualStudio.Setup.Configuration.Interop.dll": {}
+          "lib/net35/Microsoft.VisualStudio.Setup.Configuration.Interop.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net35/_._": {}
+          "lib/net35/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.15.0/16.0.28729": {
@@ -3089,10 +4945,14 @@
           "Microsoft.VisualStudio.Threading": "16.0.102"
         },
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.Shell.15.0.dll": {}
+          "lib/net45/Microsoft.VisualStudio.Shell.15.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.Design/16.0.28729": {
@@ -3103,10 +4963,14 @@
           "Microsoft.VisualStudio.Shell.Interop.8.0": "8.0.50728"
         },
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.Shell.Design.dll": {}
+          "lib/net45/Microsoft.VisualStudio.Shell.Design.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.Embeddable/16.0.28727": {
@@ -3115,10 +4979,14 @@
           "Microsoft.VisualStudio.SDK.EmbedInteropTypes": "15.0.27"
         },
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.Shell.Embeddable.dll": {}
+          "lib/net45/Microsoft.VisualStudio.Shell.Embeddable.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.Framework/16.0.28729": {
@@ -3129,10 +4997,14 @@
           "Microsoft.VisualStudio.Utilities": "16.0.28729"
         },
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.Shell.Framework.dll": {}
+          "lib/net45/Microsoft.VisualStudio.Shell.Framework.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.Interop/7.10.6072": {
@@ -3141,10 +5013,14 @@
           "Microsoft.VisualStudio.TextManager.Interop": "7.10.6071"
         },
         "compile": {
-          "lib/net11/Microsoft.VisualStudio.Shell.Interop.dll": {}
+          "lib/net11/Microsoft.VisualStudio.Shell.Interop.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net11/_._": {}
+          "lib/net11/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.Interop.10.0/10.0.30320": {
@@ -3153,10 +5029,14 @@
           "Microsoft.VisualStudio.Shell.Interop.8.0": "8.0.50728"
         },
         "compile": {
-          "lib/net20/Microsoft.VisualStudio.Shell.Interop.10.0.dll": {}
+          "lib/net20/Microsoft.VisualStudio.Shell.Interop.10.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net20/_._": {}
+          "lib/net20/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.Interop.11.0/11.0.61031": {
@@ -3165,10 +5045,14 @@
           "Microsoft.VisualStudio.Shell.Interop.10.0": "10.0.30320"
         },
         "compile": {
-          "lib/net20/Microsoft.VisualStudio.Shell.Interop.11.0.dll": {}
+          "lib/net20/Microsoft.VisualStudio.Shell.Interop.11.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net20/_._": {}
+          "lib/net20/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.Interop.12.0/12.0.30111": {
@@ -3177,10 +5061,14 @@
           "Microsoft.VisualStudio.Shell.Interop.11.0": "11.0.61031"
         },
         "compile": {
-          "lib/net20/Microsoft.VisualStudio.Shell.Interop.12.0.dll": {}
+          "lib/net20/Microsoft.VisualStudio.Shell.Interop.12.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net20/_._": {}
+          "lib/net20/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.Interop.14.0.DesignTime/14.3.26929": {
@@ -3191,10 +5079,14 @@
           "Microsoft.VisualStudio.Shell.Interop.12.0": "12.0.30111"
         },
         "compile": {
-          "lib/net20/Microsoft.VisualStudio.Shell.Interop.14.0.DesignTime.dll": {}
+          "lib/net20/Microsoft.VisualStudio.Shell.Interop.14.0.DesignTime.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net20/_._": {}
+          "lib/net20/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.Interop.15.0.DesignTime/15.0.26932": {
@@ -3204,10 +5096,14 @@
           "Microsoft.VisualStudio.Shell.Interop.12.0": "12.0.30111"
         },
         "compile": {
-          "lib/net20/Microsoft.VisualStudio.Shell.Interop.15.0.DesignTime.dll": {}
+          "lib/net20/Microsoft.VisualStudio.Shell.Interop.15.0.DesignTime.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net20/_._": {}
+          "lib/net20/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.Interop.15.1.DesignTime/15.0.26929": {
@@ -3294,10 +5190,14 @@
           "Microsoft.VisualStudio.TextManager.Interop.8.0": "8.0.50728"
         },
         "compile": {
-          "lib/net11/Microsoft.VisualStudio.Shell.Interop.8.0.dll": {}
+          "lib/net11/Microsoft.VisualStudio.Shell.Interop.8.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net11/_._": {}
+          "lib/net11/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.Interop.9.0/9.0.30730": {
@@ -3306,10 +5206,14 @@
           "Microsoft.VisualStudio.Shell.Interop.8.0": "8.0.50728"
         },
         "compile": {
-          "lib/net11/Microsoft.VisualStudio.Shell.Interop.9.0.dll": {}
+          "lib/net11/Microsoft.VisualStudio.Shell.Interop.9.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net11/_._": {}
+          "lib/net11/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.TaskRunnerExplorer.14.0/14.0.0": {
@@ -3329,10 +5233,14 @@
           "Newtonsoft.Json": "9.0.1"
         },
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.Telemetry.dll": {}
+          "lib/net45/Microsoft.VisualStudio.Telemetry.dll": {
+            "related": ".XML"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".XML"
+          }
         }
       },
       "Microsoft.VisualStudio.Text.Data/16.0.467": {
@@ -3398,10 +5306,14 @@
           "Microsoft.VisualStudio.OLE.Interop": "7.10.6071"
         },
         "compile": {
-          "lib/net11/Microsoft.VisualStudio.TextManager.Interop.dll": {}
+          "lib/net11/Microsoft.VisualStudio.TextManager.Interop.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net11/_._": {}
+          "lib/net11/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.TextManager.Interop.12.1.DesignTime/12.1.30330": {
@@ -3410,10 +5322,14 @@
           "Microsoft.VisualStudio.SDK.EmbedInteropTypes": "15.0.16"
         },
         "compile": {
-          "lib/net20/Microsoft.VisualStudio.TextManager.Interop.12.1.DesignTime.dll": {}
+          "lib/net20/Microsoft.VisualStudio.TextManager.Interop.12.1.DesignTime.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net20/_._": {}
+          "lib/net20/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.TextManager.Interop.8.0/8.0.50728": {
@@ -3422,10 +5338,14 @@
           "Microsoft.VisualStudio.Shell.Interop": "7.10.6072"
         },
         "compile": {
-          "lib/net11/Microsoft.VisualStudio.TextManager.Interop.8.0.dll": {}
+          "lib/net11/Microsoft.VisualStudio.TextManager.Interop.8.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net11/_._": {}
+          "lib/net11/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.TextTemplating.15.0/16.0.28727": {
@@ -3434,19 +5354,27 @@
           "Microsoft.VisualStudio.TextTemplating.Interfaces.11.0": "11.0.50728"
         },
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.TextTemplating.15.0.dll": {}
+          "lib/net45/Microsoft.VisualStudio.TextTemplating.15.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.TextTemplating.Interfaces.10.0/10.0.30320": {
         "type": "package",
         "compile": {
-          "lib/net40/Microsoft.VisualStudio.TextTemplating.Interfaces.10.0.dll": {}
+          "lib/net40/Microsoft.VisualStudio.TextTemplating.Interfaces.10.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net40/_._": {}
+          "lib/net40/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.TextTemplating.Interfaces.11.0/11.0.50728": {
@@ -3455,19 +5383,27 @@
           "Microsoft.VisualStudio.TextTemplating.Interfaces.10.0": "10.0.30320"
         },
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.TextTemplating.Interfaces.11.0.dll": {}
+          "lib/net45/Microsoft.VisualStudio.TextTemplating.Interfaces.11.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.TextTemplating.Interfaces.15.0/16.0.28727": {
         "type": "package",
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.TextTemplating.Interfaces.15.0.dll": {}
+          "lib/net45/Microsoft.VisualStudio.TextTemplating.Interfaces.15.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.TextTemplating.VSHost.15.0/16.0.28729": {
@@ -3477,10 +5413,14 @@
           "Microsoft.VisualStudio.TextTemplating.15.0": "16.0.28727"
         },
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.TextTemplating.VSHost.15.0.dll": {}
+          "lib/net45/Microsoft.VisualStudio.TextTemplating.VSHost.15.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Threading/16.0.102": {
@@ -3490,10 +5430,14 @@
           "System.Threading.Tasks.Extensions": "4.3.0"
         },
         "compile": {
-          "lib/net46/Microsoft.VisualStudio.Threading.dll": {}
+          "lib/net46/Microsoft.VisualStudio.Threading.dll": {
+            "related": ".pdb;.xml"
+          }
         },
         "runtime": {
-          "lib/net46/_._": {}
+          "lib/net46/_._": {
+            "related": ".pdb;.xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Threading.Analyzers/16.3.52": {
@@ -3509,46 +5453,66 @@
           "StreamJsonRpc": "1.5.43"
         },
         "compile": {
-          "lib/net46/Microsoft.VisualStudio.Utilities.dll": {}
+          "lib/net46/Microsoft.VisualStudio.Utilities.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net46/_._": {}
+          "lib/net46/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Utilities.Internal/14.1.2": {
         "type": "package",
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.Utilities.Internal.dll": {}
+          "lib/net45/Microsoft.VisualStudio.Utilities.Internal.dll": {
+            "related": ".XML"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".XML"
+          }
         }
       },
       "Microsoft.VisualStudio.Validation/15.3.15": {
         "type": "package",
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.Validation.dll": {}
+          "lib/net45/Microsoft.VisualStudio.Validation.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Web.BrowserLink.12.0/12.0.0": {
         "type": "package",
         "compile": {
-          "lib/net40/Microsoft.VisualStudio.Web.BrowserLink.12.0.dll": {}
+          "lib/net40/Microsoft.VisualStudio.Web.BrowserLink.12.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net40/_._": {}
+          "lib/net40/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Workspace.VSIntegration/15.0.485": {
         "type": "package",
         "compile": {
-          "lib/net46/Microsoft.VisualStudio.Workspace.VSIntegration.Contracts.dll": {}
+          "lib/net46/Microsoft.VisualStudio.Workspace.VSIntegration.Contracts.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net46/_._": {}
+          "lib/net46/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VSSDK.BuildTools/16.11.66": {
@@ -3573,10 +5537,14 @@
       "Newtonsoft.Json/9.0.1": {
         "type": "package",
         "compile": {
-          "lib/net45/Newtonsoft.Json.dll": {}
+          "lib/net45/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "stdole/7.0.3302": {
@@ -3598,28 +5566,40 @@
           "System.Reflection.Emit": "4.3.0"
         },
         "compile": {
-          "lib/net46/StreamJsonRpc.dll": {}
+          "lib/net46/StreamJsonRpc.dll": {
+            "related": ".pdb;.xml"
+          }
         },
         "runtime": {
-          "lib/net46/_._": {}
+          "lib/net46/_._": {
+            "related": ".pdb;.xml"
+          }
         }
       },
       "System.Buffers/4.5.0": {
         "type": "package",
         "compile": {
-          "ref/net45/System.Buffers.dll": {}
+          "ref/net45/System.Buffers.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/_._": {}
+          "lib/netstandard2.0/_._": {
+            "related": ".xml"
+          }
         }
       },
       "System.Collections.Immutable/1.5.0": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/System.Collections.Immutable.dll": {}
+          "lib/netstandard2.0/System.Collections.Immutable.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/_._": {}
+          "lib/netstandard2.0/_._": {
+            "related": ".xml"
+          }
         }
       },
       "System.ComponentModel.Composition/4.5.0": {
@@ -3719,10 +5699,14 @@
       "System.Threading.Tasks.Extensions/4.3.0": {
         "type": "package",
         "compile": {
-          "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.dll": {}
+          "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/portable-net45+win8+wp8+wpa81/_._": {}
+          "lib/portable-net45+win8+wp8+wpa81/_._": {
+            "related": ".xml"
+          }
         }
       },
       "System.ValueTuple/4.3.0": {
@@ -3915,10 +5899,14 @@
       "Microsoft.Diagnostics.Tracing.EventSource.Redist/1.1.16-beta": {
         "type": "package",
         "compile": {
-          "lib/net45/Microsoft.Diagnostics.Tracing.EventSource.dll": {}
+          "lib/net45/Microsoft.Diagnostics.Tracing.EventSource.dll": {
+            "related": ".XML"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".XML"
+          }
         },
         "build": {
           "build/portable-net45+win8+wpa81/Microsoft.Diagnostics.Tracing.EventSource.Redist.targets": {}
@@ -3940,10 +5928,14 @@
           "Microsoft.VisualStudio.Shell.Interop.10.0": "10.0.30319"
         },
         "compile": {
-          "lib/net46/Microsoft.VisualStudio.ComponentModelHost.dll": {}
+          "lib/net46/Microsoft.VisualStudio.ComponentModelHost.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net46/_._": {}
+          "lib/net46/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.CoreUtility/16.0.467": {
@@ -3965,7 +5957,9 @@
           "Microsoft.VisualStudio.Debugger.InteropA": "9.0.21023"
         },
         "compile": {
-          "ref/net45/Microsoft.VisualStudio.Debugger.Engine.dll": {}
+          "ref/net45/Microsoft.VisualStudio.Debugger.Engine.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Debugger.Interop.10.0/10.0.30320": {
@@ -4052,10 +6046,14 @@
       "Microsoft.VisualStudio.Designer.Interfaces/1.1.4323": {
         "type": "package",
         "compile": {
-          "lib/net11/Microsoft.VisualStudio.Designer.Interfaces.dll": {}
+          "lib/net11/Microsoft.VisualStudio.Designer.Interfaces.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net11/_._": {}
+          "lib/net11/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Editor/16.0.467": {
@@ -4082,10 +6080,14 @@
       "Microsoft.VisualStudio.ImageCatalog/16.0.28727": {
         "type": "package",
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.ImageCatalog.dll": {}
+          "lib/net45/Microsoft.VisualStudio.ImageCatalog.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Imaging/16.0.28729": {
@@ -4095,10 +6097,14 @@
           "Microsoft.VisualStudio.Utilities": "16.0.28729"
         },
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.Imaging.dll": {}
+          "lib/net45/Microsoft.VisualStudio.Imaging.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime/14.3.26930": {
@@ -4107,10 +6113,14 @@
           "Microsoft.VisualStudio.SDK.EmbedInteropTypes": "15.0.16"
         },
         "compile": {
-          "lib/net20/Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime.dll": {}
+          "lib/net20/Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net20/_._": {}
+          "lib/net20/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Language/16.0.467": {
@@ -4201,10 +6211,14 @@
           "System.ValueTuple": "4.3.0"
         },
         "compile": {
-          "lib/net46/Microsoft.VisualStudio.LanguageServer.Client.dll": {}
+          "lib/net46/Microsoft.VisualStudio.LanguageServer.Client.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net46/_._": {}
+          "lib/net46/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.LanguageServer.Protocol/16.0.2264": {
@@ -4213,10 +6227,14 @@
           "Newtonsoft.Json": "9.0.1"
         },
         "compile": {
-          "lib/netstandard1.0/Microsoft.VisualStudio.LanguageServer.Protocol.dll": {}
+          "lib/netstandard1.0/Microsoft.VisualStudio.LanguageServer.Protocol.dll": {
+            "related": ".pdb;.xml"
+          }
         },
         "runtime": {
-          "lib/netstandard1.0/_._": {}
+          "lib/netstandard1.0/_._": {
+            "related": ".pdb;.xml"
+          }
         }
       },
       "Microsoft.VisualStudio.OLE.Interop/7.10.6071": {
@@ -4234,19 +6252,27 @@
           "Microsoft.VisualStudio.Shell.15.0": "16.0.28729"
         },
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.Package.LanguageService.15.0.dll": {}
+          "lib/net45/Microsoft.VisualStudio.Package.LanguageService.15.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.ProjectAggregator/8.0.50728": {
         "type": "package",
         "compile": {
-          "lib/net20/Microsoft.VisualStudio.ProjectAggregator.dll": {}
+          "lib/net20/Microsoft.VisualStudio.ProjectAggregator.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net20/_._": {}
+          "lib/net20/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.RemoteControl/14.1.2": {
@@ -4255,10 +6281,14 @@
           "Microsoft.VisualStudio.Utilities.Internal": "14.1.2"
         },
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.RemoteControl.dll": {}
+          "lib/net45/Microsoft.VisualStudio.RemoteControl.dll": {
+            "related": ".XML"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".XML"
+          }
         }
       },
       "Microsoft.VisualStudio.SDK/16.0.208": {
@@ -4341,10 +6371,14 @@
       "Microsoft.VisualStudio.Setup.Configuration.Interop/1.16.30": {
         "type": "package",
         "compile": {
-          "lib/net35/Microsoft.VisualStudio.Setup.Configuration.Interop.dll": {}
+          "lib/net35/Microsoft.VisualStudio.Setup.Configuration.Interop.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net35/_._": {}
+          "lib/net35/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.15.0/16.0.28729": {
@@ -4361,10 +6395,14 @@
           "Microsoft.VisualStudio.Threading": "16.0.102"
         },
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.Shell.15.0.dll": {}
+          "lib/net45/Microsoft.VisualStudio.Shell.15.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.Design/16.0.28729": {
@@ -4375,10 +6413,14 @@
           "Microsoft.VisualStudio.Shell.Interop.8.0": "8.0.50728"
         },
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.Shell.Design.dll": {}
+          "lib/net45/Microsoft.VisualStudio.Shell.Design.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.Embeddable/16.0.28727": {
@@ -4387,10 +6429,14 @@
           "Microsoft.VisualStudio.SDK.EmbedInteropTypes": "15.0.27"
         },
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.Shell.Embeddable.dll": {}
+          "lib/net45/Microsoft.VisualStudio.Shell.Embeddable.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.Framework/16.0.28729": {
@@ -4401,10 +6447,14 @@
           "Microsoft.VisualStudio.Utilities": "16.0.28729"
         },
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.Shell.Framework.dll": {}
+          "lib/net45/Microsoft.VisualStudio.Shell.Framework.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.Interop/7.10.6072": {
@@ -4413,10 +6463,14 @@
           "Microsoft.VisualStudio.TextManager.Interop": "7.10.6071"
         },
         "compile": {
-          "lib/net11/Microsoft.VisualStudio.Shell.Interop.dll": {}
+          "lib/net11/Microsoft.VisualStudio.Shell.Interop.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net11/_._": {}
+          "lib/net11/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.Interop.10.0/10.0.30320": {
@@ -4425,10 +6479,14 @@
           "Microsoft.VisualStudio.Shell.Interop.8.0": "8.0.50728"
         },
         "compile": {
-          "lib/net20/Microsoft.VisualStudio.Shell.Interop.10.0.dll": {}
+          "lib/net20/Microsoft.VisualStudio.Shell.Interop.10.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net20/_._": {}
+          "lib/net20/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.Interop.11.0/11.0.61031": {
@@ -4437,10 +6495,14 @@
           "Microsoft.VisualStudio.Shell.Interop.10.0": "10.0.30320"
         },
         "compile": {
-          "lib/net20/Microsoft.VisualStudio.Shell.Interop.11.0.dll": {}
+          "lib/net20/Microsoft.VisualStudio.Shell.Interop.11.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net20/_._": {}
+          "lib/net20/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.Interop.12.0/12.0.30111": {
@@ -4449,10 +6511,14 @@
           "Microsoft.VisualStudio.Shell.Interop.11.0": "11.0.61031"
         },
         "compile": {
-          "lib/net20/Microsoft.VisualStudio.Shell.Interop.12.0.dll": {}
+          "lib/net20/Microsoft.VisualStudio.Shell.Interop.12.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net20/_._": {}
+          "lib/net20/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.Interop.14.0.DesignTime/14.3.26929": {
@@ -4463,10 +6529,14 @@
           "Microsoft.VisualStudio.Shell.Interop.12.0": "12.0.30111"
         },
         "compile": {
-          "lib/net20/Microsoft.VisualStudio.Shell.Interop.14.0.DesignTime.dll": {}
+          "lib/net20/Microsoft.VisualStudio.Shell.Interop.14.0.DesignTime.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net20/_._": {}
+          "lib/net20/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.Interop.15.0.DesignTime/15.0.26932": {
@@ -4476,10 +6546,14 @@
           "Microsoft.VisualStudio.Shell.Interop.12.0": "12.0.30111"
         },
         "compile": {
-          "lib/net20/Microsoft.VisualStudio.Shell.Interop.15.0.DesignTime.dll": {}
+          "lib/net20/Microsoft.VisualStudio.Shell.Interop.15.0.DesignTime.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net20/_._": {}
+          "lib/net20/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.Interop.15.1.DesignTime/15.0.26929": {
@@ -4566,10 +6640,14 @@
           "Microsoft.VisualStudio.TextManager.Interop.8.0": "8.0.50728"
         },
         "compile": {
-          "lib/net11/Microsoft.VisualStudio.Shell.Interop.8.0.dll": {}
+          "lib/net11/Microsoft.VisualStudio.Shell.Interop.8.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net11/_._": {}
+          "lib/net11/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Shell.Interop.9.0/9.0.30730": {
@@ -4578,10 +6656,14 @@
           "Microsoft.VisualStudio.Shell.Interop.8.0": "8.0.50728"
         },
         "compile": {
-          "lib/net11/Microsoft.VisualStudio.Shell.Interop.9.0.dll": {}
+          "lib/net11/Microsoft.VisualStudio.Shell.Interop.9.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net11/_._": {}
+          "lib/net11/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.TaskRunnerExplorer.14.0/14.0.0": {
@@ -4601,10 +6683,14 @@
           "Newtonsoft.Json": "9.0.1"
         },
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.Telemetry.dll": {}
+          "lib/net45/Microsoft.VisualStudio.Telemetry.dll": {
+            "related": ".XML"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".XML"
+          }
         }
       },
       "Microsoft.VisualStudio.Text.Data/16.0.467": {
@@ -4670,10 +6756,14 @@
           "Microsoft.VisualStudio.OLE.Interop": "7.10.6071"
         },
         "compile": {
-          "lib/net11/Microsoft.VisualStudio.TextManager.Interop.dll": {}
+          "lib/net11/Microsoft.VisualStudio.TextManager.Interop.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net11/_._": {}
+          "lib/net11/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.TextManager.Interop.12.1.DesignTime/12.1.30330": {
@@ -4682,10 +6772,14 @@
           "Microsoft.VisualStudio.SDK.EmbedInteropTypes": "15.0.16"
         },
         "compile": {
-          "lib/net20/Microsoft.VisualStudio.TextManager.Interop.12.1.DesignTime.dll": {}
+          "lib/net20/Microsoft.VisualStudio.TextManager.Interop.12.1.DesignTime.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net20/_._": {}
+          "lib/net20/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.TextManager.Interop.8.0/8.0.50728": {
@@ -4694,10 +6788,14 @@
           "Microsoft.VisualStudio.Shell.Interop": "7.10.6072"
         },
         "compile": {
-          "lib/net11/Microsoft.VisualStudio.TextManager.Interop.8.0.dll": {}
+          "lib/net11/Microsoft.VisualStudio.TextManager.Interop.8.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net11/_._": {}
+          "lib/net11/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.TextTemplating.15.0/16.0.28727": {
@@ -4706,19 +6804,27 @@
           "Microsoft.VisualStudio.TextTemplating.Interfaces.11.0": "11.0.50728"
         },
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.TextTemplating.15.0.dll": {}
+          "lib/net45/Microsoft.VisualStudio.TextTemplating.15.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.TextTemplating.Interfaces.10.0/10.0.30320": {
         "type": "package",
         "compile": {
-          "lib/net40/Microsoft.VisualStudio.TextTemplating.Interfaces.10.0.dll": {}
+          "lib/net40/Microsoft.VisualStudio.TextTemplating.Interfaces.10.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net40/_._": {}
+          "lib/net40/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.TextTemplating.Interfaces.11.0/11.0.50728": {
@@ -4727,19 +6833,27 @@
           "Microsoft.VisualStudio.TextTemplating.Interfaces.10.0": "10.0.30320"
         },
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.TextTemplating.Interfaces.11.0.dll": {}
+          "lib/net45/Microsoft.VisualStudio.TextTemplating.Interfaces.11.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.TextTemplating.Interfaces.15.0/16.0.28727": {
         "type": "package",
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.TextTemplating.Interfaces.15.0.dll": {}
+          "lib/net45/Microsoft.VisualStudio.TextTemplating.Interfaces.15.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.TextTemplating.VSHost.15.0/16.0.28729": {
@@ -4749,10 +6863,14 @@
           "Microsoft.VisualStudio.TextTemplating.15.0": "16.0.28727"
         },
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.TextTemplating.VSHost.15.0.dll": {}
+          "lib/net45/Microsoft.VisualStudio.TextTemplating.VSHost.15.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Threading/16.0.102": {
@@ -4762,10 +6880,14 @@
           "System.Threading.Tasks.Extensions": "4.3.0"
         },
         "compile": {
-          "lib/net46/Microsoft.VisualStudio.Threading.dll": {}
+          "lib/net46/Microsoft.VisualStudio.Threading.dll": {
+            "related": ".pdb;.xml"
+          }
         },
         "runtime": {
-          "lib/net46/_._": {}
+          "lib/net46/_._": {
+            "related": ".pdb;.xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Threading.Analyzers/16.3.52": {
@@ -4781,46 +6903,66 @@
           "StreamJsonRpc": "1.5.43"
         },
         "compile": {
-          "lib/net46/Microsoft.VisualStudio.Utilities.dll": {}
+          "lib/net46/Microsoft.VisualStudio.Utilities.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net46/_._": {}
+          "lib/net46/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Utilities.Internal/14.1.2": {
         "type": "package",
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.Utilities.Internal.dll": {}
+          "lib/net45/Microsoft.VisualStudio.Utilities.Internal.dll": {
+            "related": ".XML"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".XML"
+          }
         }
       },
       "Microsoft.VisualStudio.Validation/15.3.15": {
         "type": "package",
         "compile": {
-          "lib/net45/Microsoft.VisualStudio.Validation.dll": {}
+          "lib/net45/Microsoft.VisualStudio.Validation.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Web.BrowserLink.12.0/12.0.0": {
         "type": "package",
         "compile": {
-          "lib/net40/Microsoft.VisualStudio.Web.BrowserLink.12.0.dll": {}
+          "lib/net40/Microsoft.VisualStudio.Web.BrowserLink.12.0.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net40/_._": {}
+          "lib/net40/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Workspace.VSIntegration/15.0.485": {
         "type": "package",
         "compile": {
-          "lib/net46/Microsoft.VisualStudio.Workspace.VSIntegration.Contracts.dll": {}
+          "lib/net46/Microsoft.VisualStudio.Workspace.VSIntegration.Contracts.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net46/_._": {}
+          "lib/net46/_._": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.VSSDK.BuildTools/16.11.66": {
@@ -4845,10 +6987,14 @@
       "Newtonsoft.Json/9.0.1": {
         "type": "package",
         "compile": {
-          "lib/net45/Newtonsoft.Json.dll": {}
+          "lib/net45/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net45/_._": {
+            "related": ".xml"
+          }
         }
       },
       "stdole/7.0.3302": {
@@ -4870,28 +7016,40 @@
           "System.Reflection.Emit": "4.3.0"
         },
         "compile": {
-          "lib/net46/StreamJsonRpc.dll": {}
+          "lib/net46/StreamJsonRpc.dll": {
+            "related": ".pdb;.xml"
+          }
         },
         "runtime": {
-          "lib/net46/_._": {}
+          "lib/net46/_._": {
+            "related": ".pdb;.xml"
+          }
         }
       },
       "System.Buffers/4.5.0": {
         "type": "package",
         "compile": {
-          "ref/net45/System.Buffers.dll": {}
+          "ref/net45/System.Buffers.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/_._": {}
+          "lib/netstandard2.0/_._": {
+            "related": ".xml"
+          }
         }
       },
       "System.Collections.Immutable/1.5.0": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/System.Collections.Immutable.dll": {}
+          "lib/netstandard2.0/System.Collections.Immutable.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/_._": {}
+          "lib/netstandard2.0/_._": {
+            "related": ".xml"
+          }
         }
       },
       "System.ComponentModel.Composition/4.5.0": {
@@ -4991,10 +7149,14 @@
       "System.Threading.Tasks.Extensions/4.3.0": {
         "type": "package",
         "compile": {
-          "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.dll": {}
+          "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/portable-net45+win8+wp8+wpa81/_._": {}
+          "lib/portable-net45+win8+wp8+wpa81/_._": {
+            "related": ".xml"
+          }
         }
       },
       "System.ValueTuple/4.3.0": {
@@ -7281,6 +9443,9 @@
     },
     "runtimes": {
       "win": {
+        "#import": []
+      },
+      "win-arm64": {
         "#import": []
       },
       "win-x64": {

@@ -1,13 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29102.190
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nodez.Data", "Nodez.Data\Nodez.Data.csproj", "{2469A8BD-CCE3-4F17-B700-50ACF40CDCF4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nodez.Sdmp", "Nodez.Sdmp\Nodez.Sdmp.csproj", "{E7E85A02-2589-4C5F-BDF7-AFD164006282}"
-EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Nodez.Deployment", "Nodez.Deployment\Nodez.Deployment.vdproj", "{822C9ACE-7CA8-4AA4-AF0B-EB0C8EAE57A1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nodez.Package", "Nodez.Package\Nodez.Package.csproj", "{E0457C94-F7B1-4A75-B4C5-8C7AF694F168}"
 EndProject
@@ -21,6 +19,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 	EndProjectSection
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Nodez.Deployment", "Nodez.Deployment\Nodez.Deployment.vdproj", "{B61E1E64-D4C4-4BEB-84B5-7FAD27AE9D8F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,8 +36,6 @@ Global
 		{E7E85A02-2589-4C5F-BDF7-AFD164006282}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7E85A02-2589-4C5F-BDF7-AFD164006282}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7E85A02-2589-4C5F-BDF7-AFD164006282}.Release|Any CPU.Build.0 = Release|Any CPU
-		{822C9ACE-7CA8-4AA4-AF0B-EB0C8EAE57A1}.Debug|Any CPU.ActiveCfg = Debug
-		{822C9ACE-7CA8-4AA4-AF0B-EB0C8EAE57A1}.Release|Any CPU.ActiveCfg = Release
 		{E0457C94-F7B1-4A75-B4C5-8C7AF694F168}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E0457C94-F7B1-4A75-B4C5-8C7AF694F168}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0457C94-F7B1-4A75-B4C5-8C7AF694F168}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -54,6 +52,8 @@ Global
 		{73C8EE0A-35A6-47BD-94D0-74A3F42313D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73C8EE0A-35A6-47BD-94D0-74A3F42313D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73C8EE0A-35A6-47BD-94D0-74A3F42313D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B61E1E64-D4C4-4BEB-84B5-7FAD27AE9D8F}.Debug|Any CPU.ActiveCfg = Debug
+		{B61E1E64-D4C4-4BEB-84B5-7FAD27AE9D8F}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

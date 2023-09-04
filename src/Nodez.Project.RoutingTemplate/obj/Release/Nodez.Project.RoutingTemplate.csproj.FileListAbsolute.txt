@@ -32,3 +32,4 @@ D:\Repository\SDMP\src\Nodez.Project.RoutingTemplate\obj\Release\Nodez.Project.R
 D:\Repository\SDMP\src\Nodez.Project.RoutingTemplate\obj\Release\Nodez.Project.RoutingTemplate.csproj.CopyComplete
 D:\Repository\SDMP\src\Nodez.Project.RoutingTemplate\obj\Release\Nodez.Project.RoutingTemplate.exe
 D:\Repository\SDMP\src\Nodez.Project.RoutingTemplate\obj\Release\Nodez.Project.RoutingTemplate.pdb
+D:\Repository\SDMP\src\Nodez.Project.RoutingTemplate\obj\Release\Nodez.Project.RoutingTemplate.csproj.SuggestedBindingRedirects.cache

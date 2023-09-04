@@ -1,6 +1,3 @@
-D:\Repository\SDMP\src\Nodez.Project.GeneralTemplate\bin\Release\Nodez.Project.Template.exe.config
-D:\Repository\SDMP\src\Nodez.Project.GeneralTemplate\bin\Release\Nodez.Project.Template.exe
-D:\Repository\SDMP\src\Nodez.Project.GeneralTemplate\bin\Release\Nodez.Project.Template.pdb
 D:\Repository\SDMP\src\Nodez.Project.GeneralTemplate\bin\Release\Combinatorics.dll
 D:\Repository\SDMP\src\Nodez.Project.GeneralTemplate\bin\Release\Microsoft.ML.Core.dll
 D:\Repository\SDMP\src\Nodez.Project.GeneralTemplate\bin\Release\Microsoft.ML.CpuMath.dll
@@ -27,8 +24,12 @@ D:\Repository\SDMP\src\Nodez.Project.GeneralTemplate\bin\Release\System.Threadin
 D:\Repository\SDMP\src\Nodez.Project.GeneralTemplate\bin\Release\Nodez.Data.pdb
 D:\Repository\SDMP\src\Nodez.Project.GeneralTemplate\bin\Release\Nodez.Sdmp.pdb
 D:\Repository\SDMP\src\Nodez.Project.GeneralTemplate\obj\Release\Nodez.Project.GeneralTemplate.csproj.AssemblyReference.cache
-D:\Repository\SDMP\src\Nodez.Project.GeneralTemplate\obj\Release\Nodez.Project.Template.exe.config
 D:\Repository\SDMP\src\Nodez.Project.GeneralTemplate\obj\Release\Nodez.Project.GeneralTemplate.csproj.CoreCompileInputs.cache
 D:\Repository\SDMP\src\Nodez.Project.GeneralTemplate\obj\Release\Nodez.Project.GeneralTemplate.csproj.CopyComplete
-D:\Repository\SDMP\src\Nodez.Project.GeneralTemplate\obj\Release\Nodez.Project.Template.exe
-D:\Repository\SDMP\src\Nodez.Project.GeneralTemplate\obj\Release\Nodez.Project.Template.pdb
+D:\Repository\SDMP\src\Nodez.Project.GeneralTemplate\bin\Release\Nodez.Project.GeneralTemplate.exe.config
+D:\Repository\SDMP\src\Nodez.Project.GeneralTemplate\bin\Release\Nodez.Project.GeneralTemplate.exe
+D:\Repository\SDMP\src\Nodez.Project.GeneralTemplate\bin\Release\Nodez.Project.GeneralTemplate.pdb
+D:\Repository\SDMP\src\Nodez.Project.GeneralTemplate\obj\Release\Nodez.Project.GeneralTemplate.csproj.SuggestedBindingRedirects.cache
+D:\Repository\SDMP\src\Nodez.Project.GeneralTemplate\obj\Release\Nodez.Project.GeneralTemplate.exe.config
+D:\Repository\SDMP\src\Nodez.Project.GeneralTemplate\obj\Release\Nodez.Project.GeneralTemplate.exe
+D:\Repository\SDMP\src\Nodez.Project.GeneralTemplate\obj\Release\Nodez.Project.GeneralTemplate.pdb

@@ -32,3 +32,4 @@ D:\Repository\SDMP\src\Nodez.Project.SchedulingTemplate\obj\Release\Nodez.Projec
 D:\Repository\SDMP\src\Nodez.Project.SchedulingTemplate\obj\Release\Nodez.Project.SchedulingTemplate.csproj.CopyComplete
 D:\Repository\SDMP\src\Nodez.Project.SchedulingTemplate\obj\Release\Nodez.Project.SchedulingTemplate.exe
 D:\Repository\SDMP\src\Nodez.Project.SchedulingTemplate\obj\Release\Nodez.Project.SchedulingTemplate.pdb
+D:\Repository\SDMP\src\Nodez.Project.SchedulingTemplate\obj\Release\Nodez.Project.SchedulingTemplate.csproj.SuggestedBindingRedirects.cache

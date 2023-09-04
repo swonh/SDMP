@@ -2,7 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\examples",
-    "\\examples\\SDMP.General.CRP",
+    "\\papers",
+    "\\papers\\car resequencing problem",
     "\\src",
     "\\src\\Nodez.Project.GeneralTemplate",
     "\\src\\Nodez.Project.GeneralTemplate\\MyObjects",
@@ -10,6 +11,6 @@
     "\\src\\Nodez.Project.RoutingTemplate\\Controls",
     "\\src\\Nodez.Project.RoutingTemplate\\Controls\\General"
   ],
-  "SelectedNode": "\\examples\\SDMP.General.CRP\\SDMP.General.CRP.sln",
+  "SelectedNode": "\\src\\Nodez.sln",
   "PreviewInSolutionExplorer": false
 }
