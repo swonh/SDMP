@@ -1,7 +1,7 @@
 
 # SDMP 
 
-[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0) <a href="https://discord.gg/4Mbhg6XC"><img alt="Discord" src="https://img.shields.io/discord/1146610656779440188?logo=discord&style=flat&logoColor=white"></a>
+[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
 
 [SDMP](https://github.com/swonh/SDMP) is a optimization software package for solving sequential decision making problems using approximate dynamic programming.
 
