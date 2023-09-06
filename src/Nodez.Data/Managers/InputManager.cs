@@ -191,11 +191,9 @@ namespace Nodez.Data.Managers
 
                 stopwatch.Stop();
                 Console.WriteLine(string.Format("End loading file: [{0}] (Rows:{1},Time:{2})", key, lineCount - 1, stopwatch.Elapsed));
-
             }
 
             Console.WriteLine("End load data.");
-
         }
 
         public InputTable GetInput(string key)
