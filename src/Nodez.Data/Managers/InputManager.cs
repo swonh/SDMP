@@ -78,7 +78,6 @@ namespace Nodez.Data.Managers
             _inputs.Clear();
             _pathInputsMappings.Clear();
             _columnNameMappings.Clear();
-
         }
 
         public void LoadInputs(List<string> tableNames, Assembly assembly =null, string inputPath = null, string typePath = null, bool skipExistingData = false, int maxLoadLineCount = 0)
@@ -218,8 +217,6 @@ namespace Nodez.Data.Managers
                 _inputs.Add(key, input);
             else
                 _inputs[key] = input;
-
         }
-
     }
 }
