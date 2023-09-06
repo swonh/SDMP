@@ -1,0 +1,51 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>SDMP General Project</Name>
+    <Description>SDMP General Project</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>SDMP.General.Project</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.png</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="Nodez.Project.GeneralTemplate.csproj" File="Nodez.Project.GeneralTemplate.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="App.config">App.config</ProjectItem>
+      <Folder Name="Controls" TargetFolderName="Controls">
+        <ProjectItem ReplaceParameters="true" TargetFileName="UserActionControl.cs">UserActionControl.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="UserApproximationControl.cs">UserApproximationControl.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="UserBoundControl.cs">UserBoundControl.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="UserDataControl.cs">UserDataControl.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="UserEventControl.cs">UserEventControl.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="UserLogControl.cs">UserLogControl.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="UserSolverControl.cs">UserSolverControl.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="UserStateControl.cs">UserStateControl.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="UserStateTransitionControl.cs">UserStateTransitionControl.cs</ProjectItem>
+      </Folder>
+      <Folder Name="InputData" TargetFolderName="InputData">
+        <ProjectItem ReplaceParameters="false" TargetFileName="RunConfig.csv">RunConfig.csv</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="SampleData.csv">SampleData.csv</ProjectItem>
+      </Folder>
+      <Folder Name="MyInputs" TargetFolderName="MyInputs">
+        <ProjectItem ReplaceParameters="true" TargetFileName="RunConfig.cs">RunConfig.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="SampleData.cs">SampleData.cs</ProjectItem>
+      </Folder>
+      <Folder Name="MyMethods" TargetFolderName="MyMethods">
+        <ProjectItem ReplaceParameters="true" TargetFileName="Helper.cs">Helper.cs</ProjectItem>
+      </Folder>
+      <Folder Name="MyObjects" TargetFolderName="MyObjects">
+        <ProjectItem ReplaceParameters="true" TargetFileName="Parameter.cs">Parameter.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="UserState.cs">UserState.cs</ProjectItem>
+      </Folder>
+      <Folder Name="MyOutputs" TargetFolderName="MyOutputs">
+        <ProjectItem ReplaceParameters="true" TargetFileName="SampleOutputData.cs">SampleOutputData.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Program.cs">Program.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>
