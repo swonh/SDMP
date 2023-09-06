@@ -19,9 +19,9 @@ You can find the documentation at
 
 ## Requirements
 
-<b>OS: `Windows 10` or above</b>
+<b>OS: `Windows 10` or higher</b>
 
-<b>IDE: `Visual Studio 2019` or above</b>
+<b>IDE: `Visual Studio 2019` or higher</b>
 
 ## Installation
 
