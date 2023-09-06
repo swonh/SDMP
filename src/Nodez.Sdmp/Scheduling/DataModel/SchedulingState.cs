@@ -40,12 +40,10 @@ namespace Nodez.Sdmp.Scheduling.DataModel
 
         public int RemainTargetValue { get; set; }
 
-
         public SchedulingState(string key)
         {
             this.Key = key;
         }
-
 
         public SchedulingState()
         {

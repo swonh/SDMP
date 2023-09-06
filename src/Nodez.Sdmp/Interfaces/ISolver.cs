@@ -80,7 +80,6 @@ namespace Nodez.Sdmp.Interfaces
 
         public IRunConfig RunConfig { get; protected set; }
 
-
         public void Initialize(List<object> controls, List<object> managers)
         {
             this.RegisterControls(controls);

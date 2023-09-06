@@ -140,7 +140,6 @@ namespace Nodez.Sdmp.MachineLearningHelper
             Console.WriteLine($"*       Average LogLoss:          {logLossAverage:#.###}  - Standard deviation: ({logLossStdDeviation:#.###})  - Confidence Interval 95%: ({logLossConfidenceInterval95:#.###})");
             Console.WriteLine($"*       Average LogLossReduction: {logLossReductionAverage:#.###}  - Standard deviation: ({logLossReductionStdDeviation:#.###})  - Confidence Interval 95%: ({logLossReductionConfidenceInterval95:#.###})");
             Console.WriteLine($"*************************************************************************************************************");
-
         }
 
         public static double CalculateStandardDeviation(IEnumerable<double> values)
