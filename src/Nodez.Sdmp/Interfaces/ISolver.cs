@@ -1033,7 +1033,5 @@ namespace Nodez.Sdmp.Interfaces
         {
             return DataManager.Instance;
         }
-
     }
 }
-
