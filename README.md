@@ -13,7 +13,7 @@
 
 You can find the documentation at
 
-<b>English (ENG): To be updated</b>
+<b>English (ENG):</b> [https://swonh.gitbook.io/sdmp-user-manual-eng/](https://swonh.gitbook.io/sdmp-user-manual-eng/) (In progress)
 
 <b>Korean (KOR):</b> [https://swonh.gitbook.io/sdmp-user-manual-kor/](https://swonh.gitbook.io/sdmp-user-manual-kor/)
 
