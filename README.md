@@ -41,7 +41,3 @@ If you need help, please [open a GitHub issue](https://github.com/swonh/SDMP/iss
 If you would like to discuss solving problems in your industry (manufacturing, logistics, etc.), please contact us at the email address below.
 
 E-mail: swonhong.github@gmail.com
-
-## Support
-
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/swonhonggix)
