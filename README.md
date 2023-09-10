@@ -44,6 +44,6 @@ Contact: swonhong.github@gmail.com
 
 ## Collaborations
 
-We always welcome collaborators! If you want to work with us to improve and expand our software, please contact us!
+We welcome collaborators! If you want to work with us to improve and expand our software, please contact us!
 
 Contact: swonhong.github@gmail.com
