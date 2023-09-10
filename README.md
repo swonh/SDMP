@@ -38,6 +38,12 @@ If you need help, please [open a GitHub issue](https://github.com/swonh/SDMP/iss
 
 ## Consulting
 
-If you would like to discuss solving problems in your industry (manufacturing, logistics, etc.), please contact us at the email address below.
+If you would like to discuss solving problems in your industry (manufacturing, logistics, etc.), please contact us.
 
-E-mail: swonhong.github@gmail.com
+Contact: swonhong.github@gmail.com
+
+## Collaborations
+
+We always welcome collaborators! If you want to work with us to improve and expand our software, please contact us!
+
+Contact: swonhong.github@gmail.com
