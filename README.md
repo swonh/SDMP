@@ -11,7 +11,7 @@
 
 ## Documentation
 
-You can find the documentation at
+You can find the documentation at (We're still working on it.)
 
 <b>English (ENG):</b> [https://swonh.gitbook.io/sdmp-user-manual-eng/](https://swonh.gitbook.io/sdmp-user-manual-eng/)
 
