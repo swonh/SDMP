@@ -332,6 +332,20 @@ namespace Nodez.Sdmp.Scheduling.Managers
                 index++;
             }
 
+            foreach (Job parentJob in parentJobs.Values)
+            {
+                List<Job> sameParentJobs = new List<Job>();
+                foreach (Job job in jobs)
+                {
+                    if (job.ParentJob.JobID == parentJob.JobID)
+                    {
+                        sameParentJobs.Add(job);
+                    }
+                }
+
+                sameParentJobs.ForEach(x => x.SameParentJobs = sameParentJobs);
+            }
+
             return jobs;
         }
 
