@@ -1,9 +1,11 @@
 
 # SDMP 
 
-[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0) [![CodeFactor](https://www.codefactor.io/repository/github/swonh/sdmp/badge)](https://www.codefactor.io/repository/github/swonh/sdmp)
+[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
+[![OS](https://img.shields.io/badge/OS-windows-red)](https://windows.com)
+[![CodeFactor](https://www.codefactor.io/repository/github/swonh/sdmp/badge)](https://www.codefactor.io/repository/github/swonh/sdmp)
 
-[SDMP](https://github.com/swonh/SDMP) is a optimization software package for solving sequential decision making problems using approximate dynamic programming.
+[SDMP](https://github.com/swonh/SDMP) is an optimization software package for solving sequential decision-making problems using approximate dynamic programming.
 
 ## Licence
 
@@ -11,17 +13,17 @@
 
 ## Documentation
 
-You can find the documentation at
+You can find the documentation at (We're still working on it. Stay tuned!)
 
-<b>English (ENG): To be updated</b>
+<b>English (ENG):</b> [https://swonh.gitbook.io/sdmp-user-manual-eng/](https://swonh.gitbook.io/sdmp-user-manual-eng/)
 
 <b>Korean (KOR):</b> [https://swonh.gitbook.io/sdmp-user-manual-kor/](https://swonh.gitbook.io/sdmp-user-manual-kor/)
 
 ## Requirements
 
-<b>OS: `Windows 10` or above</b>
+<b>OS: `Windows 10` or higher</b>
 
-<b>IDE: `Visual Studio 2019` or above</b>
+<b>IDE: `Visual Studio 2019` or higher</b>
 
 ## Installation
 
@@ -38,6 +40,12 @@ If you need help, please [open a GitHub issue](https://github.com/swonh/SDMP/iss
 
 ## Consulting
 
-If you would like to discuss solving problems in your industry (manufacturing, logistics, etc.), please contact us at the email address below.
+If you would like to discuss solving problems in your industry (manufacturing, logistics, etc.), please contact us.
 
-E-mail: swonhong.github@gmail.com
+Contact: swonhong.github@gmail.com
+
+## Collaborations
+
+We welcome collaborators! If you want to work with us to improve and expand our software, please contact us! (You can also submit a pull request directly.)
+
+Contact: swonhong.github@gmail.com
