@@ -51,7 +51,7 @@ namespace Nodez.Sdmp.General.Controls
 
         public StateLog GetStateLog(State state, TimeSpan elapsedTime) 
         {
-            string relativeDualityGap = BoundManager.Instance.RelativeDualityGap < 1 ? string.Format("{0:F2}%", Math.Round(BoundManager.Instance.RelativeDualityGap * 100, 2)) : string.Empty;
+            string relativeDualityGap = string.Format("{0:F2}%", Math.Round(BoundManager.Instance.RelativeDualityGap * 100, 2));
             string bestSolution = BoundManager.Instance.BestPrimalBound != Double.PositiveInfinity && BoundManager.Instance.BestPrimalBound != Double.NegativeInfinity ? string.Format("{0:F6}", BoundManager.Instance.BestPrimalBound) : string.Empty;
             string bestDualBound = BoundManager.Instance.BestDualBound != Double.PositiveInfinity && BoundManager.Instance.BestDualBound != Double.NegativeInfinity ? string.Format("{0:F6}", BoundManager.Instance.BestDualBound) : string.Empty;
             string numSolutions = string.Format("{0}", SolutionManager.Instance.Solutions.Count);
@@ -75,7 +75,7 @@ namespace Nodez.Sdmp.General.Controls
             if (primalBound == 0)
                 return;
 
-            string relativeDualityGap = BoundManager.Instance.RelativeDualityGap < 1 ? string.Format("{0:F2}%", Math.Round(BoundManager.Instance.RelativeDualityGap * 100, 2)) : string.Empty;
+            string relativeDualityGap = string.Format("{0:F2}%", Math.Round(BoundManager.Instance.RelativeDualityGap * 100, 2));
             string bestSolution = BoundManager.Instance.BestPrimalBound != Double.PositiveInfinity && BoundManager.Instance.BestPrimalBound != Double.NegativeInfinity ? string.Format("{0:F6}", BoundManager.Instance.BestPrimalBound) : string.Empty;
             string bestDualBound = BoundManager.Instance.BestDualBound != Double.PositiveInfinity && BoundManager.Instance.BestDualBound != Double.NegativeInfinity ? string.Format("{0:F6}", BoundManager.Instance.BestDualBound) : string.Empty;
             string numSolutions = string.Format("{0}", SolutionManager.Instance.Solutions.Count);
@@ -93,7 +93,7 @@ namespace Nodez.Sdmp.General.Controls
             if (state == null)
                 return;
 
-            string relativeDualityGap = BoundManager.Instance.RelativeDualityGap < 1 ? string.Format("{0:F2}%", Math.Round(BoundManager.Instance.RelativeDualityGap * 100, 2)) : string.Empty;
+            string relativeDualityGap = string.Format("{0:F2}%", Math.Round(BoundManager.Instance.RelativeDualityGap * 100, 2));
             string bestSolution = BoundManager.Instance.BestPrimalBound != Double.PositiveInfinity && BoundManager.Instance.BestPrimalBound != Double.NegativeInfinity ? string.Format("{0:F6}", BoundManager.Instance.BestPrimalBound) : string.Empty;
             string bestDualBound = BoundManager.Instance.BestDualBound != Double.PositiveInfinity && BoundManager.Instance.BestDualBound != Double.NegativeInfinity ? string.Format("{0:F6}", BoundManager.Instance.BestDualBound) : string.Empty;
             string numSolutions = string.Format("{0}", SolutionManager.Instance.Solutions.Count);
@@ -105,7 +105,7 @@ namespace Nodez.Sdmp.General.Controls
 
         public void WriteStateLog(State state, TimeSpan elapsedTime)
         {
-            string relativeDualityGap = BoundManager.Instance.RelativeDualityGap < 1 ? string.Format("{0:F2}%", Math.Round(BoundManager.Instance.RelativeDualityGap * 100, 2)) : string.Empty;
+            string relativeDualityGap = string.Format("{0:F2}%", Math.Round(BoundManager.Instance.RelativeDualityGap * 100, 2));
             string bestSolution = BoundManager.Instance.BestPrimalBound != Double.PositiveInfinity && BoundManager.Instance.BestPrimalBound != Double.NegativeInfinity ? string.Format("{0:F6}", BoundManager.Instance.BestPrimalBound) : string.Empty;
             string bestDualBound = BoundManager.Instance.BestDualBound != Double.PositiveInfinity && BoundManager.Instance.BestDualBound != Double.NegativeInfinity ? string.Format("{0:F6}", BoundManager.Instance.BestDualBound) : string.Empty;
             string numSolutions = string.Format("{0}", SolutionManager.Instance.Solutions.Count);

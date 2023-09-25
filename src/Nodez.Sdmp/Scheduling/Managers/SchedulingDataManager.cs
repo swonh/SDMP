@@ -235,6 +235,7 @@ namespace Nodez.Sdmp.Scheduling.Managers
 
                 planInfo.PlanningHorizon = planData.PLANNING_HORIZON;
                 planInfo.PriorityLookahead = planData.PRIORITY_LOOKAHEAD;
+                planInfo.PlanInfoData = planData;
 
                 plans.Add(planInfo);
             }

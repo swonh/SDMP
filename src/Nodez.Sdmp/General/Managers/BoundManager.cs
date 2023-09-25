@@ -28,7 +28,7 @@ namespace Nodez.Sdmp.General.Managers
 
         public double RootPrimalBound { get; private set; }
 
-        public double RelativeDualityGap { get { return Math.Round(Math.Abs(this.BestPrimalBound - this.BestDualBound) / this.BestPrimalBound, 6); } }
+        public double RelativeDualityGap { get { return Math.Max(0, Math.Round(Math.Abs(this.BestPrimalBound - this.BestDualBound) / Math.Abs(this.BestPrimalBound), 6)); } }
 
         public void SetPrimalBound(double value) 
         {
