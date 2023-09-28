@@ -345,6 +345,7 @@ namespace Nodez.Sdmp.Scheduling.Managers
                 }
 
                 sameParentJobs.ForEach(x => x.SameParentJobs = sameParentJobs);
+                parentJob.ChildJobs = sameParentJobs;
             }
 
             return jobs;

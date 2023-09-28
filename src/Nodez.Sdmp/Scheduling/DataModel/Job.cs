@@ -33,6 +33,8 @@ namespace Nodez.Sdmp.Scheduling.DataModel
 
         public List<Job> SameParentJobs { get; set; }
 
+        public List<Job> ChildJobs { get; set; }
+
         public TargetInfo TargetInfo { get; set; }
 
         public int SplitCount { get; set; }
