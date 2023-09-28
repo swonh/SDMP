@@ -201,7 +201,7 @@ namespace Nodez.Sdmp.Scheduling.DataModel
                     if (parentJob.Index == otherJob.Index)
                         continue;
 
-                    if (otherJob.ReleaseTime < releaseTime)
+                    if (otherJob.ReleaseTime < releaseTime - lookAhead)
                         continue;
 
                     if (otherJob.ReleaseTime > releaseTime + lookAhead)
