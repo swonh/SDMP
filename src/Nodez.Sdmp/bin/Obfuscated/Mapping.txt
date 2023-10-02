@@ -70,7 +70,7 @@ Renamed Types:
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Controls.ProcessControl/<>c::.cctor[0]( ) skipped:  special name
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Controls.ProcessControl/<>c::.ctor[0]( ) skipped:  special name
 
-	Nodez.Sdmp.Scheduling.Controls.ProcessControl/<>c [Nodez.Sdmp]Nodez.Sdmp.Scheduling.Controls.ProcessControl/<>c Nodez.Sdmp.Scheduling.Controls.ProcessControl/<>c::<>9 ->  ⁑
+	Nodez.Sdmp.Scheduling.Controls.ProcessControl/<>c [Nodez.Sdmp]Nodez.Sdmp.Scheduling.Controls.ProcessControl/<>c Nodez.Sdmp.Scheduling.Controls.ProcessControl/<>c::<>9 ->  ⁒
 }
 
 [Nodez.Sdmp]Nodez.Sdmp.Scheduling.Controls.SchedulingControl/<>c -> [Nodez.Sdmp]Nodez.Sdmp.Scheduling.Controls.SchedulingControl/ 
@@ -80,7 +80,7 @@ Renamed Types:
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Controls.SchedulingControl/<>c::.cctor[0]( ) skipped:  special name
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Controls.SchedulingControl/<>c::.ctor[0]( ) skipped:  special name
 
-	Nodez.Sdmp.Scheduling.Controls.SchedulingControl/<>c [Nodez.Sdmp]Nodez.Sdmp.Scheduling.Controls.SchedulingControl/<>c Nodez.Sdmp.Scheduling.Controls.SchedulingControl/<>c::<>9 ->  ⁒
+	Nodez.Sdmp.Scheduling.Controls.SchedulingControl/<>c [Nodez.Sdmp]Nodez.Sdmp.Scheduling.Controls.SchedulingControl/<>c Nodez.Sdmp.Scheduling.Controls.SchedulingControl/<>c::<>9 ->  ⁓
 }
 
 [Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingBoundManager/<>c -> [Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingBoundManager/ 
@@ -90,7 +90,7 @@ Renamed Types:
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingBoundManager/<>c::.cctor[0]( ) skipped:  special name
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingBoundManager/<>c::.ctor[0]( ) skipped:  special name
 
-	Nodez.Sdmp.Routing.Managers.RoutingBoundManager/<>c [Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingBoundManager/<>c Nodez.Sdmp.Routing.Managers.RoutingBoundManager/<>c::<>9 ->  ⁓
+	Nodez.Sdmp.Routing.Managers.RoutingBoundManager/<>c [Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingBoundManager/<>c Nodez.Sdmp.Routing.Managers.RoutingBoundManager/<>c::<>9 ->  ⁔
 }
 
 [Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager/<>c -> [Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager/ 
@@ -100,7 +100,7 @@ Renamed Types:
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager/<>c::.cctor[0]( ) skipped:  special name
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager/<>c::.ctor[0]( ) skipped:  special name
 
-	Nodez.Sdmp.Routing.Managers.RoutingDataManager/<>c [Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager/<>c Nodez.Sdmp.Routing.Managers.RoutingDataManager/<>c::<>9 ->  ⁔
+	Nodez.Sdmp.Routing.Managers.RoutingDataManager/<>c [Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager/<>c Nodez.Sdmp.Routing.Managers.RoutingDataManager/<>c::<>9 ->  ⁕
 }
 
 [Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingActionManager/<>c -> [Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingActionManager/ 
@@ -110,7 +110,7 @@ Renamed Types:
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingActionManager/<>c::.cctor[0]( ) skipped:  special name
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingActionManager/<>c::.ctor[0]( ) skipped:  special name
 
-	Nodez.Sdmp.Routing.Managers.RoutingActionManager/<>c [Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingActionManager/<>c Nodez.Sdmp.Routing.Managers.RoutingActionManager/<>c::<>9 ->  ⁕
+	Nodez.Sdmp.Routing.Managers.RoutingActionManager/<>c [Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingActionManager/<>c Nodez.Sdmp.Routing.Managers.RoutingActionManager/<>c::<>9 ->  ⁖
 }
 
 [Nodez.Sdmp]Nodez.Sdmp.Routing.Controls.CustomerControl/<>c -> [Nodez.Sdmp]Nodez.Sdmp.Routing.Controls.CustomerControl/ 
@@ -120,7 +120,7 @@ Renamed Types:
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.Controls.CustomerControl/<>c::.cctor[0]( ) skipped:  special name
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.Controls.CustomerControl/<>c::.ctor[0]( ) skipped:  special name
 
-	Nodez.Sdmp.Routing.Controls.CustomerControl/<>c [Nodez.Sdmp]Nodez.Sdmp.Routing.Controls.CustomerControl/<>c Nodez.Sdmp.Routing.Controls.CustomerControl/<>c::<>9 ->  ⁛
+	Nodez.Sdmp.Routing.Controls.CustomerControl/<>c [Nodez.Sdmp]Nodez.Sdmp.Routing.Controls.CustomerControl/<>c Nodez.Sdmp.Routing.Controls.CustomerControl/<>c::<>9 ->  ⁜
 }
 
 [Nodez.Sdmp]Nodez.Sdmp.Routing.Controls.VehicleControl/<>c -> [Nodez.Sdmp]Nodez.Sdmp.Routing.Controls.VehicleControl/ 
@@ -130,7 +130,7 @@ Renamed Types:
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.Controls.VehicleControl/<>c::.cctor[0]( ) skipped:  special name
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.Controls.VehicleControl/<>c::.ctor[0]( ) skipped:  special name
 
-	Nodez.Sdmp.Routing.Controls.VehicleControl/<>c [Nodez.Sdmp]Nodez.Sdmp.Routing.Controls.VehicleControl/<>c Nodez.Sdmp.Routing.Controls.VehicleControl/<>c::<>9 ->  ⁜
+	Nodez.Sdmp.Routing.Controls.VehicleControl/<>c [Nodez.Sdmp]Nodez.Sdmp.Routing.Controls.VehicleControl/<>c Nodez.Sdmp.Routing.Controls.VehicleControl/<>c::<>9 ->  ⁝
 }
 
 [Nodez.Sdmp]Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c -> [Nodez.Sdmp]Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/ 
@@ -151,19 +151,19 @@ Renamed Types:
 	[Nodez.Sdmp]Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c::.cctor[0]( ) skipped:  special name
 	[Nodez.Sdmp]Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c::.ctor[0]( ) skipped:  special name
 
-	Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c [Nodez.Sdmp]Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c::<>9 ->  ⁝
-	System.Func`2<Microsoft.ML.TrainCatalogBase/CrossValidationResult`1<Microsoft.ML.Data.RegressionMetrics>,System.Double> [Nodez.Sdmp]System.Func`2<Microsoft.ML.TrainCatalogBase/CrossValidationResult`1<Microsoft.ML.Data.RegressionMetrics>,System.Double> Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c::<>9__6_0 ->  ⁞
-	System.Func`2<Microsoft.ML.TrainCatalogBase/CrossValidationResult`1<Microsoft.ML.Data.RegressionMetrics>,System.Double> [Nodez.Sdmp]System.Func`2<Microsoft.ML.TrainCatalogBase/CrossValidationResult`1<Microsoft.ML.Data.RegressionMetrics>,System.Double> Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c::<>9__6_1 ->   
-	System.Func`2<Microsoft.ML.TrainCatalogBase/CrossValidationResult`1<Microsoft.ML.Data.RegressionMetrics>,System.Double> [Nodez.Sdmp]System.Func`2<Microsoft.ML.TrainCatalogBase/CrossValidationResult`1<Microsoft.ML.Data.RegressionMetrics>,System.Double> Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c::<>9__6_2 ->  ⁠
-	System.Func`2<Microsoft.ML.TrainCatalogBase/CrossValidationResult`1<Microsoft.ML.Data.RegressionMetrics>,System.Double> [Nodez.Sdmp]System.Func`2<Microsoft.ML.TrainCatalogBase/CrossValidationResult`1<Microsoft.ML.Data.RegressionMetrics>,System.Double> Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c::<>9__6_3 ->  ⁡
-	System.Func`2<Microsoft.ML.TrainCatalogBase/CrossValidationResult`1<Microsoft.ML.Data.RegressionMetrics>,System.Double> [Nodez.Sdmp]System.Func`2<Microsoft.ML.TrainCatalogBase/CrossValidationResult`1<Microsoft.ML.Data.RegressionMetrics>,System.Double> Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c::<>9__6_4 ->  ⁢
-	System.Func`2<Microsoft.ML.TrainCatalogBase/CrossValidationResult`1<Microsoft.ML.Data.MulticlassClassificationMetrics>,Microsoft.ML.Data.MulticlassClassificationMetrics> [Nodez.Sdmp]System.Func`2<Microsoft.ML.TrainCatalogBase/CrossValidationResult`1<Microsoft.ML.Data.MulticlassClassificationMetrics>,Microsoft.ML.Data.MulticlassClassificationMetrics> Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c::<>9__7_0 ->  ⁣
-	System.Func`2<Microsoft.ML.Data.MulticlassClassificationMetrics,System.Double> [Nodez.Sdmp]System.Func`2<Microsoft.ML.Data.MulticlassClassificationMetrics,System.Double> Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c::<>9__7_1 ->  ⁤
-	System.Func`2<Microsoft.ML.Data.MulticlassClassificationMetrics,System.Double> [Nodez.Sdmp]System.Func`2<Microsoft.ML.Data.MulticlassClassificationMetrics,System.Double> Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c::<>9__7_2 ->  ⁪
-	System.Func`2<Microsoft.ML.Data.MulticlassClassificationMetrics,System.Double> [Nodez.Sdmp]System.Func`2<Microsoft.ML.Data.MulticlassClassificationMetrics,System.Double> Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c::<>9__7_3 ->  ⁫
-	System.Func`2<Microsoft.ML.Data.MulticlassClassificationMetrics,System.Double> [Nodez.Sdmp]System.Func`2<Microsoft.ML.Data.MulticlassClassificationMetrics,System.Double> Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c::<>9__7_4 ->  ⁬
-	System.Func`2<System.String,System.Int32> [Nodez.Sdmp]System.Func`2<System.String,System.Int32> Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c::<>9__14_0 ->  ⁭
-	System.Func`2<System.String,System.Int32> [Nodez.Sdmp]System.Func`2<System.String,System.Int32> Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c::<>9__15_0 ->  ⁮
+	Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c [Nodez.Sdmp]Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c::<>9 ->  ⁞
+	System.Func`2<Microsoft.ML.TrainCatalogBase/CrossValidationResult`1<Microsoft.ML.Data.RegressionMetrics>,System.Double> [Nodez.Sdmp]System.Func`2<Microsoft.ML.TrainCatalogBase/CrossValidationResult`1<Microsoft.ML.Data.RegressionMetrics>,System.Double> Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c::<>9__6_0 ->   
+	System.Func`2<Microsoft.ML.TrainCatalogBase/CrossValidationResult`1<Microsoft.ML.Data.RegressionMetrics>,System.Double> [Nodez.Sdmp]System.Func`2<Microsoft.ML.TrainCatalogBase/CrossValidationResult`1<Microsoft.ML.Data.RegressionMetrics>,System.Double> Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c::<>9__6_1 ->  ⁠
+	System.Func`2<Microsoft.ML.TrainCatalogBase/CrossValidationResult`1<Microsoft.ML.Data.RegressionMetrics>,System.Double> [Nodez.Sdmp]System.Func`2<Microsoft.ML.TrainCatalogBase/CrossValidationResult`1<Microsoft.ML.Data.RegressionMetrics>,System.Double> Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c::<>9__6_2 ->  ⁡
+	System.Func`2<Microsoft.ML.TrainCatalogBase/CrossValidationResult`1<Microsoft.ML.Data.RegressionMetrics>,System.Double> [Nodez.Sdmp]System.Func`2<Microsoft.ML.TrainCatalogBase/CrossValidationResult`1<Microsoft.ML.Data.RegressionMetrics>,System.Double> Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c::<>9__6_3 ->  ⁢
+	System.Func`2<Microsoft.ML.TrainCatalogBase/CrossValidationResult`1<Microsoft.ML.Data.RegressionMetrics>,System.Double> [Nodez.Sdmp]System.Func`2<Microsoft.ML.TrainCatalogBase/CrossValidationResult`1<Microsoft.ML.Data.RegressionMetrics>,System.Double> Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c::<>9__6_4 ->  ⁣
+	System.Func`2<Microsoft.ML.TrainCatalogBase/CrossValidationResult`1<Microsoft.ML.Data.MulticlassClassificationMetrics>,Microsoft.ML.Data.MulticlassClassificationMetrics> [Nodez.Sdmp]System.Func`2<Microsoft.ML.TrainCatalogBase/CrossValidationResult`1<Microsoft.ML.Data.MulticlassClassificationMetrics>,Microsoft.ML.Data.MulticlassClassificationMetrics> Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c::<>9__7_0 ->  ⁤
+	System.Func`2<Microsoft.ML.Data.MulticlassClassificationMetrics,System.Double> [Nodez.Sdmp]System.Func`2<Microsoft.ML.Data.MulticlassClassificationMetrics,System.Double> Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c::<>9__7_1 ->  ⁪
+	System.Func`2<Microsoft.ML.Data.MulticlassClassificationMetrics,System.Double> [Nodez.Sdmp]System.Func`2<Microsoft.ML.Data.MulticlassClassificationMetrics,System.Double> Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c::<>9__7_2 ->  ⁫
+	System.Func`2<Microsoft.ML.Data.MulticlassClassificationMetrics,System.Double> [Nodez.Sdmp]System.Func`2<Microsoft.ML.Data.MulticlassClassificationMetrics,System.Double> Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c::<>9__7_3 ->  ⁬
+	System.Func`2<Microsoft.ML.Data.MulticlassClassificationMetrics,System.Double> [Nodez.Sdmp]System.Func`2<Microsoft.ML.Data.MulticlassClassificationMetrics,System.Double> Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c::<>9__7_4 ->  ⁭
+	System.Func`2<System.String,System.Int32> [Nodez.Sdmp]System.Func`2<System.String,System.Int32> Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c::<>9__14_0 ->  ⁮
+	System.Func`2<System.String,System.Int32> [Nodez.Sdmp]System.Func`2<System.String,System.Int32> Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c::<>9__15_0 ->  ⁯
 }
 
 [Nodez.Sdmp]Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c__DisplayClass8_0 -> [Nodez.Sdmp]Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/ 
@@ -172,7 +172,7 @@ Renamed Types:
 
 	[Nodez.Sdmp]Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c__DisplayClass8_0::.ctor[0]( ) skipped:  special name
 
-	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c__DisplayClass8_0::average ->  ⁯
+	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c__DisplayClass8_0::average ->  　
 }
 
 [Nodez.Sdmp]Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c__DisplayClass13_0 -> [Nodez.Sdmp]Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/ 
@@ -181,8 +181,8 @@ Renamed Types:
 
 	[Nodez.Sdmp]Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c__DisplayClass13_0::.ctor[0]( ) skipped:  special name
 
-	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c__DisplayClass13_0::currentRow ->  　
-	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c__DisplayClass13_0::columnName ->   
+	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c__DisplayClass13_0::currentRow ->   
+	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.MachineLearningHelper.MLConsoleHelper/<>c__DisplayClass13_0::columnName ->   
 }
 
 [Nodez.Sdmp]Nodez.Sdmp.Interfaces.ISolver/<>c -> [Nodez.Sdmp]Nodez.Sdmp.Interfaces.ISolver/ 
@@ -195,11 +195,11 @@ Renamed Types:
 	[Nodez.Sdmp]Nodez.Sdmp.Interfaces.ISolver/<>c::.cctor[0]( ) skipped:  special name
 	[Nodez.Sdmp]Nodez.Sdmp.Interfaces.ISolver/<>c::.ctor[0]( ) skipped:  special name
 
-	Nodez.Sdmp.Interfaces.ISolver/<>c [Nodez.Sdmp]Nodez.Sdmp.Interfaces.ISolver/<>c Nodez.Sdmp.Interfaces.ISolver/<>c::<>9 ->   
-	System.Func`2<System.Collections.Generic.KeyValuePair`2<System.String,System.Double>,System.Double> [Nodez.Sdmp]System.Func`2<System.Collections.Generic.KeyValuePair`2<System.String,System.Double>,System.Double> Nodez.Sdmp.Interfaces.ISolver/<>c::<>9__131_0 ->   
-	System.Func`2<System.Collections.Generic.KeyValuePair`2<System.String,System.Double>,System.Double> [Nodez.Sdmp]System.Func`2<System.Collections.Generic.KeyValuePair`2<System.String,System.Double>,System.Double> Nodez.Sdmp.Interfaces.ISolver/<>c::<>9__131_1 ->   
-	System.Func`2<Nodez.Sdmp.General.DataModel.State,System.Double> [Nodez.Sdmp]System.Func`2<Nodez.Sdmp.General.DataModel.State,System.Double> Nodez.Sdmp.Interfaces.ISolver/<>c::<>9__132_0 ->   
-	System.Func`2<Nodez.Sdmp.General.DataModel.State,System.Double> [Nodez.Sdmp]System.Func`2<Nodez.Sdmp.General.DataModel.State,System.Double> Nodez.Sdmp.Interfaces.ISolver/<>c::<>9__132_1 ->   
+	Nodez.Sdmp.Interfaces.ISolver/<>c [Nodez.Sdmp]Nodez.Sdmp.Interfaces.ISolver/<>c Nodez.Sdmp.Interfaces.ISolver/<>c::<>9 ->   
+	System.Func`2<System.Collections.Generic.KeyValuePair`2<System.String,System.Double>,System.Double> [Nodez.Sdmp]System.Func`2<System.Collections.Generic.KeyValuePair`2<System.String,System.Double>,System.Double> Nodez.Sdmp.Interfaces.ISolver/<>c::<>9__131_0 ->   
+	System.Func`2<System.Collections.Generic.KeyValuePair`2<System.String,System.Double>,System.Double> [Nodez.Sdmp]System.Func`2<System.Collections.Generic.KeyValuePair`2<System.String,System.Double>,System.Double> Nodez.Sdmp.Interfaces.ISolver/<>c::<>9__131_1 ->   
+	System.Func`2<Nodez.Sdmp.General.DataModel.State,System.Double> [Nodez.Sdmp]System.Func`2<Nodez.Sdmp.General.DataModel.State,System.Double> Nodez.Sdmp.Interfaces.ISolver/<>c::<>9__132_0 ->   
+	System.Func`2<Nodez.Sdmp.General.DataModel.State,System.Double> [Nodez.Sdmp]System.Func`2<Nodez.Sdmp.General.DataModel.State,System.Double> Nodez.Sdmp.Interfaces.ISolver/<>c::<>9__132_1 ->   
 }
 
 [Nodez.Sdmp]Nodez.Sdmp.General.Managers.ApproximationManager/<>c -> [Nodez.Sdmp]Nodez.Sdmp.General.Managers.ApproximationManager/ 
@@ -209,7 +209,7 @@ Renamed Types:
 	[Nodez.Sdmp]Nodez.Sdmp.General.Managers.ApproximationManager/<>c::.cctor[0]( ) skipped:  special name
 	[Nodez.Sdmp]Nodez.Sdmp.General.Managers.ApproximationManager/<>c::.ctor[0]( ) skipped:  special name
 
-	Nodez.Sdmp.General.Managers.ApproximationManager/<>c [Nodez.Sdmp]Nodez.Sdmp.General.Managers.ApproximationManager/<>c Nodez.Sdmp.General.Managers.ApproximationManager/<>c::<>9 ->   
+	Nodez.Sdmp.General.Managers.ApproximationManager/<>c [Nodez.Sdmp]Nodez.Sdmp.General.Managers.ApproximationManager/<>c Nodez.Sdmp.General.Managers.ApproximationManager/<>c::<>9 ->   
 }
 
 [Nodez.Sdmp]Nodez.Sdmp.General.Managers.MachineLearningManager/<>c -> [Nodez.Sdmp]Nodez.Sdmp.General.Managers.MachineLearningManager/ 
@@ -219,7 +219,7 @@ Renamed Types:
 	[Nodez.Sdmp]Nodez.Sdmp.General.Managers.MachineLearningManager/<>c::.cctor[0]( ) skipped:  special name
 	[Nodez.Sdmp]Nodez.Sdmp.General.Managers.MachineLearningManager/<>c::.ctor[0]( ) skipped:  special name
 
-	Nodez.Sdmp.General.Managers.MachineLearningManager/<>c [Nodez.Sdmp]Nodez.Sdmp.General.Managers.MachineLearningManager/<>c Nodez.Sdmp.General.Managers.MachineLearningManager/<>c::<>9 ->   
+	Nodez.Sdmp.General.Managers.MachineLearningManager/<>c [Nodez.Sdmp]Nodez.Sdmp.General.Managers.MachineLearningManager/<>c Nodez.Sdmp.General.Managers.MachineLearningManager/<>c::<>9 ->   
 }
 
 [Nodez.Sdmp]Nodez.Sdmp.General.Managers.SolverManager/<>c -> [Nodez.Sdmp]Nodez.Sdmp.General.Managers.SolverManager/ 
@@ -229,7 +229,7 @@ Renamed Types:
 	[Nodez.Sdmp]Nodez.Sdmp.General.Managers.SolverManager/<>c::.cctor[0]( ) skipped:  special name
 	[Nodez.Sdmp]Nodez.Sdmp.General.Managers.SolverManager/<>c::.ctor[0]( ) skipped:  special name
 
-	Nodez.Sdmp.General.Managers.SolverManager/<>c [Nodez.Sdmp]Nodez.Sdmp.General.Managers.SolverManager/<>c Nodez.Sdmp.General.Managers.SolverManager/<>c::<>9 ->   
+	Nodez.Sdmp.General.Managers.SolverManager/<>c [Nodez.Sdmp]Nodez.Sdmp.General.Managers.SolverManager/<>c Nodez.Sdmp.General.Managers.SolverManager/<>c::<>9 ->   
 }
 
 [Nodez.Sdmp]Nodez.Sdmp.General.Managers.BoundManager/<>c -> [Nodez.Sdmp]Nodez.Sdmp.General.Managers.BoundManager/ 
@@ -239,7 +239,7 @@ Renamed Types:
 	[Nodez.Sdmp]Nodez.Sdmp.General.Managers.BoundManager/<>c::.cctor[0]( ) skipped:  special name
 	[Nodez.Sdmp]Nodez.Sdmp.General.Managers.BoundManager/<>c::.ctor[0]( ) skipped:  special name
 
-	Nodez.Sdmp.General.Managers.BoundManager/<>c [Nodez.Sdmp]Nodez.Sdmp.General.Managers.BoundManager/<>c Nodez.Sdmp.General.Managers.BoundManager/<>c::<>9 ->   
+	Nodez.Sdmp.General.Managers.BoundManager/<>c [Nodez.Sdmp]Nodez.Sdmp.General.Managers.BoundManager/<>c Nodez.Sdmp.General.Managers.BoundManager/<>c::<>9 ->   
 }
 
 [Nodez.Sdmp]Nodez.Sdmp.General.Managers.ControlManager/<>c -> [Nodez.Sdmp]Nodez.Sdmp.General.Managers.ControlManager/ 
@@ -249,7 +249,7 @@ Renamed Types:
 	[Nodez.Sdmp]Nodez.Sdmp.General.Managers.ControlManager/<>c::.cctor[0]( ) skipped:  special name
 	[Nodez.Sdmp]Nodez.Sdmp.General.Managers.ControlManager/<>c::.ctor[0]( ) skipped:  special name
 
-	Nodez.Sdmp.General.Managers.ControlManager/<>c [Nodez.Sdmp]Nodez.Sdmp.General.Managers.ControlManager/<>c Nodez.Sdmp.General.Managers.ControlManager/<>c::<>9 ->   
+	Nodez.Sdmp.General.Managers.ControlManager/<>c [Nodez.Sdmp]Nodez.Sdmp.General.Managers.ControlManager/<>c Nodez.Sdmp.General.Managers.ControlManager/<>c::<>9 ->   
 }
 
 [Nodez.Sdmp]Nodez.Sdmp.General.Managers.SolutionManager/<>c -> [Nodez.Sdmp]Nodez.Sdmp.General.Managers.SolutionManager/ 
@@ -259,7 +259,7 @@ Renamed Types:
 	[Nodez.Sdmp]Nodez.Sdmp.General.Managers.SolutionManager/<>c::.cctor[0]( ) skipped:  special name
 	[Nodez.Sdmp]Nodez.Sdmp.General.Managers.SolutionManager/<>c::.ctor[0]( ) skipped:  special name
 
-	Nodez.Sdmp.General.Managers.SolutionManager/<>c [Nodez.Sdmp]Nodez.Sdmp.General.Managers.SolutionManager/<>c Nodez.Sdmp.General.Managers.SolutionManager/<>c::<>9 ->   
+	Nodez.Sdmp.General.Managers.SolutionManager/<>c [Nodez.Sdmp]Nodez.Sdmp.General.Managers.SolutionManager/<>c Nodez.Sdmp.General.Managers.SolutionManager/<>c::<>9 ->   
 }
 
 [Nodez.Sdmp]Nodez.Sdmp.General.Managers.StateManager/<>c -> [Nodez.Sdmp]Nodez.Sdmp.General.Managers.StateManager/ 
@@ -269,7 +269,7 @@ Renamed Types:
 	[Nodez.Sdmp]Nodez.Sdmp.General.Managers.StateManager/<>c::.cctor[0]( ) skipped:  special name
 	[Nodez.Sdmp]Nodez.Sdmp.General.Managers.StateManager/<>c::.ctor[0]( ) skipped:  special name
 
-	Nodez.Sdmp.General.Managers.StateManager/<>c [Nodez.Sdmp]Nodez.Sdmp.General.Managers.StateManager/<>c Nodez.Sdmp.General.Managers.StateManager/<>c::<>9 ->   
+	Nodez.Sdmp.General.Managers.StateManager/<>c [Nodez.Sdmp]Nodez.Sdmp.General.Managers.StateManager/<>c Nodez.Sdmp.General.Managers.StateManager/<>c::<>9 ->  ​
 }
 
 [Nodez.Sdmp]Nodez.Sdmp.General.Managers.StateTransitionManager/<>c -> [Nodez.Sdmp]Nodez.Sdmp.General.Managers.StateTransitionManager/ 
@@ -279,7 +279,7 @@ Renamed Types:
 	[Nodez.Sdmp]Nodez.Sdmp.General.Managers.StateTransitionManager/<>c::.cctor[0]( ) skipped:  special name
 	[Nodez.Sdmp]Nodez.Sdmp.General.Managers.StateTransitionManager/<>c::.ctor[0]( ) skipped:  special name
 
-	Nodez.Sdmp.General.Managers.StateTransitionManager/<>c [Nodez.Sdmp]Nodez.Sdmp.General.Managers.StateTransitionManager/<>c Nodez.Sdmp.General.Managers.StateTransitionManager/<>c::<>9 ->  ​
+	Nodez.Sdmp.General.Managers.StateTransitionManager/<>c [Nodez.Sdmp]Nodez.Sdmp.General.Managers.StateTransitionManager/<>c Nodez.Sdmp.General.Managers.StateTransitionManager/<>c::<>9 ->  ‐
 }
 
 [Nodez.Sdmp]Nodez.Sdmp.General.DataModel.Solution/<>c -> [Nodez.Sdmp]Nodez.Sdmp.General.DataModel.Solution/ 
@@ -289,8 +289,8 @@ Renamed Types:
 	[Nodez.Sdmp]Nodez.Sdmp.General.DataModel.Solution/<>c::.cctor[0]( ) skipped:  special name
 	[Nodez.Sdmp]Nodez.Sdmp.General.DataModel.Solution/<>c::.ctor[0]( ) skipped:  special name
 
-	Nodez.Sdmp.General.DataModel.Solution/<>c [Nodez.Sdmp]Nodez.Sdmp.General.DataModel.Solution/<>c Nodez.Sdmp.General.DataModel.Solution/<>c::<>9 ->  ‐
-	System.Func`2<System.Collections.Generic.KeyValuePair`2<System.Int32,Nodez.Sdmp.General.DataModel.State>,System.Int32> [Nodez.Sdmp]System.Func`2<System.Collections.Generic.KeyValuePair`2<System.Int32,Nodez.Sdmp.General.DataModel.State>,System.Int32> Nodez.Sdmp.General.DataModel.Solution/<>c::<>9__21_0 ->  ‑
+	Nodez.Sdmp.General.DataModel.Solution/<>c [Nodez.Sdmp]Nodez.Sdmp.General.DataModel.Solution/<>c Nodez.Sdmp.General.DataModel.Solution/<>c::<>9 ->  ‑
+	System.Func`2<System.Collections.Generic.KeyValuePair`2<System.Int32,Nodez.Sdmp.General.DataModel.State>,System.Int32> [Nodez.Sdmp]System.Func`2<System.Collections.Generic.KeyValuePair`2<System.Int32,Nodez.Sdmp.General.DataModel.State>,System.Int32> Nodez.Sdmp.General.DataModel.Solution/<>c::<>9__21_0 ->  ‒
 }
 
 [Nodez.Sdmp]Nodez.Sdmp.General.Controls.ApproximationControl/<>c -> [Nodez.Sdmp]Nodez.Sdmp.General.Controls.ApproximationControl/ 
@@ -306,13 +306,13 @@ Renamed Types:
 	[Nodez.Sdmp]Nodez.Sdmp.General.Controls.ApproximationControl/<>c::.cctor[0]( ) skipped:  special name
 	[Nodez.Sdmp]Nodez.Sdmp.General.Controls.ApproximationControl/<>c::.ctor[0]( ) skipped:  special name
 
-	Nodez.Sdmp.General.Controls.ApproximationControl/<>c [Nodez.Sdmp]Nodez.Sdmp.General.Controls.ApproximationControl/<>c Nodez.Sdmp.General.Controls.ApproximationControl/<>c::<>9 ->  ‒
-	System.Func`2<Nodez.Sdmp.Routing.Interfaces.IDistanceInfoData,System.Boolean> [Nodez.Sdmp]System.Func`2<Nodez.Sdmp.Routing.Interfaces.IDistanceInfoData,System.Boolean> Nodez.Sdmp.General.Controls.ApproximationControl/<>c::<>9__16_0 ->  –
-	System.Func`2<Nodez.Sdmp.Routing.Interfaces.IDistanceInfoData,System.Double> [Nodez.Sdmp]System.Func`2<Nodez.Sdmp.Routing.Interfaces.IDistanceInfoData,System.Double> Nodez.Sdmp.General.Controls.ApproximationControl/<>c::<>9__16_1 ->  —
-	System.Func`2<Nodez.Sdmp.General.DataModel.State,System.Double> [Nodez.Sdmp]System.Func`2<Nodez.Sdmp.General.DataModel.State,System.Double> Nodez.Sdmp.General.Controls.ApproximationControl/<>c::<>9__19_0 ->  ―
-	System.Func`2<Nodez.Sdmp.General.DataModel.State,System.Double> [Nodez.Sdmp]System.Func`2<Nodez.Sdmp.General.DataModel.State,System.Double> Nodez.Sdmp.General.Controls.ApproximationControl/<>c::<>9__19_1 ->  •
-	System.Func`2<Nodez.Sdmp.General.DataModel.State,System.Double> [Nodez.Sdmp]System.Func`2<Nodez.Sdmp.General.DataModel.State,System.Double> Nodez.Sdmp.General.Controls.ApproximationControl/<>c::<>9__19_2 ->  ․
-	System.Func`2<Nodez.Sdmp.General.DataModel.State,System.Double> [Nodez.Sdmp]System.Func`2<Nodez.Sdmp.General.DataModel.State,System.Double> Nodez.Sdmp.General.Controls.ApproximationControl/<>c::<>9__20_0 ->  ‥
+	Nodez.Sdmp.General.Controls.ApproximationControl/<>c [Nodez.Sdmp]Nodez.Sdmp.General.Controls.ApproximationControl/<>c Nodez.Sdmp.General.Controls.ApproximationControl/<>c::<>9 ->  –
+	System.Func`2<Nodez.Sdmp.Routing.Interfaces.IDistanceInfoData,System.Boolean> [Nodez.Sdmp]System.Func`2<Nodez.Sdmp.Routing.Interfaces.IDistanceInfoData,System.Boolean> Nodez.Sdmp.General.Controls.ApproximationControl/<>c::<>9__16_0 ->  —
+	System.Func`2<Nodez.Sdmp.Routing.Interfaces.IDistanceInfoData,System.Double> [Nodez.Sdmp]System.Func`2<Nodez.Sdmp.Routing.Interfaces.IDistanceInfoData,System.Double> Nodez.Sdmp.General.Controls.ApproximationControl/<>c::<>9__16_1 ->  ―
+	System.Func`2<Nodez.Sdmp.General.DataModel.State,System.Double> [Nodez.Sdmp]System.Func`2<Nodez.Sdmp.General.DataModel.State,System.Double> Nodez.Sdmp.General.Controls.ApproximationControl/<>c::<>9__19_0 ->  •
+	System.Func`2<Nodez.Sdmp.General.DataModel.State,System.Double> [Nodez.Sdmp]System.Func`2<Nodez.Sdmp.General.DataModel.State,System.Double> Nodez.Sdmp.General.Controls.ApproximationControl/<>c::<>9__19_1 ->  ․
+	System.Func`2<Nodez.Sdmp.General.DataModel.State,System.Double> [Nodez.Sdmp]System.Func`2<Nodez.Sdmp.General.DataModel.State,System.Double> Nodez.Sdmp.General.Controls.ApproximationControl/<>c::<>9__19_2 ->  ‥
+	System.Func`2<Nodez.Sdmp.General.DataModel.State,System.Double> [Nodez.Sdmp]System.Func`2<Nodez.Sdmp.General.DataModel.State,System.Double> Nodez.Sdmp.General.Controls.ApproximationControl/<>c::<>9__20_0 ->  ‧
 }
 
 [Nodez.Sdmp]Nodez.Sdmp.General.Controls.BoundControl/<>c -> [Nodez.Sdmp]Nodez.Sdmp.General.Controls.BoundControl/ 
@@ -322,7 +322,7 @@ Renamed Types:
 	[Nodez.Sdmp]Nodez.Sdmp.General.Controls.BoundControl/<>c::.cctor[0]( ) skipped:  special name
 	[Nodez.Sdmp]Nodez.Sdmp.General.Controls.BoundControl/<>c::.ctor[0]( ) skipped:  special name
 
-	Nodez.Sdmp.General.Controls.BoundControl/<>c [Nodez.Sdmp]Nodez.Sdmp.General.Controls.BoundControl/<>c Nodez.Sdmp.General.Controls.BoundControl/<>c::<>9 ->  ‧
+	Nodez.Sdmp.General.Controls.BoundControl/<>c [Nodez.Sdmp]Nodez.Sdmp.General.Controls.BoundControl/<>c Nodez.Sdmp.General.Controls.BoundControl/<>c::<>9 ->   
 }
 
 [Nodez.Sdmp]Nodez.Sdmp.General.Controls.DataControl/<>c -> [Nodez.Sdmp]Nodez.Sdmp.General.Controls.DataControl/ 
@@ -332,7 +332,7 @@ Renamed Types:
 	[Nodez.Sdmp]Nodez.Sdmp.General.Controls.DataControl/<>c::.cctor[0]( ) skipped:  special name
 	[Nodez.Sdmp]Nodez.Sdmp.General.Controls.DataControl/<>c::.ctor[0]( ) skipped:  special name
 
-	Nodez.Sdmp.General.Controls.DataControl/<>c [Nodez.Sdmp]Nodez.Sdmp.General.Controls.DataControl/<>c Nodez.Sdmp.General.Controls.DataControl/<>c::<>9 ->   
+	Nodez.Sdmp.General.Controls.DataControl/<>c [Nodez.Sdmp]Nodez.Sdmp.General.Controls.DataControl/<>c Nodez.Sdmp.General.Controls.DataControl/<>c::<>9 ->   
 }
 
 [Nodez.Sdmp]Nodez.Sdmp.General.Controls.EventControl/<>c -> [Nodez.Sdmp]Nodez.Sdmp.General.Controls.EventControl/ 
@@ -342,7 +342,7 @@ Renamed Types:
 	[Nodez.Sdmp]Nodez.Sdmp.General.Controls.EventControl/<>c::.cctor[0]( ) skipped:  special name
 	[Nodez.Sdmp]Nodez.Sdmp.General.Controls.EventControl/<>c::.ctor[0]( ) skipped:  special name
 
-	Nodez.Sdmp.General.Controls.EventControl/<>c [Nodez.Sdmp]Nodez.Sdmp.General.Controls.EventControl/<>c Nodez.Sdmp.General.Controls.EventControl/<>c::<>9 ->   
+	Nodez.Sdmp.General.Controls.EventControl/<>c [Nodez.Sdmp]Nodez.Sdmp.General.Controls.EventControl/<>c Nodez.Sdmp.General.Controls.EventControl/<>c::<>9 ->  ‪
 }
 
 [Nodez.Sdmp]Nodez.Sdmp.General.Controls.MachineLearningControl/<>c -> [Nodez.Sdmp]Nodez.Sdmp.General.Controls.MachineLearningControl/ 
@@ -352,7 +352,7 @@ Renamed Types:
 	[Nodez.Sdmp]Nodez.Sdmp.General.Controls.MachineLearningControl/<>c::.cctor[0]( ) skipped:  special name
 	[Nodez.Sdmp]Nodez.Sdmp.General.Controls.MachineLearningControl/<>c::.ctor[0]( ) skipped:  special name
 
-	Nodez.Sdmp.General.Controls.MachineLearningControl/<>c [Nodez.Sdmp]Nodez.Sdmp.General.Controls.MachineLearningControl/<>c Nodez.Sdmp.General.Controls.MachineLearningControl/<>c::<>9 ->  ‪
+	Nodez.Sdmp.General.Controls.MachineLearningControl/<>c [Nodez.Sdmp]Nodez.Sdmp.General.Controls.MachineLearningControl/<>c Nodez.Sdmp.General.Controls.MachineLearningControl/<>c::<>9 ->  ‫
 }
 
 [Nodez.Sdmp]Nodez.Sdmp.General.Controls.StateTransitionControl/<>c -> [Nodez.Sdmp]Nodez.Sdmp.General.Controls.StateTransitionControl/ 
@@ -362,7 +362,7 @@ Renamed Types:
 	[Nodez.Sdmp]Nodez.Sdmp.General.Controls.StateTransitionControl/<>c::.cctor[0]( ) skipped:  special name
 	[Nodez.Sdmp]Nodez.Sdmp.General.Controls.StateTransitionControl/<>c::.ctor[0]( ) skipped:  special name
 
-	Nodez.Sdmp.General.Controls.StateTransitionControl/<>c [Nodez.Sdmp]Nodez.Sdmp.General.Controls.StateTransitionControl/<>c Nodez.Sdmp.General.Controls.StateTransitionControl/<>c::<>9 ->  ‫
+	Nodez.Sdmp.General.Controls.StateTransitionControl/<>c [Nodez.Sdmp]Nodez.Sdmp.General.Controls.StateTransitionControl/<>c Nodez.Sdmp.General.Controls.StateTransitionControl/<>c::<>9 ->  ‬
 }
 
 [Nodez.Sdmp]Nodez.Sdmp.General.Controls.SolverControl/<>c -> [Nodez.Sdmp]Nodez.Sdmp.General.Controls.SolverControl/ 
@@ -372,7 +372,7 @@ Renamed Types:
 	[Nodez.Sdmp]Nodez.Sdmp.General.Controls.SolverControl/<>c::.cctor[0]( ) skipped:  special name
 	[Nodez.Sdmp]Nodez.Sdmp.General.Controls.SolverControl/<>c::.ctor[0]( ) skipped:  special name
 
-	Nodez.Sdmp.General.Controls.SolverControl/<>c [Nodez.Sdmp]Nodez.Sdmp.General.Controls.SolverControl/<>c Nodez.Sdmp.General.Controls.SolverControl/<>c::<>9 ->  ‬
+	Nodez.Sdmp.General.Controls.SolverControl/<>c [Nodez.Sdmp]Nodez.Sdmp.General.Controls.SolverControl/<>c Nodez.Sdmp.General.Controls.SolverControl/<>c::<>9 ->  ‭
 }
 
 [Nodez.Sdmp]Nodez.Sdmp.General.Controls.StateControl/<>c -> [Nodez.Sdmp]Nodez.Sdmp.General.Controls.StateControl/ 
@@ -382,7 +382,7 @@ Renamed Types:
 	[Nodez.Sdmp]Nodez.Sdmp.General.Controls.StateControl/<>c::.cctor[0]( ) skipped:  special name
 	[Nodez.Sdmp]Nodez.Sdmp.General.Controls.StateControl/<>c::.ctor[0]( ) skipped:  special name
 
-	Nodez.Sdmp.General.Controls.StateControl/<>c [Nodez.Sdmp]Nodez.Sdmp.General.Controls.StateControl/<>c Nodez.Sdmp.General.Controls.StateControl/<>c::<>9 ->  ‭
+	Nodez.Sdmp.General.Controls.StateControl/<>c [Nodez.Sdmp]Nodez.Sdmp.General.Controls.StateControl/<>c Nodez.Sdmp.General.Controls.StateControl/<>c::<>9 ->  ‮
 }
 
 [Nodez.Sdmp]Nodez.Sdmp.General.Controls.ActionControl/<>c -> [Nodez.Sdmp]Nodez.Sdmp.General.Controls.ActionControl/ 
@@ -392,7 +392,7 @@ Renamed Types:
 	[Nodez.Sdmp]Nodez.Sdmp.General.Controls.ActionControl/<>c::.cctor[0]( ) skipped:  special name
 	[Nodez.Sdmp]Nodez.Sdmp.General.Controls.ActionControl/<>c::.ctor[0]( ) skipped:  special name
 
-	Nodez.Sdmp.General.Controls.ActionControl/<>c [Nodez.Sdmp]Nodez.Sdmp.General.Controls.ActionControl/<>c Nodez.Sdmp.General.Controls.ActionControl/<>c::<>9 ->  ‮
+	Nodez.Sdmp.General.Controls.ActionControl/<>c [Nodez.Sdmp]Nodez.Sdmp.General.Controls.ActionControl/<>c Nodez.Sdmp.General.Controls.ActionControl/<>c::<>9 ->   
 }
 
 [Nodez.Sdmp]Nodez.Sdmp.General.Controls.LogControl/<>c -> [Nodez.Sdmp]Nodez.Sdmp.General.Controls.LogControl/ 
@@ -402,7 +402,7 @@ Renamed Types:
 	[Nodez.Sdmp]Nodez.Sdmp.General.Controls.LogControl/<>c::.cctor[0]( ) skipped:  special name
 	[Nodez.Sdmp]Nodez.Sdmp.General.Controls.LogControl/<>c::.ctor[0]( ) skipped:  special name
 
-	Nodez.Sdmp.General.Controls.LogControl/<>c [Nodez.Sdmp]Nodez.Sdmp.General.Controls.LogControl/<>c Nodez.Sdmp.General.Controls.LogControl/<>c::<>9 ->   
+	Nodez.Sdmp.General.Controls.LogControl/<>c [Nodez.Sdmp]Nodez.Sdmp.General.Controls.LogControl/<>c Nodez.Sdmp.General.Controls.LogControl/<>c::<>9 ->  ′
 }
 
 [Nodez.Sdmp]Nodez.Sdmp.General.Logic.ABHeuristic -> [Nodez.Sdmp] . 
@@ -2691,6 +2691,8 @@ Skipped Types:
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.SchedulingState::set_NextMinStartTime[1]( [mscorlib]System.Double[] ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.SchedulingState::get_JobStartTime[0]( ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.SchedulingState::set_JobStartTime[1]( [mscorlib]System.Double[] ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.SchedulingState::get_JobSetupStartTime[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.SchedulingState::set_JobSetupStartTime[1]( [mscorlib]System.Double[] ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.SchedulingState::get_ParentJobEndCount[0]( ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.SchedulingState::set_ParentJobEndCount[1]( [mscorlib]System.Int32[] ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.SchedulingState::get_ParentJobAssignedEqp[0]( ) skipped:  skip by property
@@ -2724,6 +2726,7 @@ Skipped Types:
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.SchedulingState::InitJobAssignedEqp[0]( ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.SchedulingState::InitParentJobAssignedEqp[0]( ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.SchedulingState::InitJobStartTime[0]( ) skipped:  KeepPublicApi option in configuration
+	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.SchedulingState::InitJobSetupStartTime[0]( ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.SchedulingState::InitParentJobEndCount[0]( ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.SchedulingState::InitJobProcessStatus[0]( ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.SchedulingState::InitEqpProcessTime[0]( ) skipped:  KeepPublicApi option in configuration
@@ -2734,21 +2737,23 @@ Skipped Types:
 	System.Int32[] [Nodez.Sdmp]System.Int32[] Nodez.Sdmp.Scheduling.DataModel.SchedulingState::<JobProcessStatus>k__BackingField ->  ″
 	System.Double[] [Nodez.Sdmp]System.Double[] Nodez.Sdmp.Scheduling.DataModel.SchedulingState::<NextMinStartTime>k__BackingField ->  ‶
 	System.Double[] [Nodez.Sdmp]System.Double[] Nodez.Sdmp.Scheduling.DataModel.SchedulingState::<JobStartTime>k__BackingField ->  ‾
-	System.Int32[] [Nodez.Sdmp]System.Int32[] Nodez.Sdmp.Scheduling.DataModel.SchedulingState::<ParentJobEndCount>k__BackingField ->  ⁇
-	System.Int32[] [Nodez.Sdmp]System.Int32[] Nodez.Sdmp.Scheduling.DataModel.SchedulingState::<ParentJobAssignedEqp>k__BackingField ->  ⁈
-	System.Int32[] [Nodez.Sdmp]System.Int32[] Nodez.Sdmp.Scheduling.DataModel.SchedulingState::<JobAssignedEqp>k__BackingField ->  ⁉
-	System.Double[] [Nodez.Sdmp]System.Double[] Nodez.Sdmp.Scheduling.DataModel.SchedulingState::<EqpAvailableTime>k__BackingField ->  ⁊
-	System.Int32[] [Nodez.Sdmp]System.Int32[] Nodez.Sdmp.Scheduling.DataModel.SchedulingState::<EqpLastJob>k__BackingField ->  ⁋
-	System.Int32[] [Nodez.Sdmp]System.Int32[] Nodez.Sdmp.Scheduling.DataModel.SchedulingState::<RemainTarget>k__BackingField ->  ⁌
-	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Scheduling.DataModel.SchedulingState::<LastJobIndex>k__BackingField ->  ⁍
-	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Scheduling.DataModel.SchedulingState::<LastEqpIndex>k__BackingField ->  ⁎
-	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.Scheduling.DataModel.SchedulingState::<Makespan>k__BackingField ->  ⁏
-	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Scheduling.DataModel.SchedulingState::<RemainTargetValue>k__BackingField ->  ⁐
+	System.Double[] [Nodez.Sdmp]System.Double[] Nodez.Sdmp.Scheduling.DataModel.SchedulingState::<JobSetupStartTime>k__BackingField ->  ⁇
+	System.Int32[] [Nodez.Sdmp]System.Int32[] Nodez.Sdmp.Scheduling.DataModel.SchedulingState::<ParentJobEndCount>k__BackingField ->  ⁈
+	System.Int32[] [Nodez.Sdmp]System.Int32[] Nodez.Sdmp.Scheduling.DataModel.SchedulingState::<ParentJobAssignedEqp>k__BackingField ->  ⁉
+	System.Int32[] [Nodez.Sdmp]System.Int32[] Nodez.Sdmp.Scheduling.DataModel.SchedulingState::<JobAssignedEqp>k__BackingField ->  ⁊
+	System.Double[] [Nodez.Sdmp]System.Double[] Nodez.Sdmp.Scheduling.DataModel.SchedulingState::<EqpAvailableTime>k__BackingField ->  ⁋
+	System.Int32[] [Nodez.Sdmp]System.Int32[] Nodez.Sdmp.Scheduling.DataModel.SchedulingState::<EqpLastJob>k__BackingField ->  ⁌
+	System.Int32[] [Nodez.Sdmp]System.Int32[] Nodez.Sdmp.Scheduling.DataModel.SchedulingState::<RemainTarget>k__BackingField ->  ⁍
+	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Scheduling.DataModel.SchedulingState::<LastJobIndex>k__BackingField ->  ⁎
+	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Scheduling.DataModel.SchedulingState::<LastEqpIndex>k__BackingField ->  ⁏
+	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.Scheduling.DataModel.SchedulingState::<Makespan>k__BackingField ->  ⁐
+	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Scheduling.DataModel.SchedulingState::<RemainTargetValue>k__BackingField ->  ⁑
 
 
 	System.Int32[] [Nodez.Sdmp]System.Int32[] Nodez.Sdmp.Scheduling.DataModel.SchedulingState::JobProcessStatus skipped:  KeepPublicApi option in configuration
 	System.Double[] [Nodez.Sdmp]System.Double[] Nodez.Sdmp.Scheduling.DataModel.SchedulingState::NextMinStartTime skipped:  KeepPublicApi option in configuration
 	System.Double[] [Nodez.Sdmp]System.Double[] Nodez.Sdmp.Scheduling.DataModel.SchedulingState::JobStartTime skipped:  KeepPublicApi option in configuration
+	System.Double[] [Nodez.Sdmp]System.Double[] Nodez.Sdmp.Scheduling.DataModel.SchedulingState::JobSetupStartTime skipped:  KeepPublicApi option in configuration
 	System.Int32[] [Nodez.Sdmp]System.Int32[] Nodez.Sdmp.Scheduling.DataModel.SchedulingState::ParentJobEndCount skipped:  KeepPublicApi option in configuration
 	System.Int32[] [Nodez.Sdmp]System.Int32[] Nodez.Sdmp.Scheduling.DataModel.SchedulingState::ParentJobAssignedEqp skipped:  KeepPublicApi option in configuration
 	System.Int32[] [Nodez.Sdmp]System.Int32[] Nodez.Sdmp.Scheduling.DataModel.SchedulingState::JobAssignedEqp skipped:  KeepPublicApi option in configuration
@@ -2788,11 +2793,11 @@ Skipped Types:
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingState::GetKey[0]( ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingState::Clone[0]( ) skipped:  KeepPublicApi option in configuration
 
-	System.Collections.Generic.Dictionary`2<System.Int32,Nodez.Sdmp.Routing.DataModel.VehicleStateInfo> [Nodez.Sdmp]System.Collections.Generic.Dictionary`2<System.Int32,Nodez.Sdmp.Routing.DataModel.VehicleStateInfo> Nodez.Sdmp.Routing.DataModel.RoutingState::<VehicleStateInfos>k__BackingField ->  ⁖
-	System.Int32[] [Nodez.Sdmp]System.Int32[] Nodez.Sdmp.Routing.DataModel.RoutingState::<ActiveCustomerFlag>k__BackingField ->  ⁗
-	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Routing.DataModel.RoutingState::<ActiveCount>k__BackingField ->  ⁘
-	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Routing.DataModel.RoutingState::<CurrentVehicleIndex>k__BackingField ->  ⁙
-	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Routing.DataModel.RoutingState::<CurrentCustomerIndex>k__BackingField ->  ⁚
+	System.Collections.Generic.Dictionary`2<System.Int32,Nodez.Sdmp.Routing.DataModel.VehicleStateInfo> [Nodez.Sdmp]System.Collections.Generic.Dictionary`2<System.Int32,Nodez.Sdmp.Routing.DataModel.VehicleStateInfo> Nodez.Sdmp.Routing.DataModel.RoutingState::<VehicleStateInfos>k__BackingField ->  ⁗
+	System.Int32[] [Nodez.Sdmp]System.Int32[] Nodez.Sdmp.Routing.DataModel.RoutingState::<ActiveCustomerFlag>k__BackingField ->  ⁘
+	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Routing.DataModel.RoutingState::<ActiveCount>k__BackingField ->  ⁙
+	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Routing.DataModel.RoutingState::<CurrentVehicleIndex>k__BackingField ->  ⁚
+	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Routing.DataModel.RoutingState::<CurrentCustomerIndex>k__BackingField ->  ⁛
 
 
 	System.Collections.Generic.Dictionary`2<System.Int32,Nodez.Sdmp.Routing.DataModel.VehicleStateInfo> [Nodez.Sdmp]System.Collections.Generic.Dictionary`2<System.Int32,Nodez.Sdmp.Routing.DataModel.VehicleStateInfo> Nodez.Sdmp.Routing.DataModel.RoutingState::VehicleStateInfos skipped:  KeepPublicApi option in configuration

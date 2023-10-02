@@ -20,6 +20,8 @@ namespace Nodez.Sdmp.Scheduling.DataModel
 
         public double[] JobStartTime { get; set; }
 
+        public double[] JobSetupStartTime { get; set; }
+
         public int[] ParentJobEndCount { get; set; }
 
         public int[] ParentJobAssignedEqp { get; set; }
@@ -55,6 +57,7 @@ namespace Nodez.Sdmp.Scheduling.DataModel
         {
             this.InitJobProcessStatus();
             this.InitJobStartTime();
+            this.InitJobSetupStartTime();
             this.InitParentJobEndCount();
             this.InitJobAssignedEqp();
             this.InitParentJobAssignedEqp();
@@ -179,6 +182,20 @@ namespace Nodez.Sdmp.Scheduling.DataModel
             }
         }
 
+        public void InitJobSetupStartTime()
+        {
+            SchedulingDataManager dataManager = SchedulingDataManager.Instance;
+
+            SchedulingProblem prob = dataManager.SchedulingProblem;
+
+            this.JobSetupStartTime = new double[prob.JobList.Count];
+
+            for (int i = 0; i < this.JobStartTime.Length; i++)
+            {
+                this.JobSetupStartTime[i] = -1;
+            }
+        }
+
         public void InitParentJobEndCount()
         {
             SchedulingDataManager dataManager = SchedulingDataManager.Instance;
@@ -248,6 +265,7 @@ namespace Nodez.Sdmp.Scheduling.DataModel
         {
             int[] jobProcStatus = state.JobProcessStatus;
             double[] jobStartTime = state.JobStartTime;
+            double[] jobSetupStartTime = state.JobSetupStartTime;
             int[] jobAssignedEqp = state.JobAssignedEqp;
             double[] nextMinStartTime = state.NextMinStartTime;
             double[] eqpAvailableTime = state.EqpAvailableTime;
@@ -258,6 +276,7 @@ namespace Nodez.Sdmp.Scheduling.DataModel
 
             this.JobProcessStatus = new int[jobProcStatus.Length];
             this.JobStartTime = new double[jobStartTime.Length];
+            this.JobSetupStartTime = new double[JobSetupStartTime.Length];
             this.JobAssignedEqp = new int[jobAssignedEqp.Length];
             this.NextMinStartTime = new double[nextMinStartTime.Length];
             this.EqpAvailableTime = new double[eqpAvailableTime.Length];
@@ -271,6 +290,7 @@ namespace Nodez.Sdmp.Scheduling.DataModel
 
             Buffer.BlockCopy(jobProcStatus, 0, this.JobProcessStatus, 0, jobProcStatus.Length * sizeof(int));
             Buffer.BlockCopy(jobStartTime, 0, this.JobStartTime, 0, jobStartTime.Length * sizeof(double));
+            Buffer.BlockCopy(jobSetupStartTime, 0, this.JobSetupStartTime, 0, jobSetupStartTime.Length * sizeof(double));
             Buffer.BlockCopy(jobAssignedEqp, 0, this.JobAssignedEqp, 0, jobAssignedEqp.Length * sizeof(int));
             Buffer.BlockCopy(nextMinStartTime, 0, this.NextMinStartTime, 0, nextMinStartTime.Length * sizeof(double));
             Buffer.BlockCopy(eqpAvailableTime, 0, this.EqpAvailableTime, 0, eqpAvailableTime.Length * sizeof(double));
