@@ -190,7 +190,7 @@ namespace Nodez.Sdmp.Scheduling.DataModel
 
             this.JobSetupStartTime = new double[prob.JobList.Count];
 
-            for (int i = 0; i < this.JobStartTime.Length; i++)
+            for (int i = 0; i < this.JobSetupStartTime.Length; i++)
             {
                 this.JobSetupStartTime[i] = -1;
             }
