@@ -276,7 +276,7 @@ namespace Nodez.Sdmp.Scheduling.DataModel
 
             this.JobProcessStatus = new int[jobProcStatus.Length];
             this.JobStartTime = new double[jobStartTime.Length];
-            this.JobSetupStartTime = new double[JobSetupStartTime.Length];
+            this.JobSetupStartTime = new double[jobSetupStartTime.Length];
             this.JobAssignedEqp = new int[jobAssignedEqp.Length];
             this.NextMinStartTime = new double[nextMinStartTime.Length];
             this.EqpAvailableTime = new double[eqpAvailableTime.Length];
