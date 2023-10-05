@@ -348,6 +348,24 @@ namespace Nodez.Sdmp.Scheduling.Managers
                 parentJob.ChildJobs = sameParentJobs;
             }
 
+            SchedulingDataManager manager = SchedulingDataManager.Instance;
+            foreach (Job job in jobs)
+            {
+                double minProcTime = double.MaxValue;
+                foreach (Equipment eqp in manager.SchedulingProblem.EqpList)
+                {
+                    Arrange arr = manager.GetArrange(job, eqp);
+
+                    if (arr == null)
+                        continue;
+
+                    if (minProcTime > arr.ProcTime)
+                        minProcTime = arr.ProcTime;
+                }
+
+                job.MinProcTime = minProcTime;
+            }
+
             return jobs;
         }
 
