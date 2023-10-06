@@ -22,7 +22,7 @@ Renamed Types:
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Managers.SchedulingDataManager/<>c::<CreatePMSchedules>b__51_0[1]( [Nodez.Sdmp]Nodez.Sdmp.Scheduling.Interfaces.IPMScheduleData ) ->  
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Managers.SchedulingDataManager/<>c::<CreatePMSchedules>b__51_1[1]( [Nodez.Sdmp]Nodez.Sdmp.Scheduling.Interfaces.IPMScheduleData ) ->  
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Managers.SchedulingDataManager/<>c::<CreateProcesses>b__58_0[1]( [Nodez.Sdmp]Nodez.Sdmp.Scheduling.Interfaces.IProcessData ) ->  
-	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Managers.SchedulingDataManager/<>c::<.cctor>b__78_0[0]( ) ->  
+	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Managers.SchedulingDataManager/<>c::<.cctor>b__79_0[0]( ) ->  
 
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Managers.SchedulingDataManager/<>c::.cctor[0]( ) skipped:  special name
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Managers.SchedulingDataManager/<>c::.ctor[0]( ) skipped:  special name
@@ -479,6 +479,7 @@ Skipped Types:
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Managers.SchedulingDataManager::GetTargetInfo[2]( [mscorlib]System.String, [mscorlib]System.String ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Managers.SchedulingDataManager::GetProcTime[2]( [mscorlib]System.String, [mscorlib]System.Int32 ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Managers.SchedulingDataManager::GetProcTime[2]( [Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Job, [Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Equipment ) skipped:  KeepPublicApi option in configuration
+	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Managers.SchedulingDataManager::GetBundleProcTime[2]( [Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Job, [Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Equipment ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Managers.SchedulingDataManager::GetMinProcTime[1]( [Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Job ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Managers.SchedulingDataManager::GetSetupTime[3]( [Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Equipment, [Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Job, [Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Job ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Managers.SchedulingDataManager::GetPriorityJobGroup[1]( [Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Job ) skipped:  KeepPublicApi option in configuration

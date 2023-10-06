@@ -636,6 +636,27 @@ namespace Nodez.Sdmp.Scheduling.Managers
             return 0;
         }
 
+        public double GetBundleProcTime(Job job, Equipment eqp)
+        {
+            if (job == null)
+                return 0;
+
+            if (this.SchedulingProblem.ArrangeMappings.TryGetValue(Tuple.Create(job.PropertyID, eqp.EqpID), out Arrange arrange))
+            {
+                double procTime = arrange.ProcTime * job.Qty;
+
+                if (job.Qty > 1)
+                {
+                    double bundleInbetweenSetupTime = GetSetupTime(eqp, job, job);
+                    procTime += bundleInbetweenSetupTime * (job.Qty - 1);
+                }
+
+                return procTime;
+            }
+
+            return 0;
+        }
+
         public double GetMinProcTime(Job job)
         {
             if (job == null)
