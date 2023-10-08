@@ -352,6 +352,7 @@ namespace Nodez.Sdmp.Scheduling.Managers
             foreach (Job job in jobs)
             {
                 double minProcTime = double.MaxValue;
+                double maxProcTime = double.MinValue;
                 foreach (Equipment eqp in manager.SchedulingProblem.EqpList)
                 {
                     Arrange arr = manager.GetArrange(job, eqp);
@@ -361,9 +362,13 @@ namespace Nodez.Sdmp.Scheduling.Managers
 
                     if (minProcTime > arr.ProcTime)
                         minProcTime = arr.ProcTime;
+
+                    if (maxProcTime < arr.ProcTime)
+                        maxProcTime = arr.ProcTime;
                 }
 
                 job.MinProcTime = minProcTime;
+                job.MaxProcTime = maxProcTime;
             }
 
             return jobs;

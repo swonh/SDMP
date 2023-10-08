@@ -18,3 +18,4 @@ E:\SDMP\src\Nodez.Data\bin\Debug\Nodez.Data.pdb
 E:\SDMP\src\Nodez.Data\obj\Debug\Nodez.Data.csproj.CoreCompileInputs.cache
 E:\SDMP\src\Nodez.Data\obj\Debug\Nodez.Data.dll
 E:\SDMP\src\Nodez.Data\obj\Debug\Nodez.Data.pdb
+E:\SDMP\src\Nodez.Data\obj\Debug\Nodez.Data.csproj.AssemblyReference.cache
