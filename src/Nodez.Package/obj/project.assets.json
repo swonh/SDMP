@@ -8652,11 +8652,12 @@
       ]
     },
     "Microsoft.Win32.Primitives/4.3.0": {
-      "sha512": "bo2f22nn3amEMF+idxQhZL0RrCn3bSpho1Gm5xB0WJG9E0RPtrobFySPkBSLlZTajLTmJ/JtJCmKkBqRMCecxA==",
+      "sha512": "9ZQKCWxH7Ijp9BfahvL2Zyf1cJIk8XYLF6Yjzr2yi0b2cOut/HQ31qf1ThHAgCc3WiZMdnWcfJCgN82/0UunxA==",
       "type": "package",
       "path": "microsoft.win32.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -9034,11 +9035,12 @@
       ]
     },
     "System.IO/4.3.0": {
-      "sha512": "59VHIi98LqwC3VZK9wio0bhtsuzWnolfbwhd+qfg+LemQi+3UbCC5Mp5Y3ouwBgHpIOOpRZGQ5ui+arBxfiVsg==",
+      "sha512": "3qjaHvxQPDpSOYICjUoTsmoq5u6QJAFRUITgeT/4gqkF1bajbSmb1kwSxEA8AHlofqgcKJcM8udgieRNhaJ5Cg==",
       "type": "package",
       "path": "system.io/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -9417,11 +9419,12 @@
       ]
     },
     "System.Runtime/4.3.0": {
-      "sha512": "1YS7UI7WYuIFppAS4+iS6ga5VGIq/Q5G08mCFqdteMXUy/izIxbGjw1akBxo0U68PP6HItNEiNFDyeE5+XUYKA==",
+      "sha512": "JufQi0vPQ0xGnAczR13AUFglDyVYt4Kqnz1AZaiKZ5+GICq0/1MH/mO/eAJHt/mHW1zjKBJd7kV26SrxddAhiw==",
       "type": "package",
       "path": "system.runtime/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -9587,11 +9590,12 @@
       ]
     },
     "System.Security.Cryptography.Algorithms/4.3.0": {
-      "sha512": "bYU2y9BGkceN2PXklcUwrGNy3dj5mSDQVLJY5lIjlaJjjNgUbPWo3HHZrEweyFa9ULhSO5sDrVNMM7ksP7tK1w==",
+      "sha512": "W1kd2Y8mYSCgc3ULTAZ0hOP2dSdG5YauTb1089T0/kRcN2MpSAW1izOFROrJgxSlMn3ArsgHXagigyi+ibhevg==",
       "type": "package",
       "path": "system.security.cryptography.algorithms/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -9627,11 +9631,12 @@
       ]
     },
     "System.Security.Cryptography.Encoding/4.3.0": {
-      "sha512": "jlPUnFdbF10uD/LD8D5RyR9PHOjtW5WBxawaxQCw9ezS+ElV5/RVUpSPZg46oifJZp9zgqUA37mGNhmVhy81Qg==",
+      "sha512": "1DEWjZZly9ae9C79vFwqaO5kaOlI5q+3/55ohmq/7dpDyDfc8lYe7YVxJUZ5MF/NtbkRjwFRo14yM4OEo9EmDw==",
       "type": "package",
       "path": "system.security.cryptography.encoding/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -9667,11 +9672,12 @@
       ]
     },
     "System.Security.Cryptography.Primitives/4.3.0": {
-      "sha512": "VO3XNkwdHYf+aJ0oKO9nQokxtnstBuBt6azRAy+kD0IVzNfCrn9iTen4sHorzg2S3tof7Cxf+SKBxUYETxIj1A==",
+      "sha512": "7bDIyVFNL/xKeFHjhobUAQqSpJq9YTOpbEs6mR233Et01STBMXNAc/V+BM6dwYGc95gVh/Zf+iVXWzj3mE8DWg==",
       "type": "package",
       "path": "system.security.cryptography.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -9695,11 +9701,12 @@
       ]
     },
     "System.Security.Cryptography.X509Certificates/4.3.0": {
-      "sha512": "zwoCXr+1hqrViH1FLJhErkwteOYhZ9+FZ/g22PiDB7RfhkQdzb+2JPNNT1lY92p+mw0lmO43W8rd2xMPvFLVKg==",
+      "sha512": "t2Tmu6Y2NtJ2um0RtcuhP7ZdNNxXEgUm2JeoA/0NvlMjAhKCnM1NX07TDl3244mVp3QU6LPEhT3HTtH1uF7IYw==",
       "type": "package",
       "path": "system.security.cryptography.x509certificates/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -10172,20 +10179,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\홍성원\\.nuget\\packages\\": {}
+    "C:\\Users\\OptLab_Dell2\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\SDMP\\src\\Nodez.Package\\Nodez.Package.csproj",
+      "projectUniqueName": "D:\\Repository\\SDMP\\src\\Nodez.Package\\Nodez.Package.csproj",
       "projectName": "Nodez.Package",
-      "projectPath": "E:\\SDMP\\src\\Nodez.Package\\Nodez.Package.csproj",
-      "packagesPath": "C:\\Users\\홍성원\\.nuget\\packages\\",
-      "outputPath": "E:\\SDMP\\src\\Nodez.Package\\obj\\",
+      "projectPath": "D:\\Repository\\SDMP\\src\\Nodez.Package\\Nodez.Package.csproj",
+      "packagesPath": "C:\\Users\\OptLab_Dell2\\.nuget\\packages\\",
+      "outputPath": "D:\\Repository\\SDMP\\src\\Nodez.Package\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\홍성원\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\OptLab_Dell2\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
