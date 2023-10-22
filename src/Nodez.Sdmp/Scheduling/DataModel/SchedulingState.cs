@@ -63,7 +63,7 @@ namespace Nodez.Sdmp.Scheduling.DataModel
             this.InitParentJobAssignedEqp();
             this.InitEqpLastJob();
             this.InitNextMinStartTime();
-            this.InitEqpProcessTime();
+            this.InitEqpAvailableTime();
             this.InitMakeSpan();
             this.InitRemainTarget();
             this.InitRemainTargetValue();
@@ -224,7 +224,7 @@ namespace Nodez.Sdmp.Scheduling.DataModel
             }
         }
 
-        public void InitEqpProcessTime()
+        public void InitEqpAvailableTime()
         {
             SchedulingDataManager dataManager = SchedulingDataManager.Instance;
 
