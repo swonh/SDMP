@@ -2738,7 +2738,7 @@ Skipped Types:
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.SchedulingState::InitJobSetupStartTime[0]( ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.SchedulingState::InitParentJobEndCount[0]( ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.SchedulingState::InitJobProcessStatus[0]( ) skipped:  KeepPublicApi option in configuration
-	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.SchedulingState::InitEqpProcessTime[0]( ) skipped:  KeepPublicApi option in configuration
+	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.SchedulingState::InitEqpAvailableTime[0]( ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.SchedulingState::InitNextMinStartTime[0]( ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.SchedulingState::Clone[0]( ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.SchedulingState::CopyStateInfo[1]( [Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.SchedulingState ) skipped:  KeepPublicApi option in configuration
