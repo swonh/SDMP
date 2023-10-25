@@ -293,6 +293,9 @@ namespace Nodez.Sdmp.Interfaces
                 ObjectiveFunctionType objectiveFunctionType = solverControl.GetObjectiveFuntionType(this.RunConfig);
                 SetObjectiveFunctionType(objectiveFunctionType);
 
+                solverManager.SetObjectiveFunctionType(objectiveFunctionType);
+                solverManager.SetStopWatch(this.StopWatch);
+
                 logControl.WriteStartLog(this);
 
                 solutionManager.SetObjectiveFunctionType(objectiveFunctionType);
@@ -819,7 +822,8 @@ namespace Nodez.Sdmp.Interfaces
                     state.SetEstimationValue(estimationBound);
                 }
 
-                if (boundManager.IsCalculatePrimalBound(isUsePrimalBound, primalSolutionUpdatePeriod, stageIndex, loopCount))
+                bool isCalcPrimalBound = boundManager.IsCalculatePrimalBound(isUsePrimalBound, primalSolutionUpdatePeriod, stageIndex, loopCount);
+                if (isCalcPrimalBound && state.IsSetPrimalBound == false)
                 {
                     Solution feasibleSol = stateControl.GetFeasibleSolution(state);
 

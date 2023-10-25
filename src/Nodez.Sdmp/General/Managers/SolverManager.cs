@@ -4,10 +4,12 @@
 
 using Nodez.Data.DataModel;
 using Nodez.Data.Managers;
+using Nodez.Sdmp.Enum;
 using Nodez.Sdmp.General.DataModel;
 using Nodez.Sdmp.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -26,6 +28,10 @@ namespace Nodez.Sdmp.General.Managers
         public string CurrentSolverName { get; private set; }
 
         public IRunConfig RunConfig { get { return GetRunConfig(); } }
+
+        public ObjectiveFunctionType ObjectiveFunctionType { get; private set; }
+
+        public Stopwatch StopWatch { get; private set; }
 
         private Dictionary<string, DateTime> _engineStartTime { get; set; }
 
@@ -59,6 +65,16 @@ namespace Nodez.Sdmp.General.Managers
         public IRunConfig GetRunConfig() 
         {
             return _runConfig;
+        }
+
+        public void SetObjectiveFunctionType(ObjectiveFunctionType objectiveFunctionType) 
+        {
+            this.ObjectiveFunctionType = objectiveFunctionType;
+        }
+
+        public void SetStopWatch(Stopwatch stopWatch) 
+        {
+            this.StopWatch = stopWatch;
         }
 
         public void SetCurrentSolverName(string solverName) 
