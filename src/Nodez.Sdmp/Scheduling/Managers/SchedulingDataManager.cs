@@ -353,6 +353,7 @@ namespace Nodez.Sdmp.Scheduling.Managers
             {
                 double minProcTime = double.MaxValue;
                 double maxProcTime = double.MinValue;
+                double maxBundleProcTime = double.MinValue;
                 foreach (Equipment eqp in manager.SchedulingProblem.EqpList)
                 {
                     Arrange arr = manager.GetArrange(job, eqp);
@@ -365,10 +366,19 @@ namespace Nodez.Sdmp.Scheduling.Managers
 
                     if (maxProcTime < arr.ProcTime)
                         maxProcTime = arr.ProcTime;
+
+                    double bundleInbetweenSetupTime = GetSetupTime(eqp, job, job);
+                    double setupTimeSum = bundleInbetweenSetupTime * (job.Qty - 1);
+
+                    double bundleProcTime = arr.ProcTime * job.Qty + setupTimeSum;
+
+                    if (maxBundleProcTime < bundleProcTime)
+                        maxBundleProcTime = bundleProcTime;
                 }
 
                 job.MinProcTime = minProcTime;
                 job.MaxProcTime = maxProcTime;
+                job.MaxBundleProcTime = maxBundleProcTime;
             }
 
             return jobs;
@@ -661,6 +671,7 @@ namespace Nodez.Sdmp.Scheduling.Managers
 
             return 0;
         }
+
 
         public double GetMinProcTime(Job job)
         {

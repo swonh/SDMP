@@ -1,21 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "E:\\SDMP\\src\\Nodez.Package\\Nodez.Package.csproj": {}
+    "D:\\Repository\\SDMP\\src\\Nodez.Package\\Nodez.Package.csproj": {}
   },
   "projects": {
-    "E:\\SDMP\\src\\Nodez.Package\\Nodez.Package.csproj": {
+    "D:\\Repository\\SDMP\\src\\Nodez.Package\\Nodez.Package.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\SDMP\\src\\Nodez.Package\\Nodez.Package.csproj",
+        "projectUniqueName": "D:\\Repository\\SDMP\\src\\Nodez.Package\\Nodez.Package.csproj",
         "projectName": "Nodez.Package",
-        "projectPath": "E:\\SDMP\\src\\Nodez.Package\\Nodez.Package.csproj",
-        "packagesPath": "C:\\Users\\홍성원\\.nuget\\packages\\",
-        "outputPath": "E:\\SDMP\\src\\Nodez.Package\\obj\\",
+        "projectPath": "D:\\Repository\\SDMP\\src\\Nodez.Package\\Nodez.Package.csproj",
+        "packagesPath": "C:\\Users\\OptLab_Dell2\\.nuget\\packages\\",
+        "outputPath": "D:\\Repository\\SDMP\\src\\Nodez.Package\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
-          "C:\\Users\\홍성원\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\OptLab_Dell2\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

@@ -47,6 +47,8 @@ namespace Nodez.Sdmp.Scheduling.DataModel
 
         public double MaxProcTime { get; set; }
 
+        public double MaxBundleProcTime { get; set; }
+
         public string PropertyID { get; set; }
 
         public bool IsAct { get; set; }
