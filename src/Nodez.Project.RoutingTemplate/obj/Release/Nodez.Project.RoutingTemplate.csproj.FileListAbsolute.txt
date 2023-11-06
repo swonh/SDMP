@@ -24,8 +24,6 @@ D:\Repository\SDMP\src\Nodez.Project.RoutingTemplate\bin\Release\System.Numerics
 D:\Repository\SDMP\src\Nodez.Project.RoutingTemplate\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
 D:\Repository\SDMP\src\Nodez.Project.RoutingTemplate\bin\Release\System.Threading.Channels.dll
 D:\Repository\SDMP\src\Nodez.Project.RoutingTemplate\bin\Release\System.Threading.Tasks.Extensions.dll
-D:\Repository\SDMP\src\Nodez.Project.RoutingTemplate\bin\Release\Nodez.Data.pdb
-D:\Repository\SDMP\src\Nodez.Project.RoutingTemplate\bin\Release\Nodez.Sdmp.pdb
 D:\Repository\SDMP\src\Nodez.Project.RoutingTemplate\obj\Release\Nodez.Project.RoutingTemplate.csproj.AssemblyReference.cache
 D:\Repository\SDMP\src\Nodez.Project.RoutingTemplate\obj\Release\Nodez.Project.RoutingTemplate.csproj.SuggestedBindingRedirects.cache
 D:\Repository\SDMP\src\Nodez.Project.RoutingTemplate\obj\Release\Nodez.Project.RoutingTemplate.exe.config

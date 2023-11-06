@@ -24,8 +24,6 @@ D:\Repository\SDMP\src\Nodez.Project.SchedulingTemplate\bin\Release\System.Numer
 D:\Repository\SDMP\src\Nodez.Project.SchedulingTemplate\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
 D:\Repository\SDMP\src\Nodez.Project.SchedulingTemplate\bin\Release\System.Threading.Channels.dll
 D:\Repository\SDMP\src\Nodez.Project.SchedulingTemplate\bin\Release\System.Threading.Tasks.Extensions.dll
-D:\Repository\SDMP\src\Nodez.Project.SchedulingTemplate\bin\Release\Nodez.Data.pdb
-D:\Repository\SDMP\src\Nodez.Project.SchedulingTemplate\bin\Release\Nodez.Sdmp.pdb
 D:\Repository\SDMP\src\Nodez.Project.SchedulingTemplate\obj\Release\Nodez.Project.SchedulingTemplate.csproj.AssemblyReference.cache
 D:\Repository\SDMP\src\Nodez.Project.SchedulingTemplate\obj\Release\Nodez.Project.SchedulingTemplate.csproj.SuggestedBindingRedirects.cache
 D:\Repository\SDMP\src\Nodez.Project.SchedulingTemplate\obj\Release\Nodez.Project.SchedulingTemplate.exe.config

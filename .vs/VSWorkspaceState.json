@@ -7,8 +7,9 @@
     "\\src",
     "\\src\\Nodez.Project.GeneralTemplate",
     "\\src\\Nodez.Project.GeneralTemplate\\Controls",
+    "\\src\\Nodez.Project.GeneralTemplate\\MyObjects",
     "\\src\\Nodez.Sdmp"
   ],
-  "SelectedNode": "\\src\\Nodez.Project.GeneralTemplate\\Controls\\UserActionControl.cs",
+  "SelectedNode": "\\src\\Nodez.Project.GeneralTemplate\\MyObjects\\UserState.cs",
   "PreviewInSolutionExplorer": false
 }
