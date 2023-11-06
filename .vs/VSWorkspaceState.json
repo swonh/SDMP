@@ -1,16 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\examples",
-    "\\examples\\SDMP.General.CRP",
     "\\papers",
     "\\papers\\car resequencing problem",
     "\\src",
     "\\src\\Nodez.Project.GeneralTemplate",
+    "\\src\\Nodez.Project.GeneralTemplate\\Controls",
     "\\src\\Nodez.Project.GeneralTemplate\\MyObjects",
     "\\src\\Nodez.Project.RoutingTemplate",
     "\\src\\Nodez.Project.RoutingTemplate\\Controls",
     "\\src\\Nodez.Project.RoutingTemplate\\Controls\\General"
   ],
+  "SelectedNode": "\\src\\Nodez.Project.GeneralTemplate\\Controls\\UserStateControl.cs",
   "PreviewInSolutionExplorer": false
 }
