@@ -435,14 +435,14 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_B56775AB4301D28308CF075CBAA23379"
-        "OwnerKey" = "8:_D813E5255138421EB30BEA191D068FF5"
+        "MsmKey" = "8:_B138A4EF60D64E3BAD8557493810C642"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_BBA8489C92EE453E8F3684DC541ABDD0"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_B56775AB4301D28308CF075CBAA23379"
+        "OwnerKey" = "8:_D813E5255138421EB30BEA191D068FF5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -764,6 +764,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
         "Release"
@@ -788,6 +796,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
     }
@@ -1500,6 +1516,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B138A4EF60D64E3BAD8557493810C642"
+            {
+            "SourcePath" = "8:C:\\Users\\OptLab_Dell2\\Desktop\\SDMP.General.CRP.zip"
+            "TargetName" = "8:SDMP.General.CRP.zip"
+            "Tag" = "8:"
+            "Folder" = "8:_3194FFB128984F85A5432A1678084E97"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_B56775AB4301D28308CF075CBAA23379"
             {
             "AssemblyRegister" = "3:1"
@@ -1529,26 +1565,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BBA8489C92EE453E8F3684DC541ABDD0"
-            {
-            "SourcePath" = "8:C:\\Users\\OptLab_Dell2\\Desktop\\SDMP.General.CRP.zip"
-            "TargetName" = "8:SDMP.General.CRP.zip"
-            "Tag" = "8:"
-            "Folder" = "8:_3194FFB128984F85A5432A1678084E97"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D9FC459510F1973B7701706EB9DA4262"
