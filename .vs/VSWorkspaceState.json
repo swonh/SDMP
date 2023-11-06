@@ -5,10 +5,10 @@
     "\\papers\\car resequencing problem",
     "\\papers\\car resequencing problem\\SDMP.General.CRP",
     "\\src",
-    "\\src\\Nodez.Sdmp",
-    "\\src\\Nodez.Sdmp\\General",
-    "\\src\\Nodez.Sdmp\\General\\Controls"
+    "\\src\\Nodez.Project.GeneralTemplate",
+    "\\src\\Nodez.Project.GeneralTemplate\\Controls",
+    "\\src\\Nodez.Sdmp"
   ],
-  "SelectedNode": "\\src\\Nodez.sln",
+  "SelectedNode": "\\src\\Nodez.Project.GeneralTemplate\\Controls\\UserActionControl.cs",
   "PreviewInSolutionExplorer": false
 }
