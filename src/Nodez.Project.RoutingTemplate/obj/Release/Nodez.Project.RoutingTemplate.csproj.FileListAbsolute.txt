@@ -27,9 +27,9 @@ D:\Repository\SDMP\src\Nodez.Project.RoutingTemplate\bin\Release\System.Threadin
 D:\Repository\SDMP\src\Nodez.Project.RoutingTemplate\bin\Release\Nodez.Data.pdb
 D:\Repository\SDMP\src\Nodez.Project.RoutingTemplate\bin\Release\Nodez.Sdmp.pdb
 D:\Repository\SDMP\src\Nodez.Project.RoutingTemplate\obj\Release\Nodez.Project.RoutingTemplate.csproj.AssemblyReference.cache
+D:\Repository\SDMP\src\Nodez.Project.RoutingTemplate\obj\Release\Nodez.Project.RoutingTemplate.csproj.SuggestedBindingRedirects.cache
 D:\Repository\SDMP\src\Nodez.Project.RoutingTemplate\obj\Release\Nodez.Project.RoutingTemplate.exe.config
 D:\Repository\SDMP\src\Nodez.Project.RoutingTemplate\obj\Release\Nodez.Project.RoutingTemplate.csproj.CoreCompileInputs.cache
 D:\Repository\SDMP\src\Nodez.Project.RoutingTemplate\obj\Release\Nodez.Project.RoutingTemplate.csproj.CopyComplete
 D:\Repository\SDMP\src\Nodez.Project.RoutingTemplate\obj\Release\Nodez.Project.RoutingTemplate.exe
 D:\Repository\SDMP\src\Nodez.Project.RoutingTemplate\obj\Release\Nodez.Project.RoutingTemplate.pdb
-D:\Repository\SDMP\src\Nodez.Project.RoutingTemplate\obj\Release\Nodez.Project.RoutingTemplate.csproj.SuggestedBindingRedirects.cache

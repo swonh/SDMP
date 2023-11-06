@@ -61,7 +61,6 @@ D:\Repository\SDMP\src\Nodez.Project.SchedulingTemplate\bin\Debug\System.Threadi
 D:\Repository\SDMP\src\Nodez.Project.SchedulingTemplate\bin\Debug\Nodez.Data.pdb
 D:\Repository\SDMP\src\Nodez.Project.SchedulingTemplate\bin\Debug\Nodez.Sdmp.pdb
 D:\Repository\SDMP\src\Nodez.Project.SchedulingTemplate\obj\Debug\Nodez.Project.SchedulingTemplate.csproj.AssemblyReference.cache
-D:\Repository\SDMP\src\Nodez.Project.SchedulingTemplate\obj\Debug\Nodez.Project.SchedulingTemplate.csproj.SuggestedBindingRedirects.cache
 D:\Repository\SDMP\src\Nodez.Project.SchedulingTemplate\obj\Debug\Nodez.Project.SchedulingTemplate.exe.config
 D:\Repository\SDMP\src\Nodez.Project.SchedulingTemplate\obj\Debug\Nodez.Project.SchedulingTemplate.csproj.CoreCompileInputs.cache
 D:\Repository\SDMP\src\Nodez.Project.SchedulingTemplate\obj\Debug\Nodez.Project.SchedulingTemplate.csproj.CopyComplete

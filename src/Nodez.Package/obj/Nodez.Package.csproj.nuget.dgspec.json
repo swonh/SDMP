@@ -52,6 +52,9 @@
         "win": {
           "#import": []
         },
+        "win-arm64": {
+          "#import": []
+        },
         "win-x64": {
           "#import": []
         },

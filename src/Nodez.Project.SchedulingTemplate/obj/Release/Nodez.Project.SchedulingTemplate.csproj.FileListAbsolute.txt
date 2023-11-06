@@ -27,9 +27,9 @@ D:\Repository\SDMP\src\Nodez.Project.SchedulingTemplate\bin\Release\System.Threa
 D:\Repository\SDMP\src\Nodez.Project.SchedulingTemplate\bin\Release\Nodez.Data.pdb
 D:\Repository\SDMP\src\Nodez.Project.SchedulingTemplate\bin\Release\Nodez.Sdmp.pdb
 D:\Repository\SDMP\src\Nodez.Project.SchedulingTemplate\obj\Release\Nodez.Project.SchedulingTemplate.csproj.AssemblyReference.cache
+D:\Repository\SDMP\src\Nodez.Project.SchedulingTemplate\obj\Release\Nodez.Project.SchedulingTemplate.csproj.SuggestedBindingRedirects.cache
 D:\Repository\SDMP\src\Nodez.Project.SchedulingTemplate\obj\Release\Nodez.Project.SchedulingTemplate.exe.config
 D:\Repository\SDMP\src\Nodez.Project.SchedulingTemplate\obj\Release\Nodez.Project.SchedulingTemplate.csproj.CoreCompileInputs.cache
 D:\Repository\SDMP\src\Nodez.Project.SchedulingTemplate\obj\Release\Nodez.Project.SchedulingTemplate.csproj.CopyComplete
 D:\Repository\SDMP\src\Nodez.Project.SchedulingTemplate\obj\Release\Nodez.Project.SchedulingTemplate.exe
 D:\Repository\SDMP\src\Nodez.Project.SchedulingTemplate\obj\Release\Nodez.Project.SchedulingTemplate.pdb
-D:\Repository\SDMP\src\Nodez.Project.SchedulingTemplate\obj\Release\Nodez.Project.SchedulingTemplate.csproj.SuggestedBindingRedirects.cache

@@ -6,6 +6,8 @@ D:\Repository\SDMP\src\Nodez.Package\bin\Release\ProjectTemplates\SDMP Schedulin
 D:\Repository\SDMP\src\Nodez.Package\bin\Release\sdmp_main.png
 D:\Repository\SDMP\src\Nodez.Package\bin\Release\Nodez.Package.dll
 D:\Repository\SDMP\src\Nodez.Package\bin\Release\Nodez.Package.pdb
+D:\Repository\SDMP\src\Nodez.Package\bin\Release\Nodez.Package.vsix
+D:\Repository\SDMP\src\Nodez.Package\bin\Release\extension.vsixmanifest
 D:\Repository\SDMP\src\Nodez.Package\obj\Release\Nodez.Package.csproj.AssemblyReference.cache
 D:\Repository\SDMP\src\Nodez.Package\obj\Release\_EmptyResource.resources
 D:\Repository\SDMP\src\Nodez.Package\obj\Release\Nodez.Package.csproj.GenerateResource.cache
@@ -13,8 +15,6 @@ D:\Repository\SDMP\src\Nodez.Package\obj\Release\Nodez.Package.GeneratedMSBuildE
 D:\Repository\SDMP\src\Nodez.Package\obj\Release\Nodez.Package.csproj.CoreCompileInputs.cache
 D:\Repository\SDMP\src\Nodez.Package\obj\Release\Nodez.Package.dll
 D:\Repository\SDMP\src\Nodez.Package\obj\Release\Nodez.Package.pdb
-D:\Repository\SDMP\src\Nodez.Package\bin\Release\Nodez.Package.vsix
-D:\Repository\SDMP\src\Nodez.Package\bin\Release\extension.vsixmanifest
 D:\Repository\SDMP\src\Nodez.Package\obj\Release\extension.vsixmanifest
 D:\Repository\SDMP\src\Nodez.Package\obj\Release\files.json
 D:\Repository\SDMP\src\Nodez.Package\obj\Release\TemplateManifests\templateManifest0.noloc.vstman
