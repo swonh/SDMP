@@ -51,7 +51,7 @@
         </ProjectSubType>
         <SortOrder>1000</SortOrder>
         <CreateNewFolder>true</CreateNewFolder>
-        <DefaultName>SDMP General Project</DefaultName>
+        <DefaultName>SDMP.General.Project</DefaultName>
         <ProvideDefaultName>true</ProvideDefaultName>
         <LocationField>Enabled</LocationField>
         <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
