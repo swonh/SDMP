@@ -535,6 +535,24 @@ namespace Nodez.Sdmp.Scheduling.Managers
             return this.SchedulingProblem.JobList[index];
         }
 
+        public List<Job> GetParentJobs(double fromTime, double toTime)
+        {
+            List<Job> parentJobs = new List<Job>();
+
+            foreach (Job parentJob in this.SchedulingProblem.ParentJobList)
+            {
+                if (fromTime > parentJob.ReleaseTime)
+                    continue;
+
+                if (toTime < parentJob.ReleaseTime)
+                    continue;
+
+                parentJobs.Add(parentJob);
+            }
+
+            return parentJobs;
+        }
+
         public Job GetParentJob(int index)
         {
             if (index < 0)
