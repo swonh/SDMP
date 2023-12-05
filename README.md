@@ -2,7 +2,6 @@
 # SDMP 
 
 [![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
-[![OS](https://img.shields.io/badge/OS-windows-red)](https://windows.com)
 [![CodeFactor](https://www.codefactor.io/repository/github/swonh/sdmp/badge)](https://www.codefactor.io/repository/github/swonh/sdmp)
 
 [SDMP](https://github.com/swonh/SDMP) is an optimization software package for solving sequential decision-making problems using approximate dynamic programming.
@@ -29,7 +28,7 @@ You can find the documentation at (We're still working on it. Stay tuned!)
 
 To use `SDMP`, you must first install it.
 
-<b>Download latest version:</b> [SDMP-1.0.3-win64.zip](https://github.com/swonh/SDMP/releases/download/v1.0.3/SDMP-1.0.3-win64.zip)
+<b>Download latest version:</b> [SDMP-1.0.4-win64.zip](https://github.com/swonh/SDMP/releases/download/v1.0.4/SDMP-1.0.4-win64.zip)
 
 > **Note**
 > Run the <b>Install.bat</b> file, and it will install automatically. (Do not run any other files.)
