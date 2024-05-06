@@ -34,6 +34,10 @@ namespace Nodez.Sdmp.Constants
 
         public static string IS_USE_DISTANCE_INFO_DATA = "IS_USE_DISTANCE_INFO_DATA";
 
+        public static string DISTANCE_METRIC = "DISTANCE_METRIC";
+
+        public static string MANHATTAN = "Manhattan";
+
         public static string PLAN_INFO = "PlanInfo";
 
         public static string JOB = "Job";

@@ -64,6 +64,16 @@ namespace Nodez.Sdmp
             return dist;
         }
 
+        public static double CalculateManhattanDistance(double x1, double y1, double x2, double y2)
+        {
+            double dx = Math.Abs(x1 - x2);
+            double dy = Math.Abs(y1 - y2);
+
+            double dist = dx + dy;
+
+            return dist;
+        }
+
         public static string CreateKey(string[] keys)
         {
             StringBuilder stringBuilder = new StringBuilder();

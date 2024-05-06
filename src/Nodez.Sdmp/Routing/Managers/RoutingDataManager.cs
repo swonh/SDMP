@@ -137,7 +137,8 @@ namespace Nodez.Sdmp.Routing.Managers
             this.RoutingProblem.SetDepotObjects(this.CreateDepot(this.RoutingData.CustomerDataList));
 
             bool isUseDistInfo = Convert.ToBoolean(this.GetRunOptionValue(Constants.Constants.IS_USE_DISTANCE_INFO_DATA));
-            this.RoutingProblem.SetDistanceInfoObjects(this.CreateDistanceInfos(this.RoutingData.CustomerDataList, this.RoutingData.DistanceInfoDataList, isUseDistInfo));
+            string distanceMetric = this.GetRunOptionValue(Constants.Constants.DISTANCE_METRIC);
+            this.RoutingProblem.SetDistanceInfoObjects(this.CreateDistanceInfos(this.RoutingData.CustomerDataList, this.RoutingData.DistanceInfoDataList, isUseDistInfo, distanceMetric));
         }
 
         public string GetRunOptionValue(string optionName) 
@@ -164,7 +165,7 @@ namespace Nodez.Sdmp.Routing.Managers
             return runOptions;
         }
 
-        private List<DistanceInfo> CreateDistanceInfos(List<ICustomerData> customerDataList, List<IDistanceInfoData> distanceInfoDataList, bool isUseDistInfo)
+        private List<DistanceInfo> CreateDistanceInfos(List<ICustomerData> customerDataList, List<IDistanceInfoData> distanceInfoDataList, bool isUseDistInfo, string distanceMetric)
         {
             List<DistanceInfo> distInfos = new List<DistanceInfo>();
 
@@ -192,6 +193,12 @@ namespace Nodez.Sdmp.Routing.Managers
                     {
                         dist = UtilityHelper.CalculateEuclideanDistance(i.X_COORDINATE, i.Y_COORDINATE, j.X_COORDINATE, j.Y_COORDINATE);
                         dist = Math.Round(dist, 2);
+
+                        if (distanceMetric == Constants.Constants.MANHATTAN)
+                        {
+                            dist = UtilityHelper.CalculateManhattanDistance(i.X_COORDINATE, i.Y_COORDINATE, j.X_COORDINATE, j.Y_COORDINATE);
+                            dist = Math.Round(dist, 2);
+                        }
                     }
 
                     info.FromCustomerID = i.ID;

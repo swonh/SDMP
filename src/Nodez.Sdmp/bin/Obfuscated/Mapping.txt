@@ -1097,7 +1097,7 @@ Skipped Types:
 [Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager skipped:  KeepPublicApi option in configuration
 {
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager::CreateRunOptions[1]( [mscorlib]System.Collections.Generic.List`1<[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.IRunOptionData> ) ->  
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager::CreateDistanceInfos[3]( [mscorlib]System.Collections.Generic.List`1<[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.ICustomerData>, [mscorlib]System.Collections.Generic.List`1<[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.IDistanceInfoData>, [mscorlib]System.Boolean ) ->  
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager::CreateDistanceInfos[4]( [mscorlib]System.Collections.Generic.List`1<[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.ICustomerData>, [mscorlib]System.Collections.Generic.List`1<[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.IDistanceInfoData>, [mscorlib]System.Boolean, [mscorlib]System.String ) ->  
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager::CreateVehicles[1]( [mscorlib]System.Collections.Generic.List`1<[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.IVehicleData> ) ->  
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager::CreateResources[1]( [mscorlib]System.Collections.Generic.List`1<[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.IResourceData> ) ->  
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager::CreateDepot[1]( [mscorlib]System.Collections.Generic.List`1<[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.ICustomerData> ) ->  
@@ -2676,6 +2676,8 @@ Skipped Types:
 	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Constants.Constants::DEMAND skipped:  KeepPublicApi option in configuration
 	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Constants.Constants::RUN_OPTION skipped:  KeepPublicApi option in configuration
 	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Constants.Constants::IS_USE_DISTANCE_INFO_DATA skipped:  KeepPublicApi option in configuration
+	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Constants.Constants::DISTANCE_METRIC skipped:  KeepPublicApi option in configuration
+	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Constants.Constants::MANHATTAN skipped:  KeepPublicApi option in configuration
 	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Constants.Constants::PLAN_INFO skipped:  KeepPublicApi option in configuration
 	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Constants.Constants::JOB skipped:  KeepPublicApi option in configuration
 	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Constants.Constants::EQUIPMENT skipped:  KeepPublicApi option in configuration
@@ -3120,6 +3122,7 @@ Skipped Types:
 	[Nodez.Sdmp]Nodez.Sdmp.UtilityHelper::IntToFloat[1]( [mscorlib]System.Int32 ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.UtilityHelper::DoubleToFloat[1]( [mscorlib]System.Double ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.UtilityHelper::CalculateEuclideanDistance[4]( [mscorlib]System.Double, [mscorlib]System.Double, [mscorlib]System.Double, [mscorlib]System.Double ) skipped:  KeepPublicApi option in configuration
+	[Nodez.Sdmp]Nodez.Sdmp.UtilityHelper::CalculateManhattanDistance[4]( [mscorlib]System.Double, [mscorlib]System.Double, [mscorlib]System.Double, [mscorlib]System.Double ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.UtilityHelper::CreateKey[1]( [mscorlib]System.String[] ) skipped:  KeepPublicApi option in configuration
 }
 
