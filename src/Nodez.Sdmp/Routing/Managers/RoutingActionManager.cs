@@ -33,12 +33,12 @@ namespace Nodez.Sdmp.Routing.Managers
 
                 VehicleStateInfo vehicleStateInfo = stateInfo.Value;
 
-                if (vehicleStateInfo.IsDoneVisitCustomers())
+                if (vehicleStateInfo.IsDoneVisitNodes())
                     continue;
 
-                for (int i = 0; i < vehicleStateInfo.NextVistableCustomerFlag.Length; i++)
+                for (int i = 0; i < vehicleStateInfo.NextVistableNodeFlag.Length; i++)
                 {
-                    int flag = vehicleStateInfo.NextVistableCustomerFlag[i];
+                    int flag = vehicleStateInfo.NextVistableNodeFlag[i];
 
                     if (flag == 0)
                         continue;
@@ -48,27 +48,27 @@ namespace Nodez.Sdmp.Routing.Managers
                     RoutingState toState = new RoutingState();
                     toState.CopyStateInfo(state);
 
-                    dataManager.RoutingProblem.CustomerIndexMappings.TryGetValue(i, out Customer customer);
+                    dataManager.RoutingProblem.NodeIndexMappings.TryGetValue(i, out Node node);
 
-                    if (customer == null)
+                    if (node == null)
                         continue;
 
-                    Resource resource = vehicle.GetLoadableResource(customer.Demand.Product);
+                    Resource resource = vehicle.GetLoadableResource(node.Demand.Product);
 
                     if (resource == null)
                         continue;
 
-                    if (toState.IsCapacityAvailable(customer, vehicle, resource) == false)
+                    if (toState.IsCapacityAvailable(node, vehicle, resource) == false)
                         continue;
 
-                    if (toState.CheckTimeWindow(customer, vehicle) == false)
+                    if (toState.CheckTimeWindow(node, vehicle) == false)
                         continue;
 
-                    toState.VisitCustomer(customer, vehicle, resource);
+                    toState.VisitNode(node, vehicle, resource);
 
                     tran.PreActionState = state;
                     tran.PostActionState = toState;
-                    tran.Cost = dataManager.GetDistance(vehicleStateInfo.CurrentCustomerIndex, i);
+                    tran.Cost = dataManager.GetDistance(vehicleStateInfo.CurrentNodeIndex, i);
 
                     maps.Add(tran);
                 }
@@ -94,7 +94,7 @@ namespace Nodez.Sdmp.Routing.Managers
 
                     tran.PreActionState = state;
                     tran.PostActionState = toState;
-                    tran.Cost = dataManager.GetDistance(vehicleStateInfo.CurrentCustomerIndex, depot.Index);
+                    tran.Cost = dataManager.GetDistance(vehicleStateInfo.CurrentNodeIndex, depot.Index);
 
                     maps.Add(tran);
                 }

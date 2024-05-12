@@ -12,7 +12,7 @@ using System.Text;
 
 namespace Nodez.Project.RoutingTemplate.MyInputs
 {
-    public class Customer : IInputRow, ICustomerData
+    public class Node : IInputRow, INodeData
     {
         // Define columns here (NOTICE: The column name defined here and the column name defined in the data file must match.)
 
@@ -34,7 +34,7 @@ namespace Nodez.Project.RoutingTemplate.MyInputs
 
         public string IS_DEPOT { get; private set; }
 
-        public Customer()
+        public Node()
         {
             // Define keys here (You can search data with the key defined here. Allow multiple keys)
 

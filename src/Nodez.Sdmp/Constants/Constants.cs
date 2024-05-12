@@ -18,7 +18,7 @@ namespace Nodez.Sdmp.Constants
 
         public static string VEHICLE = "Vehicle";
 
-        public static string CUSTOMER = "Customer";
+        public static string NODE = "Node";
 
         public static string DISTANCE_INFO = "DistanceInfo";
 

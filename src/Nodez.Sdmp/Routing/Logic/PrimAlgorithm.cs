@@ -58,7 +58,7 @@ namespace Nodez.Sdmp.Routing.Logic
             {
                 foreach (var info in st.VehicleStateInfos)
                 {
-                    visitedNodeSet.Add(info.Value.CurrentCustomerIndex);
+                    visitedNodeSet.Add(info.Value.CurrentNodeIndex);
                 }
             }
 
@@ -77,7 +77,7 @@ namespace Nodez.Sdmp.Routing.Logic
 
             this.NodeSet.Add(manager.RoutingProblem.Depot.Index);
 
-            foreach (Customer c in manager.RoutingProblem.Customers)
+            foreach (Node c in manager.RoutingProblem.Nodes)
             {
                 this.NodeSet.Add(c.Index);
             }

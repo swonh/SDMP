@@ -37,7 +37,7 @@ namespace Nodez.Sdmp.Routing.Solver
             ActionControl transitionControl = ActionControl.Instance;
             StateManager stateManager = StateManager.Instance;
             StateControl stateControl = StateControl.Instance;
-            CustomerControl customerControl = CustomerControl.Instance;
+            NodeControl nodeControl = NodeControl.Instance;
             ApproximationControl approxControl = ApproximationControl.Instance;
 
             List<State> newStates = new List<State>();
@@ -94,9 +94,9 @@ namespace Nodez.Sdmp.Routing.Solver
         {
             RoutingState routingState = state as RoutingState;
             ActionControl actionControl = ActionControl.Instance;
-            CustomerControl customerControl = CustomerControl.Instance;
+            NodeControl nodeControl = NodeControl.Instance;
 
-            routingState.VehicleStateInfos = customerControl.GetVisitableCustomers(routingState.VehicleStateInfos);
+            routingState.VehicleStateInfos = nodeControl.GetVisitableNodes(routingState.VehicleStateInfos);
             List<General.DataModel.StateActionMap> maps = actionControl.GetStateActionMaps(state);
 
             return maps;

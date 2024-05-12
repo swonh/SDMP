@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Nodez.Sdmp.Routing.DataModel
 {
-    public class Depot : Customer
+    public class Depot : Node
     {
         public new Depot Clone() 
         {

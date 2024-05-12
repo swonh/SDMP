@@ -142,12 +142,11 @@
     <Compile Include="Interfaces\IRunConfig.cs" />
     <Compile Include="Interfaces\ISolver.cs" />
     <Compile Include="MachineLearningHelper\MLConsoleHelper.cs" />
-    <Compile Include="Routing\Controls\CustomerControl.cs" />
+    <Compile Include="Routing\Controls\NodeControl.cs" />
     <Compile Include="General\Controls\SolverControl.cs" />
     <Compile Include="General\Controls\StateControl.cs" />
     <Compile Include="General\Controls\ActionControl.cs" />
     <Compile Include="Routing\Controls\VehicleControl.cs" />
-    <Compile Include="Routing\DataModel\Customer.cs" />
     <Compile Include="Routing\DataModel\Demand.cs" />
     <Compile Include="Routing\DataModel\Depot.cs" />
     <Compile Include="Routing\DataModel\DistanceInfo.cs" />
@@ -166,7 +165,7 @@
     <Compile Include="Enum\ObjectiveFunctionType.cs" />
     <Compile Include="Enum\PrimalHeuristicType.cs" />
     <Compile Include="Routing\DataModel\RoutingData.cs" />
-    <Compile Include="Routing\Interfaces\ICustomerData.cs" />
+    <Compile Include="Routing\Interfaces\INodeData.cs" />
     <Compile Include="Routing\Interfaces\IDemandData.cs" />
     <Compile Include="Routing\Interfaces\IDistanceInfoData.cs" />
     <Compile Include="Routing\Interfaces\IProductData.cs" />

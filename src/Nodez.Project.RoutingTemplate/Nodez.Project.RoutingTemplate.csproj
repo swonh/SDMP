@@ -60,9 +60,9 @@
     <Compile Include="Controls\General\UserActionControl.cs" />
     <Compile Include="Controls\General\UserDataControl.cs" />
     <Compile Include="Controls\General\UserStateTransitionControl.cs" />
-    <Compile Include="Controls\Routing\UserCustomerControl.cs" />
+    <Compile Include="Controls\Routing\UserNodeControl.cs" />
     <Compile Include="Controls\Routing\UserVehicleControl.cs" />
-    <Compile Include="MyInputs\Customer.cs" />
+    <Compile Include="MyInputs\Node.cs" />
     <Compile Include="MyInputs\Demand.cs" />
     <Compile Include="MyInputs\DistanceInfo.cs" />
     <Compile Include="MyInputs\Product.cs" />

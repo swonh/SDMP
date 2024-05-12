@@ -14,17 +14,17 @@ using System.Threading.Tasks;
 
 namespace Nodez.Sdmp.Routing.Controls
 {
-    public class CustomerControl
+    public class NodeControl
     {
-        private static readonly Lazy<CustomerControl> lazy = new Lazy<CustomerControl>(() => new CustomerControl());
+        private static readonly Lazy<NodeControl> lazy = new Lazy<NodeControl>(() => new NodeControl());
 
-        public static CustomerControl Instance
+        public static NodeControl Instance
         {
             get
             {
-                if (ControlManager.Instance.RegisteredControls.TryGetValue(ControlType.CustomerControl.ToString(), out object control))
+                if (ControlManager.Instance.RegisteredControls.TryGetValue(ControlType.NodeControl.ToString(), out object control))
                 {
-                    return (CustomerControl)control;
+                    return (NodeControl)control;
                 }
                 else
                 {
@@ -33,7 +33,7 @@ namespace Nodez.Sdmp.Routing.Controls
             }
         }
 
-        public virtual Dictionary<int, VehicleStateInfo> GetVisitableCustomers(Dictionary<int, VehicleStateInfo> vehicleInfos) 
+        public virtual Dictionary<int, VehicleStateInfo> GetVisitableNodes(Dictionary<int, VehicleStateInfo> vehicleInfos) 
         {
             return vehicleInfos;
         }

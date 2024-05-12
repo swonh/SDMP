@@ -35,7 +35,7 @@ namespace Nodez.Project.RoutingTemplate
             UserEventControl eventControl = UserEventControl.Instance;
             UserLogControl logControl = UserLogControl.Instance;
             UserApproximationControl approxControl = UserApproximationControl.Instance;
-            UserCustomerControl customerControl = UserCustomerControl.Instance;
+            UserNodeControl nodeControl = UserNodeControl.Instance;
 
             List<object> controls = new List<object>() { boundControl, stateControl, solverControl, actionControl, transitionControl, dataControl, eventControl, logControl, approxControl };
 

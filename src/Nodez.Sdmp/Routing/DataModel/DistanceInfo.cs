@@ -12,13 +12,13 @@ namespace Nodez.Sdmp.Routing.DataModel
 {
     public class DistanceInfo
     {
-        public string FromCustomerID { get; set; }
+        public string FromNodeID { get; set; }
 
-        public int FromCustomerIndex { get; set; }
+        public int FromNodeIndex { get; set; }
 
-        public string ToCustomerID { get; set; }
+        public string ToNodeID { get; set; }
 
-        public int ToCustomerIndex { get; set; }
+        public int ToNodeIndex { get; set; }
 
         public double Distance { get; set; }
 

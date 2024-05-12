@@ -30,7 +30,7 @@ namespace Nodez.Sdmp.Routing.Managers
 
         public InputTable ResourceTable { get; private set; }
 
-        public InputTable CustomerTable { get; private set; }
+        public InputTable NodeTable { get; private set; }
 
         public InputTable DistanceInfoTable { get; private set; }
 
@@ -48,7 +48,7 @@ namespace Nodez.Sdmp.Routing.Managers
 
             this.VehicleTable = inputManager.GetInput(Constants.Constants.VEHICLE);
             this.ResourceTable = inputManager.GetInput(Constants.Constants.RESOURCE);
-            this.CustomerTable = inputManager.GetInput(Constants.Constants.CUSTOMER);
+            this.NodeTable = inputManager.GetInput(Constants.Constants.NODE);
             this.VehicleResourceTable = inputManager.GetInput(Constants.Constants.VEHICLE_RESOURCE);
             this.ProductTable = inputManager.GetInput(Constants.Constants.PRODUCT);
             this.DemandTable = inputManager.GetInput(Constants.Constants.DEMAND);
@@ -62,9 +62,9 @@ namespace Nodez.Sdmp.Routing.Managers
                 routingData.SetVehicleDataList(VehicleTable.Rows().Cast<IVehicleData>().ToList());
             }
 
-            if (CustomerTable != null)
+            if (NodeTable != null)
             {
-                routingData.SetCustomerDataList(CustomerTable.Rows().Cast<ICustomerData>().ToList());
+                routingData.SetNodeDataList(NodeTable.Rows().Cast<INodeData>().ToList());
             }
 
             if (DistanceInfoTable != null) 
@@ -108,7 +108,7 @@ namespace Nodez.Sdmp.Routing.Managers
             if (this.RoutingData.VehicleDataList == null)
                 return;
 
-            if (this.RoutingData.CustomerDataList == null)
+            if (this.RoutingData.NodeDataList == null)
                 return;
 
             if (this.RoutingData.ResourceDataList == null)
@@ -133,12 +133,12 @@ namespace Nodez.Sdmp.Routing.Managers
             this.RoutingProblem.SetDemandObjects(this.CreateDemands(this.RoutingData.DemandDataList));
             this.RoutingProblem.SetResourceObjects(this.CreateResources(this.RoutingData.ResourceDataList));
             this.RoutingProblem.SetVehicleObjects(this.CreateVehicles(this.RoutingData.VehicleDataList));
-            this.RoutingProblem.SetCustomerObjects(this.CreateCustomers(this.RoutingData.CustomerDataList));
-            this.RoutingProblem.SetDepotObjects(this.CreateDepot(this.RoutingData.CustomerDataList));
+            this.RoutingProblem.SetNodeObjects(this.CreateNodes(this.RoutingData.NodeDataList));
+            this.RoutingProblem.SetDepotObjects(this.CreateDepot(this.RoutingData.NodeDataList));
 
             bool isUseDistInfo = Convert.ToBoolean(this.GetRunOptionValue(Constants.Constants.IS_USE_DISTANCE_INFO_DATA));
             string distanceMetric = this.GetRunOptionValue(Constants.Constants.DISTANCE_METRIC);
-            this.RoutingProblem.SetDistanceInfoObjects(this.CreateDistanceInfos(this.RoutingData.CustomerDataList, this.RoutingData.DistanceInfoDataList, isUseDistInfo, distanceMetric));
+            this.RoutingProblem.SetDistanceInfoObjects(this.CreateDistanceInfos(this.RoutingData.NodeDataList, this.RoutingData.DistanceInfoDataList, isUseDistInfo, distanceMetric));
         }
 
         public string GetRunOptionValue(string optionName) 
@@ -165,15 +165,15 @@ namespace Nodez.Sdmp.Routing.Managers
             return runOptions;
         }
 
-        private List<DistanceInfo> CreateDistanceInfos(List<ICustomerData> customerDataList, List<IDistanceInfoData> distanceInfoDataList, bool isUseDistInfo, string distanceMetric)
+        private List<DistanceInfo> CreateDistanceInfos(List<INodeData> nodeDataList, List<IDistanceInfoData> distanceInfoDataList, bool isUseDistInfo, string distanceMetric)
         {
             List<DistanceInfo> distInfos = new List<DistanceInfo>();
 
             int index_i = 0;
-            foreach (ICustomerData i in customerDataList)
+            foreach (INodeData i in nodeDataList)
             {
                 int index_j = 0;
-                foreach (ICustomerData j in customerDataList)
+                foreach (INodeData j in nodeDataList)
                 {
                     DistanceInfo info = new DistanceInfo();
 
@@ -201,10 +201,10 @@ namespace Nodez.Sdmp.Routing.Managers
                         }
                     }
 
-                    info.FromCustomerID = i.ID;
-                    info.FromCustomerIndex = index_i;
-                    info.ToCustomerID = j.ID;
-                    info.ToCustomerIndex = index_j;
+                    info.FromNodeID = i.ID;
+                    info.FromNodeIndex = index_i;
+                    info.ToNodeID = j.ID;
+                    info.ToNodeIndex = index_j;
                     info.Distance = dist;
                     info.Time = time;
 
@@ -266,11 +266,11 @@ namespace Nodez.Sdmp.Routing.Managers
             return resources;
         }
 
-        private Depot CreateDepot(List<ICustomerData> customerDataList)
+        private Depot CreateDepot(List<INodeData> nodeDataList)
         {
             Depot depot = new Depot();
 
-            foreach (ICustomerData item in customerDataList)
+            foreach (INodeData item in nodeDataList)
             {
                 bool isDepot = UtilityHelper.StringToBoolean(item.IS_DEPOT);
 
@@ -286,35 +286,35 @@ namespace Nodez.Sdmp.Routing.Managers
             return depot;
         }
 
-        private List<Customer> CreateCustomers(List<ICustomerData> customerDataList)
+        private List<Node> CreateNodes(List<INodeData> nodeDataList)
         {
-            List<Customer> customers = new List<Customer>();
+            List<Node> nodes = new List<Node>();
 
             int index = 1;
-            foreach (ICustomerData item in customerDataList)
+            foreach (INodeData item in nodeDataList)
             {
                 bool isDepot = UtilityHelper.StringToBoolean(item.IS_DEPOT);
 
                 if (isDepot)
                     continue;
 
-                Customer cus = new Customer();
-                cus.Index = index;
-                cus.ID = item.ID;
-                cus.Name = item.NAME;
-                cus.Demand = this.GetDemand(item.DEMAND_ID);
-                cus.TimeWindow = Tuple.Create(item.START_TIME_WINDOW, item.END_TIME_WINDOW);
-                cus.IsVisited = false;
-                cus.VisitedVehicle = null;
-                cus.IsDelivery = UtilityHelper.StringToBoolean(item.IS_DELIVERY);
-                cus.IsDepot = isDepot;
+                Node node = new Node();
+                node.Index = index;
+                node.ID = item.ID;
+                node.Name = item.NAME;
+                node.Demand = this.GetDemand(item.DEMAND_ID);
+                node.TimeWindow = Tuple.Create(item.START_TIME_WINDOW, item.END_TIME_WINDOW);
+                node.IsVisited = false;
+                node.VisitedVehicle = null;
+                node.IsDelivery = UtilityHelper.StringToBoolean(item.IS_DELIVERY);
+                node.IsDepot = isDepot;
 
-                customers.Add(cus);
+                nodes.Add(node);
 
                 index++;              
             }
 
-            return customers;
+            return nodes;
         }
 
         private List<Demand> CreateDemands(List<IDemandData> demandDataList) 
@@ -396,11 +396,11 @@ namespace Nodez.Sdmp.Routing.Managers
             return product;
         }
 
-        public Customer GetCustomer(int customerIndex) 
+        public Node GetNode(int nodeIndex) 
         {
-            this.RoutingProblem.CustomerIndexMappings.TryGetValue(customerIndex, out Customer customer);
+            this.RoutingProblem.NodeIndexMappings.TryGetValue(nodeIndex, out Node node);
 
-            return customer;
+            return node;
         }
 
         public Vehicle GetVehicle(int vehicelIndex)
@@ -410,18 +410,18 @@ namespace Nodez.Sdmp.Routing.Managers
             return vehicle;
         }
 
-        public double GetDistance(int fromCustomerIndex, int toCustomerIndex) 
+        public double GetDistance(int fromNodeIndex, int toNodeIndex) 
         {
-            Tuple<int, int> key = Tuple.Create(fromCustomerIndex, toCustomerIndex);
+            Tuple<int, int> key = Tuple.Create(fromNodeIndex, toNodeIndex);
             if (this.RoutingProblem.DistanceInfoIndexMappings.TryGetValue(key, out DistanceInfo info))
                 return info.Distance;
 
             return 0;
         }
 
-        public double GetTime(int fromCustomerIndex, int toCustomerIndex)
+        public double GetTime(int fromNodeIndex, int toNodeIndex)
         {
-            Tuple<int, int> key = Tuple.Create(fromCustomerIndex, toCustomerIndex);
+            Tuple<int, int> key = Tuple.Create(fromNodeIndex, toNodeIndex);
             if (this.RoutingProblem.DistanceInfoIndexMappings.TryGetValue(key, out DistanceInfo info))
                 return info.Time;
 

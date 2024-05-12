@@ -16,7 +16,7 @@ namespace Nodez.Sdmp.Routing.DataModel
 
         public List<Resource> Resources { get; private set; }
 
-        public List<Customer> Customers { get; private set; }
+        public List<Node> Nodes { get; private set; }
 
         public Depot Depot { get; private set; }
 
@@ -34,9 +34,9 @@ namespace Nodez.Sdmp.Routing.DataModel
 
         public Dictionary<string, Resource> ResourceMappings { get; private set; }
 
-        public Dictionary<string, Customer> CustomerMappings { get; private set; }
+        public Dictionary<string, Node> NodeMappings { get; private set; }
 
-        public Dictionary<int, Customer> CustomerIndexMappings { get; private set; }
+        public Dictionary<int, Node> NodeIndexMappings { get; private set; }
 
         public Dictionary<string, Demand> DemandMappings { get; private set; }
 
@@ -52,21 +52,21 @@ namespace Nodez.Sdmp.Routing.DataModel
         {
             this.Vehicles = new List<Vehicle>();
             this.Resources = new List<Resource>();
-            this.Customers = new List<Customer>();
+            this.Nodes = new List<Node>();
             this.Depot = new Depot();
             this.Demands = new List<Demand>();
             this.Products = new List<Product>();
 
             this.VehicleMappings = new Dictionary<string, Vehicle>();
             this.ResourceMappings = new Dictionary<string, Resource>();
-            this.CustomerMappings = new Dictionary<string, Customer>();
+            this.NodeMappings = new Dictionary<string, Node>();
             this.DemandMappings = new Dictionary<string, Demand>();
             this.ProductMappings = new Dictionary<string, Product>();
             this.DistanceInfoMappings = new Dictionary<Tuple<string, string>, DistanceInfo>();
             this.DistanceInfoIndexMappings = new Dictionary<Tuple<int, int>, DistanceInfo>();
             this.RunOptionMappings = new Dictionary<string, string>();
 
-            this.CustomerIndexMappings = new Dictionary<int, Customer>();
+            this.NodeIndexMappings = new Dictionary<int, Node>();
             this.VehicleIndexMappings = new Dictionary<int, Vehicle>();
         }
 
@@ -89,11 +89,11 @@ namespace Nodez.Sdmp.Routing.DataModel
             this.SetResourceMappings();
         }
 
-        public void SetCustomerObjects(List<Customer> customers)
+        public void SetNodeObjects(List<Node> nodes)
         {
-            this.Customers = customers;
-            this.SetCustomerMappings();
-            this.SetCustomerIndexMappings();
+            this.Nodes = nodes;
+            this.SetNodeMappings();
+            this.SetNodeIndexMappings();
         }
 
         public void SetDepotObjects(Depot depot)
@@ -135,7 +135,7 @@ namespace Nodez.Sdmp.Routing.DataModel
         {
             foreach (DistanceInfo info in this.DistanceInfos) 
             {
-                Tuple<string, string> key = Tuple.Create(info.FromCustomerID, info.ToCustomerID);
+                Tuple<string, string> key = Tuple.Create(info.FromNodeID, info.ToNodeID);
 
                 if (this.DistanceInfoMappings.ContainsKey(key))
                     continue;
@@ -148,7 +148,7 @@ namespace Nodez.Sdmp.Routing.DataModel
         {
             foreach (DistanceInfo info in this.DistanceInfos)
             {
-                Tuple<int, int> key = Tuple.Create(info.FromCustomerIndex, info.ToCustomerIndex);
+                Tuple<int, int> key = Tuple.Create(info.FromNodeIndex, info.ToNodeIndex);
 
                 if (this.DistanceInfoIndexMappings.ContainsKey(key))
                     continue;
@@ -190,25 +190,25 @@ namespace Nodez.Sdmp.Routing.DataModel
             }
         }
 
-        private void SetCustomerMappings()
+        private void SetNodeMappings()
         {
-            foreach (Customer customer in this.Customers)
+            foreach (Node node in this.Nodes)
             {
-                if (this.CustomerMappings.ContainsKey(customer.ID))
+                if (this.NodeMappings.ContainsKey(node.ID))
                     continue;
 
-                this.CustomerMappings.Add(customer.ID, customer);
+                this.NodeMappings.Add(node.ID, node);
             }
         }
 
-        private void SetCustomerIndexMappings()
+        private void SetNodeIndexMappings()
         {
-            foreach (Customer customer in this.Customers)
+            foreach (Node node in this.Nodes)
             {
-                if (this.CustomerIndexMappings.ContainsKey(customer.Index))
+                if (this.NodeIndexMappings.ContainsKey(node.Index))
                     continue;
 
-                this.CustomerIndexMappings.Add(customer.Index, customer);
+                this.NodeIndexMappings.Add(node.Index, node);
             }
         }
 

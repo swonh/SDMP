@@ -13,15 +13,15 @@ using System.Threading.Tasks;
 
 namespace Nodez.Project.RoutingTemplate.Controls
 {
-    public class UserCustomerControl : CustomerControl
+    public class UserNodeControl : NodeControl
     {
-        private static readonly Lazy<UserCustomerControl> lazy = new Lazy<UserCustomerControl>(() => new UserCustomerControl());
+        private static readonly Lazy<UserNodeControl> lazy = new Lazy<UserNodeControl>(() => new UserNodeControl());
 
-        public static new UserCustomerControl Instance { get { return lazy.Value; } }
+        public static new UserNodeControl Instance { get { return lazy.Value; } }
 
-        public override Dictionary<int, VehicleStateInfo> GetVisitableCustomers(Dictionary<int, VehicleStateInfo> vehicleInfos)
+        public override Dictionary<int, VehicleStateInfo> GetVisitableNodes(Dictionary<int, VehicleStateInfo> vehicleInfos)
         {
-            return base.GetVisitableCustomers(vehicleInfos);         
+            return base.GetVisitableNodes(vehicleInfos);         
         }
     }
 }

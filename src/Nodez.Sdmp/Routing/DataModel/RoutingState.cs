@@ -16,13 +16,13 @@ namespace Nodez.Sdmp.Routing.DataModel
     {
         public Dictionary<int, VehicleStateInfo> VehicleStateInfos { get; set; }
 
-        public int[] ActiveCustomerFlag { get; set; }
+        public int[] ActiveNodeFlag { get; set; }
 
         public int ActiveCount { get; set; }
 
         public int CurrentVehicleIndex { get; set; }
 
-        public int CurrentCustomerIndex { get; set; }
+        public int CurrentNodeIndex { get; set; }
 
         public RoutingState(string key)
         {
@@ -40,31 +40,31 @@ namespace Nodez.Sdmp.Routing.DataModel
         public void Initialize() 
         {
             this.InitVehicleStateInfos();
-            this.InitActiveCustomers();
+            this.InitActiveNodes();
         }
 
         public void InitVehicleStateInfos() 
         {
             RoutingDataManager manager = RoutingDataManager.Instance;
-            int customerCount = manager.RoutingProblem.Customers.Count;
+            int nodeCount = manager.RoutingProblem.Nodes.Count;
 
             Dictionary<int, VehicleStateInfo> infos = new Dictionary<int, VehicleStateInfo>();
             foreach (Vehicle vehicle in manager.RoutingProblem.Vehicles) 
             {
                 VehicleStateInfo info = new VehicleStateInfo();
-                info.CurrentCustomerIndex = manager.RoutingProblem.Depot.Index;
-                info.VisitedCustomerFlag = new int[customerCount + 1];
-                info.NextVistableCustomerFlag = new int[customerCount + 1];
+                info.CurrentNodeIndex = manager.RoutingProblem.Depot.Index;
+                info.VisitedNodeFlag = new int[nodeCount + 1];
+                info.NextVistableNodeFlag = new int[nodeCount + 1];
                 info.RemainCapacity = new double[vehicle.Resources.Count + 1];
                 info.IsActive = true;
 
-                for (int i = 1; i < customerCount + 1; i++) 
+                for (int i = 1; i < nodeCount + 1; i++) 
                 {
-                    info.NextVistableCustomerFlag[i] = 1;
+                    info.NextVistableNodeFlag[i] = 1;
                 }
 
-                info.VisitedCustomerCount = 0;
-                info.VistableCustomerCount = customerCount;
+                info.VisitedNodeCount = 0;
+                info.VistableNodeCount = nodeCount;
 
                 foreach (Resource res in vehicle.Resources.Values)
                 {
@@ -77,19 +77,19 @@ namespace Nodez.Sdmp.Routing.DataModel
             this.VehicleStateInfos = infos;
         }
 
-        public void InitActiveCustomers() 
+        public void InitActiveNodes() 
         {
             RoutingDataManager manager = RoutingDataManager.Instance;
-            int customerCount = manager.RoutingProblem.Customers.Count;
+            int nodeCount = manager.RoutingProblem.Nodes.Count;
 
-            this.ActiveCustomerFlag = new int[customerCount + 1];
+            this.ActiveNodeFlag = new int[nodeCount + 1];
 
-            for (int i = 1; i < customerCount + 1; i++)
+            for (int i = 1; i < nodeCount + 1; i++)
             {
-                this.ActiveCustomerFlag[i] = 1;
+                this.ActiveNodeFlag[i] = 1;
             }
 
-            this.ActiveCount = customerCount;
+            this.ActiveCount = nodeCount;
         }
 
         public void CopyStateInfo(RoutingState state) 
@@ -103,30 +103,30 @@ namespace Nodez.Sdmp.Routing.DataModel
 
             this.VehicleStateInfos = infos;
 
-            int[] active = state.ActiveCustomerFlag;
-            this.ActiveCustomerFlag = new int[active.Length];
+            int[] active = state.ActiveNodeFlag;
+            this.ActiveNodeFlag = new int[active.Length];
             this.ActiveCount = state.ActiveCount;
             this.CurrentVehicleIndex = state.CurrentVehicleIndex;
-            this.CurrentCustomerIndex = state.CurrentCustomerIndex;
+            this.CurrentNodeIndex = state.CurrentNodeIndex;
 
-            Buffer.BlockCopy(active, 0, this.ActiveCustomerFlag, 0, active.Length * sizeof(int));
+            Buffer.BlockCopy(active, 0, this.ActiveNodeFlag, 0, active.Length * sizeof(int));
         }
 
-        public bool IsCapacityAvailable(Customer nextCustomer, Vehicle vehicle, Resource resource)
+        public bool IsCapacityAvailable(Node nextNode, Vehicle vehicle, Resource resource)
         {
             int vehicleIndex = vehicle.Index;
 
-            if (nextCustomer.Demand.Quantity > this.VehicleStateInfos[vehicleIndex].RemainCapacity[resource.Index])
+            if (nextNode.Demand.Quantity > this.VehicleStateInfos[vehicleIndex].RemainCapacity[resource.Index])
                 return false;
 
             return true;
         }
 
-        public bool CheckTimeWindow(Customer nextCustomer, Vehicle vehicle) 
+        public bool CheckTimeWindow(Node nextNode, Vehicle vehicle) 
         {
             bool check = false;
 
-            if (nextCustomer.TimeWindow.Item1 <= this.VehicleStateInfos[vehicle.Index].AvailableTime) 
+            if (nextNode.TimeWindow.Item1 <= this.VehicleStateInfos[vehicle.Index].AvailableTime) 
             {
                 check = true;
             }
@@ -134,38 +134,38 @@ namespace Nodez.Sdmp.Routing.DataModel
             return check;
         }
 
-        public void VisitCustomer(Customer nextCustomer, Vehicle vehicle, Resource resource)
+        public void VisitNode(Node nextNode, Vehicle vehicle, Resource resource)
         {
-            int nextCustomerIndex = nextCustomer.Index;
+            int nextNodeIndex = nextNode.Index;
             int vehicleIndex = vehicle.Index;
-            int currentCustomerIndex = this.VehicleStateInfos[vehicleIndex].CurrentCustomerIndex;
+            int currentNodeIndex = this.VehicleStateInfos[vehicleIndex].CurrentNodeIndex;
 
-            this.ActiveCustomerFlag[nextCustomerIndex] = 0;
-            this.VehicleStateInfos[vehicleIndex].CurrentCustomerIndex = nextCustomerIndex;
+            this.ActiveNodeFlag[nextNodeIndex] = 0;
+            this.VehicleStateInfos[vehicleIndex].CurrentNodeIndex = nextNodeIndex;
 
             foreach (VehicleStateInfo info in this.VehicleStateInfos.Values)
             {
-                info.NextVistableCustomerFlag[nextCustomerIndex] = 0;
-                info.VistableCustomerCount--;
+                info.NextVistableNodeFlag[nextNodeIndex] = 0;
+                info.VistableNodeCount--;
             }
 
-            double time = RoutingDataManager.Instance.GetTime(currentCustomerIndex, nextCustomerIndex);
+            double time = RoutingDataManager.Instance.GetTime(currentNodeIndex, nextNodeIndex);
 
-            this.VehicleStateInfos[vehicleIndex].VisitedCustomerFlag[nextCustomerIndex] = 1;
-            this.VehicleStateInfos[vehicleIndex].VisitedCustomerCount++;
+            this.VehicleStateInfos[vehicleIndex].VisitedNodeFlag[nextNodeIndex] = 1;
+            this.VehicleStateInfos[vehicleIndex].VisitedNodeCount++;
             this.VehicleStateInfos[vehicleIndex].AvailableTime += time;
 
-            if (nextCustomer.IsDelivery)
+            if (nextNode.IsDelivery)
             {
-                this.VehicleStateInfos[vehicleIndex].RemainCapacity[resource.Index] += nextCustomer.Demand.Quantity;
+                this.VehicleStateInfos[vehicleIndex].RemainCapacity[resource.Index] += nextNode.Demand.Quantity;
             }
             else 
             {
-                this.VehicleStateInfos[vehicleIndex].RemainCapacity[resource.Index] -= nextCustomer.Demand.Quantity;
+                this.VehicleStateInfos[vehicleIndex].RemainCapacity[resource.Index] -= nextNode.Demand.Quantity;
             }
 
             this.CurrentVehicleIndex = vehicleIndex;
-            this.CurrentCustomerIndex = nextCustomerIndex;
+            this.CurrentNodeIndex = nextNodeIndex;
             
 
             this.ActiveCount--;
@@ -174,13 +174,13 @@ namespace Nodez.Sdmp.Routing.DataModel
         public void ReturnToDepot(int vehicleIndex)
         {
             Depot depot = RoutingDataManager.Instance.RoutingProblem.Depot;
-            double time = RoutingDataManager.Instance.GetTime(this.VehicleStateInfos[vehicleIndex].CurrentCustomerIndex, depot.Index);
+            double time = RoutingDataManager.Instance.GetTime(this.VehicleStateInfos[vehicleIndex].CurrentNodeIndex, depot.Index);
 
             this.VehicleStateInfos[vehicleIndex].AvailableTime += time;
-            this.VehicleStateInfos[vehicleIndex].CurrentCustomerIndex = depot.Index;
+            this.VehicleStateInfos[vehicleIndex].CurrentNodeIndex = depot.Index;
             this.VehicleStateInfos[vehicleIndex].IsActive = false;
 
-            this.CurrentCustomerIndex = 0;
+            this.CurrentNodeIndex = 0;
             this.CurrentVehicleIndex = vehicleIndex;
         }
 
@@ -188,7 +188,7 @@ namespace Nodez.Sdmp.Routing.DataModel
         {
             StringBuilder str = new StringBuilder();
 
-            str.AppendFormat("Customer:{0}:", this.CurrentCustomerIndex);
+            str.AppendFormat("Node:{0}:", this.CurrentNodeIndex);
             str.AppendFormat("Vehicle{0}:", this.CurrentVehicleIndex);
 
             foreach (var item in this.VehicleStateInfos)

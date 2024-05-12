@@ -27,7 +27,7 @@ namespace Nodez.Sdmp.Routing.DataModel
 
         public double TotalTravelTime { get; set; }
 
-        public Customer CurrentCustomer { get; set; }
+        public Node CurrentNode { get; set; }
 
         public Resource GetLoadableResource(Product product)
         {
@@ -55,12 +55,12 @@ namespace Nodez.Sdmp.Routing.DataModel
             return copied;
         }
 
-        public Customer CopyCurrentCustomer(Vehicle clone) 
+        public Node CopyCurrentNode(Vehicle clone) 
         {
-            if (this.CurrentCustomer == null)
+            if (this.CurrentNode == null)
                 return null;
 
-            return clone.CurrentCustomer.Clone();
+            return clone.CurrentNode.Clone();
         }
 
         public void ReplaceResources(Dictionary<string, Resource> resources) 
@@ -68,9 +68,9 @@ namespace Nodez.Sdmp.Routing.DataModel
             this.Resources = resources;
         }
 
-        public void ReplaceCurrentCustomer(Customer currentCustomer) 
+        public void ReplaceCurrentNode(Node currentNode) 
         {
-            this.CurrentCustomer = currentCustomer;
+            this.CurrentNode = currentNode;
         }
 
         public Vehicle Clone() 
@@ -78,10 +78,10 @@ namespace Nodez.Sdmp.Routing.DataModel
             Vehicle clone = (Vehicle)this.MemberwiseClone();
 
             Dictionary<string, Resource> resources = CopyResources(clone);
-            Customer currentCustomer = CopyCurrentCustomer(clone);
+            Node currentNode = CopyCurrentNode(clone);
 
             clone.ReplaceResources(resources);
-            clone.ReplaceCurrentCustomer(currentCustomer);
+            clone.ReplaceCurrentNode(currentNode);
 
             return clone;
         }

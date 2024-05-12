@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Nodez.Sdmp.Routing.Interfaces
 {
-    public interface ICustomerData
+    public interface INodeData
     {
         string ID { get; }
 

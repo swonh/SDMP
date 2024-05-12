@@ -31,7 +31,7 @@ namespace Nodez.Sdmp.Routing.DataModel
 
         public bool IsDepot { get; set; }
 
-        public Demand CopyDemand(Customer clone)
+        public Demand CopyDemand(Node clone)
         {
             if (this.Demand == null)
                 return null;
@@ -39,7 +39,7 @@ namespace Nodez.Sdmp.Routing.DataModel
             return clone.Demand.Clone();
         }
 
-        public Vehicle CopyVisitedVehicle(Customer clone)
+        public Vehicle CopyVisitedVehicle(Node clone)
         {
             if (this.VisitedVehicle == null)
                 return null;

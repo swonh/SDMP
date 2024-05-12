@@ -57,14 +57,14 @@ namespace Nodez.Project.RoutingTemplate.Controls
                 RoutingState state = item.Value as RoutingState;
 
                 int vehicleIndex = state.CurrentVehicleIndex;
-                int customerIndex = state.CurrentCustomerIndex;
+                int nodeIndex = state.CurrentNodeIndex;
 
                 if (vehicleRoutes.TryGetValue(vehicleIndex, out List<int> route) == false)
                 {
-                    vehicleRoutes.Add(vehicleIndex, new List<int>() { customerIndex });
+                    vehicleRoutes.Add(vehicleIndex, new List<int>() { nodeIndex });
                 }
                 else
-                    vehicleRoutes[vehicleIndex].Add(customerIndex);
+                    vehicleRoutes[vehicleIndex].Add(nodeIndex);
             }
 
             double totalLoad = 0;
@@ -85,25 +85,25 @@ namespace Nodez.Project.RoutingTemplate.Controls
                 if (vehicleRoutes.TryGetValue(vehicle.Index, out List<int> value))
                 {
                     routingStr.AppendFormat("{0}->", depot.Name);
-                    Customer prevCust = depot;
+                    Node prevNode = depot;
 
                     for (int idx = 0; idx < value.Count; idx++)
                     {
                         int c = value.ElementAt(idx);
 
-                        Customer customer = manager.GetCustomer(c);
+                        Node node = manager.GetNode(c);
 
                         if (depot.Index == c)
-                            customer = depot;
+                            node = depot;
 
                         double qty = 0;
                         string workType = string.Empty;
 
-                        qty = customer.Demand == null ? 0 : customer.Demand.Quantity;
-                        workType = customer.IsDelivery ? "Delivery" : "Pickup";
+                        qty = node.Demand == null ? 0 : node.Demand.Quantity;
+                        workType = node.IsDelivery ? "Delivery" : "Pickup";
 
-                        double dist = manager.GetDistance(prevCust.Index, customer.Index);
-                        double time = manager.GetTime(prevCust.Index, customer.Index);
+                        double dist = manager.GetDistance(prevNode.Index, node.Index);
+                        double time = manager.GetTime(prevNode.Index, node.Index);
 
                         totalLoad += qty;
                         totalDistance += dist;
@@ -114,13 +114,13 @@ namespace Nodez.Project.RoutingTemplate.Controls
 
                         if (idx == value.Count - 1)
                         {
-                            routingStr.AppendFormat("{0} {1}({2}) | AvailTime:{3}", customer.Name, workType, qty, vehicleAvailableTime);
+                            routingStr.AppendFormat("{0} {1}({2}) | AvailTime:{3}", node.Name, workType, qty, vehicleAvailableTime);
                             break;
                         }
 
-                        routingStr.AppendFormat("{0} {1}({2})| AvailTime:{3} ->", customer.Name, workType, qty, vehicleAvailableTime);
+                        routingStr.AppendFormat("{0} {1}({2})| AvailTime:{3} ->", node.Name, workType, qty, vehicleAvailableTime);
 
-                        prevCust = customer;
+                        prevNode = node;
                     }
                 }
 

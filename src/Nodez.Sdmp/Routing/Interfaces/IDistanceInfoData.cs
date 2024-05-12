@@ -12,9 +12,9 @@ namespace Nodez.Sdmp.Routing.Interfaces
 {
     public interface IDistanceInfoData
     {
-        string FROM_CUSTOMER_ID { get; }
+        string FROM_NODE_ID { get; }
 
-        string TO_CUSTOMER_ID { get; }
+        string TO_NODE_ID { get; }
 
         double DISTANCE { get; }
 

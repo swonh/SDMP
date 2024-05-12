@@ -113,14 +113,14 @@ Renamed Types:
 	Nodez.Sdmp.Routing.Managers.RoutingActionManager/<>c [Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingActionManager/<>c Nodez.Sdmp.Routing.Managers.RoutingActionManager/<>c::<>9 ->  ⁜
 }
 
-[Nodez.Sdmp]Nodez.Sdmp.Routing.Controls.CustomerControl/<>c -> [Nodez.Sdmp]Nodez.Sdmp.Routing.Controls.CustomerControl/ 
+[Nodez.Sdmp]Nodez.Sdmp.Routing.Controls.NodeControl/<>c -> [Nodez.Sdmp]Nodez.Sdmp.Routing.Controls.NodeControl/ 
 {
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.Controls.CustomerControl/<>c::<.cctor>b__5_0[0]( ) ->  
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.Controls.NodeControl/<>c::<.cctor>b__5_0[0]( ) ->  
 
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.Controls.CustomerControl/<>c::.cctor[0]( ) skipped:  special name
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.Controls.CustomerControl/<>c::.ctor[0]( ) skipped:  special name
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.Controls.NodeControl/<>c::.cctor[0]( ) skipped:  special name
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.Controls.NodeControl/<>c::.ctor[0]( ) skipped:  special name
 
-	Nodez.Sdmp.Routing.Controls.CustomerControl/<>c [Nodez.Sdmp]Nodez.Sdmp.Routing.Controls.CustomerControl/<>c Nodez.Sdmp.Routing.Controls.CustomerControl/<>c::<>9 ->  ⁢
+	Nodez.Sdmp.Routing.Controls.NodeControl/<>c [Nodez.Sdmp]Nodez.Sdmp.Routing.Controls.NodeControl/<>c Nodez.Sdmp.Routing.Controls.NodeControl/<>c::<>9 ->  ⁢
 }
 
 [Nodez.Sdmp]Nodez.Sdmp.Routing.Controls.VehicleControl/<>c -> [Nodez.Sdmp]Nodez.Sdmp.Routing.Controls.VehicleControl/ 
@@ -1097,11 +1097,11 @@ Skipped Types:
 [Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager skipped:  KeepPublicApi option in configuration
 {
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager::CreateRunOptions[1]( [mscorlib]System.Collections.Generic.List`1<[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.IRunOptionData> ) ->  
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager::CreateDistanceInfos[4]( [mscorlib]System.Collections.Generic.List`1<[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.ICustomerData>, [mscorlib]System.Collections.Generic.List`1<[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.IDistanceInfoData>, [mscorlib]System.Boolean, [mscorlib]System.String ) ->  
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager::CreateDistanceInfos[4]( [mscorlib]System.Collections.Generic.List`1<[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.INodeData>, [mscorlib]System.Collections.Generic.List`1<[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.IDistanceInfoData>, [mscorlib]System.Boolean, [mscorlib]System.String ) ->  
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager::CreateVehicles[1]( [mscorlib]System.Collections.Generic.List`1<[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.IVehicleData> ) ->  
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager::CreateResources[1]( [mscorlib]System.Collections.Generic.List`1<[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.IResourceData> ) ->  
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager::CreateDepot[1]( [mscorlib]System.Collections.Generic.List`1<[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.ICustomerData> ) ->  
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager::CreateCustomers[1]( [mscorlib]System.Collections.Generic.List`1<[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.ICustomerData> ) ->  
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager::CreateDepot[1]( [mscorlib]System.Collections.Generic.List`1<[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.INodeData> ) ->  
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager::CreateNodes[1]( [mscorlib]System.Collections.Generic.List`1<[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.INodeData> ) ->  
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager::CreateDemands[1]( [mscorlib]System.Collections.Generic.List`1<[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.IDemandData> ) ->  
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager::CreateProducts[1]( [mscorlib]System.Collections.Generic.List`1<[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.IProductData> ) ->  
 
@@ -1114,8 +1114,8 @@ Skipped Types:
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager::set_VehicleTable[1]( [Nodez.Data]Nodez.Data.DataModel.InputTable ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager::get_ResourceTable[0]( ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager::set_ResourceTable[1]( [Nodez.Data]Nodez.Data.DataModel.InputTable ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager::get_CustomerTable[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager::set_CustomerTable[1]( [Nodez.Data]Nodez.Data.DataModel.InputTable ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager::get_NodeTable[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager::set_NodeTable[1]( [Nodez.Data]Nodez.Data.DataModel.InputTable ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager::get_DistanceInfoTable[0]( ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager::set_DistanceInfoTable[1]( [Nodez.Data]Nodez.Data.DataModel.InputTable ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager::get_VehicleResourceTable[0]( ) skipped:  skip by property
@@ -1133,7 +1133,7 @@ Skipped Types:
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager::GetResource[1]( [mscorlib]System.String ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager::GetDemand[1]( [mscorlib]System.String ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager::GetProduct[1]( [mscorlib]System.String ) skipped:  KeepPublicApi option in configuration
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager::GetCustomer[1]( [mscorlib]System.Int32 ) skipped:  KeepPublicApi option in configuration
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager::GetNode[1]( [mscorlib]System.Int32 ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager::GetVehicle[1]( [mscorlib]System.Int32 ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager::GetDistance[2]( [mscorlib]System.Int32, [mscorlib]System.Int32 ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager::GetTime[2]( [mscorlib]System.Int32, [mscorlib]System.Int32 ) skipped:  KeepPublicApi option in configuration
@@ -1145,7 +1145,7 @@ Skipped Types:
 	Nodez.Sdmp.Routing.DataModel.RoutingProblem [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingProblem Nodez.Sdmp.Routing.Managers.RoutingDataManager::<RoutingProblem>k__BackingField ->  ⁊
 	Nodez.Data.DataModel.InputTable [Nodez.Sdmp]Nodez.Data.DataModel.InputTable Nodez.Sdmp.Routing.Managers.RoutingDataManager::<VehicleTable>k__BackingField ->  ⁋
 	Nodez.Data.DataModel.InputTable [Nodez.Sdmp]Nodez.Data.DataModel.InputTable Nodez.Sdmp.Routing.Managers.RoutingDataManager::<ResourceTable>k__BackingField ->  ⁌
-	Nodez.Data.DataModel.InputTable [Nodez.Sdmp]Nodez.Data.DataModel.InputTable Nodez.Sdmp.Routing.Managers.RoutingDataManager::<CustomerTable>k__BackingField ->  ⁍
+	Nodez.Data.DataModel.InputTable [Nodez.Sdmp]Nodez.Data.DataModel.InputTable Nodez.Sdmp.Routing.Managers.RoutingDataManager::<NodeTable>k__BackingField ->  ⁍
 	Nodez.Data.DataModel.InputTable [Nodez.Sdmp]Nodez.Data.DataModel.InputTable Nodez.Sdmp.Routing.Managers.RoutingDataManager::<DistanceInfoTable>k__BackingField ->  ⁎
 	Nodez.Data.DataModel.InputTable [Nodez.Sdmp]Nodez.Data.DataModel.InputTable Nodez.Sdmp.Routing.Managers.RoutingDataManager::<VehicleResourceTable>k__BackingField ->  ⁏
 	Nodez.Data.DataModel.InputTable [Nodez.Sdmp]Nodez.Data.DataModel.InputTable Nodez.Sdmp.Routing.Managers.RoutingDataManager::<ProductTable>k__BackingField ->  ⁐
@@ -1158,7 +1158,7 @@ Skipped Types:
 	Nodez.Sdmp.Routing.DataModel.RoutingProblem [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingProblem Nodez.Sdmp.Routing.Managers.RoutingDataManager::RoutingProblem skipped:  KeepPublicApi option in configuration
 	Nodez.Data.DataModel.InputTable [Nodez.Sdmp]Nodez.Data.DataModel.InputTable Nodez.Sdmp.Routing.Managers.RoutingDataManager::VehicleTable skipped:  KeepPublicApi option in configuration
 	Nodez.Data.DataModel.InputTable [Nodez.Sdmp]Nodez.Data.DataModel.InputTable Nodez.Sdmp.Routing.Managers.RoutingDataManager::ResourceTable skipped:  KeepPublicApi option in configuration
-	Nodez.Data.DataModel.InputTable [Nodez.Sdmp]Nodez.Data.DataModel.InputTable Nodez.Sdmp.Routing.Managers.RoutingDataManager::CustomerTable skipped:  KeepPublicApi option in configuration
+	Nodez.Data.DataModel.InputTable [Nodez.Sdmp]Nodez.Data.DataModel.InputTable Nodez.Sdmp.Routing.Managers.RoutingDataManager::NodeTable skipped:  KeepPublicApi option in configuration
 	Nodez.Data.DataModel.InputTable [Nodez.Sdmp]Nodez.Data.DataModel.InputTable Nodez.Sdmp.Routing.Managers.RoutingDataManager::DistanceInfoTable skipped:  KeepPublicApi option in configuration
 	Nodez.Data.DataModel.InputTable [Nodez.Sdmp]Nodez.Data.DataModel.InputTable Nodez.Sdmp.Routing.Managers.RoutingDataManager::VehicleResourceTable skipped:  KeepPublicApi option in configuration
 	Nodez.Data.DataModel.InputTable [Nodez.Sdmp]Nodez.Data.DataModel.InputTable Nodez.Sdmp.Routing.Managers.RoutingDataManager::ProductTable skipped:  KeepPublicApi option in configuration
@@ -1210,58 +1210,6 @@ Skipped Types:
 	System.Collections.Generic.Dictionary`2<System.Tuple`2<System.Int32,System.Int32>,System.Double> [Nodez.Sdmp]System.Collections.Generic.Dictionary`2<System.Tuple`2<System.Int32,System.Int32>,System.Double> Nodez.Sdmp.Routing.Logic.PrimAlgorithm::PrimEdgeSet skipped:  KeepPublicApi option in configuration
 }
 
-[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Customer skipped:  KeepPublicApi option in configuration
-{
-
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Customer::get_Index[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Customer::set_Index[1]( [mscorlib]System.Int32 ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Customer::get_ID[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Customer::set_ID[1]( [mscorlib]System.String ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Customer::get_Name[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Customer::set_Name[1]( [mscorlib]System.String ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Customer::get_Demand[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Customer::set_Demand[1]( [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Demand ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Customer::get_TimeWindow[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Customer::set_TimeWindow[1]( [mscorlib]System.Tuple`2<[mscorlib]System.Double,[mscorlib]System.Double> ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Customer::get_IsVisited[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Customer::set_IsVisited[1]( [mscorlib]System.Boolean ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Customer::get_VisitedVehicle[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Customer::set_VisitedVehicle[1]( [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Vehicle ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Customer::get_IsDelivery[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Customer::set_IsDelivery[1]( [mscorlib]System.Boolean ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Customer::get_IsDepot[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Customer::set_IsDepot[1]( [mscorlib]System.Boolean ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Customer::ToString[0]( ) skipped:  external base class or interface
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Customer::CopyDemand[1]( [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Customer ) skipped:  KeepPublicApi option in configuration
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Customer::CopyVisitedVehicle[1]( [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Customer ) skipped:  KeepPublicApi option in configuration
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Customer::ReplaceDemand[1]( [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Demand ) skipped:  KeepPublicApi option in configuration
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Customer::ReplaceVisitedVehicle[1]( [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Vehicle ) skipped:  KeepPublicApi option in configuration
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Customer::GetDistance[1]( [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Customer ) skipped:  KeepPublicApi option in configuration
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Customer::Clone[0]( ) skipped:  KeepPublicApi option in configuration
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Customer::.ctor[0]( ) skipped:  special name
-
-	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Routing.DataModel.Customer::<Index>k__BackingField ->  ⁘
-	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Routing.DataModel.Customer::<ID>k__BackingField ->  ⁙
-	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Routing.DataModel.Customer::<Name>k__BackingField ->  ⁚
-	Nodez.Sdmp.Routing.DataModel.Demand [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Demand Nodez.Sdmp.Routing.DataModel.Customer::<Demand>k__BackingField ->  ⁛
-	System.Tuple`2<System.Double,System.Double> [Nodez.Sdmp]System.Tuple`2<System.Double,System.Double> Nodez.Sdmp.Routing.DataModel.Customer::<TimeWindow>k__BackingField ->  ⁜
-	System.Boolean [Nodez.Sdmp]System.Boolean Nodez.Sdmp.Routing.DataModel.Customer::<IsVisited>k__BackingField ->  ⁝
-	Nodez.Sdmp.Routing.DataModel.Vehicle [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Vehicle Nodez.Sdmp.Routing.DataModel.Customer::<VisitedVehicle>k__BackingField ->  ⁞
-	System.Boolean [Nodez.Sdmp]System.Boolean Nodez.Sdmp.Routing.DataModel.Customer::<IsDelivery>k__BackingField ->   
-	System.Boolean [Nodez.Sdmp]System.Boolean Nodez.Sdmp.Routing.DataModel.Customer::<IsDepot>k__BackingField ->  ⁠
-
-
-	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Routing.DataModel.Customer::Index skipped:  KeepPublicApi option in configuration
-	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Routing.DataModel.Customer::ID skipped:  KeepPublicApi option in configuration
-	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Routing.DataModel.Customer::Name skipped:  KeepPublicApi option in configuration
-	Nodez.Sdmp.Routing.DataModel.Demand [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Demand Nodez.Sdmp.Routing.DataModel.Customer::Demand skipped:  KeepPublicApi option in configuration
-	System.Tuple`2<System.Double,System.Double> [Nodez.Sdmp]System.Tuple`2<System.Double,System.Double> Nodez.Sdmp.Routing.DataModel.Customer::TimeWindow skipped:  KeepPublicApi option in configuration
-	System.Boolean [Nodez.Sdmp]System.Boolean Nodez.Sdmp.Routing.DataModel.Customer::IsVisited skipped:  KeepPublicApi option in configuration
-	Nodez.Sdmp.Routing.DataModel.Vehicle [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Vehicle Nodez.Sdmp.Routing.DataModel.Customer::VisitedVehicle skipped:  KeepPublicApi option in configuration
-	System.Boolean [Nodez.Sdmp]System.Boolean Nodez.Sdmp.Routing.DataModel.Customer::IsDelivery skipped:  KeepPublicApi option in configuration
-	System.Boolean [Nodez.Sdmp]System.Boolean Nodez.Sdmp.Routing.DataModel.Customer::IsDepot skipped:  KeepPublicApi option in configuration
-}
-
 [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Demand skipped:  KeepPublicApi option in configuration
 {
 
@@ -1278,10 +1226,10 @@ Skipped Types:
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Demand::Clone[0]( ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Demand::.ctor[0]( ) skipped:  special name
 
-	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Routing.DataModel.Demand::<ID>k__BackingField ->  ⁡
-	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Routing.DataModel.Demand::<Name>k__BackingField ->  ⁢
-	Nodez.Sdmp.Routing.DataModel.Product [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Product Nodez.Sdmp.Routing.DataModel.Demand::<Product>k__BackingField ->  ⁣
-	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.Routing.DataModel.Demand::<Quantity>k__BackingField ->  ⁤
+	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Routing.DataModel.Demand::<ID>k__BackingField ->  ⁘
+	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Routing.DataModel.Demand::<Name>k__BackingField ->  ⁙
+	Nodez.Sdmp.Routing.DataModel.Product [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Product Nodez.Sdmp.Routing.DataModel.Demand::<Product>k__BackingField ->  ⁚
+	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.Routing.DataModel.Demand::<Quantity>k__BackingField ->  ⁛
 
 
 	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Routing.DataModel.Demand::ID skipped:  KeepPublicApi option in configuration
@@ -1293,34 +1241,86 @@ Skipped Types:
 [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.DistanceInfo skipped:  KeepPublicApi option in configuration
 {
 
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.DistanceInfo::get_FromCustomerID[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.DistanceInfo::set_FromCustomerID[1]( [mscorlib]System.String ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.DistanceInfo::get_FromCustomerIndex[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.DistanceInfo::set_FromCustomerIndex[1]( [mscorlib]System.Int32 ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.DistanceInfo::get_ToCustomerID[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.DistanceInfo::set_ToCustomerID[1]( [mscorlib]System.String ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.DistanceInfo::get_ToCustomerIndex[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.DistanceInfo::set_ToCustomerIndex[1]( [mscorlib]System.Int32 ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.DistanceInfo::get_FromNodeID[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.DistanceInfo::set_FromNodeID[1]( [mscorlib]System.String ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.DistanceInfo::get_FromNodeIndex[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.DistanceInfo::set_FromNodeIndex[1]( [mscorlib]System.Int32 ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.DistanceInfo::get_ToNodeID[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.DistanceInfo::set_ToNodeID[1]( [mscorlib]System.String ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.DistanceInfo::get_ToNodeIndex[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.DistanceInfo::set_ToNodeIndex[1]( [mscorlib]System.Int32 ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.DistanceInfo::get_Distance[0]( ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.DistanceInfo::set_Distance[1]( [mscorlib]System.Double ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.DistanceInfo::get_Time[0]( ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.DistanceInfo::set_Time[1]( [mscorlib]System.Double ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.DistanceInfo::.ctor[0]( ) skipped:  special name
 
-	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Routing.DataModel.DistanceInfo::<FromCustomerID>k__BackingField ->  ⁪
-	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Routing.DataModel.DistanceInfo::<FromCustomerIndex>k__BackingField ->  ⁫
-	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Routing.DataModel.DistanceInfo::<ToCustomerID>k__BackingField ->  ⁬
-	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Routing.DataModel.DistanceInfo::<ToCustomerIndex>k__BackingField ->  ⁭
-	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.Routing.DataModel.DistanceInfo::<Distance>k__BackingField ->  ⁮
-	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.Routing.DataModel.DistanceInfo::<Time>k__BackingField ->  ⁯
+	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Routing.DataModel.DistanceInfo::<FromNodeID>k__BackingField ->  ⁜
+	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Routing.DataModel.DistanceInfo::<FromNodeIndex>k__BackingField ->  ⁝
+	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Routing.DataModel.DistanceInfo::<ToNodeID>k__BackingField ->  ⁞
+	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Routing.DataModel.DistanceInfo::<ToNodeIndex>k__BackingField ->   
+	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.Routing.DataModel.DistanceInfo::<Distance>k__BackingField ->  ⁠
+	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.Routing.DataModel.DistanceInfo::<Time>k__BackingField ->  ⁡
 
 
-	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Routing.DataModel.DistanceInfo::FromCustomerID skipped:  KeepPublicApi option in configuration
-	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Routing.DataModel.DistanceInfo::FromCustomerIndex skipped:  KeepPublicApi option in configuration
-	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Routing.DataModel.DistanceInfo::ToCustomerID skipped:  KeepPublicApi option in configuration
-	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Routing.DataModel.DistanceInfo::ToCustomerIndex skipped:  KeepPublicApi option in configuration
+	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Routing.DataModel.DistanceInfo::FromNodeID skipped:  KeepPublicApi option in configuration
+	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Routing.DataModel.DistanceInfo::FromNodeIndex skipped:  KeepPublicApi option in configuration
+	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Routing.DataModel.DistanceInfo::ToNodeID skipped:  KeepPublicApi option in configuration
+	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Routing.DataModel.DistanceInfo::ToNodeIndex skipped:  KeepPublicApi option in configuration
 	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.Routing.DataModel.DistanceInfo::Distance skipped:  KeepPublicApi option in configuration
 	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.Routing.DataModel.DistanceInfo::Time skipped:  KeepPublicApi option in configuration
+}
+
+[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Node skipped:  KeepPublicApi option in configuration
+{
+
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Node::get_Index[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Node::set_Index[1]( [mscorlib]System.Int32 ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Node::get_ID[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Node::set_ID[1]( [mscorlib]System.String ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Node::get_Name[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Node::set_Name[1]( [mscorlib]System.String ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Node::get_Demand[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Node::set_Demand[1]( [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Demand ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Node::get_TimeWindow[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Node::set_TimeWindow[1]( [mscorlib]System.Tuple`2<[mscorlib]System.Double,[mscorlib]System.Double> ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Node::get_IsVisited[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Node::set_IsVisited[1]( [mscorlib]System.Boolean ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Node::get_VisitedVehicle[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Node::set_VisitedVehicle[1]( [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Vehicle ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Node::get_IsDelivery[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Node::set_IsDelivery[1]( [mscorlib]System.Boolean ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Node::get_IsDepot[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Node::set_IsDepot[1]( [mscorlib]System.Boolean ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Node::ToString[0]( ) skipped:  external base class or interface
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Node::CopyDemand[1]( [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Node ) skipped:  KeepPublicApi option in configuration
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Node::CopyVisitedVehicle[1]( [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Node ) skipped:  KeepPublicApi option in configuration
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Node::ReplaceDemand[1]( [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Demand ) skipped:  KeepPublicApi option in configuration
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Node::ReplaceVisitedVehicle[1]( [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Vehicle ) skipped:  KeepPublicApi option in configuration
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Node::GetDistance[1]( [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Node ) skipped:  KeepPublicApi option in configuration
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Node::Clone[0]( ) skipped:  KeepPublicApi option in configuration
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Node::.ctor[0]( ) skipped:  special name
+
+	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Routing.DataModel.Node::<Index>k__BackingField ->  ⁢
+	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Routing.DataModel.Node::<ID>k__BackingField ->  ⁣
+	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Routing.DataModel.Node::<Name>k__BackingField ->  ⁤
+	Nodez.Sdmp.Routing.DataModel.Demand [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Demand Nodez.Sdmp.Routing.DataModel.Node::<Demand>k__BackingField ->  ⁪
+	System.Tuple`2<System.Double,System.Double> [Nodez.Sdmp]System.Tuple`2<System.Double,System.Double> Nodez.Sdmp.Routing.DataModel.Node::<TimeWindow>k__BackingField ->  ⁫
+	System.Boolean [Nodez.Sdmp]System.Boolean Nodez.Sdmp.Routing.DataModel.Node::<IsVisited>k__BackingField ->  ⁬
+	Nodez.Sdmp.Routing.DataModel.Vehicle [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Vehicle Nodez.Sdmp.Routing.DataModel.Node::<VisitedVehicle>k__BackingField ->  ⁭
+	System.Boolean [Nodez.Sdmp]System.Boolean Nodez.Sdmp.Routing.DataModel.Node::<IsDelivery>k__BackingField ->  ⁮
+	System.Boolean [Nodez.Sdmp]System.Boolean Nodez.Sdmp.Routing.DataModel.Node::<IsDepot>k__BackingField ->  ⁯
+
+
+	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Routing.DataModel.Node::Index skipped:  KeepPublicApi option in configuration
+	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Routing.DataModel.Node::ID skipped:  KeepPublicApi option in configuration
+	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Routing.DataModel.Node::Name skipped:  KeepPublicApi option in configuration
+	Nodez.Sdmp.Routing.DataModel.Demand [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Demand Nodez.Sdmp.Routing.DataModel.Node::Demand skipped:  KeepPublicApi option in configuration
+	System.Tuple`2<System.Double,System.Double> [Nodez.Sdmp]System.Tuple`2<System.Double,System.Double> Nodez.Sdmp.Routing.DataModel.Node::TimeWindow skipped:  KeepPublicApi option in configuration
+	System.Boolean [Nodez.Sdmp]System.Boolean Nodez.Sdmp.Routing.DataModel.Node::IsVisited skipped:  KeepPublicApi option in configuration
+	Nodez.Sdmp.Routing.DataModel.Vehicle [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Vehicle Nodez.Sdmp.Routing.DataModel.Node::VisitedVehicle skipped:  KeepPublicApi option in configuration
+	System.Boolean [Nodez.Sdmp]System.Boolean Nodez.Sdmp.Routing.DataModel.Node::IsDelivery skipped:  KeepPublicApi option in configuration
+	System.Boolean [Nodez.Sdmp]System.Boolean Nodez.Sdmp.Routing.DataModel.Node::IsDepot skipped:  KeepPublicApi option in configuration
 }
 
 [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Product skipped:  KeepPublicApi option in configuration
@@ -1385,8 +1385,8 @@ Skipped Types:
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingProblem::SetVehicleMappings[0]( ) ->  
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingProblem::SetVehicleIndexMappings[0]( ) ->  
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingProblem::SetResourceMappings[0]( ) ->  
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingProblem::SetCustomerMappings[0]( ) ->  
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingProblem::SetCustomerIndexMappings[0]( ) ->  
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingProblem::SetNodeMappings[0]( ) ->  
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingProblem::SetNodeIndexMappings[0]( ) ->  
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingProblem::SetDemandMappings[0]( ) ->  
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingProblem::SetProductMappings[0]( ) ->  
 
@@ -1394,8 +1394,8 @@ Skipped Types:
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingProblem::set_Vehicles[1]( [mscorlib]System.Collections.Generic.List`1<[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Vehicle> ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingProblem::get_Resources[0]( ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingProblem::set_Resources[1]( [mscorlib]System.Collections.Generic.List`1<[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Resource> ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingProblem::get_Customers[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingProblem::set_Customers[1]( [mscorlib]System.Collections.Generic.List`1<[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Customer> ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingProblem::get_Nodes[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingProblem::set_Nodes[1]( [mscorlib]System.Collections.Generic.List`1<[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Node> ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingProblem::get_Depot[0]( ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingProblem::set_Depot[1]( [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Depot ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingProblem::get_Demands[0]( ) skipped:  skip by property
@@ -1412,10 +1412,10 @@ Skipped Types:
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingProblem::set_VehicleIndexMappings[1]( [mscorlib]System.Collections.Generic.Dictionary`2<[mscorlib]System.Int32,[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Vehicle> ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingProblem::get_ResourceMappings[0]( ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingProblem::set_ResourceMappings[1]( [mscorlib]System.Collections.Generic.Dictionary`2<[mscorlib]System.String,[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Resource> ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingProblem::get_CustomerMappings[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingProblem::set_CustomerMappings[1]( [mscorlib]System.Collections.Generic.Dictionary`2<[mscorlib]System.String,[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Customer> ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingProblem::get_CustomerIndexMappings[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingProblem::set_CustomerIndexMappings[1]( [mscorlib]System.Collections.Generic.Dictionary`2<[mscorlib]System.Int32,[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Customer> ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingProblem::get_NodeMappings[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingProblem::set_NodeMappings[1]( [mscorlib]System.Collections.Generic.Dictionary`2<[mscorlib]System.String,[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Node> ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingProblem::get_NodeIndexMappings[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingProblem::set_NodeIndexMappings[1]( [mscorlib]System.Collections.Generic.Dictionary`2<[mscorlib]System.Int32,[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Node> ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingProblem::get_DemandMappings[0]( ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingProblem::set_DemandMappings[1]( [mscorlib]System.Collections.Generic.Dictionary`2<[mscorlib]System.String,[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Demand> ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingProblem::get_ProductMappings[0]( ) skipped:  skip by property
@@ -1430,7 +1430,7 @@ Skipped Types:
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingProblem::SetRunOptionObjects[1]( [mscorlib]System.Collections.Generic.List`1<[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RunOption> ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingProblem::SetVehicleObjects[1]( [mscorlib]System.Collections.Generic.List`1<[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Vehicle> ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingProblem::SetResourceObjects[1]( [mscorlib]System.Collections.Generic.List`1<[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Resource> ) skipped:  KeepPublicApi option in configuration
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingProblem::SetCustomerObjects[1]( [mscorlib]System.Collections.Generic.List`1<[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Customer> ) skipped:  KeepPublicApi option in configuration
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingProblem::SetNodeObjects[1]( [mscorlib]System.Collections.Generic.List`1<[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Node> ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingProblem::SetDepotObjects[1]( [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Depot ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingProblem::SetDemandObjects[1]( [mscorlib]System.Collections.Generic.List`1<[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Demand> ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingProblem::SetProductObjects[1]( [mscorlib]System.Collections.Generic.List`1<[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Product> ) skipped:  KeepPublicApi option in configuration
@@ -1438,7 +1438,7 @@ Skipped Types:
 
 	System.Collections.Generic.List`1<Nodez.Sdmp.Routing.DataModel.Vehicle> [Nodez.Sdmp]System.Collections.Generic.List`1<Nodez.Sdmp.Routing.DataModel.Vehicle> Nodez.Sdmp.Routing.DataModel.RoutingProblem::<Vehicles>k__BackingField ->   
 	System.Collections.Generic.List`1<Nodez.Sdmp.Routing.DataModel.Resource> [Nodez.Sdmp]System.Collections.Generic.List`1<Nodez.Sdmp.Routing.DataModel.Resource> Nodez.Sdmp.Routing.DataModel.RoutingProblem::<Resources>k__BackingField ->   
-	System.Collections.Generic.List`1<Nodez.Sdmp.Routing.DataModel.Customer> [Nodez.Sdmp]System.Collections.Generic.List`1<Nodez.Sdmp.Routing.DataModel.Customer> Nodez.Sdmp.Routing.DataModel.RoutingProblem::<Customers>k__BackingField ->   
+	System.Collections.Generic.List`1<Nodez.Sdmp.Routing.DataModel.Node> [Nodez.Sdmp]System.Collections.Generic.List`1<Nodez.Sdmp.Routing.DataModel.Node> Nodez.Sdmp.Routing.DataModel.RoutingProblem::<Nodes>k__BackingField ->   
 	Nodez.Sdmp.Routing.DataModel.Depot [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Depot Nodez.Sdmp.Routing.DataModel.RoutingProblem::<Depot>k__BackingField ->   
 	System.Collections.Generic.List`1<Nodez.Sdmp.Routing.DataModel.Demand> [Nodez.Sdmp]System.Collections.Generic.List`1<Nodez.Sdmp.Routing.DataModel.Demand> Nodez.Sdmp.Routing.DataModel.RoutingProblem::<Demands>k__BackingField ->   
 	System.Collections.Generic.List`1<Nodez.Sdmp.Routing.DataModel.Product> [Nodez.Sdmp]System.Collections.Generic.List`1<Nodez.Sdmp.Routing.DataModel.Product> Nodez.Sdmp.Routing.DataModel.RoutingProblem::<Products>k__BackingField ->   
@@ -1447,8 +1447,8 @@ Skipped Types:
 	System.Collections.Generic.Dictionary`2<System.String,Nodez.Sdmp.Routing.DataModel.Vehicle> [Nodez.Sdmp]System.Collections.Generic.Dictionary`2<System.String,Nodez.Sdmp.Routing.DataModel.Vehicle> Nodez.Sdmp.Routing.DataModel.RoutingProblem::<VehicleMappings>k__BackingField ->  ‑
 	System.Collections.Generic.Dictionary`2<System.Int32,Nodez.Sdmp.Routing.DataModel.Vehicle> [Nodez.Sdmp]System.Collections.Generic.Dictionary`2<System.Int32,Nodez.Sdmp.Routing.DataModel.Vehicle> Nodez.Sdmp.Routing.DataModel.RoutingProblem::<VehicleIndexMappings>k__BackingField ->  ‒
 	System.Collections.Generic.Dictionary`2<System.String,Nodez.Sdmp.Routing.DataModel.Resource> [Nodez.Sdmp]System.Collections.Generic.Dictionary`2<System.String,Nodez.Sdmp.Routing.DataModel.Resource> Nodez.Sdmp.Routing.DataModel.RoutingProblem::<ResourceMappings>k__BackingField ->  –
-	System.Collections.Generic.Dictionary`2<System.String,Nodez.Sdmp.Routing.DataModel.Customer> [Nodez.Sdmp]System.Collections.Generic.Dictionary`2<System.String,Nodez.Sdmp.Routing.DataModel.Customer> Nodez.Sdmp.Routing.DataModel.RoutingProblem::<CustomerMappings>k__BackingField ->  —
-	System.Collections.Generic.Dictionary`2<System.Int32,Nodez.Sdmp.Routing.DataModel.Customer> [Nodez.Sdmp]System.Collections.Generic.Dictionary`2<System.Int32,Nodez.Sdmp.Routing.DataModel.Customer> Nodez.Sdmp.Routing.DataModel.RoutingProblem::<CustomerIndexMappings>k__BackingField ->  ―
+	System.Collections.Generic.Dictionary`2<System.String,Nodez.Sdmp.Routing.DataModel.Node> [Nodez.Sdmp]System.Collections.Generic.Dictionary`2<System.String,Nodez.Sdmp.Routing.DataModel.Node> Nodez.Sdmp.Routing.DataModel.RoutingProblem::<NodeMappings>k__BackingField ->  —
+	System.Collections.Generic.Dictionary`2<System.Int32,Nodez.Sdmp.Routing.DataModel.Node> [Nodez.Sdmp]System.Collections.Generic.Dictionary`2<System.Int32,Nodez.Sdmp.Routing.DataModel.Node> Nodez.Sdmp.Routing.DataModel.RoutingProblem::<NodeIndexMappings>k__BackingField ->  ―
 	System.Collections.Generic.Dictionary`2<System.String,Nodez.Sdmp.Routing.DataModel.Demand> [Nodez.Sdmp]System.Collections.Generic.Dictionary`2<System.String,Nodez.Sdmp.Routing.DataModel.Demand> Nodez.Sdmp.Routing.DataModel.RoutingProblem::<DemandMappings>k__BackingField ->  •
 	System.Collections.Generic.Dictionary`2<System.String,Nodez.Sdmp.Routing.DataModel.Product> [Nodez.Sdmp]System.Collections.Generic.Dictionary`2<System.String,Nodez.Sdmp.Routing.DataModel.Product> Nodez.Sdmp.Routing.DataModel.RoutingProblem::<ProductMappings>k__BackingField ->  ․
 	System.Collections.Generic.Dictionary`2<System.Tuple`2<System.String,System.String>,Nodez.Sdmp.Routing.DataModel.DistanceInfo> [Nodez.Sdmp]System.Collections.Generic.Dictionary`2<System.Tuple`2<System.String,System.String>,Nodez.Sdmp.Routing.DataModel.DistanceInfo> Nodez.Sdmp.Routing.DataModel.RoutingProblem::<DistanceInfoMappings>k__BackingField ->  ‥
@@ -1458,7 +1458,7 @@ Skipped Types:
 
 	System.Collections.Generic.List`1<Nodez.Sdmp.Routing.DataModel.Vehicle> [Nodez.Sdmp]System.Collections.Generic.List`1<Nodez.Sdmp.Routing.DataModel.Vehicle> Nodez.Sdmp.Routing.DataModel.RoutingProblem::Vehicles skipped:  KeepPublicApi option in configuration
 	System.Collections.Generic.List`1<Nodez.Sdmp.Routing.DataModel.Resource> [Nodez.Sdmp]System.Collections.Generic.List`1<Nodez.Sdmp.Routing.DataModel.Resource> Nodez.Sdmp.Routing.DataModel.RoutingProblem::Resources skipped:  KeepPublicApi option in configuration
-	System.Collections.Generic.List`1<Nodez.Sdmp.Routing.DataModel.Customer> [Nodez.Sdmp]System.Collections.Generic.List`1<Nodez.Sdmp.Routing.DataModel.Customer> Nodez.Sdmp.Routing.DataModel.RoutingProblem::Customers skipped:  KeepPublicApi option in configuration
+	System.Collections.Generic.List`1<Nodez.Sdmp.Routing.DataModel.Node> [Nodez.Sdmp]System.Collections.Generic.List`1<Nodez.Sdmp.Routing.DataModel.Node> Nodez.Sdmp.Routing.DataModel.RoutingProblem::Nodes skipped:  KeepPublicApi option in configuration
 	Nodez.Sdmp.Routing.DataModel.Depot [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Depot Nodez.Sdmp.Routing.DataModel.RoutingProblem::Depot skipped:  KeepPublicApi option in configuration
 	System.Collections.Generic.List`1<Nodez.Sdmp.Routing.DataModel.Demand> [Nodez.Sdmp]System.Collections.Generic.List`1<Nodez.Sdmp.Routing.DataModel.Demand> Nodez.Sdmp.Routing.DataModel.RoutingProblem::Demands skipped:  KeepPublicApi option in configuration
 	System.Collections.Generic.List`1<Nodez.Sdmp.Routing.DataModel.Product> [Nodez.Sdmp]System.Collections.Generic.List`1<Nodez.Sdmp.Routing.DataModel.Product> Nodez.Sdmp.Routing.DataModel.RoutingProblem::Products skipped:  KeepPublicApi option in configuration
@@ -1467,8 +1467,8 @@ Skipped Types:
 	System.Collections.Generic.Dictionary`2<System.String,Nodez.Sdmp.Routing.DataModel.Vehicle> [Nodez.Sdmp]System.Collections.Generic.Dictionary`2<System.String,Nodez.Sdmp.Routing.DataModel.Vehicle> Nodez.Sdmp.Routing.DataModel.RoutingProblem::VehicleMappings skipped:  KeepPublicApi option in configuration
 	System.Collections.Generic.Dictionary`2<System.Int32,Nodez.Sdmp.Routing.DataModel.Vehicle> [Nodez.Sdmp]System.Collections.Generic.Dictionary`2<System.Int32,Nodez.Sdmp.Routing.DataModel.Vehicle> Nodez.Sdmp.Routing.DataModel.RoutingProblem::VehicleIndexMappings skipped:  KeepPublicApi option in configuration
 	System.Collections.Generic.Dictionary`2<System.String,Nodez.Sdmp.Routing.DataModel.Resource> [Nodez.Sdmp]System.Collections.Generic.Dictionary`2<System.String,Nodez.Sdmp.Routing.DataModel.Resource> Nodez.Sdmp.Routing.DataModel.RoutingProblem::ResourceMappings skipped:  KeepPublicApi option in configuration
-	System.Collections.Generic.Dictionary`2<System.String,Nodez.Sdmp.Routing.DataModel.Customer> [Nodez.Sdmp]System.Collections.Generic.Dictionary`2<System.String,Nodez.Sdmp.Routing.DataModel.Customer> Nodez.Sdmp.Routing.DataModel.RoutingProblem::CustomerMappings skipped:  KeepPublicApi option in configuration
-	System.Collections.Generic.Dictionary`2<System.Int32,Nodez.Sdmp.Routing.DataModel.Customer> [Nodez.Sdmp]System.Collections.Generic.Dictionary`2<System.Int32,Nodez.Sdmp.Routing.DataModel.Customer> Nodez.Sdmp.Routing.DataModel.RoutingProblem::CustomerIndexMappings skipped:  KeepPublicApi option in configuration
+	System.Collections.Generic.Dictionary`2<System.String,Nodez.Sdmp.Routing.DataModel.Node> [Nodez.Sdmp]System.Collections.Generic.Dictionary`2<System.String,Nodez.Sdmp.Routing.DataModel.Node> Nodez.Sdmp.Routing.DataModel.RoutingProblem::NodeMappings skipped:  KeepPublicApi option in configuration
+	System.Collections.Generic.Dictionary`2<System.Int32,Nodez.Sdmp.Routing.DataModel.Node> [Nodez.Sdmp]System.Collections.Generic.Dictionary`2<System.Int32,Nodez.Sdmp.Routing.DataModel.Node> Nodez.Sdmp.Routing.DataModel.RoutingProblem::NodeIndexMappings skipped:  KeepPublicApi option in configuration
 	System.Collections.Generic.Dictionary`2<System.String,Nodez.Sdmp.Routing.DataModel.Demand> [Nodez.Sdmp]System.Collections.Generic.Dictionary`2<System.String,Nodez.Sdmp.Routing.DataModel.Demand> Nodez.Sdmp.Routing.DataModel.RoutingProblem::DemandMappings skipped:  KeepPublicApi option in configuration
 	System.Collections.Generic.Dictionary`2<System.String,Nodez.Sdmp.Routing.DataModel.Product> [Nodez.Sdmp]System.Collections.Generic.Dictionary`2<System.String,Nodez.Sdmp.Routing.DataModel.Product> Nodez.Sdmp.Routing.DataModel.RoutingProblem::ProductMappings skipped:  KeepPublicApi option in configuration
 	System.Collections.Generic.Dictionary`2<System.Tuple`2<System.String,System.String>,Nodez.Sdmp.Routing.DataModel.DistanceInfo> [Nodez.Sdmp]System.Collections.Generic.Dictionary`2<System.Tuple`2<System.String,System.String>,Nodez.Sdmp.Routing.DataModel.DistanceInfo> Nodez.Sdmp.Routing.DataModel.RoutingProblem::DistanceInfoMappings skipped:  KeepPublicApi option in configuration
@@ -1496,16 +1496,16 @@ Skipped Types:
 [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.VehicleStateInfo skipped:  KeepPublicApi option in configuration
 {
 
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::get_CurrentCustomerIndex[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::set_CurrentCustomerIndex[1]( [mscorlib]System.Int32 ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::get_VisitedCustomerFlag[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::set_VisitedCustomerFlag[1]( [mscorlib]System.Int32[] ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::get_NextVistableCustomerFlag[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::set_NextVistableCustomerFlag[1]( [mscorlib]System.Int32[] ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::get_VisitedCustomerCount[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::set_VisitedCustomerCount[1]( [mscorlib]System.Int32 ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::get_VistableCustomerCount[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::set_VistableCustomerCount[1]( [mscorlib]System.Int32 ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::get_CurrentNodeIndex[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::set_CurrentNodeIndex[1]( [mscorlib]System.Int32 ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::get_VisitedNodeFlag[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::set_VisitedNodeFlag[1]( [mscorlib]System.Int32[] ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::get_NextVistableNodeFlag[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::set_NextVistableNodeFlag[1]( [mscorlib]System.Int32[] ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::get_VisitedNodeCount[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::set_VisitedNodeCount[1]( [mscorlib]System.Int32 ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::get_VistableNodeCount[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::set_VistableNodeCount[1]( [mscorlib]System.Int32 ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::get_RemainCapacity[0]( ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::set_RemainCapacity[1]( [mscorlib]System.Double[] ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::get_IsActive[0]( ) skipped:  skip by property
@@ -1513,25 +1513,25 @@ Skipped Types:
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::get_AvailableTime[0]( ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::set_AvailableTime[1]( [mscorlib]System.Double ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::ToString[0]( ) skipped:  external base class or interface
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::IsDoneVisitCustomers[0]( ) skipped:  KeepPublicApi option in configuration
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::IsDoneVisitNodes[0]( ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::Clone[0]( ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::.ctor[0]( ) skipped:  special name
 
-	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::<CurrentCustomerIndex>k__BackingField ->  ‫
-	System.Int32[] [Nodez.Sdmp]System.Int32[] Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::<VisitedCustomerFlag>k__BackingField ->  ‬
-	System.Int32[] [Nodez.Sdmp]System.Int32[] Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::<NextVistableCustomerFlag>k__BackingField ->  ‭
-	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::<VisitedCustomerCount>k__BackingField ->  ‮
-	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::<VistableCustomerCount>k__BackingField ->   
+	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::<CurrentNodeIndex>k__BackingField ->  ‫
+	System.Int32[] [Nodez.Sdmp]System.Int32[] Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::<VisitedNodeFlag>k__BackingField ->  ‬
+	System.Int32[] [Nodez.Sdmp]System.Int32[] Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::<NextVistableNodeFlag>k__BackingField ->  ‭
+	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::<VisitedNodeCount>k__BackingField ->  ‮
+	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::<VistableNodeCount>k__BackingField ->   
 	System.Double[] [Nodez.Sdmp]System.Double[] Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::<RemainCapacity>k__BackingField ->  ′
 	System.Boolean [Nodez.Sdmp]System.Boolean Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::<IsActive>k__BackingField ->  ‵
 	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::<AvailableTime>k__BackingField ->  ″
 
 
-	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::CurrentCustomerIndex skipped:  KeepPublicApi option in configuration
-	System.Int32[] [Nodez.Sdmp]System.Int32[] Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::VisitedCustomerFlag skipped:  KeepPublicApi option in configuration
-	System.Int32[] [Nodez.Sdmp]System.Int32[] Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::NextVistableCustomerFlag skipped:  KeepPublicApi option in configuration
-	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::VisitedCustomerCount skipped:  KeepPublicApi option in configuration
-	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::VistableCustomerCount skipped:  KeepPublicApi option in configuration
+	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::CurrentNodeIndex skipped:  KeepPublicApi option in configuration
+	System.Int32[] [Nodez.Sdmp]System.Int32[] Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::VisitedNodeFlag skipped:  KeepPublicApi option in configuration
+	System.Int32[] [Nodez.Sdmp]System.Int32[] Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::NextVistableNodeFlag skipped:  KeepPublicApi option in configuration
+	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::VisitedNodeCount skipped:  KeepPublicApi option in configuration
+	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::VistableNodeCount skipped:  KeepPublicApi option in configuration
 	System.Double[] [Nodez.Sdmp]System.Double[] Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::RemainCapacity skipped:  KeepPublicApi option in configuration
 	System.Boolean [Nodez.Sdmp]System.Boolean Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::IsActive skipped:  KeepPublicApi option in configuration
 	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.Routing.DataModel.VehicleStateInfo::AvailableTime skipped:  KeepPublicApi option in configuration
@@ -1554,13 +1554,13 @@ Skipped Types:
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Vehicle::set_TotalTravelDistance[1]( [mscorlib]System.Double ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Vehicle::get_TotalTravelTime[0]( ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Vehicle::set_TotalTravelTime[1]( [mscorlib]System.Double ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Vehicle::get_CurrentCustomer[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Vehicle::set_CurrentCustomer[1]( [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Customer ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Vehicle::get_CurrentNode[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Vehicle::set_CurrentNode[1]( [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Node ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Vehicle::GetLoadableResource[1]( [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Product ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Vehicle::CopyResources[1]( [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Vehicle ) skipped:  KeepPublicApi option in configuration
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Vehicle::CopyCurrentCustomer[1]( [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Vehicle ) skipped:  KeepPublicApi option in configuration
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Vehicle::CopyCurrentNode[1]( [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Vehicle ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Vehicle::ReplaceResources[1]( [mscorlib]System.Collections.Generic.Dictionary`2<[mscorlib]System.String,[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Resource> ) skipped:  KeepPublicApi option in configuration
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Vehicle::ReplaceCurrentCustomer[1]( [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Customer ) skipped:  KeepPublicApi option in configuration
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Vehicle::ReplaceCurrentNode[1]( [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Node ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Vehicle::Clone[0]( ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Vehicle::.ctor[0]( ) skipped:  special name
 
@@ -1571,7 +1571,7 @@ Skipped Types:
 	System.Collections.Generic.Dictionary`2<System.String,Nodez.Sdmp.Routing.DataModel.Resource> [Nodez.Sdmp]System.Collections.Generic.Dictionary`2<System.String,Nodez.Sdmp.Routing.DataModel.Resource> Nodez.Sdmp.Routing.DataModel.Vehicle::<Resources>k__BackingField ->  ⁉
 	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.Routing.DataModel.Vehicle::<TotalTravelDistance>k__BackingField ->  ⁊
 	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.Routing.DataModel.Vehicle::<TotalTravelTime>k__BackingField ->  ⁋
-	Nodez.Sdmp.Routing.DataModel.Customer [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Customer Nodez.Sdmp.Routing.DataModel.Vehicle::<CurrentCustomer>k__BackingField ->  ⁌
+	Nodez.Sdmp.Routing.DataModel.Node [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Node Nodez.Sdmp.Routing.DataModel.Vehicle::<CurrentNode>k__BackingField ->  ⁌
 
 
 	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Routing.DataModel.Vehicle::Index skipped:  KeepPublicApi option in configuration
@@ -1581,7 +1581,7 @@ Skipped Types:
 	System.Collections.Generic.Dictionary`2<System.String,Nodez.Sdmp.Routing.DataModel.Resource> [Nodez.Sdmp]System.Collections.Generic.Dictionary`2<System.String,Nodez.Sdmp.Routing.DataModel.Resource> Nodez.Sdmp.Routing.DataModel.Vehicle::Resources skipped:  KeepPublicApi option in configuration
 	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.Routing.DataModel.Vehicle::TotalTravelDistance skipped:  KeepPublicApi option in configuration
 	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.Routing.DataModel.Vehicle::TotalTravelTime skipped:  KeepPublicApi option in configuration
-	Nodez.Sdmp.Routing.DataModel.Customer [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Customer Nodez.Sdmp.Routing.DataModel.Vehicle::CurrentCustomer skipped:  KeepPublicApi option in configuration
+	Nodez.Sdmp.Routing.DataModel.Node [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Node Nodez.Sdmp.Routing.DataModel.Vehicle::CurrentNode skipped:  KeepPublicApi option in configuration
 }
 
 [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingData skipped:  KeepPublicApi option in configuration
@@ -1589,12 +1589,12 @@ Skipped Types:
 
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingData::get_VehicleDataList[0]( ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingData::set_VehicleDataList[1]( [mscorlib]System.Collections.Generic.List`1<[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.IVehicleData> ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingData::get_CustomerDataList[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingData::set_CustomerDataList[1]( [mscorlib]System.Collections.Generic.List`1<[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.ICustomerData> ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingData::get_NodeDataList[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingData::set_NodeDataList[1]( [mscorlib]System.Collections.Generic.List`1<[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.INodeData> ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingData::get_DistanceInfoDataList[0]( ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingData::set_DistanceInfoDataList[1]( [mscorlib]System.Collections.Generic.List`1<[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.IDistanceInfoData> ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingData::get_DepotData[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingData::set_DepotData[1]( [Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.ICustomerData ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingData::set_DepotData[1]( [Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.INodeData ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingData::get_ResourceDataList[0]( ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingData::set_ResourceDataList[1]( [mscorlib]System.Collections.Generic.List`1<[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.IResourceData> ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingData::get_VehicleResourceDataList[0]( ) skipped:  skip by property
@@ -1608,8 +1608,8 @@ Skipped Types:
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingData::SetRunOptionData[1]( [mscorlib]System.Collections.Generic.List`1<[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.IRunOptionData> ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingData::SetVehicleDataList[1]( [mscorlib]System.Collections.Generic.List`1<[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.IVehicleData> ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingData::SetDistanceInfoDataList[1]( [mscorlib]System.Collections.Generic.List`1<[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.IDistanceInfoData> ) skipped:  KeepPublicApi option in configuration
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingData::SetCustomerDataList[1]( [mscorlib]System.Collections.Generic.List`1<[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.ICustomerData> ) skipped:  KeepPublicApi option in configuration
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingData::SetDepotDataList[1]( [Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.ICustomerData ) skipped:  KeepPublicApi option in configuration
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingData::SetNodeDataList[1]( [mscorlib]System.Collections.Generic.List`1<[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.INodeData> ) skipped:  KeepPublicApi option in configuration
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingData::SetDepotDataList[1]( [Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.INodeData ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingData::SetResourceDataList[1]( [mscorlib]System.Collections.Generic.List`1<[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.IResourceData> ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingData::SetDemandDataList[1]( [mscorlib]System.Collections.Generic.List`1<[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.IDemandData> ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingData::SetProductDataList[1]( [mscorlib]System.Collections.Generic.List`1<[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.IProductData> ) skipped:  KeepPublicApi option in configuration
@@ -1617,9 +1617,9 @@ Skipped Types:
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingData::.ctor[0]( ) skipped:  special name
 
 	System.Collections.Generic.List`1<Nodez.Sdmp.Routing.Interfaces.IVehicleData> [Nodez.Sdmp]System.Collections.Generic.List`1<Nodez.Sdmp.Routing.Interfaces.IVehicleData> Nodez.Sdmp.Routing.DataModel.RoutingData::<VehicleDataList>k__BackingField ->  ⁍
-	System.Collections.Generic.List`1<Nodez.Sdmp.Routing.Interfaces.ICustomerData> [Nodez.Sdmp]System.Collections.Generic.List`1<Nodez.Sdmp.Routing.Interfaces.ICustomerData> Nodez.Sdmp.Routing.DataModel.RoutingData::<CustomerDataList>k__BackingField ->  ⁎
+	System.Collections.Generic.List`1<Nodez.Sdmp.Routing.Interfaces.INodeData> [Nodez.Sdmp]System.Collections.Generic.List`1<Nodez.Sdmp.Routing.Interfaces.INodeData> Nodez.Sdmp.Routing.DataModel.RoutingData::<NodeDataList>k__BackingField ->  ⁎
 	System.Collections.Generic.List`1<Nodez.Sdmp.Routing.Interfaces.IDistanceInfoData> [Nodez.Sdmp]System.Collections.Generic.List`1<Nodez.Sdmp.Routing.Interfaces.IDistanceInfoData> Nodez.Sdmp.Routing.DataModel.RoutingData::<DistanceInfoDataList>k__BackingField ->  ⁏
-	Nodez.Sdmp.Routing.Interfaces.ICustomerData [Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.ICustomerData Nodez.Sdmp.Routing.DataModel.RoutingData::<DepotData>k__BackingField ->  ⁐
+	Nodez.Sdmp.Routing.Interfaces.INodeData [Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.INodeData Nodez.Sdmp.Routing.DataModel.RoutingData::<DepotData>k__BackingField ->  ⁐
 	System.Collections.Generic.List`1<Nodez.Sdmp.Routing.Interfaces.IResourceData> [Nodez.Sdmp]System.Collections.Generic.List`1<Nodez.Sdmp.Routing.Interfaces.IResourceData> Nodez.Sdmp.Routing.DataModel.RoutingData::<ResourceDataList>k__BackingField ->  ⁑
 	System.Collections.Generic.List`1<Nodez.Sdmp.Routing.Interfaces.IVehicleResourceData> [Nodez.Sdmp]System.Collections.Generic.List`1<Nodez.Sdmp.Routing.Interfaces.IVehicleResourceData> Nodez.Sdmp.Routing.DataModel.RoutingData::<VehicleResourceDataList>k__BackingField ->  ⁒
 	System.Collections.Generic.List`1<Nodez.Sdmp.Routing.Interfaces.IDemandData> [Nodez.Sdmp]System.Collections.Generic.List`1<Nodez.Sdmp.Routing.Interfaces.IDemandData> Nodez.Sdmp.Routing.DataModel.RoutingData::<DemandDataList>k__BackingField ->  ⁓
@@ -1628,9 +1628,9 @@ Skipped Types:
 
 
 	System.Collections.Generic.List`1<Nodez.Sdmp.Routing.Interfaces.IVehicleData> [Nodez.Sdmp]System.Collections.Generic.List`1<Nodez.Sdmp.Routing.Interfaces.IVehicleData> Nodez.Sdmp.Routing.DataModel.RoutingData::VehicleDataList skipped:  KeepPublicApi option in configuration
-	System.Collections.Generic.List`1<Nodez.Sdmp.Routing.Interfaces.ICustomerData> [Nodez.Sdmp]System.Collections.Generic.List`1<Nodez.Sdmp.Routing.Interfaces.ICustomerData> Nodez.Sdmp.Routing.DataModel.RoutingData::CustomerDataList skipped:  KeepPublicApi option in configuration
+	System.Collections.Generic.List`1<Nodez.Sdmp.Routing.Interfaces.INodeData> [Nodez.Sdmp]System.Collections.Generic.List`1<Nodez.Sdmp.Routing.Interfaces.INodeData> Nodez.Sdmp.Routing.DataModel.RoutingData::NodeDataList skipped:  KeepPublicApi option in configuration
 	System.Collections.Generic.List`1<Nodez.Sdmp.Routing.Interfaces.IDistanceInfoData> [Nodez.Sdmp]System.Collections.Generic.List`1<Nodez.Sdmp.Routing.Interfaces.IDistanceInfoData> Nodez.Sdmp.Routing.DataModel.RoutingData::DistanceInfoDataList skipped:  KeepPublicApi option in configuration
-	Nodez.Sdmp.Routing.Interfaces.ICustomerData [Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.ICustomerData Nodez.Sdmp.Routing.DataModel.RoutingData::DepotData skipped:  KeepPublicApi option in configuration
+	Nodez.Sdmp.Routing.Interfaces.INodeData [Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.INodeData Nodez.Sdmp.Routing.DataModel.RoutingData::DepotData skipped:  KeepPublicApi option in configuration
 	System.Collections.Generic.List`1<Nodez.Sdmp.Routing.Interfaces.IResourceData> [Nodez.Sdmp]System.Collections.Generic.List`1<Nodez.Sdmp.Routing.Interfaces.IResourceData> Nodez.Sdmp.Routing.DataModel.RoutingData::ResourceDataList skipped:  KeepPublicApi option in configuration
 	System.Collections.Generic.List`1<Nodez.Sdmp.Routing.Interfaces.IVehicleResourceData> [Nodez.Sdmp]System.Collections.Generic.List`1<Nodez.Sdmp.Routing.Interfaces.IVehicleResourceData> Nodez.Sdmp.Routing.DataModel.RoutingData::VehicleResourceDataList skipped:  KeepPublicApi option in configuration
 	System.Collections.Generic.List`1<Nodez.Sdmp.Routing.Interfaces.IDemandData> [Nodez.Sdmp]System.Collections.Generic.List`1<Nodez.Sdmp.Routing.Interfaces.IDemandData> Nodez.Sdmp.Routing.DataModel.RoutingData::DemandDataList skipped:  KeepPublicApi option in configuration
@@ -1638,18 +1638,18 @@ Skipped Types:
 	System.Collections.Generic.List`1<Nodez.Sdmp.Routing.Interfaces.IRunOptionData> [Nodez.Sdmp]System.Collections.Generic.List`1<Nodez.Sdmp.Routing.Interfaces.IRunOptionData> Nodez.Sdmp.Routing.DataModel.RoutingData::RunOptionDataList skipped:  KeepPublicApi option in configuration
 }
 
-[Nodez.Sdmp]Nodez.Sdmp.Routing.Controls.CustomerControl skipped:  KeepPublicApi option in configuration
+[Nodez.Sdmp]Nodez.Sdmp.Routing.Controls.NodeControl skipped:  KeepPublicApi option in configuration
 {
 
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.Controls.CustomerControl::get_Instance[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.Controls.CustomerControl::GetVisitableCustomers[1]( [mscorlib]System.Collections.Generic.Dictionary`2<[mscorlib]System.Int32,[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.VehicleStateInfo> ) skipped:  KeepPublicApi option in configuration
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.Controls.CustomerControl::.ctor[0]( ) skipped:  special name
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.Controls.CustomerControl::.cctor[0]( ) skipped:  special name
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.Controls.NodeControl::get_Instance[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.Controls.NodeControl::GetVisitableNodes[1]( [mscorlib]System.Collections.Generic.Dictionary`2<[mscorlib]System.Int32,[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.VehicleStateInfo> ) skipped:  KeepPublicApi option in configuration
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.Controls.NodeControl::.ctor[0]( ) skipped:  special name
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.Controls.NodeControl::.cctor[0]( ) skipped:  special name
 
-	System.Lazy`1<Nodez.Sdmp.Routing.Controls.CustomerControl> [Nodez.Sdmp]System.Lazy`1<Nodez.Sdmp.Routing.Controls.CustomerControl> Nodez.Sdmp.Routing.Controls.CustomerControl::lazy ->  ⁖
+	System.Lazy`1<Nodez.Sdmp.Routing.Controls.NodeControl> [Nodez.Sdmp]System.Lazy`1<Nodez.Sdmp.Routing.Controls.NodeControl> Nodez.Sdmp.Routing.Controls.NodeControl::lazy ->  ⁖
 
 
-	Nodez.Sdmp.Routing.Controls.CustomerControl [Nodez.Sdmp]Nodez.Sdmp.Routing.Controls.CustomerControl Nodez.Sdmp.Routing.Controls.CustomerControl::Instance skipped:  KeepPublicApi option in configuration
+	Nodez.Sdmp.Routing.Controls.NodeControl [Nodez.Sdmp]Nodez.Sdmp.Routing.Controls.NodeControl Nodez.Sdmp.Routing.Controls.NodeControl::Instance skipped:  KeepPublicApi option in configuration
 }
 
 [Nodez.Sdmp]Nodez.Sdmp.Routing.Controls.VehicleControl skipped:  KeepPublicApi option in configuration
@@ -2631,7 +2631,7 @@ Skipped Types:
 	Nodez.Sdmp.Enum.ControlType [Nodez.Sdmp]Nodez.Sdmp.Enum.ControlType Nodez.Sdmp.Enum.ControlType::StateControl skipped:  KeepPublicApi option in configuration
 	Nodez.Sdmp.Enum.ControlType [Nodez.Sdmp]Nodez.Sdmp.Enum.ControlType Nodez.Sdmp.Enum.ControlType::StateTransitionControl skipped:  KeepPublicApi option in configuration
 	Nodez.Sdmp.Enum.ControlType [Nodez.Sdmp]Nodez.Sdmp.Enum.ControlType Nodez.Sdmp.Enum.ControlType::ActionControl skipped:  KeepPublicApi option in configuration
-	Nodez.Sdmp.Enum.ControlType [Nodez.Sdmp]Nodez.Sdmp.Enum.ControlType Nodez.Sdmp.Enum.ControlType::CustomerControl skipped:  KeepPublicApi option in configuration
+	Nodez.Sdmp.Enum.ControlType [Nodez.Sdmp]Nodez.Sdmp.Enum.ControlType Nodez.Sdmp.Enum.ControlType::NodeControl skipped:  KeepPublicApi option in configuration
 	Nodez.Sdmp.Enum.ControlType [Nodez.Sdmp]Nodez.Sdmp.Enum.ControlType Nodez.Sdmp.Enum.ControlType::VehicleControl skipped:  KeepPublicApi option in configuration
 	Nodez.Sdmp.Enum.ControlType [Nodez.Sdmp]Nodez.Sdmp.Enum.ControlType Nodez.Sdmp.Enum.ControlType::SchedulingControl skipped:  KeepPublicApi option in configuration
 	Nodez.Sdmp.Enum.ControlType [Nodez.Sdmp]Nodez.Sdmp.Enum.ControlType Nodez.Sdmp.Enum.ControlType::ProcessControl skipped:  KeepPublicApi option in configuration
@@ -2668,7 +2668,7 @@ Skipped Types:
 	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Constants.Constants::OPTIMAL skipped:  KeepPublicApi option in configuration
 	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Constants.Constants::FINAL skipped:  KeepPublicApi option in configuration
 	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Constants.Constants::VEHICLE skipped:  KeepPublicApi option in configuration
-	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Constants.Constants::CUSTOMER skipped:  KeepPublicApi option in configuration
+	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Constants.Constants::NODE skipped:  KeepPublicApi option in configuration
 	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Constants.Constants::DISTANCE_INFO skipped:  KeepPublicApi option in configuration
 	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Constants.Constants::RESOURCE skipped:  KeepPublicApi option in configuration
 	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Constants.Constants::VEHICLE_RESOURCE skipped:  KeepPublicApi option in configuration
@@ -2801,40 +2801,40 @@ Skipped Types:
 
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingState::get_VehicleStateInfos[0]( ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingState::set_VehicleStateInfos[1]( [mscorlib]System.Collections.Generic.Dictionary`2<[mscorlib]System.Int32,[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.VehicleStateInfo> ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingState::get_ActiveCustomerFlag[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingState::set_ActiveCustomerFlag[1]( [mscorlib]System.Int32[] ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingState::get_ActiveNodeFlag[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingState::set_ActiveNodeFlag[1]( [mscorlib]System.Int32[] ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingState::get_ActiveCount[0]( ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingState::set_ActiveCount[1]( [mscorlib]System.Int32 ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingState::get_CurrentVehicleIndex[0]( ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingState::set_CurrentVehicleIndex[1]( [mscorlib]System.Int32 ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingState::get_CurrentCustomerIndex[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingState::set_CurrentCustomerIndex[1]( [mscorlib]System.Int32 ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingState::get_CurrentNodeIndex[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingState::set_CurrentNodeIndex[1]( [mscorlib]System.Int32 ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingState::ToString[0]( ) skipped:  external base class or interface
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingState::.ctor[1]( [mscorlib]System.String ) skipped:  special name
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingState::.ctor[0]( ) skipped:  special name
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingState::Initialize[0]( ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingState::InitVehicleStateInfos[0]( ) skipped:  KeepPublicApi option in configuration
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingState::InitActiveCustomers[0]( ) skipped:  KeepPublicApi option in configuration
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingState::InitActiveNodes[0]( ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingState::CopyStateInfo[1]( [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingState ) skipped:  KeepPublicApi option in configuration
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingState::IsCapacityAvailable[3]( [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Customer, [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Vehicle, [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Resource ) skipped:  KeepPublicApi option in configuration
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingState::CheckTimeWindow[2]( [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Customer, [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Vehicle ) skipped:  KeepPublicApi option in configuration
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingState::VisitCustomer[3]( [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Customer, [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Vehicle, [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Resource ) skipped:  KeepPublicApi option in configuration
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingState::IsCapacityAvailable[3]( [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Node, [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Vehicle, [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Resource ) skipped:  KeepPublicApi option in configuration
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingState::CheckTimeWindow[2]( [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Node, [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Vehicle ) skipped:  KeepPublicApi option in configuration
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingState::VisitNode[3]( [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Node, [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Vehicle, [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Resource ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingState::ReturnToDepot[1]( [mscorlib]System.Int32 ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingState::GetKey[0]( ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.RoutingState::Clone[0]( ) skipped:  KeepPublicApi option in configuration
 
 	System.Collections.Generic.Dictionary`2<System.Int32,Nodez.Sdmp.Routing.DataModel.VehicleStateInfo> [Nodez.Sdmp]System.Collections.Generic.Dictionary`2<System.Int32,Nodez.Sdmp.Routing.DataModel.VehicleStateInfo> Nodez.Sdmp.Routing.DataModel.RoutingState::<VehicleStateInfos>k__BackingField ->  ⁝
-	System.Int32[] [Nodez.Sdmp]System.Int32[] Nodez.Sdmp.Routing.DataModel.RoutingState::<ActiveCustomerFlag>k__BackingField ->  ⁞
+	System.Int32[] [Nodez.Sdmp]System.Int32[] Nodez.Sdmp.Routing.DataModel.RoutingState::<ActiveNodeFlag>k__BackingField ->  ⁞
 	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Routing.DataModel.RoutingState::<ActiveCount>k__BackingField ->   
 	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Routing.DataModel.RoutingState::<CurrentVehicleIndex>k__BackingField ->  ⁠
-	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Routing.DataModel.RoutingState::<CurrentCustomerIndex>k__BackingField ->  ⁡
+	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Routing.DataModel.RoutingState::<CurrentNodeIndex>k__BackingField ->  ⁡
 
 
 	System.Collections.Generic.Dictionary`2<System.Int32,Nodez.Sdmp.Routing.DataModel.VehicleStateInfo> [Nodez.Sdmp]System.Collections.Generic.Dictionary`2<System.Int32,Nodez.Sdmp.Routing.DataModel.VehicleStateInfo> Nodez.Sdmp.Routing.DataModel.RoutingState::VehicleStateInfos skipped:  KeepPublicApi option in configuration
-	System.Int32[] [Nodez.Sdmp]System.Int32[] Nodez.Sdmp.Routing.DataModel.RoutingState::ActiveCustomerFlag skipped:  KeepPublicApi option in configuration
+	System.Int32[] [Nodez.Sdmp]System.Int32[] Nodez.Sdmp.Routing.DataModel.RoutingState::ActiveNodeFlag skipped:  KeepPublicApi option in configuration
 	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Routing.DataModel.RoutingState::ActiveCount skipped:  KeepPublicApi option in configuration
 	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Routing.DataModel.RoutingState::CurrentVehicleIndex skipped:  KeepPublicApi option in configuration
-	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Routing.DataModel.RoutingState::CurrentCustomerIndex skipped:  KeepPublicApi option in configuration
+	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Routing.DataModel.RoutingState::CurrentNodeIndex skipped:  KeepPublicApi option in configuration
 }
 
 [Nodez.Sdmp]Nodez.Sdmp.Scheduling.Interfaces.IArrangeData skipped:  KeepPublicApi option in configuration
@@ -2980,29 +2980,29 @@ Skipped Types:
 	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Scheduling.Interfaces.ITargetInfoData::TARGET_QTY skipped:  KeepPublicApi option in configuration
 }
 
-[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.ICustomerData skipped:  KeepPublicApi option in configuration
+[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.INodeData skipped:  KeepPublicApi option in configuration
 {
 
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.ICustomerData::get_ID[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.ICustomerData::get_NAME[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.ICustomerData::get_DEMAND_ID[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.ICustomerData::get_START_TIME_WINDOW[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.ICustomerData::get_END_TIME_WINDOW[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.ICustomerData::get_X_COORDINATE[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.ICustomerData::get_Y_COORDINATE[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.ICustomerData::get_IS_DELIVERY[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.ICustomerData::get_IS_DEPOT[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.INodeData::get_ID[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.INodeData::get_NAME[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.INodeData::get_DEMAND_ID[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.INodeData::get_START_TIME_WINDOW[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.INodeData::get_END_TIME_WINDOW[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.INodeData::get_X_COORDINATE[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.INodeData::get_Y_COORDINATE[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.INodeData::get_IS_DELIVERY[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.INodeData::get_IS_DEPOT[0]( ) skipped:  skip by property
 
 
-	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Routing.Interfaces.ICustomerData::ID skipped:  KeepPublicApi option in configuration
-	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Routing.Interfaces.ICustomerData::NAME skipped:  KeepPublicApi option in configuration
-	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Routing.Interfaces.ICustomerData::DEMAND_ID skipped:  KeepPublicApi option in configuration
-	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.Routing.Interfaces.ICustomerData::START_TIME_WINDOW skipped:  KeepPublicApi option in configuration
-	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.Routing.Interfaces.ICustomerData::END_TIME_WINDOW skipped:  KeepPublicApi option in configuration
-	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.Routing.Interfaces.ICustomerData::X_COORDINATE skipped:  KeepPublicApi option in configuration
-	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.Routing.Interfaces.ICustomerData::Y_COORDINATE skipped:  KeepPublicApi option in configuration
-	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Routing.Interfaces.ICustomerData::IS_DELIVERY skipped:  KeepPublicApi option in configuration
-	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Routing.Interfaces.ICustomerData::IS_DEPOT skipped:  KeepPublicApi option in configuration
+	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Routing.Interfaces.INodeData::ID skipped:  KeepPublicApi option in configuration
+	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Routing.Interfaces.INodeData::NAME skipped:  KeepPublicApi option in configuration
+	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Routing.Interfaces.INodeData::DEMAND_ID skipped:  KeepPublicApi option in configuration
+	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.Routing.Interfaces.INodeData::START_TIME_WINDOW skipped:  KeepPublicApi option in configuration
+	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.Routing.Interfaces.INodeData::END_TIME_WINDOW skipped:  KeepPublicApi option in configuration
+	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.Routing.Interfaces.INodeData::X_COORDINATE skipped:  KeepPublicApi option in configuration
+	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.Routing.Interfaces.INodeData::Y_COORDINATE skipped:  KeepPublicApi option in configuration
+	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Routing.Interfaces.INodeData::IS_DELIVERY skipped:  KeepPublicApi option in configuration
+	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Routing.Interfaces.INodeData::IS_DEPOT skipped:  KeepPublicApi option in configuration
 }
 
 [Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.IDemandData skipped:  KeepPublicApi option in configuration
@@ -3023,14 +3023,14 @@ Skipped Types:
 [Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.IDistanceInfoData skipped:  KeepPublicApi option in configuration
 {
 
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.IDistanceInfoData::get_FROM_CUSTOMER_ID[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.IDistanceInfoData::get_TO_CUSTOMER_ID[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.IDistanceInfoData::get_FROM_NODE_ID[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.IDistanceInfoData::get_TO_NODE_ID[0]( ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.IDistanceInfoData::get_DISTANCE[0]( ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.IDistanceInfoData::get_TIME[0]( ) skipped:  skip by property
 
 
-	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Routing.Interfaces.IDistanceInfoData::FROM_CUSTOMER_ID skipped:  KeepPublicApi option in configuration
-	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Routing.Interfaces.IDistanceInfoData::TO_CUSTOMER_ID skipped:  KeepPublicApi option in configuration
+	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Routing.Interfaces.IDistanceInfoData::FROM_NODE_ID skipped:  KeepPublicApi option in configuration
+	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Routing.Interfaces.IDistanceInfoData::TO_NODE_ID skipped:  KeepPublicApi option in configuration
 	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.Routing.Interfaces.IDistanceInfoData::DISTANCE skipped:  KeepPublicApi option in configuration
 	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.Routing.Interfaces.IDistanceInfoData::TIME skipped:  KeepPublicApi option in configuration
 }

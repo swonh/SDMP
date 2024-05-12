@@ -21,7 +21,7 @@ namespace Nodez.Sdmp.Enum
         StateControl,
         StateTransitionControl,
         ActionControl,
-        CustomerControl,
+        NodeControl,
         VehicleControl,
         SchedulingControl,
         ProcessControl,

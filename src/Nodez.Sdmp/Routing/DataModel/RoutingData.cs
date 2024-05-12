@@ -16,11 +16,11 @@ namespace Nodez.Sdmp.Routing.DataModel
     {
         public List<IVehicleData> VehicleDataList { get; private set; }
 
-        public List<ICustomerData> CustomerDataList { get; private set; }
+        public List<INodeData> NodeDataList { get; private set; }
 
         public List<IDistanceInfoData> DistanceInfoDataList { get; private set; }
 
-        public ICustomerData DepotData { get; private set; }
+        public INodeData DepotData { get; private set; }
 
         public List<IResourceData> ResourceDataList { get; private set; }
 
@@ -47,12 +47,12 @@ namespace Nodez.Sdmp.Routing.DataModel
             this.DistanceInfoDataList = distanceInfoDataList;
         }
 
-        public void SetCustomerDataList(List<ICustomerData> customerDataList)
+        public void SetNodeDataList(List<INodeData> nodeDataList)
         {
-            this.CustomerDataList = customerDataList;
+            this.NodeDataList = nodeDataList;
         }
 
-        public void SetDepotDataList(ICustomerData depotData)
+        public void SetDepotDataList(INodeData depotData)
         {
             this.DepotData = depotData;
         }
