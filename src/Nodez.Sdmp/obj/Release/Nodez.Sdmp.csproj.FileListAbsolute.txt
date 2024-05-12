@@ -154,9 +154,10 @@ D:\Repository\SDMP\src\Nodez.Sdmp\obj\Release\Nodez.Sdmp.csproj.CoreCompileInput
 D:\Repository\SDMP\src\Nodez.Sdmp\obj\Release\Nodez.Sdmp.csproj.CopyComplete
 D:\Repository\SDMP\src\Nodez.Sdmp\obj\Release\Nodez.Sdmp.dll
 D:\Repository\SDMP\src\Nodez.Sdmp\obj\Release\Nodez.Sdmp.pdb
+E:\2024_Dev\SDMP\src\Nodez.Sdmp\bin\Release\Nodez.Sdmp.pdb
+E:\2024_Dev\SDMP\src\Nodez.Sdmp\bin\Release\System.Collections.Immutable.dll
 E:\2024_Dev\SDMP\src\Nodez.Sdmp\bin\Release\Obfuscar.xml
 E:\2024_Dev\SDMP\src\Nodez.Sdmp\bin\Release\Nodez.Sdmp.dll
-E:\2024_Dev\SDMP\src\Nodez.Sdmp\bin\Release\Nodez.Sdmp.pdb
 E:\2024_Dev\SDMP\src\Nodez.Sdmp\bin\Release\Combinatorics.dll
 E:\2024_Dev\SDMP\src\Nodez.Sdmp\bin\Release\Microsoft.ML.Core.dll
 E:\2024_Dev\SDMP\src\Nodez.Sdmp\bin\Release\Microsoft.ML.CpuMath.dll
@@ -173,7 +174,6 @@ E:\2024_Dev\SDMP\src\Nodez.Sdmp\bin\Release\Nodez.Data.dll
 E:\2024_Dev\SDMP\src\Nodez.Sdmp\bin\Release\PriorityQueue.dll
 E:\2024_Dev\SDMP\src\Nodez.Sdmp\bin\Release\System.Buffers.dll
 E:\2024_Dev\SDMP\src\Nodez.Sdmp\bin\Release\System.CodeDom.dll
-E:\2024_Dev\SDMP\src\Nodez.Sdmp\bin\Release\System.Collections.Immutable.dll
 E:\2024_Dev\SDMP\src\Nodez.Sdmp\bin\Release\System.Memory.dll
 E:\2024_Dev\SDMP\src\Nodez.Sdmp\bin\Release\System.Numerics.Vectors.dll
 E:\2024_Dev\SDMP\src\Nodez.Sdmp\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
