@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Nodez.Sdmp.Routing.DataModel
 {
-    public class Customer
+    public class Node
     {
         public int Index { get; set; }
 
