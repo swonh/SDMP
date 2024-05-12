@@ -20,6 +20,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Nodez.Deployment", "Nodez.Deployment\Nodez.Deployment.vdproj", "{B61E1E64-D4C4-4BEB-84B5-7FAD27AE9D8F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nodez.Package", "Nodez.Package\Nodez.Package.csproj", "{F11038EB-EA50-4B96-BF4D-9B799E6E1302}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -100,6 +102,18 @@ Global
 		{B61E1E64-D4C4-4BEB-84B5-7FAD27AE9D8F}.Release|arm64.Build.0 = Release
 		{B61E1E64-D4C4-4BEB-84B5-7FAD27AE9D8F}.Release|x86.ActiveCfg = Release
 		{B61E1E64-D4C4-4BEB-84B5-7FAD27AE9D8F}.Release|x86.Build.0 = Release
+		{F11038EB-EA50-4B96-BF4D-9B799E6E1302}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F11038EB-EA50-4B96-BF4D-9B799E6E1302}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F11038EB-EA50-4B96-BF4D-9B799E6E1302}.Debug|arm64.ActiveCfg = Debug|Any CPU
+		{F11038EB-EA50-4B96-BF4D-9B799E6E1302}.Debug|arm64.Build.0 = Debug|Any CPU
+		{F11038EB-EA50-4B96-BF4D-9B799E6E1302}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F11038EB-EA50-4B96-BF4D-9B799E6E1302}.Debug|x86.Build.0 = Debug|Any CPU
+		{F11038EB-EA50-4B96-BF4D-9B799E6E1302}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F11038EB-EA50-4B96-BF4D-9B799E6E1302}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F11038EB-EA50-4B96-BF4D-9B799E6E1302}.Release|arm64.ActiveCfg = Release|Any CPU
+		{F11038EB-EA50-4B96-BF4D-9B799E6E1302}.Release|arm64.Build.0 = Release|Any CPU
+		{F11038EB-EA50-4B96-BF4D-9B799E6E1302}.Release|x86.ActiveCfg = Release|Any CPU
+		{F11038EB-EA50-4B96-BF4D-9B799E6E1302}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
