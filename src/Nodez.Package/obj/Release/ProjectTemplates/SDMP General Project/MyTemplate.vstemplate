@@ -35,7 +35,9 @@
         <ProjectItem ReplaceParameters="true" TargetFileName="RunConfig.cs">RunConfig.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="SampleData.cs">SampleData.cs</ProjectItem>
       </Folder>
-      <Folder Name="MyMethods" TargetFolderName="MyMethods" />
+      <Folder Name="MyMethods" TargetFolderName="MyMethods">
+        <ProjectItem ReplaceParameters="true" TargetFileName="Helper.cs">Helper.cs</ProjectItem>
+      </Folder>
       <Folder Name="MyObjects" TargetFolderName="MyObjects">
         <ProjectItem ReplaceParameters="true" TargetFileName="Parameter.cs">Parameter.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="UserState.cs">UserState.cs</ProjectItem>

@@ -1,4 +1,8 @@
-﻿using Nodez.Sdmp.Constants;
+﻿// Copyright (c) 2021-23, Sungwon Hong. All Rights Reserved. 
+// This Source Code Form is subject to the terms of the Mozilla Public License, Version 2.0. 
+// If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+using Nodez.Sdmp.Constants;
 using Nodez.Sdmp.General.Controls;
 using Nodez.Sdmp.General.DataModel;
 using Nodez.Sdmp.General.Managers;
@@ -53,14 +57,14 @@ namespace $safeprojectname$.Controls
                 RoutingState state = item.Value as RoutingState;
 
                 int vehicleIndex = state.CurrentVehicleIndex;
-                int customerIndex = state.CurrentCustomerIndex;
+                int nodeIndex = state.CurrentNodeIndex;
 
                 if (vehicleRoutes.TryGetValue(vehicleIndex, out List<int> route) == false)
                 {
-                    vehicleRoutes.Add(vehicleIndex, new List<int>() { customerIndex });
+                    vehicleRoutes.Add(vehicleIndex, new List<int>() { nodeIndex });
                 }
                 else
-                    vehicleRoutes[vehicleIndex].Add(customerIndex);
+                    vehicleRoutes[vehicleIndex].Add(nodeIndex);
             }
 
             double totalLoad = 0;
@@ -81,25 +85,25 @@ namespace $safeprojectname$.Controls
                 if (vehicleRoutes.TryGetValue(vehicle.Index, out List<int> value))
                 {
                     routingStr.AppendFormat("{0}->", depot.Name);
-                    Customer prevCust = depot;
+                    Node prevNode = depot;
 
                     for (int idx = 0; idx < value.Count; idx++)
                     {
                         int c = value.ElementAt(idx);
 
-                        Customer customer = manager.GetCustomer(c);
+                        Node node = manager.GetNode(c);
 
                         if (depot.Index == c)
-                            customer = depot;
+                            node = depot;
 
                         double qty = 0;
                         string workType = string.Empty;
 
-                        qty = customer.Demand == null ? 0 : customer.Demand.Quantity;
-                        workType = customer.IsDelivery ? "Delivery" : "Pickup";
+                        qty = node.Demand == null ? 0 : node.Demand.Quantity;
+                        workType = node.IsDelivery ? "Delivery" : "Pickup";
 
-                        double dist = manager.GetDistance(prevCust.Index, customer.Index);
-                        double time = manager.GetTime(prevCust.Index, customer.Index);
+                        double dist = manager.GetDistance(prevNode.Index, node.Index);
+                        double time = manager.GetTime(prevNode.Index, node.Index);
 
                         totalLoad += qty;
                         totalDistance += dist;
@@ -110,13 +114,13 @@ namespace $safeprojectname$.Controls
 
                         if (idx == value.Count - 1)
                         {
-                            routingStr.AppendFormat("{0} {1}({2}) | AvailTime:{3}", customer.Name, workType, qty, vehicleAvailableTime);
+                            routingStr.AppendFormat("{0} {1}({2}) | AvailTime:{3}", node.Name, workType, qty, vehicleAvailableTime);
                             break;
                         }
 
-                        routingStr.AppendFormat("{0} {1}({2})| AvailTime:{3} ->", customer.Name, workType, qty, vehicleAvailableTime);
+                        routingStr.AppendFormat("{0} {1}({2})| AvailTime:{3} ->", node.Name, workType, qty, vehicleAvailableTime);
 
-                        prevCust = customer;
+                        prevNode = node;
                     }
                 }
 

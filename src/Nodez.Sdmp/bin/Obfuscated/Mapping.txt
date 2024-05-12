@@ -3078,11 +3078,13 @@ Skipped Types:
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.IVehicleData::get_ID[0]( ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.IVehicleData::get_NAME[0]( ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.IVehicleData::get_SPEED[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.IVehicleData::get_AVAILABLE_NUMBER[0]( ) skipped:  skip by property
 
 
 	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Routing.Interfaces.IVehicleData::ID skipped:  KeepPublicApi option in configuration
 	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Routing.Interfaces.IVehicleData::NAME skipped:  KeepPublicApi option in configuration
 	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.Routing.Interfaces.IVehicleData::SPEED skipped:  KeepPublicApi option in configuration
+	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Routing.Interfaces.IVehicleData::AVAILABLE_NUMBER skipped:  KeepPublicApi option in configuration
 }
 
 [Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.IVehicleResourceData skipped:  KeepPublicApi option in configuration
