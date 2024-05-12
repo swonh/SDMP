@@ -12,6 +12,10 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
@@ -36,7 +40,7 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="InputData\Customer.csv" />
+    <None Include="InputData\Node.csv" />
     <None Include="InputData\Demand.csv" />
     <None Include="InputData\DistanceInfo.csv" />
     <None Include="InputData\Product.csv" />
@@ -56,9 +60,9 @@
     <Compile Include="Controls\General\UserActionControl.cs" />
     <Compile Include="Controls\General\UserDataControl.cs" />
     <Compile Include="Controls\General\UserStateTransitionControl.cs" />
-    <Compile Include="Controls\Routing\UserCustomerControl.cs" />
+    <Compile Include="Controls\Routing\UserNodeControl.cs" />
     <Compile Include="Controls\Routing\UserVehicleControl.cs" />
-    <Compile Include="MyInputs\Customer.cs" />
+    <Compile Include="MyInputs\Node.cs" />
     <Compile Include="MyInputs\Demand.cs" />
     <Compile Include="MyInputs\DistanceInfo.cs" />
     <Compile Include="MyInputs\Product.cs" />

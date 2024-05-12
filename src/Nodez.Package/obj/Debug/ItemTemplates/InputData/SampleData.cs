@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
 
-namespace Nodez.Project.Template.MyInputs
+namespace $rootnamespace$
 {
     public class $safeitemname$ : IInputRow
     {

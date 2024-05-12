@@ -1,6 +1,6 @@
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
   <Metadata>
-    <Identity Id="Nodez.Package.d8bfcbaa-7e33-438f-8f51-09cbb2e8b8b9" Version="1.0.4" Language="en-US" Publisher="Sungwon Hong" />
+    <Identity Id="Nodez.Package.d8bfcbaa-7e33-438f-8f51-09cbb2e8b8b9" Version="1.0.5" Language="en-US" Publisher="Sungwon Hong" />
     <DisplayName>SDMP</DisplayName>
     <Description xml:space="preserve">SDMP Visual Studio Package</Description>
     <Icon>sdmp_main.png</Icon>

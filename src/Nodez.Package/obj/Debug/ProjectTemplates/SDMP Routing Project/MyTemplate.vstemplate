@@ -29,14 +29,14 @@
           <ProjectItem ReplaceParameters="true" TargetFileName="UserStateTransitionControl.cs">UserStateTransitionControl.cs</ProjectItem>
         </Folder>
         <Folder Name="Routing" TargetFolderName="Routing">
-          <ProjectItem ReplaceParameters="true" TargetFileName="UserCustomerControl.cs">UserCustomerControl.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="UserNodeControl.cs">UserNodeControl.cs</ProjectItem>
           <ProjectItem ReplaceParameters="true" TargetFileName="UserVehicleControl.cs">UserVehicleControl.cs</ProjectItem>
         </Folder>
       </Folder>
       <Folder Name="InputData" TargetFolderName="InputData">
-        <ProjectItem ReplaceParameters="false" TargetFileName="Customer.csv">Customer.csv</ProjectItem>
         <ProjectItem ReplaceParameters="false" TargetFileName="Demand.csv">Demand.csv</ProjectItem>
         <ProjectItem ReplaceParameters="false" TargetFileName="DistanceInfo.csv">DistanceInfo.csv</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="Node.csv">Node.csv</ProjectItem>
         <ProjectItem ReplaceParameters="false" TargetFileName="Product.csv">Product.csv</ProjectItem>
         <ProjectItem ReplaceParameters="false" TargetFileName="Resource.csv">Resource.csv</ProjectItem>
         <ProjectItem ReplaceParameters="false" TargetFileName="RunConfig.csv">RunConfig.csv</ProjectItem>
@@ -45,9 +45,9 @@
         <ProjectItem ReplaceParameters="false" TargetFileName="VehicleResource.csv">VehicleResource.csv</ProjectItem>
       </Folder>
       <Folder Name="MyInputs" TargetFolderName="MyInputs">
-        <ProjectItem ReplaceParameters="true" TargetFileName="Customer.cs">Customer.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="Demand.cs">Demand.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="DistanceInfo.cs">DistanceInfo.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Node.cs">Node.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="Product.cs">Product.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="Resource.cs">Resource.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="RunConfig.cs">RunConfig.cs</ProjectItem>

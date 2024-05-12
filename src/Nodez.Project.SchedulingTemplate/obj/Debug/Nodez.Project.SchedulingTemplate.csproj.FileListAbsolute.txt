@@ -128,7 +128,6 @@ E:\2024_Dev\SDMP\src\Nodez.Project.SchedulingTemplate\bin\Debug\System.Threading
 E:\2024_Dev\SDMP\src\Nodez.Project.SchedulingTemplate\bin\Debug\System.Threading.Tasks.Extensions.dll
 E:\2024_Dev\SDMP\src\Nodez.Project.SchedulingTemplate\bin\Debug\Nodez.Data.pdb
 E:\2024_Dev\SDMP\src\Nodez.Project.SchedulingTemplate\bin\Debug\Nodez.Sdmp.pdb
-E:\2024_Dev\SDMP\src\Nodez.Project.SchedulingTemplate\obj\Debug\Nodez.Project.SchedulingTemplate.csproj.AssemblyReference.cache
 E:\2024_Dev\SDMP\src\Nodez.Project.SchedulingTemplate\obj\Debug\Nodez.Project.SchedulingTemplate.exe.config
 E:\2024_Dev\SDMP\src\Nodez.Project.SchedulingTemplate\obj\Debug\Nodez.Project.SchedulingTemplate.csproj.CoreCompileInputs.cache
 E:\2024_Dev\SDMP\src\Nodez.Project.SchedulingTemplate\obj\Debug\Nodez.Project.SchedulingTemplate.csproj.CopyComplete

@@ -1,11 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\src",
-    "\\src\\Nodez.Sdmp",
-    "\\src\\Nodez.Sdmp\\Scheduling",
-    "\\src\\Nodez.Sdmp\\Scheduling\\Managers"
+    ""
   ],
-  "SelectedNode": "\\src\\Nodez.Sdmp\\Scheduling\\Managers\\SchedulingDataManager.cs",
+  "SelectedNode": "\\Nodez.sln",
   "PreviewInSolutionExplorer": false
 }

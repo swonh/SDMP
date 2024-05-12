@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Nodez.Project.Template.MyOutputs
+namespace $rootnamespace$
 {
     public class $safeitemname$ : IOutputRow
     {

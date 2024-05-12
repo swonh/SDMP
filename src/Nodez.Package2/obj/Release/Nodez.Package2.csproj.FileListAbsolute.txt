@@ -1,0 +1,4 @@
+E:\2024_Dev\SDMP\src\Nodez.Package2\obj\Release\Nodez.Package2.csproj.AssemblyReference.cache
+E:\2024_Dev\SDMP\src\Nodez.Package2\obj\Release\_EmptyResource.resources
+E:\2024_Dev\SDMP\src\Nodez.Package2\obj\Release\Nodez.Package2.csproj.GenerateResource.cache
+E:\2024_Dev\SDMP\src\Nodez.Package2\obj\Release\Nodez.Package2.csproj.CoreCompileInputs.cache

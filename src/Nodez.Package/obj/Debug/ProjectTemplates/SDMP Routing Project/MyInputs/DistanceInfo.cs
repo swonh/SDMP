@@ -16,9 +16,9 @@ namespace $safeprojectname$.MyInputs
     {
         // Define columns here (NOTICE: The column name defined here and the column name defined in the data file must match.)
 
-        public string FROM_CUSTOMER_ID { get; private set; }
+        public string FROM_NODE_ID { get; private set; }
 
-        public string TO_CUSTOMER_ID { get; private set; }
+        public string TO_NODE_ID { get; private set; }
 
         public double DISTANCE { get; private set; }
 
@@ -29,8 +29,8 @@ namespace $safeprojectname$.MyInputs
             // Define keys here (You can search data with the key defined here. Allow multiple keys)
 
             HashSet<string> key = new HashSet<string>();
-            key.Add("FROM_CUSTOMER_ID");
-            key.Add("TO_CUSTOMER_ID");
+            key.Add("FROM_NODE_ID");
+            key.Add("TO_NODE_ID");
 
             this.KeyMappings.Add(1, key);
         }

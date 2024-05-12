@@ -8,7 +8,7 @@ using Nodez.Data.DataModel;
 using Nodez.Data.Interface;
 using Nodez.Data.Managers;
 using $safeprojectname$.Controls;
-using Nodez.Project.Template.MyInputs;
+using $safeprojectname$.MyInputs;
 using Nodez.Sdmp.Constants;
 using Nodez.Sdmp.General.Solver;
 using System;

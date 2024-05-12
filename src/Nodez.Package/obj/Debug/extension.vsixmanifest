@@ -1,6 +1,6 @@
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
   <Metadata>
-    <Identity Id="Nodez.Package.d8bfcbaa-7e33-438f-8f51-09cbb2e8b8b9" Version="1.0.3" Language="en-US" Publisher="Sungwon Hong" />
+    <Identity Id="Nodez.Package.d8bfcbaa-7e33-438f-8f51-09cbb2e8b8b9" Version="1.0.5" Language="en-US" Publisher="Sungwon Hong" />
     <DisplayName>SDMP</DisplayName>
     <Description xml:space="preserve">SDMP Visual Studio Package</Description>
     <Icon>sdmp_main.png</Icon>
@@ -15,6 +15,15 @@
     <InstallationTarget Version="[16.0,18.0)" Id="Microsoft.VisualStudio.Enterprise">
       <ProductArchitecture>amd64</ProductArchitecture>
     </InstallationTarget>
+    <InstallationTarget Version="[16.0,18.0)" Id="Microsoft.VisualStudio.Enterprise">
+      <ProductArchitecture>x86</ProductArchitecture>
+    </InstallationTarget>
+    <InstallationTarget Version="[16.0,18.0)" Id="Microsoft.VisualStudio.Pro">
+      <ProductArchitecture>x86</ProductArchitecture>
+    </InstallationTarget>
+    <InstallationTarget Version="[16.0,18.0)" Id="Microsoft.VisualStudio.Community">
+      <ProductArchitecture>x86</ProductArchitecture>
+    </InstallationTarget>
   </Installation>
   <Dependencies>
     <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" Version="[4.5,)" />
@@ -23,7 +32,7 @@
     <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[16.0,18.0)" DisplayName="Visual Studio core editor" />
   </Prerequisites>
   <Assets>
-    <Asset Type="Microsoft.VisualStudio.ItemTemplate" Path="ItemTemplates" />
     <Asset Type="Microsoft.VisualStudio.ProjectTemplate" Path="ProjectTemplates" />
+    <Asset Type="Microsoft.VisualStudio.ItemTemplate" Path="ItemTemplates" />
   </Assets>
 </PackageManifest>
