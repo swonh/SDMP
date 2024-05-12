@@ -57,20 +57,20 @@ namespace Nodez.Sdmp.Routing.DataModel
             this.VisitedVehicle = visitedVehicle;
         }
 
-        public double GetDistance(Customer toCustomer) 
+        public double GetDistance(Node toNode) 
         {
             RoutingDataManager manager = RoutingDataManager.Instance;
 
-            Tuple<string, string> key = Tuple.Create(this.ID, toCustomer.ID);
+            Tuple<string, string> key = Tuple.Create(this.ID, toNode.ID);
             if (manager.RoutingProblem.DistanceInfoMappings.TryGetValue(key, out DistanceInfo info))
                 return info.Distance;
 
             return 0;
         }
 
-        public Customer Clone()
+        public Node Clone()
         {
-            Customer clone = (Customer)this.MemberwiseClone();
+            Node clone = (Node)this.MemberwiseClone();
 
             Demand demand = CopyDemand(clone);
             Vehicle visitedVehicle = CopyVisitedVehicle(clone);

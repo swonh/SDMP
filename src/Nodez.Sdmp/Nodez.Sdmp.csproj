@@ -151,6 +151,7 @@
     <Compile Include="Routing\DataModel\Demand.cs" />
     <Compile Include="Routing\DataModel\Depot.cs" />
     <Compile Include="Routing\DataModel\DistanceInfo.cs" />
+    <Compile Include="Routing\DataModel\Node.cs" />
     <Compile Include="Routing\DataModel\Product.cs" />
     <Compile Include="Routing\DataModel\Resource.cs" />
     <Compile Include="Routing\DataModel\RoutingProblem.cs" />
