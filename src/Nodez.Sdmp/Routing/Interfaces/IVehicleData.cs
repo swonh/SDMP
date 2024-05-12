@@ -17,7 +17,5 @@ namespace Nodez.Sdmp.Routing.Interfaces
         string NAME { get; }
 
         double SPEED { get; }
-
-        int AVAILABLE_NUMBER { get; }
     }
 }

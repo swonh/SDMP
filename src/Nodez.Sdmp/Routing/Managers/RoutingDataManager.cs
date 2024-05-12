@@ -226,20 +226,17 @@ namespace Nodez.Sdmp.Routing.Managers
             int index = 1;
             foreach (IVehicleData item in vehicleDataList)
             {
-                for (int i = 0; i < item.AVAILABLE_NUMBER; i++)
-                {
-                    Vehicle vehicle = new Vehicle();
+                Vehicle vehicle = new Vehicle();
 
-                    vehicle.Index = index;
-                    vehicle.ID = item.ID;
-                    vehicle.Name = item.NAME;
-                    vehicle.Resources = this.GetResourceMappings(item.ID);
-                    vehicle.Speed = item.SPEED;
+                vehicle.Index = index;
+                vehicle.ID = item.ID;
+                vehicle.Name = item.NAME;
+                vehicle.Resources = this.GetResourceMappings(item.ID);
+                vehicle.Speed = item.SPEED;
 
-                    vehicles.Add(vehicle);
+                vehicles.Add(vehicle);
 
-                    index++;
-                }
+                index++;
             }
 
             return vehicles;
