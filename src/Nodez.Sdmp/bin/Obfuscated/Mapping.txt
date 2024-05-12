@@ -3026,13 +3026,11 @@ Skipped Types:
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.IDistanceInfoData::get_FROM_NODE_ID[0]( ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.IDistanceInfoData::get_TO_NODE_ID[0]( ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.IDistanceInfoData::get_DISTANCE[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.IDistanceInfoData::get_TIME[0]( ) skipped:  skip by property
 
 
 	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Routing.Interfaces.IDistanceInfoData::FROM_NODE_ID skipped:  KeepPublicApi option in configuration
 	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Routing.Interfaces.IDistanceInfoData::TO_NODE_ID skipped:  KeepPublicApi option in configuration
 	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.Routing.Interfaces.IDistanceInfoData::DISTANCE skipped:  KeepPublicApi option in configuration
-	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.Routing.Interfaces.IDistanceInfoData::TIME skipped:  KeepPublicApi option in configuration
 }
 
 [Nodez.Sdmp]Nodez.Sdmp.Routing.Interfaces.IProductData skipped:  KeepPublicApi option in configuration

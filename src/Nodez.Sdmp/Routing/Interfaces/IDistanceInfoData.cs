@@ -17,7 +17,5 @@ namespace Nodez.Sdmp.Routing.Interfaces
         string TO_NODE_ID { get; }
 
         double DISTANCE { get; }
-
-        double TIME { get; }
     }
 }

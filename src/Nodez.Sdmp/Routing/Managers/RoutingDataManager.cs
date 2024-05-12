@@ -186,7 +186,6 @@ namespace Nodez.Sdmp.Routing.Managers
                         if (data != null)
                         {
                             dist = data.DISTANCE;
-                            time = data.TIME;
                         }
                     }
                     else
