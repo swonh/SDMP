@@ -634,12 +634,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_7C88432B8E73BE3B0ED045BF188B1BEF"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_D813E5255138421EB30BEA191D068FF5"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -689,6 +683,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_F5B1D8A62C793DC8909037FFFA82B7B6"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_7C88432B8E73BE3B0ED045BF188B1BEF"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -1851,15 +1851,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SDMP"
-        "ProductCode" = "8:{4AECFE4D-7279-4111-9E4F-41B775592480}"
-        "PackageCode" = "8:{BACF2463-8A99-4185-B2F0-79EF1CA60E39}"
+        "ProductCode" = "8:{B67FD33A-6CA0-4D07-809D-6688D128CC3F}"
+        "PackageCode" = "8:{22447226-4EC2-4729-95A7-881A702FCE90}"
         "UpgradeCode" = "8:{68B95BE9-A50E-4263-965E-B5A5C213D91E}"
         "AspNetVersion" = "8:"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.4"
+        "ProductVersion" = "8:1.0.5"
         "Manufacturer" = "8:Nodez"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
