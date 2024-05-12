@@ -40,7 +40,7 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="InputData\Customer.csv" />
+    <None Include="InputData\Node.csv" />
     <None Include="InputData\Demand.csv" />
     <None Include="InputData\DistanceInfo.csv" />
     <None Include="InputData\Product.csv" />
