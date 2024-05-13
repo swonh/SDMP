@@ -21,6 +21,10 @@ namespace Nodez.Sdmp.Routing.DataModel
 
         public Order Order { get; set; }
 
+        public double X_Coordinate { get; set; }
+
+        public double Y_Coordinate { get; set; }
+
         public Tuple<double, double> TimeWindow { get; set; }
 
         public bool IsVisited { get; set; }

@@ -299,6 +299,8 @@ namespace Nodez.Sdmp.Routing.Managers
                 node.ID = item.ID;
                 node.Name = item.NAME;
                 node.Order = this.GetOrder(item.ORDER_ID);
+                node.X_Coordinate = item.X_COORDINATE;
+                node.Y_Coordinate = item.Y_COORDINATE;
                 node.TimeWindow = Tuple.Create(item.START_TIME_WINDOW, item.END_TIME_WINDOW);
                 node.IsVisited = false;
                 node.VisitedVehicle = null;
@@ -306,6 +308,11 @@ namespace Nodez.Sdmp.Routing.Managers
                 node.IsDepot = isDepot;
 
                 nodes.Add(node);
+
+                if (node.IsDelivery)
+                    node.Order.DeliveryNode = node;
+                else
+                    node.Order.PickupNode = node;
 
                 index++;              
             }
