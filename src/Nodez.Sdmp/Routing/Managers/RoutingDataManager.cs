@@ -320,10 +320,12 @@ namespace Nodez.Sdmp.Routing.Managers
         {
             List<Order> orders = new List<Order>();
 
+            int index = 1;
             foreach (IOrderData item in orderDataList)
             {
                 Order order = new Order();
 
+                order.Index = index;
                 order.ID = item.ID;
                 order.Name = item.NAME;
                 order.OrderTime = item.ORDER_TIME;
@@ -335,6 +337,8 @@ namespace Nodez.Sdmp.Routing.Managers
                 order.Quantity = item.ORDER_QTY;
           
                 orders.Add(order);
+
+                index++;
             }
 
             return orders;

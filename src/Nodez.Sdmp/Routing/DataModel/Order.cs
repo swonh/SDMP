@@ -12,6 +12,8 @@ namespace Nodez.Sdmp.Routing.DataModel
 {
     public class Order
     {
+        public int Index { get; set; }
+
         public string ID { get; set; }
 
         public string Name { get; set; }
