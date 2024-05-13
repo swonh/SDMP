@@ -20,7 +20,17 @@ namespace Nodez.Project.RoutingTemplate.MyInputs
 
         public string NAME { get; private set; }
 
+        public string TYPE { get; private set; }
+
         public double SPEED { get; private set; }
+
+        public double CAPACITY { get; private set; }
+
+        public double SERVICE_TIME { get; private set; }
+
+        public double FIXED_COST { get; private set; }
+
+        public double VARIABLE_COST { get; private set; }
 
 
         public Vehicle()

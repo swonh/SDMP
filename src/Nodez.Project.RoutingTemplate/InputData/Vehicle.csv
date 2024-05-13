@@ -1,2 +1,2 @@
-﻿ID,NAME,SPEED
-V_1,Vehicle 1,10
+﻿ID,NAME,TYPE,SPEED
+V_1,Vehicle 1,CAR,10

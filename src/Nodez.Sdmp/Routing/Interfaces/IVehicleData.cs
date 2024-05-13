@@ -16,6 +16,16 @@ namespace Nodez.Sdmp.Routing.Interfaces
 
         string NAME { get; }
 
+        string TYPE { get; }
+
         double SPEED { get; }
+
+        double CAPACITY { get; }
+
+        double SERVICE_TIME { get; }
+
+        double FIXED_COST { get;}
+
+        double VARIABLE_COST { get; }
     }
 }

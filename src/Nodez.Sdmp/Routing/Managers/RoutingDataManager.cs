@@ -230,8 +230,13 @@ namespace Nodez.Sdmp.Routing.Managers
                 vehicle.Index = index;
                 vehicle.ID = item.ID;
                 vehicle.Name = item.NAME;
+                vehicle.Type = item.TYPE;
                 vehicle.Resources = this.GetResourceMappings(item.ID);
                 vehicle.Speed = item.SPEED;
+                vehicle.Capacity = item.CAPACITY;
+                vehicle.ServiceTime = item.SERVICE_TIME;
+                vehicle.FixedCost = item.FIXED_COST;
+                vehicle.VariableCost = item.VARIABLE_COST;
 
                 vehicles.Add(vehicle);
 

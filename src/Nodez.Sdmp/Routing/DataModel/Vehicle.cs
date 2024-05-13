@@ -19,7 +19,17 @@ namespace Nodez.Sdmp.Routing.DataModel
 
         public string Name { get; set; }
 
+        public string Type { get; set; }
+
         public double Speed { get; set; }
+
+        public double Capacity { get; set; }
+
+        public double ServiceTime { get; set; }
+
+        public double FixedCost { get; set; }
+
+        public double VariableCost { get; set; }
 
         public Dictionary<string, Resource> Resources { get; set; }
 
