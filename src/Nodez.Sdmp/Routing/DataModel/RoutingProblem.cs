@@ -44,6 +44,8 @@ namespace Nodez.Sdmp.Routing.DataModel
 
         public Dictionary<string, Order> OrderMappings { get; private set; }
 
+        public Dictionary<int, Order> OrderIndexMappings { get; private set; }
+
         public Dictionary<string, Product> ProductMappings { get; private set; }
 
         public Dictionary<Tuple<string, string>, DistanceInfo> DistanceInfoMappings { get; private set; }
@@ -65,6 +67,7 @@ namespace Nodez.Sdmp.Routing.DataModel
             this.ResourceMappings = new Dictionary<string, Resource>();
             this.NodeMappings = new Dictionary<string, Node>();
             this.OrderMappings = new Dictionary<string, Order>();
+            this.OrderIndexMappings = new Dictionary<int, Order>();
             this.PickupNodeOrderIDMappings = new Dictionary<string, Node>();
             this.DeliveryNodeOrderIDMappings = new Dictionary<string, Node>();
             this.ProductMappings = new Dictionary<string, Product>();
@@ -113,6 +116,7 @@ namespace Nodez.Sdmp.Routing.DataModel
         {
             this.Orders = orders;
             this.SetOrderMappings();
+            this.SetOrderIndexMappings();
         }
 
         public void SetProductObjects(List<Product> products)
@@ -262,6 +266,17 @@ namespace Nodez.Sdmp.Routing.DataModel
                     continue;
 
                 this.OrderMappings.Add(order.ID, order);
+            }
+        }
+
+        private void SetOrderIndexMappings()
+        {
+            foreach (Order order in this.Orders)
+            {
+                if (this.OrderIndexMappings.ContainsKey(order.Index))
+                    continue;
+
+                this.OrderIndexMappings.Add(order.Index, order);
             }
         }
 

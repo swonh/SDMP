@@ -415,6 +415,13 @@ namespace Nodez.Sdmp.Routing.Managers
             return order;
         }
 
+        public Order GetOrder(int orderIndex)
+        {
+            this.RoutingProblem.OrderIndexMappings.TryGetValue(orderIndex, out Order order);
+
+            return order;
+        }
+
         public Product GetProduct(string prodID)
         {
             this.RoutingProblem.ProductMappings.TryGetValue(prodID, out Product product);
