@@ -20,7 +20,7 @@ namespace Nodez.Project.RoutingTemplate.MyInputs
 
         public string NAME { get; private set; }
 
-        public string DEMAND_ID { get; private set; }
+        public string ORDER_ID { get; private set; }
 
         public double START_TIME_WINDOW { get; private set; }
 

@@ -99,7 +99,7 @@ namespace Nodez.Project.RoutingTemplate.Controls
                         double qty = 0;
                         string workType = string.Empty;
 
-                        qty = node.Demand == null ? 0 : node.Demand.Quantity;
+                        qty = node.Order == null ? 0 : node.Order.Quantity;
                         workType = node.IsDelivery ? "Delivery" : "Pickup";
 
                         double dist = manager.GetDistance(prevNode.Index, node.Index);

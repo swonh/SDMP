@@ -28,7 +28,7 @@ namespace Nodez.Sdmp.Constants
 
         public static string PRODUCT = "Product";
 
-        public static string DEMAND = "Demand";
+        public static string ORDER = "Order";
 
         public static string RUN_OPTION = "RunOption";
 

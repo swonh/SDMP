@@ -20,7 +20,7 @@ namespace Nodez.Sdmp.Routing.DataModel
 
         public Depot Depot { get; private set; }
 
-        public List<Demand> Demands { get; private set; }
+        public List<Order> Orders { get; private set; }
 
         public List<Product> Products { get; private set; }
 
@@ -38,7 +38,11 @@ namespace Nodez.Sdmp.Routing.DataModel
 
         public Dictionary<int, Node> NodeIndexMappings { get; private set; }
 
-        public Dictionary<string, Demand> DemandMappings { get; private set; }
+        public Dictionary<string, Node> PickupNodeOrderIDMappings { get; private set; }
+
+        public Dictionary<string, Node> DeliveryNodeOrderIDMappings { get; private set; }
+
+        public Dictionary<string, Order> OrderMappings { get; private set; }
 
         public Dictionary<string, Product> ProductMappings { get; private set; }
 
@@ -54,13 +58,15 @@ namespace Nodez.Sdmp.Routing.DataModel
             this.Resources = new List<Resource>();
             this.Nodes = new List<Node>();
             this.Depot = new Depot();
-            this.Demands = new List<Demand>();
+            this.Orders = new List<Order>();
             this.Products = new List<Product>();
 
             this.VehicleMappings = new Dictionary<string, Vehicle>();
             this.ResourceMappings = new Dictionary<string, Resource>();
             this.NodeMappings = new Dictionary<string, Node>();
-            this.DemandMappings = new Dictionary<string, Demand>();
+            this.OrderMappings = new Dictionary<string, Order>();
+            this.PickupNodeOrderIDMappings = new Dictionary<string, Node>();
+            this.DeliveryNodeOrderIDMappings = new Dictionary<string, Node>();
             this.ProductMappings = new Dictionary<string, Product>();
             this.DistanceInfoMappings = new Dictionary<Tuple<string, string>, DistanceInfo>();
             this.DistanceInfoIndexMappings = new Dictionary<Tuple<int, int>, DistanceInfo>();
@@ -94,6 +100,8 @@ namespace Nodez.Sdmp.Routing.DataModel
             this.Nodes = nodes;
             this.SetNodeMappings();
             this.SetNodeIndexMappings();
+            this.SetPickupNodeOrderIDMappings();
+            this.SetDeliveryNodeOrderIDMappings();
         }
 
         public void SetDepotObjects(Depot depot)
@@ -101,10 +109,10 @@ namespace Nodez.Sdmp.Routing.DataModel
             this.Depot = depot;
         }
 
-        public void SetDemandObjects(List<Demand> demands)
+        public void SetOrderObjects(List<Order> orders)
         {
-            this.Demands = demands;
-            this.SetDemandMappings();
+            this.Orders = orders;
+            this.SetOrderMappings();
         }
 
         public void SetProductObjects(List<Product> products)
@@ -201,6 +209,40 @@ namespace Nodez.Sdmp.Routing.DataModel
             }
         }
 
+        private void SetPickupNodeOrderIDMappings() 
+        {
+            foreach (Node node in this.Nodes)
+            {
+                if (node.Order == null)
+                    continue;
+
+                if (node.IsDelivery)
+                    continue;
+
+                if (this.PickupNodeOrderIDMappings.ContainsKey(node.Order.ID))
+                    continue;
+
+                this.PickupNodeOrderIDMappings.Add(node.Order.ID, node);
+            }
+        }
+
+        private void SetDeliveryNodeOrderIDMappings()
+        {
+            foreach (Node node in this.Nodes)
+            {
+                if (node.Order == null)
+                    continue;
+
+                if (node.IsDelivery == false)
+                    continue;
+
+                if (this.DeliveryNodeOrderIDMappings.ContainsKey(node.Order.ID))
+                    continue;
+
+                this.DeliveryNodeOrderIDMappings.Add(node.Order.ID, node);
+            }
+        }
+
         private void SetNodeIndexMappings()
         {
             foreach (Node node in this.Nodes)
@@ -212,14 +254,14 @@ namespace Nodez.Sdmp.Routing.DataModel
             }
         }
 
-        private void SetDemandMappings()
+        private void SetOrderMappings()
         {
-            foreach (Demand demand in this.Demands)
+            foreach (Order order in this.Orders)
             {
-                if (this.DemandMappings.ContainsKey(demand.ID))
+                if (this.OrderMappings.ContainsKey(order.ID))
                     continue;
 
-                this.DemandMappings.Add(demand.ID, demand);
+                this.OrderMappings.Add(order.ID, order);
             }
         }
 

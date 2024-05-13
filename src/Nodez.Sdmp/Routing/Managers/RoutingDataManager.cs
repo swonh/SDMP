@@ -38,7 +38,7 @@ namespace Nodez.Sdmp.Routing.Managers
 
         public InputTable ProductTable { get; private set; }
 
-        public InputTable DemandTable { get; private set; }
+        public InputTable OrderTable { get; private set; }
 
         public InputTable RunOptionTable { get; private set; }
 
@@ -51,7 +51,7 @@ namespace Nodez.Sdmp.Routing.Managers
             this.NodeTable = inputManager.GetInput(Constants.Constants.NODE);
             this.VehicleResourceTable = inputManager.GetInput(Constants.Constants.VEHICLE_RESOURCE);
             this.ProductTable = inputManager.GetInput(Constants.Constants.PRODUCT);
-            this.DemandTable = inputManager.GetInput(Constants.Constants.DEMAND);
+            this.OrderTable = inputManager.GetInput(Constants.Constants.ORDER);
             this.RunOptionTable = inputManager.GetInput(Constants.Constants.RUN_OPTION);
             this.DistanceInfoTable = inputManager.GetInput(Constants.Constants.DISTANCE_INFO);
 
@@ -87,9 +87,9 @@ namespace Nodez.Sdmp.Routing.Managers
                 routingData.SetProductDataList(ProductTable.Rows().Cast<IProductData>().ToList());
             }
 
-            if (DemandTable != null)
+            if (OrderTable != null)
             {
-                routingData.SetDemandDataList(DemandTable.Rows().Cast<IDemandData>().ToList());
+                routingData.SetOrderDataList(OrderTable.Rows().Cast<IOrderData>().ToList());
             }
 
             if (RunOptionTable != null) 
@@ -117,7 +117,7 @@ namespace Nodez.Sdmp.Routing.Managers
             if (this.RoutingData.VehicleResourceDataList == null)
                 return;
 
-            if (this.RoutingData.DemandDataList == null)
+            if (this.RoutingData.OrderDataList == null)
                 return;
 
             if (this.RoutingData.ProductDataList == null)
@@ -130,7 +130,7 @@ namespace Nodez.Sdmp.Routing.Managers
 
             this.RoutingProblem.SetRunOptionObjects(this.CreateRunOptions(this.RoutingData.RunOptionDataList));
             this.RoutingProblem.SetProductObjects(this.CreateProducts(this.RoutingData.ProductDataList));
-            this.RoutingProblem.SetDemandObjects(this.CreateDemands(this.RoutingData.DemandDataList));
+            this.RoutingProblem.SetOrderObjects(this.CreateOrders(this.RoutingData.OrderDataList));
             this.RoutingProblem.SetResourceObjects(this.CreateResources(this.RoutingData.ResourceDataList));
             this.RoutingProblem.SetVehicleObjects(this.CreateVehicles(this.RoutingData.VehicleDataList));
             this.RoutingProblem.SetNodeObjects(this.CreateNodes(this.RoutingData.NodeDataList));
@@ -301,7 +301,7 @@ namespace Nodez.Sdmp.Routing.Managers
                 node.Index = index;
                 node.ID = item.ID;
                 node.Name = item.NAME;
-                node.Demand = this.GetDemand(item.DEMAND_ID);
+                node.Order = this.GetOrder(item.ORDER_ID);
                 node.TimeWindow = Tuple.Create(item.START_TIME_WINDOW, item.END_TIME_WINDOW);
                 node.IsVisited = false;
                 node.VisitedVehicle = null;
@@ -316,23 +316,28 @@ namespace Nodez.Sdmp.Routing.Managers
             return nodes;
         }
 
-        private List<Demand> CreateDemands(List<IDemandData> demandDataList) 
+        private List<Order> CreateOrders(List<IOrderData> orderDataList) 
         {
-            List<Demand> demands = new List<Demand>();
+            List<Order> orders = new List<Order>();
 
-            foreach (IDemandData item in demandDataList)
+            foreach (IOrderData item in orderDataList)
             {
-                Demand demand = new Demand();
+                Order order = new Order();
 
-                demand.ID = item.ID;
-                demand.Name = item.NAME;
-                demand.Product = this.GetProduct(item.PRODUCT_ID);
-                demand.Quantity = item.QUANTITY;
+                order.ID = item.ID;
+                order.Name = item.NAME;
+                order.OrderTime = item.ORDER_TIME;
+                order.Product = this.GetProduct(item.PRODUCT_ID);
+                order.PickupNode = this.GetNode(item.PICKUP_NODE_ID);
+                order.DeliveryNode = this.GetNode(item.DELIVERY_NODE_ID);
+                order.ProcessTime = item.PROCESS_TIME;
+                order.Deadline = item.DEADLINE;
+                order.Quantity = item.ORDER_QTY;
           
-                demands.Add(demand);
+                orders.Add(order);
             }
 
-            return demands;
+            return orders;
         }
 
         private List<Product> CreateProducts(List<IProductData> productDataList)
@@ -381,11 +386,11 @@ namespace Nodez.Sdmp.Routing.Managers
             return resource;
         }
 
-        public Demand GetDemand(string demandID)
+        public Order GetOrder(string orderID)
         {
-            this.RoutingProblem.DemandMappings.TryGetValue(demandID, out Demand demand);
+            this.RoutingProblem.OrderMappings.TryGetValue(orderID, out Order order);
 
-            return demand;
+            return order;
         }
 
         public Product GetProduct(string prodID)
@@ -398,6 +403,27 @@ namespace Nodez.Sdmp.Routing.Managers
         public Node GetNode(int nodeIndex) 
         {
             this.RoutingProblem.NodeIndexMappings.TryGetValue(nodeIndex, out Node node);
+
+            return node;
+        }
+
+        public Node GetNode(string nodeID)
+        {
+            this.RoutingProblem.NodeMappings.TryGetValue(nodeID, out Node node);
+
+            return node;
+        }
+
+        public Node GetPickupNodeByOrderID(string orderID)
+        {
+            this.RoutingProblem.PickupNodeOrderIDMappings.TryGetValue(orderID, out Node node);
+
+            return node;
+        }
+
+        public Node GetDeliveryNodeByOrderID(string orderID)
+        {
+            this.RoutingProblem.DeliveryNodeOrderIDMappings.TryGetValue(orderID, out Node node);
 
             return node;
         }

@@ -147,10 +147,10 @@
     <Compile Include="General\Controls\StateControl.cs" />
     <Compile Include="General\Controls\ActionControl.cs" />
     <Compile Include="Routing\Controls\VehicleControl.cs" />
-    <Compile Include="Routing\DataModel\Demand.cs" />
     <Compile Include="Routing\DataModel\Depot.cs" />
     <Compile Include="Routing\DataModel\DistanceInfo.cs" />
     <Compile Include="Routing\DataModel\Node.cs" />
+    <Compile Include="Routing\DataModel\Order.cs" />
     <Compile Include="Routing\DataModel\Product.cs" />
     <Compile Include="Routing\DataModel\Resource.cs" />
     <Compile Include="Routing\DataModel\RoutingProblem.cs" />
@@ -166,7 +166,7 @@
     <Compile Include="Enum\PrimalHeuristicType.cs" />
     <Compile Include="Routing\DataModel\RoutingData.cs" />
     <Compile Include="Routing\Interfaces\INodeData.cs" />
-    <Compile Include="Routing\Interfaces\IDemandData.cs" />
+    <Compile Include="Routing\Interfaces\IOrderData.cs" />
     <Compile Include="Routing\Interfaces\IDistanceInfoData.cs" />
     <Compile Include="Routing\Interfaces\IProductData.cs" />
     <Compile Include="Routing\Interfaces\IResourceData.cs" />

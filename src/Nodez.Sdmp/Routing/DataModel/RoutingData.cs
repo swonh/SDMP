@@ -26,7 +26,7 @@ namespace Nodez.Sdmp.Routing.DataModel
 
         public List<IVehicleResourceData> VehicleResourceDataList { get; private set; }
 
-        public List<IDemandData> DemandDataList { get; private set; }
+        public List<IOrderData> OrderDataList { get; private set; }
 
         public List<IProductData> ProductDataList { get; private set; }
 
@@ -62,9 +62,9 @@ namespace Nodez.Sdmp.Routing.DataModel
             this.ResourceDataList = resourceDataList;
         }
 
-        public void SetDemandDataList(List<IDemandData> demandDataList)
+        public void SetOrderDataList(List<IOrderData> orderDataList)
         {
-            this.DemandDataList = demandDataList;
+            this.OrderDataList = orderDataList;
         }
 
         public void SetProductDataList(List<IProductData> productDataList)

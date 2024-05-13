@@ -41,8 +41,8 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="InputData\Node.csv" />
-    <None Include="InputData\Demand.csv" />
     <None Include="InputData\DistanceInfo.csv" />
+    <None Include="InputData\Order.csv" />
     <None Include="InputData\Product.csv" />
     <None Include="InputData\Resource.csv" />
     <None Include="InputData\RunConfig.csv" />
@@ -63,8 +63,8 @@
     <Compile Include="Controls\Routing\UserNodeControl.cs" />
     <Compile Include="Controls\Routing\UserVehicleControl.cs" />
     <Compile Include="MyInputs\Node.cs" />
-    <Compile Include="MyInputs\Demand.cs" />
     <Compile Include="MyInputs\DistanceInfo.cs" />
+    <Compile Include="MyInputs\Order.cs" />
     <Compile Include="MyInputs\Product.cs" />
     <Compile Include="MyInputs\Resource.cs" />
     <Compile Include="MyInputs\RunConfig.cs" />

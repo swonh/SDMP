@@ -10,14 +10,24 @@ using System.Threading.Tasks;
 
 namespace Nodez.Sdmp.Routing.Interfaces
 {
-    public interface IDemandData
+    public interface IOrderData
     {
         string ID { get; }
 
         string NAME { get; }
 
+        double ORDER_TIME { get; }
+
         string PRODUCT_ID { get; }
 
-        double QUANTITY { get; }
+        string PICKUP_NODE_ID { get; }
+
+        string DELIVERY_NODE_ID { get; }
+
+        double PROCESS_TIME { get; }
+
+        int ORDER_QTY { get; }
+
+        double DEADLINE { get; }
     }
 }

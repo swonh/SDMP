@@ -116,7 +116,7 @@ namespace Nodez.Sdmp.Routing.DataModel
         {
             int vehicleIndex = vehicle.Index;
 
-            if (nextNode.Demand.Quantity > this.VehicleStateInfos[vehicleIndex].RemainCapacity[resource.Index])
+            if (nextNode.Order.Quantity > this.VehicleStateInfos[vehicleIndex].RemainCapacity[resource.Index])
                 return false;
 
             return true;
@@ -157,11 +157,11 @@ namespace Nodez.Sdmp.Routing.DataModel
 
             if (nextNode.IsDelivery)
             {
-                this.VehicleStateInfos[vehicleIndex].RemainCapacity[resource.Index] += nextNode.Demand.Quantity;
+                this.VehicleStateInfos[vehicleIndex].RemainCapacity[resource.Index] += nextNode.Order.Quantity;
             }
             else 
             {
-                this.VehicleStateInfos[vehicleIndex].RemainCapacity[resource.Index] -= nextNode.Demand.Quantity;
+                this.VehicleStateInfos[vehicleIndex].RemainCapacity[resource.Index] -= nextNode.Order.Quantity;
             }
 
             this.CurrentVehicleIndex = vehicleIndex;

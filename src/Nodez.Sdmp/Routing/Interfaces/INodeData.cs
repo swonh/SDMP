@@ -16,7 +16,7 @@ namespace Nodez.Sdmp.Routing.Interfaces
 
         string NAME { get; }
 
-        string DEMAND_ID { get; }
+        string ORDER_ID { get; }
 
         double START_TIME_WINDOW { get; }
 

@@ -12,7 +12,7 @@ using System.Text;
 
 namespace Nodez.Project.RoutingTemplate.MyInputs
 {
-    public class Demand : IInputRow, IDemandData
+    public class Order : IInputRow, IOrderData
     {
         // Define columns here (NOTICE: The column name defined here and the column name defined in the data file must match.)
 
@@ -20,11 +20,21 @@ namespace Nodez.Project.RoutingTemplate.MyInputs
 
         public string NAME { get; private set; }
 
+        public double ORDER_TIME { get; private set; }
+
         public string PRODUCT_ID { get; private set; }
 
-        public double QUANTITY { get; private set; }
+        public string PICKUP_NODE_ID { get; private set; }
 
-        public Demand()
+        public string DELIVERY_NODE_ID { get; private set; }
+
+        public double PROCESS_TIME { get; private set; }
+
+        public int ORDER_QTY { get; private set; }
+
+        public double DEADLINE { get; private set; }
+
+        public Order()
         {
             // Define keys here (You can search data with the key defined here. Allow multiple keys)
 

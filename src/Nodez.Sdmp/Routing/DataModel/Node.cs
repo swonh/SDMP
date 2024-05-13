@@ -19,7 +19,7 @@ namespace Nodez.Sdmp.Routing.DataModel
 
         public string Name { get; set; }
 
-        public Demand Demand { get; set; }
+        public Order Order { get; set; }
 
         public Tuple<double, double> TimeWindow { get; set; }
 
@@ -31,12 +31,12 @@ namespace Nodez.Sdmp.Routing.DataModel
 
         public bool IsDepot { get; set; }
 
-        public Demand CopyDemand(Node clone)
+        public Order CopyOrder(Node clone)
         {
-            if (this.Demand == null)
+            if (this.Order == null)
                 return null;
 
-            return clone.Demand.Clone();
+            return clone.Order.Clone();
         }
 
         public Vehicle CopyVisitedVehicle(Node clone)
@@ -47,9 +47,9 @@ namespace Nodez.Sdmp.Routing.DataModel
             return clone.VisitedVehicle.Clone();
         }
 
-        public void ReplaceDemand(Demand demand) 
+        public void ReplaceOrder(Order order) 
         {
-            this.Demand = demand;
+            this.Order = order;
         }
 
         public void ReplaceVisitedVehicle(Vehicle visitedVehicle) 
@@ -72,10 +72,10 @@ namespace Nodez.Sdmp.Routing.DataModel
         {
             Node clone = (Node)this.MemberwiseClone();
 
-            Demand demand = CopyDemand(clone);
+            Order order = CopyOrder(clone);
             Vehicle visitedVehicle = CopyVisitedVehicle(clone);
 
-            clone.ReplaceDemand(demand);
+            clone.ReplaceOrder(order);
             clone.ReplaceVisitedVehicle(visitedVehicle);
 
             return clone;

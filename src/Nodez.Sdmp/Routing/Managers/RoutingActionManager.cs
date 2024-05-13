@@ -53,7 +53,7 @@ namespace Nodez.Sdmp.Routing.Managers
                     if (node == null)
                         continue;
 
-                    Resource resource = vehicle.GetLoadableResource(node.Demand.Product);
+                    Resource resource = vehicle.GetLoadableResource(node.Order.Product);
 
                     if (resource == null)
                         continue;
