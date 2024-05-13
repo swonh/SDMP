@@ -128,11 +128,11 @@ namespace Nodez.Sdmp.Routing.Managers
 
             this.RoutingProblem = new RoutingProblem();
 
+            this.RoutingProblem.SetRunOptionObjects(this.CreateRunOptions(this.RoutingData.RunOptionDataList));
             bool isUseDistInfo = Convert.ToBoolean(this.GetRunOptionValue(Constants.Constants.IS_USE_DISTANCE_INFO_DATA));
             string distanceMetric = this.GetRunOptionValue(Constants.Constants.DISTANCE_METRIC);
             this.RoutingProblem.SetDistanceInfoObjects(this.CreateDistanceInfos(this.RoutingData.NodeDataList, this.RoutingData.DistanceInfoDataList, isUseDistInfo, distanceMetric));
 
-            this.RoutingProblem.SetRunOptionObjects(this.CreateRunOptions(this.RoutingData.RunOptionDataList));
             this.RoutingProblem.SetProductObjects(this.CreateProducts(this.RoutingData.ProductDataList));
             this.RoutingProblem.SetOrderObjects(this.CreateOrders(this.RoutingData.OrderDataList));
             this.RoutingProblem.SetNodeObjects(this.CreateNodes(this.RoutingData.NodeDataList));
