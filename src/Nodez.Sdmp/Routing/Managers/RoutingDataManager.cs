@@ -131,10 +131,10 @@ namespace Nodez.Sdmp.Routing.Managers
             this.RoutingProblem.SetRunOptionObjects(this.CreateRunOptions(this.RoutingData.RunOptionDataList));
             this.RoutingProblem.SetProductObjects(this.CreateProducts(this.RoutingData.ProductDataList));
             this.RoutingProblem.SetOrderObjects(this.CreateOrders(this.RoutingData.OrderDataList));
-            this.RoutingProblem.SetResourceObjects(this.CreateResources(this.RoutingData.ResourceDataList));
-            this.RoutingProblem.SetVehicleObjects(this.CreateVehicles(this.RoutingData.VehicleDataList));
             this.RoutingProblem.SetNodeObjects(this.CreateNodes(this.RoutingData.NodeDataList));
             this.RoutingProblem.SetDepotObjects(this.CreateDepot(this.RoutingData.NodeDataList));
+            this.RoutingProblem.SetResourceObjects(this.CreateResources(this.RoutingData.ResourceDataList));
+            this.RoutingProblem.SetVehicleObjects(this.CreateVehicles(this.RoutingData.VehicleDataList));
 
             bool isUseDistInfo = Convert.ToBoolean(this.GetRunOptionValue(Constants.Constants.IS_USE_DISTANCE_INFO_DATA));
             string distanceMetric = this.GetRunOptionValue(Constants.Constants.DISTANCE_METRIC);
@@ -289,13 +289,10 @@ namespace Nodez.Sdmp.Routing.Managers
         {
             List<Node> nodes = new List<Node>();
 
-            int index = 1;
+            int index = 0;
             foreach (INodeData item in nodeDataList)
             {
                 bool isDepot = UtilityHelper.StringToBoolean(item.IS_DEPOT);
-
-                if (isDepot)
-                    continue;
 
                 Node node = new Node();
                 node.Index = index;
@@ -392,6 +389,9 @@ namespace Nodez.Sdmp.Routing.Managers
 
         public Order GetOrder(string orderID)
         {
+            if (string.IsNullOrEmpty(orderID))
+                return null;
+
             this.RoutingProblem.OrderMappings.TryGetValue(orderID, out Order order);
 
             return order;

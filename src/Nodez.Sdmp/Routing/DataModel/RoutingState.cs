@@ -53,12 +53,12 @@ namespace Nodez.Sdmp.Routing.DataModel
             {
                 VehicleStateInfo info = new VehicleStateInfo();
                 info.CurrentNodeIndex = manager.RoutingProblem.Depot.Index;
-                info.VisitedNodeFlag = new int[nodeCount + 1];
-                info.NextVistableNodeFlag = new int[nodeCount + 1];
+                info.VisitedNodeFlag = new int[nodeCount];
+                info.NextVistableNodeFlag = new int[nodeCount];
                 info.RemainCapacity = new double[vehicle.Resources.Count + 1];
                 info.IsActive = true;
 
-                for (int i = 1; i < nodeCount + 1; i++) 
+                for (int i = 1; i < nodeCount; i++) 
                 {
                     info.NextVistableNodeFlag[i] = 1;
                 }
@@ -82,14 +82,15 @@ namespace Nodez.Sdmp.Routing.DataModel
             RoutingDataManager manager = RoutingDataManager.Instance;
             int nodeCount = manager.RoutingProblem.Nodes.Count;
 
-            this.ActiveNodeFlag = new int[nodeCount + 1];
+            this.ActiveNodeFlag = new int[nodeCount];
 
-            for (int i = 1; i < nodeCount + 1; i++)
+            for (int i = 1; i < nodeCount; i++)
             {
                 this.ActiveNodeFlag[i] = 1;
             }
 
-            this.ActiveCount = nodeCount;
+            // Except for Depot (-1)
+            this.ActiveCount = nodeCount - 1;
         }
 
         public void CopyStateInfo(RoutingState state) 

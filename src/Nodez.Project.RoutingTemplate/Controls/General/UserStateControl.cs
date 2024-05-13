@@ -95,6 +95,9 @@ namespace Nodez.Project.RoutingTemplate.Controls
 
                     RoutingDataManager.Instance.RoutingProblem.NodeIndexMappings.TryGetValue(minIdx, out Node node);
 
+                    if (node.IsDepot)
+                        continue;
+
                     Resource resource = vehicle.GetLoadableResource(node.Order.Product);
 
                     if (resource == null)
