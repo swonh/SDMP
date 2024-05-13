@@ -34,6 +34,8 @@ namespace Nodez.Sdmp.Routing.DataModel
 
         public double Quantity { get; set; }
 
+        public double Distance { get; set; }
+
         public Node CopyDeliveryNode(Order clone)
         {
             if (this.DeliveryNode == null)

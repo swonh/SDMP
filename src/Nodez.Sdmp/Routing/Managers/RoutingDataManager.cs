@@ -128,6 +128,10 @@ namespace Nodez.Sdmp.Routing.Managers
 
             this.RoutingProblem = new RoutingProblem();
 
+            bool isUseDistInfo = Convert.ToBoolean(this.GetRunOptionValue(Constants.Constants.IS_USE_DISTANCE_INFO_DATA));
+            string distanceMetric = this.GetRunOptionValue(Constants.Constants.DISTANCE_METRIC);
+            this.RoutingProblem.SetDistanceInfoObjects(this.CreateDistanceInfos(this.RoutingData.NodeDataList, this.RoutingData.DistanceInfoDataList, isUseDistInfo, distanceMetric));
+
             this.RoutingProblem.SetRunOptionObjects(this.CreateRunOptions(this.RoutingData.RunOptionDataList));
             this.RoutingProblem.SetProductObjects(this.CreateProducts(this.RoutingData.ProductDataList));
             this.RoutingProblem.SetOrderObjects(this.CreateOrders(this.RoutingData.OrderDataList));
@@ -135,10 +139,6 @@ namespace Nodez.Sdmp.Routing.Managers
             this.RoutingProblem.SetDepotObjects(this.CreateDepot(this.RoutingData.NodeDataList));
             this.RoutingProblem.SetResourceObjects(this.CreateResources(this.RoutingData.ResourceDataList));
             this.RoutingProblem.SetVehicleObjects(this.CreateVehicles(this.RoutingData.VehicleDataList));
-
-            bool isUseDistInfo = Convert.ToBoolean(this.GetRunOptionValue(Constants.Constants.IS_USE_DISTANCE_INFO_DATA));
-            string distanceMetric = this.GetRunOptionValue(Constants.Constants.DISTANCE_METRIC);
-            this.RoutingProblem.SetDistanceInfoObjects(this.CreateDistanceInfos(this.RoutingData.NodeDataList, this.RoutingData.DistanceInfoDataList, isUseDistInfo, distanceMetric));
         }
 
         public string GetRunOptionValue(string optionName) 
@@ -309,12 +309,18 @@ namespace Nodez.Sdmp.Routing.Managers
 
                 nodes.Add(node);
 
-                if (node.IsDelivery)
-                    node.Order.DeliveryNode = node;
-                else
-                    node.Order.PickupNode = node;
+                if (node.IsDepot == false)
+                {
+                    if (node.IsDelivery)
+                        node.Order.DeliveryNode = node;
+                    else
+                        node.Order.PickupNode = node;
 
-                index++;              
+                    if (node.Order.PickupNode != null && node.Order.DeliveryNode != null)
+                        node.Order.Distance = GetDistance(node.Order.PickupNode.Index, node.Order.DeliveryNode.Index);
+                }
+
+                index++;
             }
 
             return nodes;
