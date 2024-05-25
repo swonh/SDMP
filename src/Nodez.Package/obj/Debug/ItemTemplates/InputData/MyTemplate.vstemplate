@@ -2,7 +2,7 @@
   <TemplateData>
     <DefaultName>InputData.cs</DefaultName>
     <Name>InputData</Name>
-    <Description>SDMP InputData Template</Description>
+    <Description>SDMP Inputdata Template</Description>
     <ProjectType>CSharp</ProjectType>
     <SortOrder>10</SortOrder>
     <Icon>__TemplateIcon.png</Icon>

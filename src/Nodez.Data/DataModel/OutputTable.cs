@@ -58,16 +58,16 @@ namespace Nodez.Data.DataModel
 
             string exportPath = null;
             if (path == null)
-                exportPath = string.Format(@"..\..\..\{0}\Output", projectName);
+                exportPath = string.Format(@"..{0}..{0}..{0}{1}\Output", Path.DirectorySeparatorChar, projectName);
             else
                 exportPath = path;
 
             if (Directory.Exists(exportPath) == false)
                 Directory.CreateDirectory(exportPath);
 
-            string filePath = string.Format(@"{0}\{1}.csv", exportPath, this.Name);
+            string filePath = string.Format(@"{0}{1}{2}.csv", exportPath, Path.DirectorySeparatorChar, this.Name);
             if (name != null)
-                filePath = string.Format(@"{0}\{1}.csv", exportPath, name);
+                filePath = string.Format(@"{0}{1}{2}.csv", exportPath, Path.DirectorySeparatorChar, name);
 
             StreamWriter sw = new StreamWriter(filePath, isAppend, System.Text.Encoding.Default);
 

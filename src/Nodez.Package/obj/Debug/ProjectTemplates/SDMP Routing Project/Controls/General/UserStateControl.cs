@@ -1,4 +1,8 @@
-﻿using Nodez.Data;
+﻿// Copyright (c) 2021-23, Sungwon Hong. All Rights Reserved. 
+// This Source Code Form is subject to the terms of the Mozilla Public License, Version 2.0. 
+// If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+using Nodez.Data;
 using Nodez.Data.Managers;
 using Nodez.Sdmp.Enum;
 using Nodez.Sdmp.General.Controls;
@@ -60,7 +64,7 @@ namespace $safeprojectname$.Controls
                 {
                     VehicleStateInfo info = item.Value;
 
-                    if (info.IsDoneVisitCustomers())
+                    if (info.IsDoneVisitNodes())
                         continue;
 
                     int vehicleIndex = item.Key;
@@ -69,18 +73,18 @@ namespace $safeprojectname$.Controls
                     if (vehicle == null)
                         continue;
 
-                    int currentCustomer = info.CurrentCustomerIndex;
+                    int currentNode = info.CurrentNodeIndex;
 
                     int minIdx = 0;
                     double minDist = Double.MaxValue;
-                    for (int i = 1; i < info.NextVistableCustomerFlag.Length; i++)
+                    for (int i = 1; i < info.NextVistableNodeFlag.Length; i++)
                     {
-                        int flag = info.NextVistableCustomerFlag[i];
+                        int flag = info.NextVistableNodeFlag[i];
 
                         if (flag == 0)
                             continue;
 
-                        double dist = manager.GetDistance(currentCustomer, i);
+                        double dist = manager.GetDistance(currentNode, i);
 
                         if (minDist > dist)
                         {
@@ -89,14 +93,14 @@ namespace $safeprojectname$.Controls
                         }
                     }
 
-                    RoutingDataManager.Instance.RoutingProblem.CustomerIndexMappings.TryGetValue(minIdx, out Customer customer);
+                    RoutingDataManager.Instance.RoutingProblem.NodeIndexMappings.TryGetValue(minIdx, out Node node);
 
-                    Resource resource = vehicle.GetLoadableResource(customer.Demand.Product);
+                    Resource resource = vehicle.GetLoadableResource(node.Demand.Product);
 
                     if (resource == null)
                         continue;
 
-                    copiedState.VisitCustomer(customer, vehicle, resource);
+                    copiedState.VisitNode(node, vehicle, resource);
 
                     copiedState.BestValue += minDist;
                 }
@@ -118,7 +122,7 @@ namespace $safeprojectname$.Controls
                 Stage stage = new Stage(copiedState.Stage.Index + 1);
                 copiedState.Stage = stage;
 
-                double dist = manager.GetDistance(info.CurrentCustomerIndex, manager.RoutingProblem.Depot.Index);
+                double dist = manager.GetDistance(info.CurrentNodeIndex, manager.RoutingProblem.Depot.Index);
                 copiedState.ReturnToDepot(item.Key);
 
                 copiedState.BestValue += dist;

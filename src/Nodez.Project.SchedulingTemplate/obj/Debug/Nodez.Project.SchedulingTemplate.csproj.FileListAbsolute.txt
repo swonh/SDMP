@@ -133,3 +133,4 @@ E:\2024_Dev\SDMP\src\Nodez.Project.SchedulingTemplate\obj\Debug\Nodez.Project.Sc
 E:\2024_Dev\SDMP\src\Nodez.Project.SchedulingTemplate\obj\Debug\Nodez.Project.SchedulingTemplate.csproj.CopyComplete
 E:\2024_Dev\SDMP\src\Nodez.Project.SchedulingTemplate\obj\Debug\Nodez.Project.SchedulingTemplate.exe
 E:\2024_Dev\SDMP\src\Nodez.Project.SchedulingTemplate\obj\Debug\Nodez.Project.SchedulingTemplate.pdb
+E:\2024_Dev\SDMP\src\Nodez.Project.SchedulingTemplate\obj\Debug\Nodez.Project.SchedulingTemplate.csproj.AssemblyReference.cache

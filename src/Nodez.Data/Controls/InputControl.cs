@@ -45,9 +45,9 @@ namespace Nodez.Data.Controls
                 if (file.Extension.Contains(extension) == false)
                     continue;
 
-                string name = string.Format(@"{0}\{1}", destinationPath, file.Name);
+                string name = string.Format(@"{0}{1}{2}", destinationPath, Path.DirectorySeparatorChar, file.Name);
                 if (fileIdentifier != null)
-                    name = string.Format(@"{0}\{1}", destinationPath, string.Format("{0}_{1}{2}", Path.GetFileNameWithoutExtension(file.Name), fileIdentifier, file.Extension));
+                    name = string.Format(@"{0}{1}{2}", destinationPath, Path.DirectorySeparatorChar, string.Format("{0}_{1}{2}", Path.GetFileNameWithoutExtension(file.Name), fileIdentifier, file.Extension));
 
                 file.CopyTo(name, true);
             }
@@ -56,13 +56,13 @@ namespace Nodez.Data.Controls
         public Dictionary<string, string> GetInputsPathMappings(string inputPath, List<string> tableNames) 
         {
             if(inputPath == null)
-                inputPath = @"..\..\InputData";
+                inputPath = string.Format(@"..{0}..{0}InputData", Path.DirectorySeparatorChar);
 
             Dictionary<string, string> mappings = new Dictionary<string, string>();
 
             foreach (string tableName in tableNames)
             {
-                mappings.Add(tableName, string.Format(@"{0}\{1}.csv", inputPath, tableName));              
+                mappings.Add(tableName, string.Format(@"{0}{1}{2}.csv", inputPath, Path.DirectorySeparatorChar, tableName));              
             }
 
             return mappings;
@@ -86,7 +86,7 @@ namespace Nodez.Data.Controls
 
         public List<string> GetInputFileNames()
         {
-            string inputPath = @"..\..\InputData";
+            string inputPath = string.Format(@"..{0}..{0}InputData", Path.DirectorySeparatorChar);
             List<string> fileNames = new List<string>();
             if (Directory.Exists(inputPath))
             {

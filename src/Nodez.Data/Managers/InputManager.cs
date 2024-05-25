@@ -34,7 +34,7 @@ namespace Nodez.Data.Managers
         public void DeleteInputFiles(List<string> filterList = null)
         {
             string projectName = Assembly.GetCallingAssembly().GetName().Name;
-            string inputPath = string.Format(@"..\..\..\{0}\Data", projectName);
+            string inputPath = string.Format(@"..{0}..{0}..{0}{1}{0}Data", Path.DirectorySeparatorChar, projectName);
 
             if (Directory.Exists(inputPath) == false)
                 return;
