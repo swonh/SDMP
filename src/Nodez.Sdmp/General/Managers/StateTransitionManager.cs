@@ -23,7 +23,7 @@ namespace Nodez.Sdmp.General.Managers
 
             StateTransition tran = new StateTransition();
 
-            tran.FromState = stateActionMap.PostActionState;
+            tran.FromState = stateActionMap.PreActionState;
             tran.ToState = stateActionMap.PostActionState.Clone();
             tran.Cost = stateActionMap.Cost;
 
