@@ -933,6 +933,8 @@ namespace Nodez.Sdmp.Interfaces
                 State visited;
                 if (this.VisitedStates.TryGetValue(toState.Key, out visited))
                 {
+                    stateManager.SetLinks(nextTran);
+
                     if (this.ObjectiveFunctionType == ObjectiveFunctionType.Minimize)
                     {
                         if (nextValue < visited.BestValue)
