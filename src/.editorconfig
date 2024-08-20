@@ -4,7 +4,7 @@
 # You can learn more about editorconfig here: https://docs.microsoft.com/en-us/visualstudio/ide/editorconfig-code-style-settings-reference
 [*.cs]
 
-file_header_template = Copyright (c) 2021-23, Sungwon Hong. All Rights Reserved. \nThis Source Code Form is subject to the terms of the Mozilla Public License, Version 2.0. \nIf a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
+file_header_template = Copyright (c) 2021-24, Sungwon Hong. All Rights Reserved. \nThis Source Code Form is subject to the terms of the Mozilla Public License, Version 2.0. \nIf a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 #Core editorconfig formatting - indentation
 
 #use soft tabs (spaces) for indentation
