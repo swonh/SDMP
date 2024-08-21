@@ -150,11 +150,13 @@ namespace Nodez.Sdmp.Routing.DataModel
                 info.VistableNodeCount--;
             }
 
-            double time = RoutingDataManager.Instance.GetTime(vehicle, currentNodeIndex, nextNodeIndex);
+            double availableTime = this.VehicleStateInfos[vehicleIndex].AvailableTime;
+            double transitTime = RoutingDataManager.Instance.GetTime(vehicle, currentNodeIndex, nextNodeIndex);
+            double arrivalTime = availableTime + transitTime;
 
             this.VehicleStateInfos[vehicleIndex].VisitedNodeFlag[nextNodeIndex] = 1;
             this.VehicleStateInfos[vehicleIndex].VisitedNodeCount++;
-            this.VehicleStateInfos[vehicleIndex].AvailableTime += Math.Max(nextNode.Order.ReadyTime, time);
+            this.VehicleStateInfos[vehicleIndex].AvailableTime += Math.Max(nextNode.Order.ReadyTime, arrivalTime);
 
             if (nextNode.IsDelivery)
             {
