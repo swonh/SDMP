@@ -55,7 +55,7 @@ namespace Nodez.Sdmp.Routing.DataModel
                 info.CurrentNodeIndex = manager.RoutingProblem.Depot.Index;
                 info.VisitedNodeFlag = new int[nodeCount];
                 info.NextVistableNodeFlag = new int[nodeCount];
-                info.RemainCapacity = new double[vehicle.Resources.Count + 1];
+                info.RemainCapacity = new double[manager.RoutingProblem.Resources.Count + 1];
                 info.IsActive = true;
 
                 for (int i = 1; i < nodeCount; i++) 
@@ -66,11 +66,9 @@ namespace Nodez.Sdmp.Routing.DataModel
                 info.VisitedNodeCount = 0;
                 info.VistableNodeCount = nodeCount;
 
-                int idx = 0;
                 foreach (Resource res in vehicle.Resources.Values)
                 {
-                    info.RemainCapacity[idx] = res.OrgCapacity;
-                    idx++;
+                    info.RemainCapacity[res.Index] = res.OrgCapacity;
                 }
 
                 infos.Add(vehicle.Index, info);
