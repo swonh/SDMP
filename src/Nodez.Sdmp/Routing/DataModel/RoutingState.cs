@@ -66,9 +66,11 @@ namespace Nodez.Sdmp.Routing.DataModel
                 info.VisitedNodeCount = 0;
                 info.VistableNodeCount = nodeCount;
 
+                int idx = 0;
                 foreach (Resource res in vehicle.Resources.Values)
                 {
-                    info.RemainCapacity[res.Index] = res.OrgCapacity;
+                    info.RemainCapacity[idx] = res.OrgCapacity;
+                    idx++;
                 }
 
                 infos.Add(vehicle.Index, info);
