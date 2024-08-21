@@ -154,7 +154,7 @@ namespace Nodez.Sdmp.Routing.DataModel
 
             this.VehicleStateInfos[vehicleIndex].VisitedNodeFlag[nextNodeIndex] = 1;
             this.VehicleStateInfos[vehicleIndex].VisitedNodeCount++;
-            this.VehicleStateInfos[vehicleIndex].AvailableTime += time;
+            this.VehicleStateInfos[vehicleIndex].AvailableTime += Math.Max(nextNode.Order.ReadyTime, time);
 
             if (nextNode.IsDelivery)
             {
