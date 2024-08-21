@@ -127,7 +127,7 @@ namespace Nodez.Sdmp.Routing.DataModel
         {
             bool check = false;
 
-            if (nextNode.TimeWindow.Item1 <= this.VehicleStateInfos[vehicle.Index].AvailableTime) 
+            if (nextNode.TimeWindow.Item1 >= this.VehicleStateInfos[vehicle.Index].AvailableTime) 
             {
                 check = true;
             }
