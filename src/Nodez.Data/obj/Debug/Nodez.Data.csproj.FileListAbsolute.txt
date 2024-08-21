@@ -24,3 +24,4 @@ E:\2024_Dev\SDMP\src\Nodez.Data\obj\Debug\Nodez.Data.csproj.CoreCompileInputs.ca
 E:\2024_Dev\SDMP\src\Nodez.Data\obj\Debug\Nodez.Data.dll
 E:\2024_Dev\SDMP\src\Nodez.Data\obj\Debug\Nodez.Data.pdb
 E:\2024_Dev\SDMP\src\Nodez.Data\obj\Debug\Nodez.Data.csproj.AssemblyReference.cache
+D:\Repository\SDMP\src\Nodez.Data\obj\Debug\Nodez.Data.csproj.AssemblyReference.cache

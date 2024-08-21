@@ -159,16 +159,17 @@ namespace Nodez.Sdmp.Routing.DataModel
             if (nextNode.IsDelivery)
             {
                 this.VehicleStateInfos[vehicleIndex].RemainCapacity[resource.Index] += nextNode.Order.Quantity;
+                this.VehicleStateInfos[vehicleIndex].DeliveryCount++;
             }
             else 
             {
                 this.VehicleStateInfos[vehicleIndex].RemainCapacity[resource.Index] -= nextNode.Order.Quantity;
+                this.VehicleStateInfos[vehicleIndex].PickupCount++;
             }
 
             this.CurrentVehicleIndex = vehicleIndex;
             this.CurrentNodeIndex = nextNodeIndex;
             
-
             this.ActiveCount--;
         }
 

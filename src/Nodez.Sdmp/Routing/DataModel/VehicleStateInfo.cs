@@ -28,6 +28,13 @@ namespace Nodez.Sdmp.Routing.DataModel
 
         public double AvailableTime { get; set; }
 
+        public int PickupCount { get; set; }
+
+        public int DeliveryCount { get; set; }
+
+
+        public bool IsFinished { get { return VisitedNodeCount > 0 && PickupCount == DeliveryCount; } }
+
         public bool IsDoneVisitNodes() 
         {
             bool isDoneVisit = false;
