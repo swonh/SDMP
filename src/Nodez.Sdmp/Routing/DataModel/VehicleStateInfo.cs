@@ -32,7 +32,6 @@ namespace Nodez.Sdmp.Routing.DataModel
 
         public int DeliveryCount { get; set; }
 
-
         public bool IsFinished { get { return VisitedNodeCount > 0 && PickupCount == DeliveryCount; } }
 
         public bool IsDoneVisitNodes() 
@@ -57,6 +56,8 @@ namespace Nodez.Sdmp.Routing.DataModel
             clone.VistableNodeCount = this.VistableNodeCount;
             clone.IsActive = this.IsActive;
             clone.AvailableTime = this.AvailableTime;
+            clone.PickupCount = this.PickupCount;
+            clone.DeliveryCount = this.DeliveryCount;
 
             clone.VisitedNodeFlag = new int[this.VisitedNodeFlag.Length];
             clone.NextVistableNodeFlag = new int[this.NextVistableNodeFlag.Length];

@@ -473,11 +473,13 @@ namespace Nodez.Sdmp.Routing.Managers
             return 0;
         }
 
-        public double GetTime(int fromNodeIndex, int toNodeIndex)
+        public double GetTime(Vehicle vehicle, int fromNodeIndex, int toNodeIndex)
         {
             Tuple<int, int> key = Tuple.Create(fromNodeIndex, toNodeIndex);
             if (this.RoutingProblem.DistanceInfoIndexMappings.TryGetValue(key, out DistanceInfo info))
-                return info.Time;
+            {
+                 return Math.Round((info.Distance / vehicle.Speed) + vehicle.ServiceTime);
+            }
 
             return 0;
         }

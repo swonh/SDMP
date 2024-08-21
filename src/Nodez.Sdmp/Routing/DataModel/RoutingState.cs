@@ -150,7 +150,7 @@ namespace Nodez.Sdmp.Routing.DataModel
                 info.VistableNodeCount--;
             }
 
-            double time = RoutingDataManager.Instance.GetTime(currentNodeIndex, nextNodeIndex);
+            double time = RoutingDataManager.Instance.GetTime(vehicle, currentNodeIndex, nextNodeIndex);
 
             this.VehicleStateInfos[vehicleIndex].VisitedNodeFlag[nextNodeIndex] = 1;
             this.VehicleStateInfos[vehicleIndex].VisitedNodeCount++;
@@ -176,7 +176,9 @@ namespace Nodez.Sdmp.Routing.DataModel
         public void ReturnToDepot(int vehicleIndex)
         {
             Depot depot = RoutingDataManager.Instance.RoutingProblem.Depot;
-            double time = RoutingDataManager.Instance.GetTime(this.VehicleStateInfos[vehicleIndex].CurrentNodeIndex, depot.Index);
+            Vehicle vehicle = RoutingDataManager.Instance.GetVehicle(vehicleIndex);
+
+            double time = RoutingDataManager.Instance.GetTime(vehicle, this.VehicleStateInfos[vehicleIndex].CurrentNodeIndex, depot.Index);
 
             this.VehicleStateInfos[vehicleIndex].AvailableTime += time;
             this.VehicleStateInfos[vehicleIndex].CurrentNodeIndex = depot.Index;

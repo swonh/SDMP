@@ -1140,7 +1140,7 @@ Skipped Types:
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager::GetDeliveryNodeByOrderID[1]( [mscorlib]System.String ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager::GetVehicle[1]( [mscorlib]System.Int32 ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager::GetDistance[2]( [mscorlib]System.Int32, [mscorlib]System.Int32 ) skipped:  KeepPublicApi option in configuration
-	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager::GetTime[2]( [mscorlib]System.Int32, [mscorlib]System.Int32 ) skipped:  KeepPublicApi option in configuration
+	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager::GetTime[3]( [Nodez.Sdmp]Nodez.Sdmp.Routing.DataModel.Vehicle, [mscorlib]System.Int32, [mscorlib]System.Int32 ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager::.ctor[0]( ) skipped:  special name
 	[Nodez.Sdmp]Nodez.Sdmp.Routing.Managers.RoutingDataManager::.cctor[0]( ) skipped:  special name
 
