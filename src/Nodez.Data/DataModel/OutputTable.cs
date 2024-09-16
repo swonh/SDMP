@@ -92,7 +92,17 @@ namespace Nodez.Data.DataModel
                 foreach (string colName in this.ColumnNames)
                 {
                     dynamic value = row.GetValue(colName);
-                    string strVal = Convert.ToString(value);
+
+                    string strVal = string.Empty;
+
+                    if (value is DateTime)
+                    {
+                        strVal = value.ToString("yyyy-MM-dd HH:mm:ss");
+                    }
+                    else 
+                    {
+                        strVal = Convert.ToString(value);
+                    }
 
                     if (strVal != null)
                         sw.Write(strVal.Trim());
