@@ -75,6 +75,9 @@ namespace Nodez.Data.Managers
 
         public void ClearInputs()
         {
+            if (_inputs == null)
+                return;
+
             _inputs.Clear();
             _pathInputsMappings.Clear();
             _columnNameMappings.Clear();
