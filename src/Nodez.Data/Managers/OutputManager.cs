@@ -58,6 +58,9 @@ namespace Nodez.Data.Managers
 
         public void ClearOutputs()
         {
+            if (_outputs == null)
+                return;
+
             _outputs.Clear();
 
             if (_pathOutputsMappings != null)
