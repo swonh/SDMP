@@ -70,6 +70,9 @@ namespace Nodez.Data.Managers
 
         public OutputTable GetOutput(string key)
         {
+            if (_outputs == null)
+                return null;
+
             OutputTable output;
 
             if (_outputs.TryGetValue(key, out output))
