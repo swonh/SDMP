@@ -83,6 +83,9 @@ namespace Nodez.Data.Managers
 
         public void SetOutput(string key, OutputTable output)
         {
+            if (key == null)
+                return;
+
             if (_outputs == null)
                 _outputs = new Dictionary<string, OutputTable>();
 

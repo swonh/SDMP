@@ -53,7 +53,10 @@ namespace Nodez.Data.DataModel
         }
 
         public void WriteToFile(string path = null, bool isAppend = false, bool isHeaderInclude = true, string name = null)
-        { 
+        {
+            if (_rows == null)
+                return;
+
             string projectName = Assembly.GetCallingAssembly().GetName().Name;
 
             string exportPath = null;
