@@ -116,7 +116,7 @@ namespace Nodez.Sdmp.General.Managers
             double bestPrimalBound = boundManager.BestPrimalBound;
             double bestDualBound = boundManager.BestDualBound;
 
-            double relativeDualityGap = Math.Round(Math.Abs(bestPrimalBound - bestDualBound) / bestDualBound, 6);
+            double relativeDualityGap = Math.Round(Math.Abs(bestPrimalBound - bestDualBound) / Math.Abs(bestPrimalBound), 6);
             double absDualityGap = Math.Round(Math.Abs(bestPrimalBound - bestDualBound), 6);
 
             bool isUseAbsOptimalityGap = boundControl.UseAbsoluteOptimalityGap();
