@@ -242,8 +242,6 @@ E:\2024_Dev\SDMP\src\Nodez.Package\obj\Release\ProjectTemplates\SDMP Routing Pro
 E:\2024_Dev\SDMP\src\Nodez.Package\obj\Release\ProjectTemplates\SDMP Routing Project\MyMethods\Helper.cs
 E:\2024_Dev\SDMP\src\Nodez.Package\obj\Release\ProjectTemplates\SDMP Scheduling Project\MyMethods\Helper.cs
 D:\Repository\SDMP\src\Nodez.Package\bin\Release\sdmp_main.png
-D:\Repository\SDMP\src\Nodez.Package\bin\Release\ItemTemplates\SDMP InputTable Template.zip
-D:\Repository\SDMP\src\Nodez.Package\bin\Release\ItemTemplates\SDMP OutputTable Template.zip
 D:\Repository\SDMP\src\Nodez.Package\bin\Release\ProjectTemplates\SDMP General Project Template.zip
 D:\Repository\SDMP\src\Nodez.Package\bin\Release\ProjectTemplates\SDMP Routing Project Template.zip
 D:\Repository\SDMP\src\Nodez.Package\bin\Release\ProjectTemplates\SDMP Scheduling Project Template.zip
@@ -259,12 +257,6 @@ D:\Repository\SDMP\src\Nodez.Package\obj\Release\extension.vsixmanifest
 D:\Repository\SDMP\src\Nodez.Package\obj\Release\files.json
 D:\Repository\SDMP\src\Nodez.Package\obj\Release\TemplateManifests\templateManifest0.noloc.vstman
 D:\Repository\SDMP\src\Nodez.Package\obj\Release\TemplateManifests\templateManifest1.noloc.vstman
-D:\Repository\SDMP\src\Nodez.Package\obj\Release\ItemTemplates\SDMP InputTable Template\SampleData.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Release\ItemTemplates\SDMP InputTable Template\__TemplateIcon.png
-D:\Repository\SDMP\src\Nodez.Package\obj\Release\ItemTemplates\SDMP InputTable Template\MyTemplate.vstemplate
-D:\Repository\SDMP\src\Nodez.Package\obj\Release\ItemTemplates\SDMP OutputTable Template\SampleOutputData.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Release\ItemTemplates\SDMP OutputTable Template\__TemplateIcon.png
-D:\Repository\SDMP\src\Nodez.Package\obj\Release\ItemTemplates\SDMP OutputTable Template\MyTemplate.vstemplate
 D:\Repository\SDMP\src\Nodez.Package\obj\Release\ProjectTemplates\SDMP General Project Template\__TemplateIcon.png
 D:\Repository\SDMP\src\Nodez.Package\obj\Release\ProjectTemplates\SDMP General Project Template\App.config
 D:\Repository\SDMP\src\Nodez.Package\obj\Release\ProjectTemplates\SDMP General Project Template\Controls\UserActionControl.cs
@@ -365,3 +357,11 @@ D:\Repository\SDMP\src\Nodez.Package\obj\Release\ProjectTemplates\SDMP Schedulin
 D:\Repository\SDMP\src\Nodez.Package\obj\Release\ProjectTemplates\SDMP Scheduling Project Template\Nodez.Project.SchedulingTemplate.csproj
 D:\Repository\SDMP\src\Nodez.Package\obj\Release\ProjectTemplates\SDMP Scheduling Project Template\Program.cs
 D:\Repository\SDMP\src\Nodez.Package\obj\Release\templateFiles.json
+D:\Repository\SDMP\src\Nodez.Package\bin\Release\ItemTemplates\InputTable.zip
+D:\Repository\SDMP\src\Nodez.Package\bin\Release\ItemTemplates\OutputTable.zip
+D:\Repository\SDMP\src\Nodez.Package\obj\Release\ItemTemplates\InputTable\__TemplateIcon.png
+D:\Repository\SDMP\src\Nodez.Package\obj\Release\ItemTemplates\InputTable\MyTemplate.vstemplate
+D:\Repository\SDMP\src\Nodez.Package\obj\Release\ItemTemplates\InputTable\SampleData.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Release\ItemTemplates\OutputTable\__TemplateIcon.png
+D:\Repository\SDMP\src\Nodez.Package\obj\Release\ItemTemplates\OutputTable\MyTemplate.vstemplate
+D:\Repository\SDMP\src\Nodez.Package\obj\Release\ItemTemplates\OutputTable\SampleOutputData.cs

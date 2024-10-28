@@ -1,33 +1,32 @@
 ﻿<VSTemplateManifest Version="1.0" xmlns="http://schemas.microsoft.com/developer/vstemplatemanifest/2015">
-  <VSTemplateContainer TemplateType="Item">
-    <RelativePathOnDisk>SDMP InputTable Template</RelativePathOnDisk>
+  <VSTemplateContainer TemplateType="Project">
+    <RelativePathOnDisk>SDMP General Project Template</RelativePathOnDisk>
     <TemplateFileName>MyTemplate.vstemplate</TemplateFileName>
     <VSTemplateHeader>
       <TemplateData xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
-        <DefaultName>SDMP InputTable Template.cs</DefaultName>
-        <Name>SDMP InputTable Template</Name>
-        <Description>SDMP InputTable Template</Description>
+        <Name>SDMP General Project Template</Name>
+        <Description>SDMP General Project Template</Description>
         <ProjectType>CSharp</ProjectType>
-        <SortOrder>10</SortOrder>
+        <ProjectSubType>
+        </ProjectSubType>
+        <SortOrder>1000</SortOrder>
+        <CreateNewFolder>true</CreateNewFolder>
+        <DefaultName>SDMP.General.Project</DefaultName>
+        <ProvideDefaultName>true</ProvideDefaultName>
+        <LocationField>Enabled</LocationField>
+        <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
         <Icon>__TemplateIcon.png</Icon>
       </TemplateData>
     </VSTemplateHeader>
   </VSTemplateContainer>
-  <VSTemplateContainer TemplateType="Item">
-    <RelativePathOnDisk>SDMP OutputTable Template</RelativePathOnDisk>
+  <VSTemplateContainer TemplateType="Project">
+    <RelativePathOnDisk>SDMP Routing Project Template</RelativePathOnDisk>
     <TemplateFileName>MyTemplate.vstemplate</TemplateFileName>
     <VSTemplateHeader>
       <TemplateData xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
-        <DefaultName>SDMP OutputTable Template.cs</DefaultName>
-        <Name>SDMP OutputTable Template</Name>
-        <Description>SDMP OutputTable Template</Description>
+        <Name>SDMP Routing Project Template</Name>
+        <Description>SDMP Routing Project Template</Description>
         <ProjectType>CSharp</ProjectType>
-        <SortOrder>10</SortOrder>
-        <Icon>__TemplateIcon.png</Icon>
-      </TemplateData>
-    </VSTemplateHeader>
-  </VSTemplateContainer>
-</VSTemplateManifest>ProjectType>
         <ProjectSubType>
         </ProjectSubType>
         <SortOrder>1000</SortOrder>
@@ -41,12 +40,12 @@
     </VSTemplateHeader>
   </VSTemplateContainer>
   <VSTemplateContainer TemplateType="Project">
-    <RelativePathOnDisk>SDMP Scheduling Project</RelativePathOnDisk>
+    <RelativePathOnDisk>SDMP Scheduling Project Template</RelativePathOnDisk>
     <TemplateFileName>MyTemplate.vstemplate</TemplateFileName>
     <VSTemplateHeader>
       <TemplateData xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
-        <Name>SDMP Scheduling Project</Name>
-        <Description>SDMP Scheduling Project</Description>
+        <Name>SDMP Scheduling Project Template</Name>
+        <Description>SDMP Scheduling Project Template</Description>
         <ProjectType>CSharp</ProjectType>
         <ProjectSubType>
         </ProjectSubType>
