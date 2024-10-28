@@ -99,3 +99,4 @@ E:\2024_Dev\SDMP\src\Nodez.Project.RoutingTemplate\obj\Debug\Nodez.Project.Routi
 E:\2024_Dev\SDMP\src\Nodez.Project.RoutingTemplate\obj\Debug\Nodez.Project.RoutingTemplate.exe
 E:\2024_Dev\SDMP\src\Nodez.Project.RoutingTemplate\obj\Debug\Nodez.Project.RoutingTemplate.pdb
 E:\2024_Dev\SDMP\src\Nodez.Project.RoutingTemplate\obj\Debug\Nodez.Project.RoutingTemplate.csproj.AssemblyReference.cache
+D:\Repository\SDMP\src\Nodez.Project.RoutingTemplate\obj\Debug\Nodez.Project.RoutingTemplate.csproj.AssemblyReference.cache

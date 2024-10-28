@@ -246,7 +246,6 @@ E:\2024_Dev\SDMP\src\Nodez.Package\obj\Debug\templateFiles.json
 D:\Repository\SDMP\src\Nodez.Package\bin\Debug\sdmp_main.png
 D:\Repository\SDMP\src\Nodez.Package\bin\Debug\Nodez.Package.vsix
 D:\Repository\SDMP\src\Nodez.Package\bin\Debug\extension.vsixmanifest
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\Nodez.Package.csproj.AssemblyReference.cache
 D:\Repository\SDMP\src\Nodez.Package\obj\Debug\_EmptyResource.resources
 D:\Repository\SDMP\src\Nodez.Package\obj\Debug\Nodez.Package.csproj.GenerateResource.cache
 D:\Repository\SDMP\src\Nodez.Package\obj\Debug\Nodez.Package.csproj.CoreCompileInputs.cache
