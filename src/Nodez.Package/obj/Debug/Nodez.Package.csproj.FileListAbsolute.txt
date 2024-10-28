@@ -244,11 +244,6 @@ E:\2024_Dev\SDMP\src\Nodez.Package\obj\Debug\ItemTemplates\OutputData\__Template
 E:\2024_Dev\SDMP\src\Nodez.Package\obj\Debug\ItemTemplates\OutputData\MyTemplate.vstemplate
 E:\2024_Dev\SDMP\src\Nodez.Package\obj\Debug\templateFiles.json
 D:\Repository\SDMP\src\Nodez.Package\bin\Debug\sdmp_main.png
-D:\Repository\SDMP\src\Nodez.Package\bin\Debug\ProjectTemplates\SDMP General Project.zip
-D:\Repository\SDMP\src\Nodez.Package\bin\Debug\ProjectTemplates\SDMP Routing Project.zip
-D:\Repository\SDMP\src\Nodez.Package\bin\Debug\ProjectTemplates\SDMP Scheduling Project.zip
-D:\Repository\SDMP\src\Nodez.Package\bin\Debug\ItemTemplates\InputData.zip
-D:\Repository\SDMP\src\Nodez.Package\bin\Debug\ItemTemplates\OutputData.zip
 D:\Repository\SDMP\src\Nodez.Package\bin\Debug\Nodez.Package.vsix
 D:\Repository\SDMP\src\Nodez.Package\bin\Debug\extension.vsixmanifest
 D:\Repository\SDMP\src\Nodez.Package\obj\Debug\Nodez.Package.csproj.AssemblyReference.cache
@@ -261,109 +256,114 @@ D:\Repository\SDMP\src\Nodez.Package\obj\Debug\extension.vsixmanifest
 D:\Repository\SDMP\src\Nodez.Package\obj\Debug\files.json
 D:\Repository\SDMP\src\Nodez.Package\obj\Debug\TemplateManifests\templateManifest0.noloc.vstman
 D:\Repository\SDMP\src\Nodez.Package\obj\Debug\TemplateManifests\templateManifest1.noloc.vstman
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP General Project\__TemplateIcon.png
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP General Project\App.config
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP General Project\Controls\UserActionControl.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP General Project\Controls\UserApproximationControl.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP General Project\Controls\UserBoundControl.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP General Project\Controls\UserDataControl.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP General Project\Controls\UserEventControl.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP General Project\Controls\UserLogControl.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP General Project\Controls\UserSolverControl.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP General Project\Controls\UserStateControl.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP General Project\Controls\UserStateTransitionControl.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP General Project\InputData\RunConfig.csv
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP General Project\InputData\SampleData.csv
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP General Project\MyInputs\RunConfig.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP General Project\MyInputs\SampleData.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP General Project\MyMethods\Helper.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP General Project\MyObjects\Parameter.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP General Project\MyObjects\UserState.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP General Project\MyOutputs\SampleOutputData.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP General Project\MyTemplate.vstemplate
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP General Project\Nodez.Project.GeneralTemplate.csproj
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP General Project\Program.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project\__TemplateIcon.png
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project\App.config
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project\Controls\General\UserActionControl.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project\Controls\General\UserApproximationControl.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project\Controls\General\UserBoundControl.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project\Controls\General\UserDataControl.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project\Controls\General\UserEventControl.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project\Controls\General\UserLogControl.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project\Controls\General\UserSolverControl.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project\Controls\General\UserStateControl.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project\Controls\General\UserStateTransitionControl.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project\Controls\Routing\UserNodeControl.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project\Controls\Routing\UserVehicleControl.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project\InputData\Demand.csv
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project\InputData\DistanceInfo.csv
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project\InputData\Node.csv
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project\InputData\Product.csv
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project\InputData\Resource.csv
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project\InputData\RunConfig.csv
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project\InputData\RunOption.csv
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project\InputData\Vehicle.csv
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project\InputData\VehicleResource.csv
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project\MyInputs\Demand.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project\MyInputs\DistanceInfo.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project\MyInputs\Node.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project\MyInputs\Product.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project\MyInputs\Resource.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project\MyInputs\RunConfig.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project\MyInputs\RunOption.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project\MyInputs\Vehicle.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project\MyInputs\VehicleResource.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project\MyMethods\Helper.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project\MyObjects\Parameter.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project\MyObjects\UserRoutingState.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project\MyOutputs\SampleOutputData.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project\MyTemplate.vstemplate
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project\Nodez.Project.RoutingTemplate.csproj
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project\Program.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project\__TemplateIcon.png
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project\App.config
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project\Controls\General\UserActionControl.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project\Controls\General\UserApproximationControl.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project\Controls\General\UserBoundControl.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project\Controls\General\UserDataControl.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project\Controls\General\UserEventControl.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project\Controls\General\UserLogControl.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project\Controls\General\UserMachineLearningControl.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project\Controls\General\UserSolverControl.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project\Controls\General\UserStateControl.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project\Controls\General\UserStateTransitionControl.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project\Controls\Scheduling\UserProcessControl.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project\Controls\Scheduling\UserSchedulingControl.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project\InputData\Arrange.csv
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project\InputData\EqpGroup.csv
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project\InputData\Equipment.csv
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project\InputData\Job.csv
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project\InputData\PlanInfo.csv
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project\InputData\Process.csv
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project\InputData\RunConfig.csv
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project\InputData\SetupInfo.csv
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project\MyInputs\Arrange.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project\MyInputs\EqpGroup.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project\MyInputs\Equipment.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project\MyInputs\Job.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project\MyInputs\PlanInfo.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project\MyInputs\Process.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project\MyInputs\RunConfig.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project\MyInputs\SetupInfo.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project\MyMethods\Helper.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project\MyObjects\MLInputData.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project\MyObjects\MLOutputData.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project\MyObjects\Parameter.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project\MyObjects\UserSchedulingState.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project\MyOutputs\SampleOutputData.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project\MyTemplate.vstemplate
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project\Nodez.Project.SchedulingTemplate.csproj
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project\Program.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ItemTemplates\InputData\SampleData.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ItemTemplates\InputData\__TemplateIcon.png
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ItemTemplates\InputData\MyTemplate.vstemplate
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ItemTemplates\OutputData\SampleOutputData.cs
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ItemTemplates\OutputData\__TemplateIcon.png
-D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ItemTemplates\OutputData\MyTemplate.vstemplate
 D:\Repository\SDMP\src\Nodez.Package\obj\Debug\templateFiles.json
+D:\Repository\SDMP\src\Nodez.Package\bin\Debug\ItemTemplates\SDMP InputTable Template.zip
+D:\Repository\SDMP\src\Nodez.Package\bin\Debug\ItemTemplates\SDMP OutputTable Template.zip
+D:\Repository\SDMP\src\Nodez.Package\bin\Debug\ProjectTemplates\SDMP General Project Template.zip
+D:\Repository\SDMP\src\Nodez.Package\bin\Debug\ProjectTemplates\SDMP Routing Project Template.zip
+D:\Repository\SDMP\src\Nodez.Package\bin\Debug\ProjectTemplates\SDMP Scheduling Project Template.zip
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ItemTemplates\SDMP InputTable Template\SampleData.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ItemTemplates\SDMP InputTable Template\__TemplateIcon.png
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ItemTemplates\SDMP InputTable Template\MyTemplate.vstemplate
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ItemTemplates\SDMP OutputTable Template\SampleOutputData.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ItemTemplates\SDMP OutputTable Template\__TemplateIcon.png
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ItemTemplates\SDMP OutputTable Template\MyTemplate.vstemplate
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP General Project Template\__TemplateIcon.png
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP General Project Template\App.config
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP General Project Template\Controls\UserActionControl.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP General Project Template\Controls\UserApproximationControl.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP General Project Template\Controls\UserBoundControl.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP General Project Template\Controls\UserDataControl.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP General Project Template\Controls\UserEventControl.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP General Project Template\Controls\UserLogControl.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP General Project Template\Controls\UserSolverControl.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP General Project Template\Controls\UserStateControl.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP General Project Template\Controls\UserStateTransitionControl.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP General Project Template\InputData\RunConfig.csv
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP General Project Template\InputData\SampleData.csv
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP General Project Template\MyInputs\RunConfig.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP General Project Template\MyInputs\SampleData.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP General Project Template\MyMethods\Helper.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP General Project Template\MyObjects\Parameter.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP General Project Template\MyObjects\UserState.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP General Project Template\MyOutputs\SampleOutputData.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP General Project Template\MyTemplate.vstemplate
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP General Project Template\Nodez.Project.GeneralTemplate.csproj
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP General Project Template\Program.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project Template\__TemplateIcon.png
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project Template\App.config
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project Template\Controls\General\UserActionControl.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project Template\Controls\General\UserApproximationControl.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project Template\Controls\General\UserBoundControl.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project Template\Controls\General\UserDataControl.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project Template\Controls\General\UserEventControl.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project Template\Controls\General\UserLogControl.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project Template\Controls\General\UserSolverControl.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project Template\Controls\General\UserStateControl.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project Template\Controls\General\UserStateTransitionControl.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project Template\Controls\Routing\UserNodeControl.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project Template\Controls\Routing\UserVehicleControl.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project Template\InputData\DistanceInfo.csv
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project Template\InputData\Node.csv
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project Template\InputData\Order.csv
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project Template\InputData\Product.csv
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project Template\InputData\Resource.csv
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project Template\InputData\RunConfig.csv
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project Template\InputData\RunOption.csv
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project Template\InputData\Vehicle.csv
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project Template\InputData\VehicleResource.csv
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project Template\MyInputs\DistanceInfo.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project Template\MyInputs\Node.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project Template\MyInputs\Order.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project Template\MyInputs\Product.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project Template\MyInputs\Resource.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project Template\MyInputs\RunConfig.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project Template\MyInputs\RunOption.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project Template\MyInputs\Vehicle.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project Template\MyInputs\VehicleResource.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project Template\MyMethods\Helper.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project Template\MyObjects\Parameter.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project Template\MyObjects\UserRoutingState.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project Template\MyOutputs\SampleOutputData.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project Template\MyTemplate.vstemplate
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project Template\Nodez.Project.RoutingTemplate.csproj
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Routing Project Template\Program.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project Template\__TemplateIcon.png
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project Template\App.config
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project Template\Controls\General\UserActionControl.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project Template\Controls\General\UserApproximationControl.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project Template\Controls\General\UserBoundControl.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project Template\Controls\General\UserDataControl.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project Template\Controls\General\UserEventControl.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project Template\Controls\General\UserLogControl.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project Template\Controls\General\UserMachineLearningControl.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project Template\Controls\General\UserSolverControl.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project Template\Controls\General\UserStateControl.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project Template\Controls\General\UserStateTransitionControl.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project Template\Controls\Scheduling\UserProcessControl.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project Template\Controls\Scheduling\UserSchedulingControl.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project Template\InputData\Arrange.csv
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project Template\InputData\EqpGroup.csv
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project Template\InputData\Equipment.csv
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project Template\InputData\Job.csv
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project Template\InputData\PlanInfo.csv
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project Template\InputData\Process.csv
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project Template\InputData\RunConfig.csv
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project Template\InputData\SetupInfo.csv
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project Template\MyInputs\Arrange.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project Template\MyInputs\EqpGroup.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project Template\MyInputs\Equipment.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project Template\MyInputs\Job.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project Template\MyInputs\PlanInfo.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project Template\MyInputs\Process.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project Template\MyInputs\RunConfig.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project Template\MyInputs\SetupInfo.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project Template\MyMethods\Helper.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project Template\MyObjects\MLInputData.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project Template\MyObjects\MLOutputData.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project Template\MyObjects\Parameter.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project Template\MyObjects\UserSchedulingState.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project Template\MyOutputs\SampleOutputData.cs
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project Template\MyTemplate.vstemplate
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project Template\Nodez.Project.SchedulingTemplate.csproj
+D:\Repository\SDMP\src\Nodez.Package\obj\Debug\ProjectTemplates\SDMP Scheduling Project Template\Program.cs
