@@ -103,7 +103,7 @@ namespace Nodez.Project.RoutingTemplate.Controls
                         workType = node.IsDelivery ? "Delivery" : "Pickup";
 
                         double dist = manager.GetDistance(prevNode.Index, node.Index);
-                        double time = manager.GetTime(prevNode.Index, node.Index);
+                        double time = manager.GetTime(vehicle, prevNode.Index, node.Index);
 
                         totalLoad += qty;
                         totalDistance += dist;

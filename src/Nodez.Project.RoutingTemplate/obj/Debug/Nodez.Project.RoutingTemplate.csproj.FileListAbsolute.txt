@@ -60,7 +60,6 @@ D:\Repository\SDMP\src\Nodez.Project.RoutingTemplate\bin\Debug\System.Threading.
 D:\Repository\SDMP\src\Nodez.Project.RoutingTemplate\bin\Debug\System.Threading.Tasks.Extensions.dll
 D:\Repository\SDMP\src\Nodez.Project.RoutingTemplate\bin\Debug\Nodez.Data.pdb
 D:\Repository\SDMP\src\Nodez.Project.RoutingTemplate\bin\Debug\Nodez.Sdmp.pdb
-D:\Repository\SDMP\src\Nodez.Project.RoutingTemplate\obj\Debug\Nodez.Project.RoutingTemplate.csproj.AssemblyReference.cache
 D:\Repository\SDMP\src\Nodez.Project.RoutingTemplate\obj\Debug\Nodez.Project.RoutingTemplate.exe.config
 D:\Repository\SDMP\src\Nodez.Project.RoutingTemplate\obj\Debug\Nodez.Project.RoutingTemplate.csproj.CoreCompileInputs.cache
 D:\Repository\SDMP\src\Nodez.Project.RoutingTemplate\obj\Debug\Nodez.Project.RoutingTemplate.csproj.CopyComplete
