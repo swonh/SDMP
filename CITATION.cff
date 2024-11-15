@@ -4,7 +4,7 @@ authors:
 - family-names: "Hong"
   given-names: "Sungwon"
   orcid: "https://orcid.org/0000-0003-4937-9392"
-title: "SDMP: An Optimization Software Package for Efficient Approximate Dynamic Programming"
-version: 1.0.3
-date-released: 2023-09-04
+title: "SDMP: An Optimization Software Package for Approximate Dynamic Programming"
+version: 1.0.6
+date-released: 2024-10-28
 url: "https://github.com/swonh/SDMP"
