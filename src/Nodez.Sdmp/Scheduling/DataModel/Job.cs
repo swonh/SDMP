@@ -17,7 +17,7 @@ namespace Nodez.Sdmp.Scheduling.DataModel
 
         public string JobID { get; set; }
 
-        public string Name { get; set; }
+        public string JobName { get; set; }
 
         public string ProductID { get; set; }
 
@@ -57,7 +57,7 @@ namespace Nodez.Sdmp.Scheduling.DataModel
 
         public override string ToString()
         {
-            return this.Name;
+            return this.JobName;
         }
 
     }

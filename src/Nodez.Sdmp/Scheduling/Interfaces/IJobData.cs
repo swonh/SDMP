@@ -14,7 +14,7 @@ namespace Nodez.Sdmp.Scheduling.Interfaces
     {
         string JOB_ID { get; }
 
-        string NAME { get; }
+        string JOB_NAME { get; }
 
         string PRODUCT_ID { get; }
 

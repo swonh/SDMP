@@ -18,3 +18,4 @@ E:\2024_Dev\SDMP\src\Nodez.Data\bin\Release\Nodez.Data.pdb
 E:\2024_Dev\SDMP\src\Nodez.Data\obj\Release\Nodez.Data.csproj.CoreCompileInputs.cache
 E:\2024_Dev\SDMP\src\Nodez.Data\obj\Release\Nodez.Data.dll
 E:\2024_Dev\SDMP\src\Nodez.Data\obj\Release\Nodez.Data.pdb
+D:\Repository\SDMP\src\Nodez.Data\obj\Release\Nodez.Data.csproj.AssemblyReference.cache

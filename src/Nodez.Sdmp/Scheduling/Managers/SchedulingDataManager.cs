@@ -280,7 +280,7 @@ namespace Nodez.Sdmp.Scheduling.Managers
                     Job parentJob = new Job();
 
                     parentJob.JobID = jobData.PARENT_JOB_ID;
-                    parentJob.Name = jobData.PARENT_JOB_ID;
+                    parentJob.JobName = jobData.PARENT_JOB_ID;
                     parentJob.Index = parentJobIndex;
                     parentJob.Process = this.GetProcess(jobData.PROCESS_ID);
                     parentJob.TargetInfo = this.GetTargetInfo(jobData.PROCESS_ID, jobData.STEP_SEQ);
@@ -307,7 +307,7 @@ namespace Nodez.Sdmp.Scheduling.Managers
                 Job job = new Job();
 
                 job.JobID = jobData.JOB_ID;
-                job.Name = jobData.NAME;
+                job.JobName = jobData.JOB_NAME;
                 job.Index = index;
                 job.Process = this.GetProcess(jobData.PROCESS_ID);
                 job.TargetInfo = this.GetTargetInfo(jobData.PROCESS_ID, jobData.STEP_SEQ);

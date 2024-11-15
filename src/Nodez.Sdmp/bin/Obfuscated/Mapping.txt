@@ -614,8 +614,8 @@ Skipped Types:
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Job::set_Index[1]( [mscorlib]System.Int32 ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Job::get_JobID[0]( ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Job::set_JobID[1]( [mscorlib]System.String ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Job::get_Name[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Job::set_Name[1]( [mscorlib]System.String ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Job::get_JobName[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Job::set_JobName[1]( [mscorlib]System.String ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Job::get_ProductID[0]( ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Job::set_ProductID[1]( [mscorlib]System.String ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Job::get_ProcessID[0]( ) skipped:  skip by property
@@ -657,7 +657,7 @@ Skipped Types:
 
 	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Scheduling.DataModel.Job::<Index>k__BackingField -> ‪
 	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Scheduling.DataModel.Job::<JobID>k__BackingField -> ‫
-	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Scheduling.DataModel.Job::<Name>k__BackingField -> ‬
+	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Scheduling.DataModel.Job::<JobName>k__BackingField -> ‬
 	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Scheduling.DataModel.Job::<ProductID>k__BackingField -> ‭
 	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Scheduling.DataModel.Job::<ProcessID>k__BackingField -> ‮
 	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Scheduling.DataModel.Job::<StepSeq>k__BackingField ->  
@@ -680,7 +680,7 @@ Skipped Types:
 
 	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Scheduling.DataModel.Job::Index skipped:  KeepPublicApi option in configuration
 	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Scheduling.DataModel.Job::JobID skipped:  KeepPublicApi option in configuration
-	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Scheduling.DataModel.Job::Name skipped:  KeepPublicApi option in configuration
+	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Scheduling.DataModel.Job::JobName skipped:  KeepPublicApi option in configuration
 	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Scheduling.DataModel.Job::ProductID skipped:  KeepPublicApi option in configuration
 	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Scheduling.DataModel.Job::ProcessID skipped:  KeepPublicApi option in configuration
 	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Scheduling.DataModel.Job::StepSeq skipped:  KeepPublicApi option in configuration
@@ -2958,7 +2958,7 @@ Skipped Types:
 {
 
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Interfaces.IJobData::get_JOB_ID[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Interfaces.IJobData::get_NAME[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Interfaces.IJobData::get_JOB_NAME[0]( ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Interfaces.IJobData::get_PRODUCT_ID[0]( ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Interfaces.IJobData::get_PROCESS_ID[0]( ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Interfaces.IJobData::get_STEP_SEQ[0]( ) skipped:  skip by property
@@ -2972,7 +2972,7 @@ Skipped Types:
 
 
 	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Scheduling.Interfaces.IJobData::JOB_ID skipped:  KeepPublicApi option in configuration
-	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Scheduling.Interfaces.IJobData::NAME skipped:  KeepPublicApi option in configuration
+	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Scheduling.Interfaces.IJobData::JOB_NAME skipped:  KeepPublicApi option in configuration
 	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Scheduling.Interfaces.IJobData::PRODUCT_ID skipped:  KeepPublicApi option in configuration
 	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Scheduling.Interfaces.IJobData::PROCESS_ID skipped:  KeepPublicApi option in configuration
 	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Scheduling.Interfaces.IJobData::STEP_SEQ skipped:  KeepPublicApi option in configuration
