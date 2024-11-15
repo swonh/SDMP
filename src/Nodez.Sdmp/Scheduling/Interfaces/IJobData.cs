@@ -32,7 +32,7 @@ namespace Nodez.Sdmp.Scheduling.Interfaces
 
         int PRIORITY { get; }
 
-        string PROPERTY_ID { get; }
+        string RECIPE_ID { get; }
 
         bool IS_ACT { get; }
 

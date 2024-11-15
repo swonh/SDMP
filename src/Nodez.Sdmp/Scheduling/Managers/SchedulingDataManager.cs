@@ -291,7 +291,7 @@ namespace Nodez.Sdmp.Scheduling.Managers
                     parentJob.ParentJob = parentJob;
                     parentJob.SplitCount = jobData.SPLIT_COUNT;
                     parentJob.Priority = jobData.PRIORITY;
-                    parentJob.PropertyID = jobData.PROPERTY_ID;
+                    parentJob.RecipeID = jobData.RECIPE_ID;
                     parentJob.IsAct = jobData.IS_ACT;
                     parentJob.JobData = jobData;
 
@@ -318,7 +318,7 @@ namespace Nodez.Sdmp.Scheduling.Managers
                 job.SplitCount = jobData.SPLIT_COUNT;
                 job.Qty = jobData.QTY;
                 job.Priority = jobData.PRIORITY;
-                job.PropertyID = jobData.PROPERTY_ID;
+                job.RecipeID = jobData.RECIPE_ID;
                 job.IsAct = jobData.IS_ACT;
                 job.JobData = jobData;
 
@@ -660,7 +660,7 @@ namespace Nodez.Sdmp.Scheduling.Managers
             if (job == null)
                 return 0;
 
-            if (this.SchedulingProblem.ArrangeMappings.TryGetValue(Tuple.Create(job.PropertyID, eqp.EqpID), out Arrange arrange))
+            if (this.SchedulingProblem.ArrangeMappings.TryGetValue(Tuple.Create(job.RecipeID, eqp.EqpID), out Arrange arrange))
             {
                 double procTime = arrange.ProcTime * job.Qty;
                 return procTime;
@@ -674,7 +674,7 @@ namespace Nodez.Sdmp.Scheduling.Managers
             if (job == null)
                 return 0;
 
-            if (this.SchedulingProblem.ArrangeMappings.TryGetValue(Tuple.Create(job.PropertyID, eqp.EqpID), out Arrange arrange))
+            if (this.SchedulingProblem.ArrangeMappings.TryGetValue(Tuple.Create(job.RecipeID, eqp.EqpID), out Arrange arrange))
             {
                 double procTime = arrange.ProcTime * job.Qty;
 
@@ -699,7 +699,7 @@ namespace Nodez.Sdmp.Scheduling.Managers
             double minProcTime = Double.MaxValue;
             foreach (Equipment eqp in this.SchedulingProblem.EqpList)
             {
-                if (this.SchedulingProblem.ArrangeMappings.TryGetValue(Tuple.Create(job.PropertyID, eqp.EqpID), out Arrange arrange))
+                if (this.SchedulingProblem.ArrangeMappings.TryGetValue(Tuple.Create(job.RecipeID, eqp.EqpID), out Arrange arrange))
                 {
                     double procTime = arrange.ProcTime * job.Qty;
                     if (minProcTime > procTime)
@@ -723,7 +723,7 @@ namespace Nodez.Sdmp.Scheduling.Managers
             if (toJob == null)
                 return 0;
 
-            if (this.SchedulingProblem.SetupInfoMappings.TryGetValue(Tuple.Create(eqp.EqpID, fromJob.PropertyID, toJob.PropertyID), out SetupInfo setupInfo))
+            if (this.SchedulingProblem.SetupInfoMappings.TryGetValue(Tuple.Create(eqp.EqpID, fromJob.RecipeID, toJob.RecipeID), out SetupInfo setupInfo))
             {
                 return setupInfo.SetupTime;
             }
@@ -743,7 +743,7 @@ namespace Nodez.Sdmp.Scheduling.Managers
 
         public Arrange GetArrange(Job job, Equipment eqp)
         {
-            if (this.SchedulingProblem.ArrangeMappings.TryGetValue(Tuple.Create(job.PropertyID, eqp.EqpID), out Arrange value))
+            if (this.SchedulingProblem.ArrangeMappings.TryGetValue(Tuple.Create(job.RecipeID, eqp.EqpID), out Arrange value))
             {
                 return value;
             }

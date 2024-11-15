@@ -49,7 +49,7 @@ namespace Nodez.Sdmp.Scheduling.DataModel
 
         public double MaxBundleProcTime { get; set; }
 
-        public string PropertyID { get; set; }
+        public string RecipeID { get; set; }
 
         public bool IsAct { get; set; }
 
