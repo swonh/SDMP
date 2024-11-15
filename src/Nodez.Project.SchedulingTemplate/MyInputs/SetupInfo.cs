@@ -17,9 +17,9 @@ namespace Nodez.Project.SchedulingTemplate.MyInputs
         // Define columns here (NOTICE: The column name defined here and the column name defined in the data file must match.)
         public string EQP_ID { get; private set; }
 
-        public string FROM_PROPERTY_ID { get; private set; }
+        public string FROM_RECIPE_ID { get; private set; }
 
-        public string TO_PROPERTY_ID { get; private set; }
+        public string TO_RECIPE_ID { get; private set; }
 
         public double SETUP_TIME { get; private set; }
 
@@ -29,8 +29,8 @@ namespace Nodez.Project.SchedulingTemplate.MyInputs
 
             HashSet<string> key = new HashSet<string>();
             key.Add("EQP_ID");
-            key.Add("FROM_PROPERTY_ID");
-            key.Add("TO_PROPERTY_ID");
+            key.Add("FROM_RECIPE_ID");
+            key.Add("TO_RECIPE_ID");
 
             this.KeyMappings.Add(1, key);
         }

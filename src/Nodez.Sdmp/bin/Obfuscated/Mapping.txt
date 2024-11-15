@@ -548,8 +548,8 @@ Skipped Types:
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Arrange::set_Index[1]( [mscorlib]System.Int32 ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Arrange::get_ProductID[0]( ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Arrange::set_ProductID[1]( [mscorlib]System.String ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Arrange::get_PropertyID[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Arrange::set_PropertyID[1]( [mscorlib]System.String ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Arrange::get_RecipeID[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Arrange::set_RecipeID[1]( [mscorlib]System.String ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Arrange::get_EqpID[0]( ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Arrange::set_EqpID[1]( [mscorlib]System.String ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Arrange::get_ProcTime[0]( ) skipped:  skip by property
@@ -560,7 +560,7 @@ Skipped Types:
 
 	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Scheduling.DataModel.Arrange::<Index>k__BackingField -> ‐
 	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Scheduling.DataModel.Arrange::<ProductID>k__BackingField -> ‑
-	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Scheduling.DataModel.Arrange::<PropertyID>k__BackingField -> ‒
+	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Scheduling.DataModel.Arrange::<RecipeID>k__BackingField -> ‒
 	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Scheduling.DataModel.Arrange::<EqpID>k__BackingField -> –
 	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.Scheduling.DataModel.Arrange::<ProcTime>k__BackingField -> —
 	Nodez.Sdmp.Scheduling.Interfaces.IArrangeData [Nodez.Sdmp]Nodez.Sdmp.Scheduling.Interfaces.IArrangeData Nodez.Sdmp.Scheduling.DataModel.Arrange::<ArrangeData>k__BackingField -> ―
@@ -568,7 +568,7 @@ Skipped Types:
 
 	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Scheduling.DataModel.Arrange::Index skipped:  KeepPublicApi option in configuration
 	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Scheduling.DataModel.Arrange::ProductID skipped:  KeepPublicApi option in configuration
-	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Scheduling.DataModel.Arrange::PropertyID skipped:  KeepPublicApi option in configuration
+	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Scheduling.DataModel.Arrange::RecipeID skipped:  KeepPublicApi option in configuration
 	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Scheduling.DataModel.Arrange::EqpID skipped:  KeepPublicApi option in configuration
 	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.Scheduling.DataModel.Arrange::ProcTime skipped:  KeepPublicApi option in configuration
 	Nodez.Sdmp.Scheduling.Interfaces.IArrangeData [Nodez.Sdmp]Nodez.Sdmp.Scheduling.Interfaces.IArrangeData Nodez.Sdmp.Scheduling.DataModel.Arrange::ArrangeData skipped:  KeepPublicApi option in configuration
@@ -995,10 +995,10 @@ Skipped Types:
 
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.SetupInfo::get_EqpID[0]( ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.SetupInfo::set_EqpID[1]( [mscorlib]System.String ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.SetupInfo::get_FromPropertyID[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.SetupInfo::set_FromPropertyID[1]( [mscorlib]System.String ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.SetupInfo::get_ToPropertyID[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.SetupInfo::set_ToPropertyID[1]( [mscorlib]System.String ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.SetupInfo::get_FromRecipeID[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.SetupInfo::set_FromRecipeID[1]( [mscorlib]System.String ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.SetupInfo::get_ToRecipeID[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.SetupInfo::set_ToRecipeID[1]( [mscorlib]System.String ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.SetupInfo::get_SetupTime[0]( ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.SetupInfo::set_SetupTime[1]( [mscorlib]System.Double ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.SetupInfo::get_SetupInfoData[0]( ) skipped:  skip by property
@@ -1006,15 +1006,15 @@ Skipped Types:
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.SetupInfo::.ctor[0]( ) skipped:  special name
 
 	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Scheduling.DataModel.SetupInfo::<EqpID>k__BackingField ->   
-	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Scheduling.DataModel.SetupInfo::<FromPropertyID>k__BackingField ->   
-	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Scheduling.DataModel.SetupInfo::<ToPropertyID>k__BackingField ->  ‪
+	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Scheduling.DataModel.SetupInfo::<FromRecipeID>k__BackingField ->   
+	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Scheduling.DataModel.SetupInfo::<ToRecipeID>k__BackingField ->  ‪
 	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.Scheduling.DataModel.SetupInfo::<SetupTime>k__BackingField ->  ‫
 	Nodez.Sdmp.Scheduling.Interfaces.ISetupInfoData [Nodez.Sdmp]Nodez.Sdmp.Scheduling.Interfaces.ISetupInfoData Nodez.Sdmp.Scheduling.DataModel.SetupInfo::<SetupInfoData>k__BackingField ->  ‬
 
 
 	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Scheduling.DataModel.SetupInfo::EqpID skipped:  KeepPublicApi option in configuration
-	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Scheduling.DataModel.SetupInfo::FromPropertyID skipped:  KeepPublicApi option in configuration
-	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Scheduling.DataModel.SetupInfo::ToPropertyID skipped:  KeepPublicApi option in configuration
+	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Scheduling.DataModel.SetupInfo::FromRecipeID skipped:  KeepPublicApi option in configuration
+	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Scheduling.DataModel.SetupInfo::ToRecipeID skipped:  KeepPublicApi option in configuration
 	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.Scheduling.DataModel.SetupInfo::SetupTime skipped:  KeepPublicApi option in configuration
 	Nodez.Sdmp.Scheduling.Interfaces.ISetupInfoData [Nodez.Sdmp]Nodez.Sdmp.Scheduling.Interfaces.ISetupInfoData Nodez.Sdmp.Scheduling.DataModel.SetupInfo::SetupInfoData skipped:  KeepPublicApi option in configuration
 }
@@ -2932,13 +2932,13 @@ Skipped Types:
 {
 
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Interfaces.IArrangeData::get_PRODUCT_ID[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Interfaces.IArrangeData::get_PROPERTY_ID[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Interfaces.IArrangeData::get_RECIPE_ID[0]( ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Interfaces.IArrangeData::get_EQP_ID[0]( ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Interfaces.IArrangeData::get_PROC_TIME[0]( ) skipped:  skip by property
 
 
 	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Scheduling.Interfaces.IArrangeData::PRODUCT_ID skipped:  KeepPublicApi option in configuration
-	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Scheduling.Interfaces.IArrangeData::PROPERTY_ID skipped:  KeepPublicApi option in configuration
+	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Scheduling.Interfaces.IArrangeData::RECIPE_ID skipped:  KeepPublicApi option in configuration
 	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Scheduling.Interfaces.IArrangeData::EQP_ID skipped:  KeepPublicApi option in configuration
 	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.Scheduling.Interfaces.IArrangeData::PROC_TIME skipped:  KeepPublicApi option in configuration
 }
@@ -3045,14 +3045,14 @@ Skipped Types:
 {
 
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Interfaces.ISetupInfoData::get_EQP_ID[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Interfaces.ISetupInfoData::get_FROM_PROPERTY_ID[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Interfaces.ISetupInfoData::get_TO_PROPERTY_ID[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Interfaces.ISetupInfoData::get_FROM_RECIPE_ID[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Interfaces.ISetupInfoData::get_TO_RECIPE_ID[0]( ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Interfaces.ISetupInfoData::get_SETUP_TIME[0]( ) skipped:  skip by property
 
 
 	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Scheduling.Interfaces.ISetupInfoData::EQP_ID skipped:  KeepPublicApi option in configuration
-	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Scheduling.Interfaces.ISetupInfoData::FROM_PROPERTY_ID skipped:  KeepPublicApi option in configuration
-	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Scheduling.Interfaces.ISetupInfoData::TO_PROPERTY_ID skipped:  KeepPublicApi option in configuration
+	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Scheduling.Interfaces.ISetupInfoData::FROM_RECIPE_ID skipped:  KeepPublicApi option in configuration
+	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Scheduling.Interfaces.ISetupInfoData::TO_RECIPE_ID skipped:  KeepPublicApi option in configuration
 	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.Scheduling.Interfaces.ISetupInfoData::SETUP_TIME skipped:  KeepPublicApi option in configuration
 }
 

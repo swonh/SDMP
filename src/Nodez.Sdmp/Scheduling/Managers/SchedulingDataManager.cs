@@ -183,8 +183,8 @@ namespace Nodez.Sdmp.Scheduling.Managers
                 SetupInfo setupInfo = new SetupInfo();
 
                 setupInfo.EqpID = setupInfoData.EQP_ID;
-                setupInfo.FromPropertyID = setupInfoData.FROM_PROPERTY_ID;
-                setupInfo.ToPropertyID = setupInfoData.TO_PROPERTY_ID;
+                setupInfo.FromRecipeID = setupInfoData.FROM_RECIPE_ID;
+                setupInfo.ToRecipeID = setupInfoData.TO_RECIPE_ID;
                 setupInfo.SetupTime = setupInfoData.SETUP_TIME;
                 setupInfo.SetupInfoData = setupInfoData;
 
@@ -254,7 +254,7 @@ namespace Nodez.Sdmp.Scheduling.Managers
 
                 arrange.Index = index;
                 arrange.ProductID = arrangeData.PRODUCT_ID;
-                arrange.PropertyID = arrangeData.PROPERTY_ID;
+                arrange.RecipeID = arrangeData.RECIPE_ID;
                 arrange.EqpID = arrangeData.EQP_ID;
                 arrange.ProcTime = arrangeData.PROC_TIME;
 

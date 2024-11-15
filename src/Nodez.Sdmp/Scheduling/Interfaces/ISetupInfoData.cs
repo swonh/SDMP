@@ -14,9 +14,9 @@ namespace Nodez.Sdmp.Scheduling.Interfaces
     {
         string EQP_ID { get; }
 
-        string FROM_PROPERTY_ID { get; }
+        string FROM_RECIPE_ID { get; }
 
-        string TO_PROPERTY_ID { get; }
+        string TO_RECIPE_ID { get; }
 
         double SETUP_TIME { get; }
     }

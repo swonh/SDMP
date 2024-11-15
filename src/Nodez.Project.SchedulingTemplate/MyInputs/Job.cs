@@ -36,7 +36,7 @@ namespace Nodez.Project.SchedulingTemplate.MyInputs
 
         public int PRIORITY { get; private set; }
 
-        public string PROPERTY_ID { get; private set; }
+        public string RECIPE_ID { get; private set; }
 
         public bool IS_ACT { get; private set; }
 

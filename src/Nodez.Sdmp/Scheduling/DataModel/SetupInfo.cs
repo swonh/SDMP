@@ -15,9 +15,9 @@ namespace Nodez.Sdmp.Scheduling.DataModel
     {
         public string EqpID { get; set; }
 
-        public string FromPropertyID { get; set; }
+        public string FromRecipeID { get; set; }
 
-        public string ToPropertyID { get; set; }
+        public string ToRecipeID { get; set; }
 
         public double SetupTime { get; set; }
 

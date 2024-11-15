@@ -18,7 +18,7 @@ namespace Nodez.Project.SchedulingTemplate.MyInputs
 
         public string PRODUCT_ID { get; private set; }
 
-        public string PROPERTY_ID { get; private set; }
+        public string RECIPE_ID { get; private set; }
 
         public string EQP_ID { get; private set; }
 

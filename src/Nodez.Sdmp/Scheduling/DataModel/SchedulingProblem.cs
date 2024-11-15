@@ -225,10 +225,10 @@ namespace Nodez.Sdmp.Scheduling.DataModel
         {
             foreach (SetupInfo setupInfo in this.SetupInfoList) 
             {
-                if (this.SetupInfoMappings.ContainsKey(Tuple.Create(setupInfo.EqpID, setupInfo.FromPropertyID, setupInfo.ToPropertyID)))
+                if (this.SetupInfoMappings.ContainsKey(Tuple.Create(setupInfo.EqpID, setupInfo.FromRecipeID, setupInfo.ToRecipeID)))
                     continue;
 
-                this.SetupInfoMappings.Add(Tuple.Create(setupInfo.EqpID, setupInfo.FromPropertyID, setupInfo.ToPropertyID), setupInfo);
+                this.SetupInfoMappings.Add(Tuple.Create(setupInfo.EqpID, setupInfo.FromRecipeID, setupInfo.ToRecipeID), setupInfo);
             }
         }
 
@@ -247,10 +247,10 @@ namespace Nodez.Sdmp.Scheduling.DataModel
         {
             foreach (Arrange arrange in this.ArrangeList) 
             {
-                if (this.ArrangeMappings.ContainsKey(Tuple.Create(arrange.PropertyID, arrange.EqpID)))
+                if (this.ArrangeMappings.ContainsKey(Tuple.Create(arrange.RecipeID, arrange.EqpID)))
                     continue;
 
-                this.ArrangeMappings.Add(Tuple.Create(arrange.PropertyID, arrange.EqpID), arrange);
+                this.ArrangeMappings.Add(Tuple.Create(arrange.RecipeID, arrange.EqpID), arrange);
             }
         }
 
