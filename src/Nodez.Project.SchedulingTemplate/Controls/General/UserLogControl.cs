@@ -65,7 +65,7 @@ namespace Nodez.Project.SchedulingTemplate.Controls
                 double procTime = manager.GetProcTime(job, eqp);
                 double endTime = startTime + procTime;
 
-                logs.Add(Tuple.Create(eqp.Index, job.Index, startTime), string.Format("Eqp:{0} | Job:{1}, StartTime:{2}, EndTime:{3}", eqp.Name, job.Name, startTime, endTime));
+                logs.Add(Tuple.Create(eqp.Index, job.Index, startTime), string.Format("Eqp:{0} | Job:{1}, StartTime:{2}, EndTime:{3}", eqp.Name, job.JobName, startTime, endTime));
             }
 
             var items = logs.OrderBy(x => x.Key.Item1).ThenBy(x => x.Key.Item3);

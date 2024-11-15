@@ -99,4 +99,3 @@ E:\2024_Dev\SDMP\src\Nodez.Project.GeneralTemplate\obj\Debug\Nodez.Project.Gener
 E:\2024_Dev\SDMP\src\Nodez.Project.GeneralTemplate\obj\Debug\Nodez.Project.GeneralTemplate.csproj.CopyComplete
 E:\2024_Dev\SDMP\src\Nodez.Project.GeneralTemplate\obj\Debug\Nodez.Project.GeneralTemplate.exe
 E:\2024_Dev\SDMP\src\Nodez.Project.GeneralTemplate\obj\Debug\Nodez.Project.GeneralTemplate.pdb
-D:\Repository\SDMP\src\Nodez.Project.GeneralTemplate\obj\Debug\Nodez.Project.GeneralTemplate.csproj.AssemblyReference.cache
