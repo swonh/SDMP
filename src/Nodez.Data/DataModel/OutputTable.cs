@@ -193,6 +193,17 @@ namespace Nodez.Data.DataModel
             return new List<IOutputRow>();
         }
 
+        public OutputTable Clone()
+        {
+            OutputTable clone = new OutputTable();
+            clone.Views = this.Views;
+            clone.Name = this.Name;
+            clone.ColumnNames = this.ColumnNames;
+            clone._rows = this._rows;
+
+            return clone;
+        }
+
     }
 
 }

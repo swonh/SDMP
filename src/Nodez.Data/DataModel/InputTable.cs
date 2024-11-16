@@ -198,6 +198,17 @@ namespace Nodez.Data.DataModel
             return new List<IInputRow>();
         }
 
+        public InputTable Clone() 
+        {
+            InputTable clone = new InputTable();
+            clone.Views = this.Views;
+            clone.Name = this.Name;
+            clone.ColumnNames = this.ColumnNames;
+            clone._rows = this._rows;
+
+            return clone;
+        }
+
     }
 
 }
