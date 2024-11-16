@@ -58,8 +58,11 @@ namespace Nodez.Data.DataModel
             this.Name = type.Name;
         }
 
-        public void WriteToFile(string path = null)
+        public void WriteToFile(string path = null, bool isAppend = false, bool isHeaderInclude = true, string name = null)
         {
+            if (_rows == null)
+                return;
+
             string projectName = Assembly.GetCallingAssembly().GetName().Name;
 
             string exportPath = null;
@@ -72,20 +75,25 @@ namespace Nodez.Data.DataModel
                 Directory.CreateDirectory(exportPath);
 
             string filePath = string.Format(@"{0}{1}{2}.csv", exportPath, Path.DirectorySeparatorChar, this.Name);
+            if (name != null)
+                filePath = string.Format(@"{0}{1}{2}.csv", exportPath, Path.DirectorySeparatorChar, name);
 
-            StreamWriter sw = new StreamWriter(filePath, false, System.Text.Encoding.Default);
+            StreamWriter sw = new StreamWriter(filePath, isAppend, System.Text.Encoding.Default);
 
-            int i = 0;
-            foreach (string colName in this.ColumnNames)
+            if (isHeaderInclude)
             {
-                sw.Write(colName.Trim());
-                if (i < this.ColumnNames.Count - 1)
-                    sw.Write(",");
+                int i = 0;
+                foreach (string colName in this.ColumnNames)
+                {
+                    sw.Write(colName.Trim());
+                    if (i < this.ColumnNames.Count - 1)
+                        sw.Write(",");
 
-                i++;
+                    i++;
+                }
+
+                sw.Write(sw.NewLine);
             }
-
-            sw.Write(sw.NewLine);
 
             foreach (IInputRow row in this._rows)
             {
@@ -93,9 +101,20 @@ namespace Nodez.Data.DataModel
                 foreach (string colName in this.ColumnNames)
                 {
                     dynamic value = row.GetValue(colName);
-                    string strVal = Convert.ToString(value);
 
-                    sw.Write(strVal.Trim());
+                    string strVal = string.Empty;
+
+                    if (value is DateTime)
+                    {
+                        strVal = value.ToString("yyyy-MM-dd HH:mm:ss");
+                    }
+                    else
+                    {
+                        strVal = Convert.ToString(value);
+                    }
+
+                    if (strVal != null)
+                        sw.Write(strVal.Trim());
 
                     if (j < this.ColumnNames.Count - 1)
                         sw.Write(",");

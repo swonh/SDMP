@@ -203,6 +203,6 @@ E:\2024_Dev\SDMP\src\Nodez.Sdmp\bin\Release\System.Threading.Channels.xml
 E:\2024_Dev\SDMP\src\Nodez.Sdmp\bin\Release\System.Threading.Tasks.Extensions.xml
 E:\2024_Dev\SDMP\src\Nodez.Sdmp\obj\Release\Nodez.Sdmp.csproj.AssemblyReference.cache
 E:\2024_Dev\SDMP\src\Nodez.Sdmp\obj\Release\Nodez.Sdmp.csproj.CoreCompileInputs.cache
-E:\2024_Dev\SDMP\src\Nodez.Sdmp\obj\Release\Nodez.Sdmp.csproj.CopyComplete
 E:\2024_Dev\SDMP\src\Nodez.Sdmp\obj\Release\Nodez.Sdmp.dll
 E:\2024_Dev\SDMP\src\Nodez.Sdmp\obj\Release\Nodez.Sdmp.pdb
+E:\2024_Dev\SDMP\src\Nodez.Sdmp\obj\Release\Nodez.Sdmp.csproj.Up2Date
