@@ -196,10 +196,15 @@ namespace Nodez.Data.DataModel
         public OutputTable Clone()
         {
             OutputTable clone = new OutputTable();
-            clone.Views = this.Views;
+
+            Dictionary<int, Dictionary<IComparable, List<IOutputRow>>> newViews = new Dictionary<int, Dictionary<IComparable, List<IOutputRow>>>(this.Views);
+            List<string> newColumnNames = new List<string>(this.ColumnNames);
+            List<IOutputRow> newRows = new List<IOutputRow>(this._rows);
+
+            clone.Views = newViews;
             clone.Name = this.Name;
-            clone.ColumnNames = this.ColumnNames;
-            clone._rows = this._rows;
+            clone.ColumnNames = newColumnNames;
+            clone._rows = newRows;
 
             return clone;
         }

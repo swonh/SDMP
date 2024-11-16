@@ -198,13 +198,18 @@ namespace Nodez.Data.DataModel
             return new List<IInputRow>();
         }
 
-        public InputTable Clone() 
+        public InputTable Clone()
         {
             InputTable clone = new InputTable();
-            clone.Views = this.Views;
+
+            Dictionary<int, Dictionary<IComparable, List<IInputRow>>> newViews = new Dictionary<int, Dictionary<IComparable, List<IInputRow>>>(this.Views);
+            List<string> newColumnNames = new List<string>(this.ColumnNames);
+            List<IInputRow> newRows = new List<IInputRow>(this._rows);
+
+            clone.Views = newViews;
             clone.Name = this.Name;
-            clone.ColumnNames = this.ColumnNames;
-            clone._rows = this._rows;
+            clone.ColumnNames = newColumnNames;
+            clone._rows = newRows;
 
             return clone;
         }
