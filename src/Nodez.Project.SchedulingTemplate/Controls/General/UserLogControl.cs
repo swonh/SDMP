@@ -52,7 +52,7 @@ namespace Nodez.Project.SchedulingTemplate.Controls
             IOrderedEnumerable<KeyValuePair<int, State>> states = solution.States.OrderByDescending(x => x.Key);
             SchedulingState lastState =  states.FirstOrDefault().Value as SchedulingState;
 
-            Dictionary<Tuple<int, int, double>, string> logs = new Dictionary<Tuple<int, int, double>, string>();
+            Dictionary<ValueTuple<int, int, double>, string> logs = new Dictionary<ValueTuple<int, int, double>, string>();
             for (int i = 0; i < lastState.JobAssignedEqp.Length; i++) 
             {
                 int jobIdx = i;
@@ -65,7 +65,7 @@ namespace Nodez.Project.SchedulingTemplate.Controls
                 double procTime = manager.GetProcTime(job, eqp);
                 double endTime = startTime + procTime;
 
-                logs.Add(Tuple.Create(eqp.Index, job.Index, startTime), string.Format("Eqp:{0} | Job:{1}, StartTime:{2}, EndTime:{3}", eqp.Name, job.JobName, startTime, endTime));
+                logs.Add((eqp.Index, job.Index, startTime), string.Format("Eqp:{0} | Job:{1}, StartTime:{2}, EndTime:{3}", eqp.Name, job.JobName, startTime, endTime));
             }
 
             var items = logs.OrderBy(x => x.Key.Item1).ThenBy(x => x.Key.Item3);

@@ -48,9 +48,9 @@ namespace Nodez.Sdmp.Routing.DataModel
 
         public Dictionary<string, Product> ProductMappings { get; private set; }
 
-        public Dictionary<Tuple<string, string>, DistanceInfo> DistanceInfoMappings { get; private set; }
+        public Dictionary<ValueTuple<string, string>, DistanceInfo> DistanceInfoMappings { get; private set; }
 
-        public Dictionary<Tuple<int, int>, DistanceInfo> DistanceInfoIndexMappings { get; private set; }
+        public Dictionary<ValueTuple<int, int>, DistanceInfo> DistanceInfoIndexMappings { get; private set; }
 
         public Dictionary<string, string> RunOptionMappings { get; private set; }
 
@@ -71,8 +71,8 @@ namespace Nodez.Sdmp.Routing.DataModel
             this.PickupNodeOrderIDMappings = new Dictionary<string, Node>();
             this.DeliveryNodeOrderIDMappings = new Dictionary<string, Node>();
             this.ProductMappings = new Dictionary<string, Product>();
-            this.DistanceInfoMappings = new Dictionary<Tuple<string, string>, DistanceInfo>();
-            this.DistanceInfoIndexMappings = new Dictionary<Tuple<int, int>, DistanceInfo>();
+            this.DistanceInfoMappings = new Dictionary<ValueTuple<string, string>, DistanceInfo>();
+            this.DistanceInfoIndexMappings = new Dictionary<ValueTuple<int, int>, DistanceInfo>();
             this.RunOptionMappings = new Dictionary<string, string>();
 
             this.NodeIndexMappings = new Dictionary<int, Node>();
@@ -147,7 +147,7 @@ namespace Nodez.Sdmp.Routing.DataModel
         {
             foreach (DistanceInfo info in this.DistanceInfos) 
             {
-                Tuple<string, string> key = Tuple.Create(info.FromNodeID, info.ToNodeID);
+                ValueTuple<string, string> key = (info.FromNodeID, info.ToNodeID);
 
                 if (this.DistanceInfoMappings.ContainsKey(key))
                     continue;
@@ -160,7 +160,7 @@ namespace Nodez.Sdmp.Routing.DataModel
         {
             foreach (DistanceInfo info in this.DistanceInfos)
             {
-                Tuple<int, int> key = Tuple.Create(info.FromNodeIndex, info.ToNodeIndex);
+                ValueTuple<int, int> key = (info.FromNodeIndex, info.ToNodeIndex);
 
                 if (this.DistanceInfoIndexMappings.ContainsKey(key))
                     continue;

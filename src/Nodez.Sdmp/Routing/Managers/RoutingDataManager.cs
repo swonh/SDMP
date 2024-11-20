@@ -306,7 +306,7 @@ namespace Nodez.Sdmp.Routing.Managers
                 node.Order = this.GetOrder(item.ORDER_ID);
                 node.X_Coordinate = item.X_COORDINATE;
                 node.Y_Coordinate = item.Y_COORDINATE;
-                node.TimeWindow = Tuple.Create(item.START_TIME_WINDOW, item.END_TIME_WINDOW);
+                node.TimeWindow = (item.START_TIME_WINDOW, item.END_TIME_WINDOW);
                 node.IsVisited = false;
                 node.VisitedVehicle = null;
                 node.IsDelivery = UtilityHelper.StringToBoolean(item.IS_DELIVERY);
@@ -466,7 +466,7 @@ namespace Nodez.Sdmp.Routing.Managers
 
         public double GetDistance(int fromNodeIndex, int toNodeIndex) 
         {
-            Tuple<int, int> key = Tuple.Create(fromNodeIndex, toNodeIndex);
+            ValueTuple<int, int> key = (fromNodeIndex, toNodeIndex);
             if (this.RoutingProblem.DistanceInfoIndexMappings.TryGetValue(key, out DistanceInfo info))
                 return info.Distance;
 
@@ -475,7 +475,7 @@ namespace Nodez.Sdmp.Routing.Managers
 
         public double GetTime(Vehicle vehicle, int fromNodeIndex, int toNodeIndex)
         {
-            Tuple<int, int> key = Tuple.Create(fromNodeIndex, toNodeIndex);
+            ValueTuple<int, int> key = (fromNodeIndex, toNodeIndex);
             if (this.RoutingProblem.DistanceInfoIndexMappings.TryGetValue(key, out DistanceInfo info))
             {
                  return Math.Round((info.Distance / vehicle.Speed) + vehicle.ServiceTime);

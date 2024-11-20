@@ -27,7 +27,7 @@ namespace Nodez.Data.Managers
 
         private static Dictionary<string, InputTable> _inputs;
 
-        private static Dictionary<Tuple<string, string>, string> _columnNameMappings;
+        private static Dictionary<ValueTuple<string, string>, string> _columnNameMappings;
 
         private static InputControl _inputControl;
 
@@ -95,7 +95,7 @@ namespace Nodez.Data.Managers
                 _inputControl = InputControl.Instance;
 
             if (_columnNameMappings == null)
-                _columnNameMappings = new Dictionary<Tuple<string, string>, string>();
+                _columnNameMappings = new Dictionary<ValueTuple<string, string>, string>();
 
             Dictionary<string, string> pathMappings = _inputControl.GetInputsPathMappings(inputPath, tableNames);
             SetPathInputsMappings(pathMappings);
@@ -160,7 +160,7 @@ namespace Nodez.Data.Managers
 
                         foreach (KeyValuePair<string, string> map in mappings)
                         {
-                            Tuple<string, string> keyAttr = Tuple.Create(table.Name, map.Key);
+                            ValueTuple<string, string> keyAttr = (table.Name, map.Key);
                             if (_columnNameMappings.ContainsKey(keyAttr) == false)
                                 _columnNameMappings.Add(keyAttr, map.Value);
                         }

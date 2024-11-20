@@ -22,10 +22,10 @@ namespace Nodez.Data.Interface
         }
 
 
-        public void SetColumnValue(string tableName, string columnName, string value, Dictionary<Tuple<string, string>, string> columnNameMappings)
+        public void SetColumnValue(string tableName, string columnName, string value, Dictionary<ValueTuple<string, string>, string> columnNameMappings)
         {
             string propertyName;
-            if (columnNameMappings.TryGetValue(Tuple.Create(tableName, columnName), out propertyName) == false)
+            if (columnNameMappings.TryGetValue((tableName, columnName), out propertyName) == false)
                 propertyName = columnName;
 
             PropertyInfo info = this.GetType().GetProperty(propertyName);

@@ -489,23 +489,23 @@ namespace Nodez.Sdmp.Scheduling.Managers
         {
             List<Process> processes = new List<Process>();
 
-            Dictionary<string, List<Tuple<string, double>>> taskLists = new Dictionary<string, List<Tuple<string, double>>>();
+            Dictionary<string, List<ValueTuple<string, double>>> taskLists = new Dictionary<string, List<ValueTuple<string, double>>>();
 
             processDataList = processDataList.OrderBy(x => x.SEQUENCE).ToList();
 
             foreach (IProcessData processData in processDataList)
             {
-                if (taskLists.TryGetValue(processData.PROCESS_ID, out List<Tuple<string, double>> value))
+                if (taskLists.TryGetValue(processData.PROCESS_ID, out List<ValueTuple<string, double>> value))
                 {
-                    value.Add(Tuple.Create(processData.EQP_ID, processData.PROC_TIME));
+                    value.Add((processData.EQP_ID, processData.PROC_TIME));
                 }
                 else
                 {
-                    taskLists.Add(processData.PROCESS_ID, new List<Tuple<string, double>>() { Tuple.Create(processData.EQP_ID, processData.PROC_TIME) });
+                    taskLists.Add(processData.PROCESS_ID, new List<ValueTuple<string, double>>() { (processData.EQP_ID, processData.PROC_TIME) });
                 }
             }
 
-            foreach (KeyValuePair<string, List<Tuple<string, double>>> item in taskLists)
+            foreach (KeyValuePair<string, List<ValueTuple<string, double>>> item in taskLists)
             {
                 Process process = new Process();
 
@@ -513,12 +513,12 @@ namespace Nodez.Sdmp.Scheduling.Managers
 
                 for (int i = 0; i < item.Value.Count; i++)
                 {
-                    Tuple<string, double> val = item.Value.ElementAt(i);
+                    ValueTuple<string, double> val = item.Value.ElementAt(i);
 
                     if (val.Item1 == null)
                         continue;
 
-                    process.TaskList.Add(i + 1, Tuple.Create(GetEqp(val.Item1), val.Item2));
+                    process.TaskList.Add(i + 1, (GetEqp(val.Item1), val.Item2));
                 }
 
                 processes.Add(process);
@@ -601,7 +601,7 @@ namespace Nodez.Sdmp.Scheduling.Managers
         {
             if (this.SchedulingProblem.ProcessMappings.TryGetValue(processID, out Process process))
             {
-                process.TaskList.TryGetValue(sequence, out Tuple<Equipment, double> task);
+                process.TaskList.TryGetValue(sequence, out ValueTuple<Equipment, double> task);
 
                 return task.Item1;
             }
@@ -634,7 +634,7 @@ namespace Nodez.Sdmp.Scheduling.Managers
 
         public TargetInfo GetTargetInfo(string processID, string stepSeq)
         {
-            Tuple<string, string> key = Tuple.Create(processID, stepSeq);
+            ValueTuple<string, string> key = (processID, stepSeq);
             if (this.SchedulingProblem.TargetInfoMappings.TryGetValue(key, out TargetInfo target))
             {
                 return target;
@@ -647,7 +647,7 @@ namespace Nodez.Sdmp.Scheduling.Managers
         {
             if (this.SchedulingProblem.ProcessMappings.TryGetValue(processID, out Process process))
             {
-                process.TaskList.TryGetValue(sequence, out Tuple<Equipment, double> task);
+                process.TaskList.TryGetValue(sequence, out ValueTuple<Equipment, double> task);
 
                 return task.Item2;
             }
@@ -660,7 +660,7 @@ namespace Nodez.Sdmp.Scheduling.Managers
             if (job == null)
                 return 0;
 
-            if (this.SchedulingProblem.ArrangeMappings.TryGetValue(Tuple.Create(job.RecipeID, eqp.EqpID), out Arrange arrange))
+            if (this.SchedulingProblem.ArrangeMappings.TryGetValue((job.RecipeID, eqp.EqpID), out Arrange arrange))
             {
                 double procTime = arrange.ProcTime * job.Qty;
                 return procTime;
@@ -674,7 +674,7 @@ namespace Nodez.Sdmp.Scheduling.Managers
             if (job == null)
                 return 0;
 
-            if (this.SchedulingProblem.ArrangeMappings.TryGetValue(Tuple.Create(job.RecipeID, eqp.EqpID), out Arrange arrange))
+            if (this.SchedulingProblem.ArrangeMappings.TryGetValue((job.RecipeID, eqp.EqpID), out Arrange arrange))
             {
                 double procTime = arrange.ProcTime * job.Qty;
 
@@ -699,7 +699,7 @@ namespace Nodez.Sdmp.Scheduling.Managers
             double minProcTime = Double.MaxValue;
             foreach (Equipment eqp in this.SchedulingProblem.EqpList)
             {
-                if (this.SchedulingProblem.ArrangeMappings.TryGetValue(Tuple.Create(job.RecipeID, eqp.EqpID), out Arrange arrange))
+                if (this.SchedulingProblem.ArrangeMappings.TryGetValue((job.RecipeID, eqp.EqpID), out Arrange arrange))
                 {
                     double procTime = arrange.ProcTime * job.Qty;
                     if (minProcTime > procTime)
@@ -723,7 +723,7 @@ namespace Nodez.Sdmp.Scheduling.Managers
             if (toJob == null)
                 return 0;
 
-            if (this.SchedulingProblem.SetupInfoMappings.TryGetValue(Tuple.Create(eqp.EqpID, fromJob.RecipeID, toJob.RecipeID), out SetupInfo setupInfo))
+            if (this.SchedulingProblem.SetupInfoMappings.TryGetValue((eqp.EqpID, fromJob.RecipeID, toJob.RecipeID), out SetupInfo setupInfo))
             {
                 return setupInfo.SetupTime;
             }
@@ -743,7 +743,7 @@ namespace Nodez.Sdmp.Scheduling.Managers
 
         public Arrange GetArrange(Job job, Equipment eqp)
         {
-            if (this.SchedulingProblem.ArrangeMappings.TryGetValue(Tuple.Create(job.RecipeID, eqp.EqpID), out Arrange value))
+            if (this.SchedulingProblem.ArrangeMappings.TryGetValue((job.RecipeID, eqp.EqpID), out Arrange value))
             {
                 return value;
             }

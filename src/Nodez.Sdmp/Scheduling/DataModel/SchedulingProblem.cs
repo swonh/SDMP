@@ -46,13 +46,13 @@ namespace Nodez.Sdmp.Scheduling.DataModel
 
         public Dictionary<string, Process> ProcessMappings { get; private set; }
 
-        public Dictionary<Tuple<string, string>, Arrange> ArrangeMappings { get; private set; }
+        public Dictionary<ValueTuple<string, string>, Arrange> ArrangeMappings { get; private set; }
 
-        public Dictionary<Tuple<string ,string, string>, SetupInfo> SetupInfoMappings { get; private set; }
+        public Dictionary<ValueTuple<string ,string, string>, SetupInfo> SetupInfoMappings { get; private set; }
 
-        public Dictionary<Tuple<string, string>, TargetInfo> TargetInfoMappings { get; private set; }
+        public Dictionary<ValueTuple<string, string>, TargetInfo> TargetInfoMappings { get; private set; }
 
-        public Dictionary<Tuple<string, string>, PMSchedule> PMScheduleMappings { get; private set; }
+        public Dictionary<ValueTuple<string, string>, PMSchedule> PMScheduleMappings { get; private set; }
 
         public Dictionary<int, List<Job>> PriorityJobGroups { get; private set; }
 
@@ -74,10 +74,10 @@ namespace Nodez.Sdmp.Scheduling.DataModel
             this.EqpMappings = new Dictionary<string, Equipment>();
             this.EqpGroupMappings = new Dictionary<string, EqpGroup>();
             this.ProcessMappings = new Dictionary<string, Process>();
-            this.ArrangeMappings = new Dictionary<Tuple<string, string>, Arrange>();
-            this.SetupInfoMappings = new Dictionary<Tuple<string, string, string>, SetupInfo>();
-            this.TargetInfoMappings = new Dictionary<Tuple<string, string>, TargetInfo>();
-            this.PMScheduleMappings = new Dictionary<Tuple<string, string>, PMSchedule>();
+            this.ArrangeMappings = new Dictionary<ValueTuple<string, string>, Arrange>();
+            this.SetupInfoMappings = new Dictionary<ValueTuple<string, string, string>, SetupInfo>();
+            this.TargetInfoMappings = new Dictionary<ValueTuple<string, string>, TargetInfo>();
+            this.PMScheduleMappings = new Dictionary<ValueTuple<string, string>, PMSchedule>();
             this.PriorityJobGroups = new Dictionary<int, List<Job>>();
         }
 
@@ -179,7 +179,7 @@ namespace Nodez.Sdmp.Scheduling.DataModel
         {
             foreach (TargetInfo targetInfo in this.TargetInfoList)
             {
-                Tuple<string, string> key = Tuple.Create(targetInfo.ProcessID, targetInfo.StepSeq);
+                ValueTuple<string, string> key = (targetInfo.ProcessID, targetInfo.StepSeq);
                 if (this.TargetInfoMappings.ContainsKey(key))
                     continue;
 
@@ -225,10 +225,10 @@ namespace Nodez.Sdmp.Scheduling.DataModel
         {
             foreach (SetupInfo setupInfo in this.SetupInfoList) 
             {
-                if (this.SetupInfoMappings.ContainsKey(Tuple.Create(setupInfo.EqpID, setupInfo.FromRecipeID, setupInfo.ToRecipeID)))
+                if (this.SetupInfoMappings.ContainsKey((setupInfo.EqpID, setupInfo.FromRecipeID, setupInfo.ToRecipeID)))
                     continue;
 
-                this.SetupInfoMappings.Add(Tuple.Create(setupInfo.EqpID, setupInfo.FromRecipeID, setupInfo.ToRecipeID), setupInfo);
+                this.SetupInfoMappings.Add((setupInfo.EqpID, setupInfo.FromRecipeID, setupInfo.ToRecipeID), setupInfo);
             }
         }
 
@@ -236,10 +236,10 @@ namespace Nodez.Sdmp.Scheduling.DataModel
         {
             foreach (PMSchedule pmSchedule in this.PMScheduleList)
             {
-                if (this.PMScheduleMappings.ContainsKey(Tuple.Create(pmSchedule.EqpID, pmSchedule.ModuleID)))
+                if (this.PMScheduleMappings.ContainsKey((pmSchedule.EqpID, pmSchedule.ModuleID)))
                     continue;
 
-                this.PMScheduleMappings.Add(Tuple.Create(pmSchedule.EqpID, pmSchedule.ModuleID), pmSchedule);
+                this.PMScheduleMappings.Add((pmSchedule.EqpID, pmSchedule.ModuleID), pmSchedule);
             }
         }
 
@@ -247,10 +247,10 @@ namespace Nodez.Sdmp.Scheduling.DataModel
         {
             foreach (Arrange arrange in this.ArrangeList) 
             {
-                if (this.ArrangeMappings.ContainsKey(Tuple.Create(arrange.RecipeID, arrange.EqpID)))
+                if (this.ArrangeMappings.ContainsKey((arrange.RecipeID, arrange.EqpID)))
                     continue;
 
-                this.ArrangeMappings.Add(Tuple.Create(arrange.RecipeID, arrange.EqpID), arrange);
+                this.ArrangeMappings.Add((arrange.RecipeID, arrange.EqpID), arrange);
             }
         }
 

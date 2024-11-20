@@ -15,13 +15,13 @@ namespace Nodez.Sdmp.Scheduling.DataModel
     {
         public string ProcessID { get; set; }
 
-        public Dictionary<int, Tuple<Equipment, double>> TaskList { get; set; }
+        public Dictionary<int, ValueTuple<Equipment, double>> TaskList { get; set; }
 
         public IProcessData ProcessData { get; set; }
 
         public Process() 
         {
-            this.TaskList = new Dictionary<int, Tuple<Equipment, double>>();
+            this.TaskList = new Dictionary<int, ValueTuple<Equipment, double>>();
         }
     }
 }

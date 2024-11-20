@@ -21,17 +21,17 @@ namespace Nodez.Sdmp.Routing.Logic
 
         public HashSet<int> NonPrimNodeSet { get; set; }
 
-        public Dictionary<Tuple<int, int>, double> PrimEdgeSet { get; set; }
+        public Dictionary<ValueTuple<int, int>, double> PrimEdgeSet { get; set; }
 
         public PrimAlgorithm(HashSet<int> nodeSet)
         {
             this.NodeSet = nodeSet;
             this.PrimNodeSet = new HashSet<int>();
             this.NonPrimNodeSet = nodeSet;
-            this.PrimEdgeSet = new Dictionary<Tuple<int, int>, double>();
+            this.PrimEdgeSet = new Dictionary<ValueTuple<int, int>, double>();
         }
 
-        public PrimAlgorithm(HashSet<int> nodeSet, HashSet<int> primNodeSet, Dictionary<Tuple<int, int>, double> primEdgeSet)
+        public PrimAlgorithm(HashSet<int> nodeSet, HashSet<int> primNodeSet, Dictionary<ValueTuple<int, int>, double> primEdgeSet)
         {
             this.NodeSet = nodeSet;
             this.PrimNodeSet = primNodeSet;
@@ -49,7 +49,7 @@ namespace Nodez.Sdmp.Routing.Logic
 
             this.NodeSet = new HashSet<int>();
             this.PrimNodeSet = new HashSet<int>();
-            this.PrimEdgeSet = new Dictionary<Tuple<int, int>, double>();
+            this.PrimEdgeSet = new Dictionary<ValueTuple<int, int>, double>();
             this.NonPrimNodeSet = new HashSet<int>();
 
             HashSet<int> visitedNodeSet = new HashSet<int>();
@@ -62,7 +62,7 @@ namespace Nodez.Sdmp.Routing.Logic
                 }
             }
 
-            Dictionary<Tuple<int, int>, double> edges = new Dictionary<Tuple<int, int>, double>();
+            Dictionary<ValueTuple<int, int>, double> edges = new Dictionary<ValueTuple<int, int>, double>();
             for (int i = 0; i < visitedNodeSet.Count; i++)
             {
                 if (i < visitedNodeSet.Count - 1)
@@ -71,7 +71,7 @@ namespace Nodez.Sdmp.Routing.Logic
                     int to = visitedNodeSet.ElementAt(i + 1);
 
                     double dist = manager.GetDistance(from, to);
-                    edges.Add(Tuple.Create(from, to), dist);
+                    edges.Add((from, to), dist);
                 }
             }
 
@@ -129,7 +129,7 @@ namespace Nodez.Sdmp.Routing.Logic
                 }
 
                 this.PrimNodeSet.Add(minTo);
-                this.PrimEdgeSet.Add(Tuple.Create(minFrom, minTo), minDist);
+                this.PrimEdgeSet.Add((minFrom, minTo), minDist);
             }
         }
     }

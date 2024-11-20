@@ -25,7 +25,7 @@ namespace Nodez.Sdmp.Routing.DataModel
 
         public double Y_Coordinate { get; set; }
 
-        public Tuple<double, double> TimeWindow { get; set; }
+        public ValueTuple<double, double> TimeWindow { get; set; }
 
         public bool IsVisited { get; set; }
 
@@ -65,7 +65,7 @@ namespace Nodez.Sdmp.Routing.DataModel
         {
             RoutingDataManager manager = RoutingDataManager.Instance;
 
-            Tuple<string, string> key = Tuple.Create(this.ID, toNode.ID);
+            ValueTuple<string, string> key = (this.ID, toNode.ID);
             if (manager.RoutingProblem.DistanceInfoMappings.TryGetValue(key, out DistanceInfo info))
                 return info.Distance;
 
