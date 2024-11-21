@@ -1,5 +1,5 @@
 SDMP is licensed under the Mozilla Public License, Version 2.0.
-Copyright (c) 2021-2023: Sungwon Hong.
+Copyright (c) 2021-2024: Sungwon Hong.
 
 Mozilla Public License Version 2.0
 ==================================
