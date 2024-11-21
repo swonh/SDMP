@@ -22,7 +22,7 @@ Renamed Types:
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Managers.SchedulingDataManager/<>c::<CreatePMSchedules>b__51_0[1]( [Nodez.Sdmp]Nodez.Sdmp.Scheduling.Interfaces.IPMScheduleData ) ->  
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Managers.SchedulingDataManager/<>c::<CreatePMSchedules>b__51_1[1]( [Nodez.Sdmp]Nodez.Sdmp.Scheduling.Interfaces.IPMScheduleData ) ->  
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Managers.SchedulingDataManager/<>c::<CreateProcesses>b__58_0[1]( [Nodez.Sdmp]Nodez.Sdmp.Scheduling.Interfaces.IProcessData ) ->  
-	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Managers.SchedulingDataManager/<>c::<.cctor>b__80_0[0]( ) ->  
+	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Managers.SchedulingDataManager/<>c::<.cctor>b__79_0[0]( ) ->  
 
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Managers.SchedulingDataManager/<>c::.cctor[0]( ) skipped:  special name
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Managers.SchedulingDataManager/<>c::.ctor[0]( ) skipped:  special name
@@ -481,7 +481,6 @@ Skipped Types:
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Managers.SchedulingDataManager::GetProcTime[2]( [mscorlib]System.String, [mscorlib]System.Int32 ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Managers.SchedulingDataManager::GetProcTime[2]( [Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Job, [Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Equipment ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Managers.SchedulingDataManager::GetBundleProcTime[2]( [Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Job, [Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Equipment ) skipped:  KeepPublicApi option in configuration
-	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Managers.SchedulingDataManager::GetMinProcTime[1]( [Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Job ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Managers.SchedulingDataManager::GetSetupTime[3]( [Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Equipment, [Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Job, [Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Job ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Managers.SchedulingDataManager::GetPriorityJobGroup[1]( [Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Job ) skipped:  KeepPublicApi option in configuration
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.Managers.SchedulingDataManager::GetArrange[2]( [Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Job, [Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Equipment ) skipped:  KeepPublicApi option in configuration
@@ -640,10 +639,10 @@ Skipped Types:
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Job::set_Qty[1]( [mscorlib]System.Int32 ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Job::get_Priority[0]( ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Job::set_Priority[1]( [mscorlib]System.Int32 ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Job::get_MinProcTime[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Job::set_MinProcTime[1]( [mscorlib]System.Double ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Job::get_MaxProcTime[0]( ) skipped:  skip by property
-	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Job::set_MaxProcTime[1]( [mscorlib]System.Double ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Job::get_MinUnitProcTime[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Job::set_MinUnitProcTime[1]( [mscorlib]System.Double ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Job::get_MaxUnitProcTime[0]( ) skipped:  skip by property
+	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Job::set_MaxUnitProcTime[1]( [mscorlib]System.Double ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Job::get_MaxBundleProcTime[0]( ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Job::set_MaxBundleProcTime[1]( [mscorlib]System.Double ) skipped:  skip by property
 	[Nodez.Sdmp]Nodez.Sdmp.Scheduling.DataModel.Job::get_RecipeID[0]( ) skipped:  skip by property
@@ -670,8 +669,8 @@ Skipped Types:
 	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Scheduling.DataModel.Job::<SplitCount>k__BackingField -> ⁈
 	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Scheduling.DataModel.Job::<Qty>k__BackingField -> ⁉
 	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Scheduling.DataModel.Job::<Priority>k__BackingField -> ⁊
-	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.Scheduling.DataModel.Job::<MinProcTime>k__BackingField -> ⁋
-	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.Scheduling.DataModel.Job::<MaxProcTime>k__BackingField -> ⁌
+	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.Scheduling.DataModel.Job::<MinUnitProcTime>k__BackingField -> ⁋
+	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.Scheduling.DataModel.Job::<MaxUnitProcTime>k__BackingField -> ⁌
 	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.Scheduling.DataModel.Job::<MaxBundleProcTime>k__BackingField -> ⁍
 	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Scheduling.DataModel.Job::<RecipeID>k__BackingField -> ⁎
 	System.Boolean [Nodez.Sdmp]System.Boolean Nodez.Sdmp.Scheduling.DataModel.Job::<IsAct>k__BackingField -> ⁏
@@ -693,8 +692,8 @@ Skipped Types:
 	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Scheduling.DataModel.Job::SplitCount skipped:  KeepPublicApi option in configuration
 	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Scheduling.DataModel.Job::Qty skipped:  KeepPublicApi option in configuration
 	System.Int32 [Nodez.Sdmp]System.Int32 Nodez.Sdmp.Scheduling.DataModel.Job::Priority skipped:  KeepPublicApi option in configuration
-	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.Scheduling.DataModel.Job::MinProcTime skipped:  KeepPublicApi option in configuration
-	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.Scheduling.DataModel.Job::MaxProcTime skipped:  KeepPublicApi option in configuration
+	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.Scheduling.DataModel.Job::MinUnitProcTime skipped:  KeepPublicApi option in configuration
+	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.Scheduling.DataModel.Job::MaxUnitProcTime skipped:  KeepPublicApi option in configuration
 	System.Double [Nodez.Sdmp]System.Double Nodez.Sdmp.Scheduling.DataModel.Job::MaxBundleProcTime skipped:  KeepPublicApi option in configuration
 	System.String [Nodez.Sdmp]System.String Nodez.Sdmp.Scheduling.DataModel.Job::RecipeID skipped:  KeepPublicApi option in configuration
 	System.Boolean [Nodez.Sdmp]System.Boolean Nodez.Sdmp.Scheduling.DataModel.Job::IsAct skipped:  KeepPublicApi option in configuration

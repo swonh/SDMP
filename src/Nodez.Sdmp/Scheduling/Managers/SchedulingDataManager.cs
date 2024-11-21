@@ -376,8 +376,8 @@ namespace Nodez.Sdmp.Scheduling.Managers
                         maxBundleProcTime = bundleProcTime;
                 }
 
-                job.MinProcTime = minProcTime;
-                job.MaxProcTime = maxProcTime;
+                job.MinUnitProcTime = minProcTime;
+                job.MaxUnitProcTime = maxProcTime;
                 job.MaxBundleProcTime = maxBundleProcTime;
             }
 
@@ -688,28 +688,6 @@ namespace Nodez.Sdmp.Scheduling.Managers
             }
 
             return 0;
-        }
-
-
-        public double GetMinProcTime(Job job)
-        {
-            if (job == null)
-                return 0;
-
-            double minProcTime = Double.MaxValue;
-            foreach (Equipment eqp in this.SchedulingProblem.EqpList)
-            {
-                if (this.SchedulingProblem.ArrangeMappings.TryGetValue((job.RecipeID, eqp.EqpID), out Arrange arrange))
-                {
-                    double procTime = arrange.ProcTime * job.Qty;
-                    if (minProcTime > procTime)
-                    {
-                        minProcTime = procTime;
-                    }
-                }
-            }
-
-            return minProcTime;
         }
 
         public double GetSetupTime(Equipment eqp, Job fromJob, Job toJob)

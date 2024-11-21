@@ -43,9 +43,9 @@ namespace Nodez.Sdmp.Scheduling.DataModel
 
         public int Priority { get; set; }
 
-        public double MinProcTime { get; set; }
+        public double MinUnitProcTime { get; set; }
 
-        public double MaxProcTime { get; set; }
+        public double MaxUnitProcTime { get; set; }
 
         public double MaxBundleProcTime { get; set; }
 
