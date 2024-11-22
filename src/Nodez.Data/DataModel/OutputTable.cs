@@ -27,6 +27,15 @@ namespace Nodez.Data.DataModel
             return this._rows;
         }
 
+        public void Clear()
+        {
+            if (this._rows != null)
+                this._rows.Clear();
+
+            if (this.Views != null)
+                this.Views.Clear();
+        }
+
         private void Init(IOutputRow row)
         {
             Type type = row.GetType();

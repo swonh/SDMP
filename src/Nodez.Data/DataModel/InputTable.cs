@@ -31,6 +31,9 @@ namespace Nodez.Data.DataModel
         {
             if (this._rows != null)
                 this._rows.Clear();
+
+            if (this.Views != null)
+                this.Views.Clear();
         }
 
         private void Init(IInputRow row)
