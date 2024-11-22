@@ -826,6 +826,8 @@ namespace Nodez.Sdmp.Interfaces
 
                 eventControl.OnVisitState(state);
 
+                state.DualBound = boundManager.RootDualBound;
+
                 bool isCalcDualBound = boundManager.IsCalculateDualBound(isUseDualBound, dualBoundUpdatePeriod, stageIndex, loopCount);
                 if (isCalcDualBound && state.IsSetDualBound == false)
                 {
@@ -876,7 +878,7 @@ namespace Nodez.Sdmp.Interfaces
                     return;
                 }
 
-                if (state.IsSetDualBound && stateControl.CanPruneByOptimality(state, objectiveFunctionType, pruneTolerance))
+                if (stateControl.CanPruneByOptimality(state, objectiveFunctionType, pruneTolerance))
                 {
                     logControl.WritePruneLog(state);
                     continue;
