@@ -440,11 +440,11 @@ namespace Nodez.Sdmp.Interfaces
 
                 if (stateManager.FinalState != null)
                 {
-                    Solution optimalSol = solutionManager.GetOptimalSolution(stateManager.FinalState);
+                    Solution optimalSol = solutionManager.GetSolution(stateManager.FinalState);
 
                     solutionManager.AddSolution(optimalSol, true);
                     logControl.WriteOptimalLog();
-                    logControl.WriteEndLog(Messeges.FOUND_OPTIMAL_SOLUTION);
+                    logControl.WriteEndLog(Messeges.FOUND_SOLUTION);
                 }
                 else if (solutionManager.BestSolution != null && solutionManager.OptimalSolution == null)
                 {

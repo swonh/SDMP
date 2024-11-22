@@ -60,7 +60,7 @@ namespace Nodez.Sdmp.General.Managers
         public void SetFinalState(State state)
         {
             SolutionManager solutionManager = SolutionManager.Instance;
-            Solution sol = solutionManager.GetOptimalSolution(state);
+            Solution sol = solutionManager.GetSolution(state);
             solutionManager.AddSolution(sol);
 
             if (solutionManager.BestSolution == sol)

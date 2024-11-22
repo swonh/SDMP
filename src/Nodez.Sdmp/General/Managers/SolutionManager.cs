@@ -57,11 +57,11 @@ namespace Nodez.Sdmp.General.Managers
             this.ObjectiveFunctionType = objectiveFunctionType;
         }
 
-        public virtual Solution GetOptimalSolution(State finalState)
+        public virtual Solution GetSolution(State finalState)
         {
-            Solution optSol = new Solution(finalState.GetBestStatesBackward());
+            Solution sol = new Solution(finalState.GetBestStatesBackward());
 
-            return optSol;
+            return sol;
         }
 
         public virtual void AddSolution(Solution solution, bool isOptimal = false, bool isInitial = false)
