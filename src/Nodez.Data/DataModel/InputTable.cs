@@ -172,7 +172,7 @@ namespace Nodez.Data.DataModel
             this._rows.Add(row);
         }
 
-        public List<IInputRow> FindRows(int viewNum, params object[] keys)
+        public List<IInputRow> FindRows(int viewNum, params string[] keys)
         {
             if (this._rows == null || this._rows.Count == 0)
                 return new List<IInputRow>();
@@ -181,9 +181,9 @@ namespace Nodez.Data.DataModel
             for (int i = 0; i < keys.Length; i++)
             {
                 if (i < keys.Length - 1)
-                    stringBuilder.Append(string.Format("{0}@", keys[i]));
+                    stringBuilder.Append($"{keys[i]}@");
                 else
-                    stringBuilder.Append(string.Format("{0}", keys[i]));
+                    stringBuilder.Append($"{keys[i]}");
             }
 
             string key = stringBuilder.ToString();
