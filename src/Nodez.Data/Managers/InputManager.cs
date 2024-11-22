@@ -34,7 +34,7 @@ namespace Nodez.Data.Managers
         public void DeleteInputFiles(List<string> filterList = null)
         {
             string projectName = Assembly.GetCallingAssembly().GetName().Name;
-            string inputPath = string.Format(@"..{0}..{0}..{0}{1}{0}Data", Path.DirectorySeparatorChar, projectName);
+            string inputPath = $@"..{Path.DirectorySeparatorChar}..{Path.DirectorySeparatorChar}..{Path.DirectorySeparatorChar}{projectName}{Path.DirectorySeparatorChar}Data";
 
             if (Directory.Exists(inputPath) == false)
                 return;
@@ -88,7 +88,7 @@ namespace Nodez.Data.Managers
             if (assembly == null)
                 assembly = Assembly.GetEntryAssembly();
 
-            Console.WriteLine(string.Format("Project name: {0}", assembly.GetName().Name));
+            Console.WriteLine($"Project name: {assembly.GetName().Name}");
             Console.WriteLine("Start load data...");
 
             if (_inputControl == null)

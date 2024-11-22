@@ -59,7 +59,7 @@ namespace Nodez.Data.Interface
             int keyNum = 0;
             foreach (KeyValuePair<int, HashSet<string>> item in this.KeyMappings)
             {
-                stringBuilder.Append(string.Format("Key:{0}=>", item.Key));
+                stringBuilder.Append($"Key:{item.Key}=>");
 
                 int valCount = 0;
                 foreach (string columnName in item.Value)

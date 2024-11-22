@@ -32,7 +32,7 @@ namespace Nodez.Data.Interface
 
             if (info == null)
             {
-                throw new Exception(string.Format("Columnname does not match: Table:{0}, Column:{1}", this.InputTable.Name, columnName));
+                throw new Exception($"Columnname does not match: Table:{this.InputTable.Name}, Column:{columnName}");
             }
 
             object changedValue;
@@ -58,7 +58,7 @@ namespace Nodez.Data.Interface
             int keyNum = 0;
             foreach (KeyValuePair<int, HashSet<string>> item in this.KeyMappings)
             {
-                stringBuilder.Append(string.Format("Key:{0}=>", item.Key));
+                stringBuilder.Append($"Key:{item.Key}=>");
 
                 int valCount = 0;
                 foreach (string columnName in item.Value)

@@ -173,7 +173,7 @@ namespace Nodez.Data.DataModel
             this._rows.Add(row);
         }
 
-        public List<IOutputRow> FindRows(int viewNum, params string[] keys)
+        public List<IOutputRow> FindRows(int viewNum, params object[] keys)
         {
             if (this._rows == null || this._rows.Count == 0)
                 return new List<IOutputRow>();

@@ -29,7 +29,7 @@ namespace Nodez.Data.Managers
         public void DeleteOutputFiles()
         {
             string projectName = Assembly.GetCallingAssembly().GetName().Name;
-            string outputPath = string.Format(@"..{0}..{0}..{0}{1}{0}Output", Path.DirectorySeparatorChar, projectName);
+            string outputPath = $@"..{Path.DirectorySeparatorChar}..{Path.DirectorySeparatorChar}..{Path.DirectorySeparatorChar}{projectName}{Path.DirectorySeparatorChar}Output";
 
             if (Directory.Exists(outputPath) == false)
                 return;
