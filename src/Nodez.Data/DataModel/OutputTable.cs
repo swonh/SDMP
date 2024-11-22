@@ -182,7 +182,7 @@ namespace Nodez.Data.DataModel
             for (int i = 0; i < keys.Length; i++)
             {
                 if (i < keys.Length - 1)
-                    stringBuilder.Append($"{ keys[i]}@");
+                    stringBuilder.Append($"{keys[i]}@");
                 else
                     stringBuilder.Append($"{keys[i]}");
             }
