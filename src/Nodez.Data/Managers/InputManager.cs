@@ -113,13 +113,13 @@ namespace Nodez.Data.Managers
                 }
 
                 stopwatch.Restart();
-                Console.WriteLine(string.Format("Start loading file: [{0}]", key));
+                Console.WriteLine($"Start loading file: [{key}]");
 
                 Type rowType = null;
                 if (typePath != null)
-                    rowType = assembly.GetType(string.Format("{0}.{1}", typePath, key));
+                    rowType = assembly.GetType($"{typePath}.{key}");
                 else
-                    rowType = assembly.GetType(string.Format("{0}.MyInputs.{1}", assembly.GetName().Name, key));
+                    rowType = assembly.GetType($"{assembly.GetName().Name}.MyInputs.{key}");
 
                 if (rowType == null)
                     continue;
@@ -193,7 +193,7 @@ namespace Nodez.Data.Managers
                 this.SetInput(key, table);
 
                 stopwatch.Stop();
-                Console.WriteLine(string.Format("End loading file: [{0}] (Rows:{1},Time:{2})", key, lineCount - 1, stopwatch.Elapsed));
+                Console.WriteLine($"End loading file: [{key}] (Rows:{lineCount - 1},Time:{stopwatch.Elapsed})");
             }
 
             Console.WriteLine("End load data.");
