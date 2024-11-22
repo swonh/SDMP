@@ -461,7 +461,7 @@ namespace Nodez.Sdmp.Interfaces
                     }
 
                     solutionManager.AddSolution(sol, true);
-                    logControl.WriteOptimalLog();
+                    logControl.WriteBestSolutionLog();
                     logControl.WriteEndLog(Messeges.FOUND_SOLUTION);
                 }
                 else if (solutionManager.BestSolution != null && solutionManager.OptimalSolution == null)
