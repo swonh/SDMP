@@ -59,12 +59,7 @@ namespace Nodez.Sdmp.General.Managers
 
         public void SetFinalState(State state)
         {
-            SolutionManager solutionManager = SolutionManager.Instance;
-            Solution sol = solutionManager.GetSolution(state);
-            solutionManager.AddSolution(sol);
-
-            if (solutionManager.BestSolution == sol)
-                this.FinalState = state;
+            this.FinalState = state;
         }
 
         public void ClearStageStateMappings() 
