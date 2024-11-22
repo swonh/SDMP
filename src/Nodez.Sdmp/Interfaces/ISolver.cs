@@ -495,7 +495,6 @@ namespace Nodez.Sdmp.Interfaces
                 fixedKeys.Clear();
                 this.VisitedStates.Clear();
                 this.CurrentStageIndex++;
-                GC.Collect();
             }
         }
 
