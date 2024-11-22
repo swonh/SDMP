@@ -876,7 +876,7 @@ namespace Nodez.Sdmp.Interfaces
                     return;
                 }
 
-                if (stateControl.CanPruneByOptimality(state, objectiveFunctionType, pruneTolerance))
+                if (state.IsSetDualBound && stateControl.CanPruneByOptimality(state, objectiveFunctionType, pruneTolerance))
                 {
                     logControl.WritePruneLog(state);
                     continue;
