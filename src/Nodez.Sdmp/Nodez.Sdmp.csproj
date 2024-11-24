@@ -134,7 +134,7 @@
     <Compile Include="General\Controls\MachineLearningControl.cs" />
     <Compile Include="General\Controls\StateTransitionControl.cs" />
     <Compile Include="General\DataModel\MLInputDataSample.cs" />
-    <Compile Include="General\DataModel\StateLog.cs" />
+    <Compile Include="General\DataModel\Log.cs" />
     <Compile Include="General\DataModel\StateTransition.cs" />
     <Compile Include="General\Managers\ApproximationManager.cs" />
     <Compile Include="General\Managers\MachineLearningManager.cs" />

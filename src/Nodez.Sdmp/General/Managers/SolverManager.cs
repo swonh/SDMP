@@ -43,7 +43,7 @@ namespace Nodez.Sdmp.General.Managers
 
         private Dictionary<string, string> _outputDirectoryPath { get; set; }
 
-        private List<StateLog> _stateLogs { get; set; }
+        private List<Log> _logs { get; set; }
 
         private IRunConfig _runConfig { get; set; }
 
@@ -54,7 +54,7 @@ namespace Nodez.Sdmp.General.Managers
             this._bestSolutionDateTime = new Dictionary<string, DateTime>();
             this._rootSolutionDateTime = new Dictionary<string, DateTime>();
             this._outputDirectoryPath = new Dictionary<string, string>();
-            this._stateLogs = new List<StateLog>();
+            this._logs = new List<Log>();
         }
 
         public void SetRunConfig(IRunConfig runConfig) 
@@ -84,23 +84,23 @@ namespace Nodez.Sdmp.General.Managers
 
         public void ClearStateLogs() 
         {
-            this._stateLogs.Clear();
+            this._logs.Clear();
         }
 
-        public void AddStateLog(StateLog stateLog) 
+        public void AddLog(Log log) 
         {
-            this._stateLogs.Add(stateLog);
+            this._logs.Add(log);
         }
 
-        public List<StateLog> GetStateLogs() 
+        public List<Log> GetLogs() 
         {
-            return this._stateLogs;
+            return this._logs;
         }
 
-        public void ExportStateLogs() 
+        public void ExportLogs() 
         {
             OutputTable table = new OutputTable();
-            foreach (StateLog log in this._stateLogs) 
+            foreach (Log log in this._logs) 
             {
                 table.AddRow(log);
             }
@@ -111,7 +111,7 @@ namespace Nodez.Sdmp.General.Managers
             if (Directory.Exists(dirPath) == false)
                 Directory.CreateDirectory(dirPath);
 
-            table.WriteToFile(dirPath, false, true, Constants.Constants.STATE_LOG);
+            table.WriteToFile(dirPath, false, true, $"{Constants.Constants.LOG}_{CurrentSolverName}_{engineStartTime}");
             OutputManager.Instance.SetOutput(table.Name, table);
         }
 

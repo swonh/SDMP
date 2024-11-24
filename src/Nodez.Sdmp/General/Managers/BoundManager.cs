@@ -51,11 +51,8 @@ namespace Nodez.Sdmp.General.Managers
                     this.BestPrimalBound = primalBound;
                     LogControl.Instance.WritePrimalBoundUpdateLog(state, primalBound, elapsedTime);
 
-                    if (LogControl.Instance.IsExportStateLog())
-                    {
-                        StateLog stateLog = LogControl.Instance.GetStateLog(state, elapsedTime);
-                        SolverManager.Instance.AddStateLog(stateLog);
-                    }
+                    Log log = LogControl.Instance.GetLog(state, elapsedTime);
+                    SolverManager.Instance.AddLog(log);
                 }
             }
             else
@@ -67,11 +64,8 @@ namespace Nodez.Sdmp.General.Managers
                     this.BestPrimalBound = primalBound;
                     LogControl.Instance.WritePrimalBoundUpdateLog(state, primalBound, elapsedTime);
 
-                    if (LogControl.Instance.IsExportStateLog())
-                    {
-                        StateLog stateLog = LogControl.Instance.GetStateLog(state, elapsedTime);
-                        SolverManager.Instance.AddStateLog(stateLog);
-                    }
+                    Log log = LogControl.Instance.GetLog(state, elapsedTime);
+                    SolverManager.Instance.AddLog(log);
                 }
             }
         }
@@ -85,25 +79,19 @@ namespace Nodez.Sdmp.General.Managers
                     this.BestDualBound = dualBound;
                     LogControl.Instance.WriteDualBoundUpdateLog(state, dualBound, elapsedTime);
 
-                    if (LogControl.Instance.IsExportStateLog())
-                    {
-                        StateLog stateLog = LogControl.Instance.GetStateLog(state, elapsedTime);
-                        SolverManager.Instance.AddStateLog(stateLog);
-                    }
+                    Log log = LogControl.Instance.GetLog(state, elapsedTime);
+                    SolverManager.Instance.AddLog(log);
                 }
             }
-            else 
+            else
             {
                 if (this.BestDualBound > dualBound)
                 {
                     this.BestDualBound = dualBound;
                     LogControl.Instance.WriteDualBoundUpdateLog(state, dualBound, elapsedTime);
 
-                    if (LogControl.Instance.IsExportStateLog())
-                    {
-                        StateLog stateLog = LogControl.Instance.GetStateLog(state, elapsedTime);
-                        SolverManager.Instance.AddStateLog(stateLog);
-                    }
+                    Log log = LogControl.Instance.GetLog(state, elapsedTime);
+                    SolverManager.Instance.AddLog(log);
                 }
             }
         }
