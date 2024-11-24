@@ -96,10 +96,10 @@ namespace Nodez.Project.RoutingTemplate.Controls
             return 0.1;
         }
 
-        public override double GetEstimatedValue(State state)
+        public override double GetValueFunctionEstimate(State state)
         {
             double estimatedValue = 0;
-            estimatedValue = state.BestValue + state.DualBound;
+            estimatedValue = state.CurrentBestValue + state.DualBound;
 
             return estimatedValue;
         }
@@ -152,14 +152,14 @@ namespace Nodez.Project.RoutingTemplate.Controls
                     if (state.IsFinal)
                         continue;
 
-                    double estimatedValue = GetEstimatedValue(state);
-                    state.EstimationValue = estimatedValue;
+                    double estimatedValue = GetValueFunctionEstimate(state);
+                    state.ValueFunctionEstimate = estimatedValue;
                 }
 
                 if (objectiveFunctionType == ObjectiveFunctionType.Minimize)
-                    states = states.OrderBy(x => x.EstimationValue).ToList();
+                    states = states.OrderBy(x => x.ValueFunctionEstimate).ToList();
                 else if (objectiveFunctionType == ObjectiveFunctionType.Maximize)
-                    states = states.OrderByDescending(x => x.EstimationValue).ToList();
+                    states = states.OrderByDescending(x => x.ValueFunctionEstimate).ToList();
 
                 int count = 0;
                 foreach (State state in states)
@@ -177,7 +177,7 @@ namespace Nodez.Project.RoutingTemplate.Controls
 
         public override List<State> FilterLocalStates(List<State> states, int maxTransitionCount)
         {
-            states = states.OrderBy(x => x.PrevBestState.DualBound + (x.BestValue - x.PrevBestState.BestValue) + x.BestValue).ToList();
+            states = states.OrderBy(x => x.PrevBestState.DualBound + (x.CurrentBestValue - x.PrevBestState.CurrentBestValue) + x.CurrentBestValue).ToList();
 
             List<State> filtered = new List<State>();
 
@@ -201,14 +201,14 @@ namespace Nodez.Project.RoutingTemplate.Controls
 
             if (objFuncType == ObjectiveFunctionType.Minimize)
             {
-                if (state.EstimationValue + pruneTolerance > minEstimationValue + (minTransitionCost * multiplier))
+                if (state.ValueFunctionEstimate + pruneTolerance > minEstimationValue + (minTransitionCost * multiplier))
                     return true;
                 else
                     return false;
             }
             else
             {
-                if (state.EstimationValue + pruneTolerance < minEstimationValue + (minTransitionCost * multiplier))
+                if (state.ValueFunctionEstimate + pruneTolerance < minEstimationValue + (minTransitionCost * multiplier))
                     return true;
                 else
                     return false;

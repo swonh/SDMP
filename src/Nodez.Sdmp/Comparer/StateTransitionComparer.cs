@@ -17,7 +17,7 @@ namespace Nodez.Sdmp.Comparer
         {
             int cmp = 0;
 
-            cmp = x.PostActionState.BestValue.CompareTo(y.PostActionState.BestValue);
+            cmp = x.PostActionState.CurrentBestValue.CompareTo(y.PostActionState.CurrentBestValue);
 
             if (cmp == 0)
                 cmp = x.Index.CompareTo(y.Index);

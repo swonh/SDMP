@@ -124,7 +124,7 @@ namespace Nodez.Project.SchedulingTemplate.Controls
 
                 copiedState.SetMakeSpan();
 
-                copiedState.BestValue = copiedState.Makespan;
+                copiedState.CurrentBestValue = copiedState.Makespan;
 
                 copiedState.SetKey(copiedState.GetKey());
 
@@ -143,7 +143,7 @@ namespace Nodez.Project.SchedulingTemplate.Controls
 
             double bestPrimalBound = boundManager.BestPrimalBound;
             double dualBound = state.DualBound;
-            double bestValue = state.BestValue;
+            double bestValue = state.CurrentBestValue;
 
             double rootDualBound = boundManager.RootDualBound;
 

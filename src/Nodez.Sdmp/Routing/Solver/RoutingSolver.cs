@@ -64,9 +64,9 @@ namespace Nodez.Sdmp.Routing.Solver
                 tran.SetIndex(++this.TransitionIndex);
 
                 double cost = tran.Cost;
-                double nextValue = initialState.BestValue + cost;
+                double nextValue = initialState.CurrentBestValue + cost;
 
-                toState.BestValue = nextValue;
+                toState.CurrentBestValue = nextValue;
 
                 toState.SetPrevBestState(initialState);
 

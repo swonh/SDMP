@@ -105,7 +105,7 @@ namespace Nodez.Project.RoutingTemplate.Controls
 
                     copiedState.VisitNode(node, vehicle, resource);
 
-                    copiedState.BestValue += minDist;
+                    copiedState.CurrentBestValue += minDist;
                 }
 
                 states.Add(copiedState);
@@ -128,7 +128,7 @@ namespace Nodez.Project.RoutingTemplate.Controls
                 double dist = manager.GetDistance(info.CurrentNodeIndex, manager.RoutingProblem.Depot.Index);
                 copiedState.ReturnToDepot(item.Key);
 
-                copiedState.BestValue += dist;
+                copiedState.CurrentBestValue += dist;
 
                 states.Add(copiedState);
             }
@@ -144,7 +144,7 @@ namespace Nodez.Project.RoutingTemplate.Controls
 
             double bestPrimalBound = boundManager.BestPrimalBound;
             double dualBound = state.DualBound;
-            double bestValue = state.BestValue;
+            double bestValue = state.CurrentBestValue;
 
             double rootDualBound = boundManager.RootDualBound;
 

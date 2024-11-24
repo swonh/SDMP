@@ -109,12 +109,12 @@ namespace Nodez.Sdmp.General.Controls
             return 2;
         }
 
-        public virtual double GetEstimatedValue(State state) 
+        public virtual double GetValueFunctionEstimate(State state) 
         {
             double dualBound = BoundControl.Instance.GetDualBound(state);
             state.SetDualBound(dualBound);
 
-            return state.BestValue + state.DualBound;
+            return state.CurrentBestValue + state.DualBound;
         }
 
         public virtual List<State> FilterGlobalStates(List<State> states, int maxTransitionCount, ObjectiveFunctionType objectiveFunctionType, double pruneTolerance, bool isApplyStateClustering)
@@ -161,14 +161,14 @@ namespace Nodez.Sdmp.General.Controls
                     if (state.IsFinal)
                         continue;
 
-                    double estimatedValue = GetEstimatedValue(state);
-                    state.EstimationValue = estimatedValue;
+                    double estimatedValue = GetValueFunctionEstimate(state);
+                    state.ValueFunctionEstimate = estimatedValue;
                 }
 
                 if (objectiveFunctionType == ObjectiveFunctionType.Minimize)
-                    states = states.OrderBy(x => x.EstimationValue).ToList();
+                    states = states.OrderBy(x => x.ValueFunctionEstimate).ToList();
                 else if (objectiveFunctionType == ObjectiveFunctionType.Maximize)
-                    states = states.OrderByDescending(x => x.EstimationValue).ToList();
+                    states = states.OrderByDescending(x => x.ValueFunctionEstimate).ToList();
 
                 int count = 0;
                 foreach (State state in states)
@@ -186,7 +186,7 @@ namespace Nodez.Sdmp.General.Controls
 
         public virtual List<State> FilterLocalStates(List<State> states, int maxTransitionCount)
         {
-            states = states.OrderBy(x => x.PrevBestState.DualBound + (x.BestValue - x.PrevBestState.BestValue) + x.BestValue).ToList();
+            states = states.OrderBy(x => x.PrevBestState.DualBound + (x.CurrentBestValue - x.PrevBestState.CurrentBestValue) + x.CurrentBestValue).ToList();
 
             List<State> filtered = new List<State>();
 
@@ -210,14 +210,14 @@ namespace Nodez.Sdmp.General.Controls
 
             if (objFuncType == ObjectiveFunctionType.Minimize)
             {
-                if (state.EstimationValue + pruneTolerance > minEstimationValue + (minTransitionCost * multiplier))
+                if (state.ValueFunctionEstimate + pruneTolerance > minEstimationValue + (minTransitionCost * multiplier))
                     return true;
                 else
                     return false;
             }
             else
             {
-                if (state.EstimationValue + pruneTolerance < minEstimationValue + (minTransitionCost * multiplier))
+                if (state.ValueFunctionEstimate + pruneTolerance < minEstimationValue + (minTransitionCost * multiplier))
                     return true;
                 else
                     return false;

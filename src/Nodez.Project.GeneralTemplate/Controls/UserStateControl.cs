@@ -42,7 +42,7 @@ namespace Nodez.Project.GeneralTemplate.Controls
 
             double bestPrimalBound = boundManager.BestPrimalBound;
             double dualBound = state.DualBound;
-            double bestValue = state.BestValue;
+            double bestValue = state.CurrentBestValue;
 
             double rootDualBound = boundManager.RootDualBound;
 

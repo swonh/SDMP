@@ -17,11 +17,11 @@ namespace Nodez.Sdmp.General.DataModel
 
         public int Index { get; set; }
 
-        public double BestValue { get; set; }
+        public double CurrentBestValue { get; set; }
 
         public double DualBound { get; set; }
 
-        public double EstimationValue { get; set; }
+        public double ValueFunctionEstimate { get; set; }
 
         public double PrimalBound { get; set; }
 
@@ -85,7 +85,7 @@ namespace Nodez.Sdmp.General.DataModel
 
         public virtual void SetEstimationValue(double value) 
         {
-            this.EstimationValue = value;
+            this.ValueFunctionEstimate = value;
             this.IsSetEstimationBound = true;
         }
 

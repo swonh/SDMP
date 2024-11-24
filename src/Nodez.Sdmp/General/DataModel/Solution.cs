@@ -37,7 +37,7 @@ namespace Nodez.Sdmp.General.DataModel
         public void SetValue() 
         {
             IOrderedEnumerable<KeyValuePair<int, State>> ordered = this.States.OrderBy(x => x.Key);
-            this.Value = ordered.Last().Value.BestValue;
+            this.Value = ordered.Last().Value.CurrentBestValue;
         }
 
         public void SetIsOptimal(bool isOptimal) 

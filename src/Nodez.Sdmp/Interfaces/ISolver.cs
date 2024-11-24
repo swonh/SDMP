@@ -193,9 +193,9 @@ namespace Nodez.Sdmp.Interfaces
                 tran.SetIndex(++this.TransitionIndex);
 
                 double cost = tran.Cost;
-                double nextValue = initialState.BestValue + cost;
+                double nextValue = initialState.CurrentBestValue + cost;
 
-                toState.BestValue = nextValue;
+                toState.CurrentBestValue = nextValue;
 
                 toState.SetPrevBestState(initialState);
 
@@ -407,7 +407,7 @@ namespace Nodez.Sdmp.Interfaces
 
                 if (this.IsUseEstimationValue) 
                 {
-                    double firstEstimationValue = approxControl.GetEstimatedValue(initialState);
+                    double firstEstimationValue = approxControl.GetValueFunctionEstimate(initialState);
 
                     initialState.SetEstimationValue(firstEstimationValue);
                 }
@@ -552,11 +552,11 @@ namespace Nodez.Sdmp.Interfaces
                 if (state.IsFinal)
                     continue;
 
-                double estimatedValue = approxControl.GetEstimatedValue(state);
-                state.EstimationValue = estimatedValue;
+                double estimatedValue = approxControl.GetValueFunctionEstimate(state);
+                state.ValueFunctionEstimate = estimatedValue;
 
-                if (minEstimationValue > state.EstimationValue)
-                    minEstimationValue = state.EstimationValue;
+                if (minEstimationValue > state.ValueFunctionEstimate)
+                    minEstimationValue = state.ValueFunctionEstimate;
 
                 loopCount++;
             }
@@ -565,9 +565,9 @@ namespace Nodez.Sdmp.Interfaces
                 return;
 
             if (objectiveFunctionType == ObjectiveFunctionType.Minimize)
-                states = states.OrderBy(x => x.EstimationValue).ToList();
+                states = states.OrderBy(x => x.ValueFunctionEstimate).ToList();
             else
-                states = states.OrderByDescending(x => x.EstimationValue).ToList();
+                states = states.OrderByDescending(x => x.ValueFunctionEstimate).ToList();
 
             double minTransitionCost = approxControl.GetMinimumTransitionCost();
             double multiplier = approxControl.GetMultiplier();
@@ -832,7 +832,7 @@ namespace Nodez.Sdmp.Interfaces
                 bool isCalcEstimationValue = approxManager.IsCalculateEstimationValue(isUseEstimationValue, estimationValueUpdatePeriod, stageIndex, loopCount);
                 if (isCalcEstimationValue && state.IsSetEstimationBound == false) 
                 {
-                    double estimationBound = approxControl.GetEstimatedValue(state);
+                    double estimationBound = approxControl.GetValueFunctionEstimate(state);
                     state.SetEstimationValue(estimationBound);
                 }
 
@@ -878,7 +878,7 @@ namespace Nodez.Sdmp.Interfaces
                 if (this.IsApplyStateFiltering == false && this.IsApplyApproximation == false)
                 {
                     if (fixedStateBounds.ContainsKey(state.Key) == false)
-                        fixedStateBounds.Add(state.Key, state.BestValue + state.DualBound);
+                        fixedStateBounds.Add(state.Key, state.CurrentBestValue + state.DualBound);
                 }
                 
                 List<General.DataModel.StateTransition> trans = new List<General.DataModel.StateTransition>();
@@ -939,7 +939,7 @@ namespace Nodez.Sdmp.Interfaces
                     toState.SetKey(stateControl.GetKey(toState));
 
                 double cost = nextTran.Cost;
-                double nextValue = state.BestValue + cost;
+                double nextValue = state.CurrentBestValue + cost;
 
                 State visited;
                 if (this.VisitedStates.TryGetValue(toState.Key, out visited))
@@ -948,32 +948,32 @@ namespace Nodez.Sdmp.Interfaces
 
                     if (this.ObjectiveFunctionType == ObjectiveFunctionType.Minimize)
                     {
-                        if (nextValue < visited.BestValue)
+                        if (nextValue < visited.CurrentBestValue)
                         {
                             visited.PrevBestStates.Clear();
                             visited.SetPrevBestState(state);
 
-                            visited.BestValue = nextValue;
+                            visited.CurrentBestValue = nextValue;
 
                             this.UpdatePriorityQueue(visited);
                         }
-                        else if (nextValue == visited.BestValue)
+                        else if (nextValue == visited.CurrentBestValue)
                         {
                             visited.SetPrevBestState(state);
                         }
                     }
                     else if (this.ObjectiveFunctionType == ObjectiveFunctionType.Maximize) 
                     {
-                        if (nextValue > visited.BestValue)
+                        if (nextValue > visited.CurrentBestValue)
                         {
                             visited.PrevBestStates.Clear();
                             visited.SetPrevBestState(state);
 
-                            visited.BestValue = nextValue;
+                            visited.CurrentBestValue = nextValue;
 
                             this.UpdatePriorityQueue(visited);
                         }
-                        else if (nextValue == visited.BestValue)
+                        else if (nextValue == visited.CurrentBestValue)
                         {
                             visited.SetPrevBestState(state);
                         }
@@ -990,7 +990,7 @@ namespace Nodez.Sdmp.Interfaces
 
                     toState.SetPrevBestState(state);
 
-                    toState.BestValue = nextValue;
+                    toState.CurrentBestValue = nextValue;
 
                     this.VisitedStates.Add(toState.Key, toState);
                     toState.IsVisited = true;

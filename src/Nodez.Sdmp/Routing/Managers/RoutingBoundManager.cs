@@ -25,7 +25,7 @@ namespace Nodez.Sdmp.Routing.Managers
 
             double mstValue = prim.GetMSTValue();
 
-            double bound = mstValue - state.BestValue;
+            double bound = mstValue - state.CurrentBestValue;
 
             return bound;
         }
