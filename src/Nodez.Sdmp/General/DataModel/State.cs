@@ -43,7 +43,7 @@ namespace Nodez.Sdmp.General.DataModel
 
         public bool IsSetPrimalBound { get; set; }
 
-        public bool IsSetEstimationBound { get; set; }
+        public bool IsSetValueFunctionEstimate { get; set; }
 
         public State PreActionState { get; set; }
 
@@ -83,10 +83,10 @@ namespace Nodez.Sdmp.General.DataModel
             this.IsSetPrimalBound = true;
         }
 
-        public virtual void SetEstimationValue(double value) 
+        public virtual void SetValueFunctionEstimate(double value) 
         {
             this.ValueFunctionEstimate = value;
-            this.IsSetEstimationBound = true;
+            this.IsSetValueFunctionEstimate = true;
         }
 
         public virtual void SetKey(string key)

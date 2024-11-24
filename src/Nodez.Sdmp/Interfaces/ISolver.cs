@@ -409,7 +409,7 @@ namespace Nodez.Sdmp.Interfaces
                 {
                     double firstEstimationValue = approxControl.GetValueFunctionEstimate(initialState);
 
-                    initialState.SetEstimationValue(firstEstimationValue);
+                    initialState.SetValueFunctionEstimate(firstEstimationValue);
                 }
 
                 if (solutionManager.CheckOptimalityCondition())
@@ -835,11 +835,11 @@ namespace Nodez.Sdmp.Interfaces
                     state.SetDualBound(dualBound);
                 }
 
-                bool isCalcEstimationValue = approxManager.IsCalculateEstimationValue(isUseValueFuctionEstimate, valueFunctionEstimateUpdatePeriod, stageIndex, loopCount);
-                if (isCalcEstimationValue && state.IsSetEstimationBound == false) 
+                bool isCalcValueFunctionEstimate = approxManager.IsCalculateValueFunctionEstimate(isUseValueFuctionEstimate, valueFunctionEstimateUpdatePeriod, stageIndex, loopCount);
+                if (isCalcValueFunctionEstimate && state.IsSetValueFunctionEstimate == false) 
                 {
-                    double estimationBound = approxControl.GetValueFunctionEstimate(state);
-                    state.SetEstimationValue(estimationBound);
+                    double valueFunctionEstimate = approxControl.GetValueFunctionEstimate(state);
+                    state.SetValueFunctionEstimate(valueFunctionEstimate);
                 }
 
                 bool isCalcPrimalBound = boundManager.IsCalculatePrimalBound(isUsePrimalBound, primalSolutionUpdatePeriod, stageIndex, loopCount);

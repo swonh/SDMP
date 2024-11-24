@@ -19,12 +19,12 @@ namespace Nodez.Sdmp.General.Managers
 
         public void Reset() { lazy = new Lazy<ApproximationManager>(); }
 
-        public bool IsCalculateEstimationValue(bool isUseEstimationValue, int estimationValueUpdatePeriod, int stageIndex, int loopCount)
+        public bool IsCalculateValueFunctionEstimate(bool isUseValueFunctionEstimate, int valueFunctionEstimateUpdatePeriod, int stageIndex, int loopCount)
         {
-            if (isUseEstimationValue == false)
+            if (isUseValueFunctionEstimate == false)
                 return false;
 
-            if (loopCount % estimationValueUpdatePeriod != 0)
+            if (loopCount % valueFunctionEstimateUpdatePeriod != 0)
                 return false;
 
             int stopStageIndex = ApproximationControl.Instance.GetValueFunctionEstimateStopStageIndex();
