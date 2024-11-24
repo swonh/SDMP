@@ -100,6 +100,43 @@ namespace Nodez.Sdmp.General.Managers
             this._statusLogs.Add(log);
         }
 
+        public void AddStateInfoLog(StateInfoLog log, bool autoFlush = true)
+        {
+            this._stateInfoLogs.Add(log);
+
+            if (autoFlush)
+            {
+                if (this._stateInfoLogs.Count > 5000)
+                {
+                    OutputTable stateInfoLogTable = new OutputTable();
+
+                    foreach (StateInfoLog item in _stateInfoLogs)
+                    {
+                        stateInfoLogTable.AddRow(item);
+                    }
+
+                    string engineStartTime = SolverManager.Instance.GetEngineStartTime(CurrentSolverName).ToString("yyyyMMdd_HHmmss");
+                    string dirPath = SolverManager.Instance.GetOutputDirectoryPath(CurrentSolverName);
+
+                    if (Directory.Exists(dirPath) == false)
+                        Directory.CreateDirectory(dirPath);
+
+                    if (OutputManager.Instance.GetOutput(Constants.Constants.STATE_INFO_LOG) == null)
+                    {
+                        stateInfoLogTable.WriteToFile(dirPath, false, true, $"{Constants.Constants.STATE_INFO_LOG}_{CurrentSolverName}_{engineStartTime}");
+                        OutputManager.Instance.SetOutput(stateInfoLogTable.Name, stateInfoLogTable);
+                    }
+                    else
+                    {
+                        stateInfoLogTable.WriteToFile(dirPath, true, false, $"{Constants.Constants.STATE_INFO_LOG}_{CurrentSolverName}_{engineStartTime}");
+                    }
+
+                    this.ClearStateInfoLogs();
+                    stateInfoLogTable.Clear();
+                }
+            }
+        }
+
         public void AddStateInfoLogs(List<StateInfoLog> logs, bool autoFlush = true) 
         {
             this._stateInfoLogs.AddRange(logs);
