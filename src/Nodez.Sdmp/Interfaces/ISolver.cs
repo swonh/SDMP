@@ -778,6 +778,8 @@ namespace Nodez.Sdmp.Interfaces
 
                 int stageIndex = peek.Stage.Index;
 
+                peek.DualBound = boundManager.RootDualBound;
+
                 if (this.CheckStateClusteringCondition(stageIndex)) 
                 {
                     this.ClusterGlobalStates(transitionQueue);
@@ -831,10 +833,6 @@ namespace Nodez.Sdmp.Interfaces
                 {
                     double dualBound = boundControl.GetDualBound(state);
                     state.SetDualBound(dualBound);
-                }
-                else 
-                {
-                    state.DualBound = boundManager.RootDualBound;
                 }
 
                 bool isCalcValueFunctionEstimate = approxManager.IsCalculateValueFunctionEstimate(isUseValueFuctionEstimate, valueFunctionEstimateUpdatePeriod, stageIndex, loopCount);
