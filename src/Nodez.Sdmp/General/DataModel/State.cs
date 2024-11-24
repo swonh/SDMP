@@ -2,6 +2,7 @@
 // This Source Code Form is subject to the terms of the Mozilla Public License, Version 2.0. 
 // If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
+using Nodez.Sdmp.General.Managers;
 using Priority_Queue;
 using System;
 using System.Collections.Generic;
@@ -63,12 +64,14 @@ namespace Nodez.Sdmp.General.DataModel
         public State(string key)
         {
             this.Key = key;
+            this.DualBound = BoundManager.Instance.RootDualBound;
         }
 
         public State()
         {
             this.PrevStates = new Dictionary<string, State>();
             this.PrevBestStates = new Dictionary<string, State>();
+            this.DualBound = BoundManager.Instance.RootDualBound;
         }
 
         public virtual void SetDualBound(double value)

@@ -778,8 +778,6 @@ namespace Nodez.Sdmp.Interfaces
 
                 int stageIndex = peek.Stage.Index;
 
-                peek.DualBound = boundManager.RootDualBound;
-
                 if (this.CheckStateClusteringCondition(stageIndex)) 
                 {
                     this.ClusterGlobalStates(transitionQueue);
