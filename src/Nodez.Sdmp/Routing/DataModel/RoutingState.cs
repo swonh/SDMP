@@ -205,7 +205,7 @@ namespace Nodez.Sdmp.Routing.DataModel
             return str.ToString();
         }
 
-        public RoutingState Clone() 
+        public new RoutingState Clone() 
         {
             RoutingState clone = (RoutingState)this.MemberwiseClone();
 
