@@ -143,7 +143,7 @@ namespace Nodez.Sdmp.General.Managers
 
             if (autoFlush)
             {
-                if (this._stateInfoLogs.Count > 5000)
+                if (this._stateInfoLogs.Count >= 5000)
                 {
                     OutputTable stateInfoLogTable = new OutputTable();
                                                      
