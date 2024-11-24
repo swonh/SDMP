@@ -859,8 +859,8 @@ namespace Nodez.Sdmp.Interfaces
 
                 if (logControl.IsWriteStateInfoLog())
                 {
-                    List<StateInfoLog> stateInfoLogs = LogControl.Instance.GetStateInfoLogs(transitionQueue.ToList());
-                    SolverManager.Instance.AddStateInfoLogs(stateInfoLogs);
+                    StateInfoLog log = LogControl.Instance.GetStateInfoLog(state);
+                    SolverManager.Instance.AddStateInfoLog(log);
                 }
 
                 if (this.IsOnlineLearning && mlManager.IsFitModel(omlineTrainingPeriod, stageIndex)) 

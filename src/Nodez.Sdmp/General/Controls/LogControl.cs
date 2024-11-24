@@ -75,6 +75,21 @@ namespace Nodez.Sdmp.General.Controls
             return log;
         }
 
+        public StateInfoLog GetStateInfoLog(State state)
+        {
+            StateInfoLog log = new StateInfoLog();
+
+            log.STATE_INDEX = state.Index;
+            log.STATE_KEY = state.Key;
+            log.STAGE_INDEX = state.Stage.Index;
+            log.CURRENT_BEST_VALUE = state.CurrentBestValue;
+            log.DUAL_BOUND = state.DualBound;
+            log.PRIMAL_BOUND = state.PrimalBound;
+            log.VALUE_FUNCTION_ESTIMATE = state.ValueFunctionEstimate;
+
+            return log;
+        }
+
         public List<StateInfoLog> GetStateInfoLogs(List<State> states) 
         {
             List<StateInfoLog> logs = new List<StateInfoLog>();
