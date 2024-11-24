@@ -37,12 +37,6 @@ To use `SDMP`, you must first install it.
 
 If you need help, please [open a GitHub issue](https://github.com/swonh/SDMP/issues/new).
 
-## Discussions
-
-If you would like to discuss solving problems in your industry (manufacturing, logistics, etc.), please contact us.
-
-Contact: swonhong.github@gmail.com
-
 ## Collaborations
 
 We welcome collaborators! If you want to work with us to improve and expand our software, please contact us! (You can also submit a pull request directly.)
