@@ -826,13 +826,15 @@ namespace Nodez.Sdmp.Interfaces
 
                 eventControl.OnVisitState(state);
 
-                state.DualBound = boundManager.RootDualBound;
-
                 bool isCalcDualBound = boundManager.IsCalculateDualBound(isUseDualBound, dualBoundUpdatePeriod, stageIndex, loopCount);
                 if (isCalcDualBound && state.IsSetDualBound == false)
                 {
                     double dualBound = boundControl.GetDualBound(state);
                     state.SetDualBound(dualBound);
+                }
+                else 
+                {
+                    state.DualBound = boundManager.RootDualBound;
                 }
 
                 bool isCalcValueFunctionEstimate = approxManager.IsCalculateValueFunctionEstimate(isUseValueFuctionEstimate, valueFunctionEstimateUpdatePeriod, stageIndex, loopCount);
