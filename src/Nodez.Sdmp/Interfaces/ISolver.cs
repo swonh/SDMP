@@ -42,7 +42,7 @@ namespace Nodez.Sdmp.Interfaces
 
         public int DualBoundUpdatePeriod { get; protected set; }
 
-        public int EstimationValueUpdatePeriod { get; protected set; }
+        public int ValueFuctionEstimateUpdatePeriod { get; protected set; }
 
         public int OnlineTrainingPeriod { get; protected set; }
 
@@ -306,7 +306,7 @@ namespace Nodez.Sdmp.Interfaces
                 this.RunMaxTime = solverControl.GetRunMaxTime();
                 this.PrimalSolutionUpdatePeriod = boundControl.GetPrimalSolutionUpdatePeriod();
                 this.DualBoundUpdatePeriod = boundControl.GetDualBoundUpdatePeriod();
-                this.EstimationValueUpdatePeriod = approxControl.GetEstimationValueUpdatePeriod();
+                this.ValueFuctionEstimateUpdatePeriod = approxControl.GetValueFunctionEstimateUpdatePeriod();
                 this.LogPeriod = logControl.GetLogPeriod();
                 this.IsUsePrimalBound = boundControl.IsUsePrimalBound();
                 this.IsUseDualBound = boundControl.IsUseDualBound();
@@ -743,7 +743,7 @@ namespace Nodez.Sdmp.Interfaces
             int stateLogPeriod = this.LogPeriod;
             int primalSolutionUpdatePeriod = this.PrimalSolutionUpdatePeriod;
             int dualBoundUpdatePeriod = this.DualBoundUpdatePeriod;
-            int estimationValueUpdatePeriod = this.EstimationValueUpdatePeriod;
+            int valueFunctionEstimateUpdatePeriod = this.ValueFuctionEstimateUpdatePeriod;
             int omlineTrainingPeriod = this.OnlineTrainingPeriod;
             bool isUsePrimalBound = this.IsUsePrimalBound;
             bool isUseDualBound = this.IsUseDualBound;
@@ -829,7 +829,7 @@ namespace Nodez.Sdmp.Interfaces
                     state.SetDualBound(dualBound);
                 }
 
-                bool isCalcEstimationValue = approxManager.IsCalculateEstimationValue(isUseEstimationValue, estimationValueUpdatePeriod, stageIndex, loopCount);
+                bool isCalcEstimationValue = approxManager.IsCalculateEstimationValue(isUseEstimationValue, valueFunctionEstimateUpdatePeriod, stageIndex, loopCount);
                 if (isCalcEstimationValue && state.IsSetEstimationBound == false) 
                 {
                     double estimationBound = approxControl.GetValueFunctionEstimate(state);

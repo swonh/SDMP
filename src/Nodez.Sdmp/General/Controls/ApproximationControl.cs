@@ -49,7 +49,7 @@ namespace Nodez.Sdmp.General.Controls
             return false;
         }
 
-        public virtual int GetEstimationValueUpdatePeriod()
+        public virtual int GetValueFunctionEstimateUpdatePeriod()
         {
             return 1;
         }

@@ -36,7 +36,7 @@ namespace Nodez.Project.RoutingTemplate.Controls
             return false;
         }
 
-        public override int GetEstimationValueUpdatePeriod()
+        public override int GetValueFunctionEstimateUpdatePeriod()
         {
             return 1;
         }
