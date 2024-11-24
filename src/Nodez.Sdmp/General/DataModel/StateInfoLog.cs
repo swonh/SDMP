@@ -27,7 +27,7 @@ namespace Nodez.Sdmp.General.DataModel
 
         public double PRIMAL_BONUND { get; set; }
 
-        public double VALUE_FUNCTION_ESTIMATES { get; set; }
+        public double VALUE_FUNCTION_ESTIMATE { get; set; }
 
     }
 }

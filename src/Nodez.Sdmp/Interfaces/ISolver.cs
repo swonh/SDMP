@@ -46,7 +46,7 @@ namespace Nodez.Sdmp.Interfaces
 
         public int OnlineTrainingPeriod { get; protected set; }
 
-        public int StateLogPeriod { get; protected set; }
+        public int LogPeriod { get; protected set; }
 
         public int CurrentStateIndex { get; protected set; }
 
@@ -307,7 +307,7 @@ namespace Nodez.Sdmp.Interfaces
                 this.PrimalSolutionUpdatePeriod = boundControl.GetPrimalSolutionUpdatePeriod();
                 this.DualBoundUpdatePeriod = boundControl.GetDualBoundUpdatePeriod();
                 this.EstimationValueUpdatePeriod = approxControl.GetEstimationValueUpdatePeriod();
-                this.StateLogPeriod = logControl.GetStateLogPeriod();
+                this.LogPeriod = logControl.GetLogPeriod();
                 this.IsUsePrimalBound = boundControl.IsUsePrimalBound();
                 this.IsUseDualBound = boundControl.IsUseDualBound();
                 this.IsUseEstimationValue = approxControl.IsUseEstimationValue();
@@ -740,7 +740,7 @@ namespace Nodez.Sdmp.Interfaces
             ApproximationManager approxManager = ApproximationManager.Instance;
             MachineLearningManager mlManager = MachineLearningManager.Instance;
 
-            int stateLogPeriod = this.StateLogPeriod;
+            int stateLogPeriod = this.LogPeriod;
             int primalSolutionUpdatePeriod = this.PrimalSolutionUpdatePeriod;
             int dualBoundUpdatePeriod = this.DualBoundUpdatePeriod;
             int estimationValueUpdatePeriod = this.EstimationValueUpdatePeriod;

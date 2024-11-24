@@ -34,7 +34,7 @@ namespace Nodez.Sdmp.General.Controls
             }
         }
 
-        public virtual int GetStateLogPeriod()
+        public virtual int GetLogPeriod()
         {
             return 5000;
         }
