@@ -27,7 +27,7 @@ namespace Nodez.Sdmp.General.Managers
             if (loopCount % estimationValueUpdatePeriod != 0)
                 return false;
 
-            int stopStageIndex = ApproximationControl.Instance.GetEstimationValueStopStageIndex();
+            int stopStageIndex = ApproximationControl.Instance.GetValueFunctionEstimateStopStageIndex();
 
             if (stageIndex >= stopStageIndex)
                 return false;

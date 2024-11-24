@@ -44,7 +44,7 @@ namespace Nodez.Sdmp.General.Controls
             return false;
         }
 
-        public virtual bool IsUseEstimationValue()
+        public virtual bool IsUseValueFunctionEstimate()
         {
             return false;
         }
@@ -54,7 +54,7 @@ namespace Nodez.Sdmp.General.Controls
             return 1;
         }
 
-        public virtual int GetEstimationValueStopStageIndex()
+        public virtual int GetValueFunctionEstimateStopStageIndex()
         {
             return Int32.MaxValue;
         }

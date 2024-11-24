@@ -29,7 +29,7 @@ namespace Nodez.Project.SchedulingTemplate.Controls
             return false;
         }
 
-        public override bool IsUseEstimationValue()
+        public override bool IsUseValueFunctionEstimate()
         {
             return false;
         }
@@ -39,7 +39,7 @@ namespace Nodez.Project.SchedulingTemplate.Controls
             return 1;
         }
 
-        public override int GetEstimationValueStopStageIndex()
+        public override int GetValueFunctionEstimateStopStageIndex()
         {
             return Int32.MaxValue;
         }

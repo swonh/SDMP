@@ -31,7 +31,7 @@ namespace Nodez.Project.RoutingTemplate.Controls
             return false;
         }
 
-        public override bool IsUseEstimationValue()
+        public override bool IsUseValueFunctionEstimate()
         {
             return false;
         }
@@ -41,7 +41,7 @@ namespace Nodez.Project.RoutingTemplate.Controls
             return 1;
         }
 
-        public override int GetEstimationValueStopStageIndex()
+        public override int GetValueFunctionEstimateStopStageIndex()
         {
             return Int32.MaxValue;
         }

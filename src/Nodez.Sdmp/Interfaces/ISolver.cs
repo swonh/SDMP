@@ -62,7 +62,7 @@ namespace Nodez.Sdmp.Interfaces
 
         public bool IsUseDualBound { get; protected set; }
 
-        public bool IsUseEstimationValue { get; protected set; }
+        public bool IsUseValueFunctionEstimate { get; protected set; }
 
         public double PruneTolerance { get; protected set; }
 
@@ -310,7 +310,7 @@ namespace Nodez.Sdmp.Interfaces
                 this.LogPeriod = logControl.GetLogPeriod();
                 this.IsUsePrimalBound = boundControl.IsUsePrimalBound();
                 this.IsUseDualBound = boundControl.IsUseDualBound();
-                this.IsUseEstimationValue = approxControl.IsUseEstimationValue();
+                this.IsUseValueFunctionEstimate = approxControl.IsUseValueFunctionEstimate();
                 this.OnlineTrainingPeriod = mlControl.GetOnlineTrainingPeriod();
                 this.PruneTolerance = boundControl.GetPruneTolerance();
                 this.IsApplyStateFiltering = approxControl.IsApplyStateFiltering();
@@ -405,7 +405,7 @@ namespace Nodez.Sdmp.Interfaces
                     boundManager.SetRootDualBound(firstDualBound);
                 }
 
-                if (this.IsUseEstimationValue) 
+                if (this.IsUseValueFunctionEstimate) 
                 {
                     double firstEstimationValue = approxControl.GetValueFunctionEstimate(initialState);
 
@@ -747,7 +747,7 @@ namespace Nodez.Sdmp.Interfaces
             int omlineTrainingPeriod = this.OnlineTrainingPeriod;
             bool isUsePrimalBound = this.IsUsePrimalBound;
             bool isUseDualBound = this.IsUseDualBound;
-            bool isUseEstimationValue = this.IsUseEstimationValue;
+            bool isUseValueFuctionEstimate = this.IsUseValueFunctionEstimate;
             double pruneTolerance = this.PruneTolerance;
 
             ObjectiveFunctionType objectiveFunctionType = this.ObjectiveFunctionType;
@@ -829,7 +829,7 @@ namespace Nodez.Sdmp.Interfaces
                     state.SetDualBound(dualBound);
                 }
 
-                bool isCalcEstimationValue = approxManager.IsCalculateEstimationValue(isUseEstimationValue, valueFunctionEstimateUpdatePeriod, stageIndex, loopCount);
+                bool isCalcEstimationValue = approxManager.IsCalculateEstimationValue(isUseValueFuctionEstimate, valueFunctionEstimateUpdatePeriod, stageIndex, loopCount);
                 if (isCalcEstimationValue && state.IsSetEstimationBound == false) 
                 {
                     double estimationBound = approxControl.GetValueFunctionEstimate(state);

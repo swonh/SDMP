@@ -49,6 +49,11 @@ namespace Nodez.Sdmp.General.Controls
             return false;
         }
 
+        public virtual bool IsExportStateInfoLog() 
+        {
+            return false;
+        }
+
         public Log GetLog(State state, TimeSpan elapsedTime) 
         {
             string relativeDualityGap = string.Format("{0:F2}%", Math.Round(BoundManager.Instance.RelativeDualityGap * 100, 2));
