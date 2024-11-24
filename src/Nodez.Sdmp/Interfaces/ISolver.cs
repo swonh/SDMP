@@ -796,12 +796,6 @@ namespace Nodez.Sdmp.Interfaces
                 if (transitionQueue.Count == 0)
                     break;
 
-                if (logControl.IsWriteStateInfoLog())
-                {
-                    List<StateInfoLog> stateInfoLogs = LogControl.Instance.GetStateInfoLogs(transitionQueue.ToList());
-                    SolverManager.Instance.AddStateInfoLogs(stateInfoLogs);
-                }
-
                 State state = this.GetNextState();
 
                 state.IsFixed = true;
@@ -861,6 +855,12 @@ namespace Nodez.Sdmp.Interfaces
                         state.SetPrimalBound(primalBound);
                         boundManager.UpdateBestPrimalBound(state, primalBound, objectiveFunctionType, StopWatch.Elapsed);
                     }
+                }
+
+                if (logControl.IsWriteStateInfoLog())
+                {
+                    List<StateInfoLog> stateInfoLogs = LogControl.Instance.GetStateInfoLogs(transitionQueue.ToList());
+                    SolverManager.Instance.AddStateInfoLogs(stateInfoLogs);
                 }
 
                 if (this.IsOnlineLearning && mlManager.IsFitModel(omlineTrainingPeriod, stageIndex)) 
