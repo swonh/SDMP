@@ -19,13 +19,13 @@ namespace Nodez.Sdmp.General.DataModel
 
         public string STATE_KEY { get; set; }
 
-        public int STAGE { get; set; }
+        public int STAGE_INDEX { get; set; }
 
         public double CURRENT_BEST_VALUE { get; set; }
 
         public double DUAL_BOUND { get; set; }
 
-        public double PRIMAL_BONUND { get; set; }
+        public double PRIMAL_BOUND { get; set; }
 
         public double VALUE_FUNCTION_ESTIMATE { get; set; }
 

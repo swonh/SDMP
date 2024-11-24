@@ -772,12 +772,6 @@ namespace Nodez.Sdmp.Interfaces
                     return;
                 }
 
-                if (logControl.IsWriteStateInfoLog())
-                {
-                    List<StateInfoLog> stateInfoLogs = LogControl.Instance.GetStateInfoLogs(transitionQueue.ToList());
-                    SolverManager.Instance.AddStateInfoLogs(stateInfoLogs);
-                }
-
                 loopCount++;
 
                 State peek = transitionQueue.First();
@@ -801,6 +795,12 @@ namespace Nodez.Sdmp.Interfaces
                 
                 if (transitionQueue.Count == 0)
                     break;
+
+                if (logControl.IsWriteStateInfoLog())
+                {
+                    List<StateInfoLog> stateInfoLogs = LogControl.Instance.GetStateInfoLogs(transitionQueue.ToList());
+                    SolverManager.Instance.AddStateInfoLogs(stateInfoLogs);
+                }
 
                 State state = this.GetNextState();
 
