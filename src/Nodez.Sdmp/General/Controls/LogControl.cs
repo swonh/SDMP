@@ -44,12 +44,12 @@ namespace Nodez.Sdmp.General.Controls
             
         }
 
-        public virtual bool IsExportStatusLog() 
+        public virtual bool IsWriteStatusLog() 
         {
             return false;
         }
 
-        public virtual bool IsExportStateInfoLog() 
+        public virtual bool IsWriteStateInfoLog() 
         {
             return false;
         }
@@ -73,6 +73,13 @@ namespace Nodez.Sdmp.General.Controls
             log.TIME = time;
 
             return log;
+        }
+
+        public List<StateInfoLog> GetStateInfoLogs(List<State> states) 
+        {
+            List<StateInfoLog> logs = new List<StateInfoLog>();
+
+            return logs;
         }
 
         public void WritePrimalBoundUpdateLog(State state, double primalBound, TimeSpan elapsedTime) 

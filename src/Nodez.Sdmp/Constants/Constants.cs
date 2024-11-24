@@ -56,7 +56,9 @@ namespace Nodez.Sdmp.Constants
 
         public static string PM_SCHEDULE = "PMSchedule";
 
-        public static string LOG = "Log";
+        public static string STATUS_LOG = "StatusLog";
+
+        public static string STATE_INFO_LOG = "StateInfoLog";
 
         public static string RUN_CONFIG = "RunConfig";
 

@@ -85,9 +85,14 @@ namespace Nodez.Sdmp.General.Managers
             this.CurrentSolverName = solverName;
         }
 
-        public void ClearLogs() 
+        public void ClearStatusLogs() 
         {
             this._statusLogs.Clear();
+        }
+
+        public void ClearStateInfoLogs()
+        {
+            this._stateInfoLogs.Clear();
         }
 
         public void AddStatusLog(StatusLog log) 
@@ -95,12 +100,49 @@ namespace Nodez.Sdmp.General.Managers
             this._statusLogs.Add(log);
         }
 
+        public void AddStateInfoLogs(List<StateInfoLog> logs, bool autoFlush = true) 
+        {
+            this._stateInfoLogs.AddRange(logs);
+
+            if (autoFlush)
+            {
+                if (this._stateInfoLogs.Count > 5000)
+                {
+                    OutputTable stateInfoLogTable = new OutputTable();
+                                                     
+                    foreach (StateInfoLog log in _stateInfoLogs) 
+                    {
+                        stateInfoLogTable.AddRow(log);
+                    }
+
+                    string engineStartTime = SolverManager.Instance.GetEngineStartTime(CurrentSolverName).ToString("yyyyMMdd_HHmmss");
+                    string dirPath = SolverManager.Instance.GetOutputDirectoryPath(CurrentSolverName);
+
+                    if (Directory.Exists(dirPath) == false)
+                        Directory.CreateDirectory(dirPath);
+
+                    if (OutputManager.Instance.GetOutput(Constants.Constants.STATE_INFO_LOG) == null)
+                    {
+                        stateInfoLogTable.WriteToFile(dirPath, false, true, $"{Constants.Constants.STATE_INFO_LOG}_{CurrentSolverName}_{engineStartTime}");
+                        OutputManager.Instance.SetOutput(stateInfoLogTable.Name, stateInfoLogTable);
+                    }
+                    else 
+                    {
+                        stateInfoLogTable.WriteToFile(dirPath, true, false, $"{Constants.Constants.STATE_INFO_LOG}_{CurrentSolverName}_{engineStartTime}");
+                    }
+
+                    this.ClearStateInfoLogs();
+                    stateInfoLogTable.Clear();
+                }
+            }
+        }
+
         public List<StatusLog> GetStatusLogs() 
         {
             return this._statusLogs;
         }
 
-        public void ExportStatusLogs() 
+        public void WriteStatusLogs() 
         {
             OutputTable table = new OutputTable();
             foreach (StatusLog log in this._statusLogs) 
@@ -114,8 +156,33 @@ namespace Nodez.Sdmp.General.Managers
             if (Directory.Exists(dirPath) == false)
                 Directory.CreateDirectory(dirPath);
 
-            table.WriteToFile(dirPath, false, true, $"{Constants.Constants.LOG}_{CurrentSolverName}_{engineStartTime}");
+            table.WriteToFile(dirPath, false, true, $"{Constants.Constants.STATUS_LOG}_{CurrentSolverName}_{engineStartTime}");
             OutputManager.Instance.SetOutput(table.Name, table);
+        }
+
+        public void WriteStateInfoLogs()
+        {
+            OutputTable table = new OutputTable();
+            foreach (StateInfoLog log in this._stateInfoLogs)
+            {
+                table.AddRow(log);
+            }
+
+            string engineStartTime = SolverManager.Instance.GetEngineStartTime(CurrentSolverName).ToString("yyyyMMdd_HHmmss");
+            string dirPath = SolverManager.Instance.GetOutputDirectoryPath(CurrentSolverName);
+
+            if (Directory.Exists(dirPath) == false)
+                Directory.CreateDirectory(dirPath);
+
+            if (OutputManager.Instance.GetOutput(Constants.Constants.STATE_INFO_LOG) == null)
+            {
+                table.WriteToFile(dirPath, false, true, $"{Constants.Constants.STATE_INFO_LOG}_{CurrentSolverName}_{engineStartTime}");
+                OutputManager.Instance.SetOutput(table.Name, table);
+            }
+            else
+            {
+                table.WriteToFile(dirPath, true, false, $"{Constants.Constants.STATE_INFO_LOG}_{CurrentSolverName}_{engineStartTime}");
+            }
         }
 
         public void SetOutputDirectoryPath(string solverName, string outputDirectoryPath)

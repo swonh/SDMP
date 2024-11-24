@@ -274,7 +274,7 @@ namespace Nodez.Sdmp.Interfaces
                 solverManager.SetCurrentSolverName(this.RunConfig.SOLVER_NAME);
                 this.Name = solverManager.CurrentSolverName;
                 solverManager.SetEngineStartTime(this.Name, this.EngineStartTime);
-                solverManager.ClearLogs();
+                solverManager.ClearStatusLogs();
 
                 eventControl.OnBeginSolve();
 
@@ -479,9 +479,14 @@ namespace Nodez.Sdmp.Interfaces
                     mlManager.FitValuePredictionModel(true);
                 }
 
-                if (logControl.IsExportStatusLog()) 
+                if (logControl.IsWriteStatusLog()) 
                 {
-                    solverManager.ExportStatusLogs();
+                    solverManager.WriteStatusLogs();
+                }
+
+                if (logControl.IsWriteStateInfoLog())
+                {
+                    solverManager.WriteStateInfoLogs();
                 }
 
                 eventControl.OnDoneSolve();
@@ -765,6 +770,12 @@ namespace Nodez.Sdmp.Interfaces
                 {
                     logControl.WriteEndLog($"{Messeges.MAX_TIME_LIMIT} RunMaxTime={this.RunMaxTime} sec.");
                     return;
+                }
+
+                if (logControl.IsWriteStateInfoLog())
+                {
+                    List<StateInfoLog> stateInfoLogs = LogControl.Instance.GetStateInfoLogs(transitionQueue.ToList());
+                    SolverManager.Instance.AddStateInfoLogs(stateInfoLogs);
                 }
 
                 loopCount++;
