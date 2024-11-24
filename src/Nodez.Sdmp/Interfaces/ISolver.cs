@@ -274,7 +274,7 @@ namespace Nodez.Sdmp.Interfaces
                 solverManager.SetCurrentSolverName(this.RunConfig.SOLVER_NAME);
                 this.Name = solverManager.CurrentSolverName;
                 solverManager.SetEngineStartTime(this.Name, this.EngineStartTime);
-                solverManager.ClearStateLogs();
+                solverManager.ClearLogs();
 
                 eventControl.OnBeginSolve();
 
@@ -415,12 +415,12 @@ namespace Nodez.Sdmp.Interfaces
                 if (solutionManager.CheckOptimalityCondition())
                 {
                     solutionManager.AddSolution(initialFeasibleSol, true);
-                    logControl.WriteLog(initialState, StopWatch.Elapsed);
+                    logControl.WriteStatusLog(initialState, StopWatch.Elapsed);
                     logControl.WriteOptimalLog();
                     logControl.WriteEndLog(Messeges.FOUND_OPTIMAL_SOLUTION);
 
-                    Log log = LogControl.Instance.GetLog(initialState, StopWatch.Elapsed);
-                    SolverManager.Instance.AddLog(log);
+                    StatusLog log = LogControl.Instance.GetStatusLog(initialState, StopWatch.Elapsed);
+                    SolverManager.Instance.AddStatusLog(log);
 
                     return;
                 }
@@ -479,9 +479,9 @@ namespace Nodez.Sdmp.Interfaces
                     mlManager.FitValuePredictionModel(true);
                 }
 
-                if (logControl.IsExportLog()) 
+                if (logControl.IsExportStatusLog()) 
                 {
-                    solverManager.ExportLogs();
+                    solverManager.ExportStatusLogs();
                 }
 
                 eventControl.OnDoneSolve();
@@ -804,10 +804,10 @@ namespace Nodez.Sdmp.Interfaces
 
                 if (loopCount % stateLogPeriod == 0 || this.CurrentStageIndex < stageIndex)
                 {
-                    logControl.WriteLog(state, StopWatch.Elapsed);
+                    logControl.WriteStatusLog(state, StopWatch.Elapsed);
 
-                    Log log = LogControl.Instance.GetLog(state, StopWatch.Elapsed);
-                    SolverManager.Instance.AddLog(log);
+                    StatusLog log = LogControl.Instance.GetStatusLog(state, StopWatch.Elapsed);
+                    SolverManager.Instance.AddStatusLog(log);
                 }
 
                 this.RemoveVisitedStates(fixedStateBounds, stageIndex, memoryClearPeriod);
@@ -860,12 +860,12 @@ namespace Nodez.Sdmp.Interfaces
                 if (solutionManager.CheckOptimalityCondition())
                 {
                     solutionManager.AddSolution(solutionManager.BestSolution, true);
-                    logControl.WriteLog(state, StopWatch.Elapsed);
+                    logControl.WriteStatusLog(state, StopWatch.Elapsed);
                     logControl.WriteOptimalLog();
                     logControl.WriteEndLog(Messeges.FOUND_OPTIMAL_SOLUTION);
 
-                    Log log = LogControl.Instance.GetLog(state, StopWatch.Elapsed);
-                    SolverManager.Instance.AddLog(log);
+                    StatusLog log = LogControl.Instance.GetStatusLog(state, StopWatch.Elapsed);
+                    SolverManager.Instance.AddStatusLog(log);
 
                     return;
                 }

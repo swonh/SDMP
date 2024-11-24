@@ -51,8 +51,8 @@ namespace Nodez.Sdmp.General.Managers
                     this.BestPrimalBound = primalBound;
                     LogControl.Instance.WritePrimalBoundUpdateLog(state, primalBound, elapsedTime);
 
-                    Log log = LogControl.Instance.GetLog(state, elapsedTime);
-                    SolverManager.Instance.AddLog(log);
+                    StatusLog log = LogControl.Instance.GetStatusLog(state, elapsedTime);
+                    SolverManager.Instance.AddStatusLog(log);
                 }
             }
             else
@@ -64,8 +64,8 @@ namespace Nodez.Sdmp.General.Managers
                     this.BestPrimalBound = primalBound;
                     LogControl.Instance.WritePrimalBoundUpdateLog(state, primalBound, elapsedTime);
 
-                    Log log = LogControl.Instance.GetLog(state, elapsedTime);
-                    SolverManager.Instance.AddLog(log);
+                    StatusLog log = LogControl.Instance.GetStatusLog(state, elapsedTime);
+                    SolverManager.Instance.AddStatusLog(log);
                 }
             }
         }
@@ -79,8 +79,8 @@ namespace Nodez.Sdmp.General.Managers
                     this.BestDualBound = dualBound;
                     LogControl.Instance.WriteDualBoundUpdateLog(state, dualBound, elapsedTime);
 
-                    Log log = LogControl.Instance.GetLog(state, elapsedTime);
-                    SolverManager.Instance.AddLog(log);
+                    StatusLog log = LogControl.Instance.GetStatusLog(state, elapsedTime);
+                    SolverManager.Instance.AddStatusLog(log);
                 }
             }
             else
@@ -90,8 +90,8 @@ namespace Nodez.Sdmp.General.Managers
                     this.BestDualBound = dualBound;
                     LogControl.Instance.WriteDualBoundUpdateLog(state, dualBound, elapsedTime);
 
-                    Log log = LogControl.Instance.GetLog(state, elapsedTime);
-                    SolverManager.Instance.AddLog(log);
+                    StatusLog log = LogControl.Instance.GetStatusLog(state, elapsedTime);
+                    SolverManager.Instance.AddStatusLog(log);
                 }
             }
         }

@@ -44,7 +44,7 @@ namespace Nodez.Sdmp.General.Controls
             
         }
 
-        public virtual bool IsExportLog() 
+        public virtual bool IsExportStatusLog() 
         {
             return false;
         }
@@ -54,7 +54,7 @@ namespace Nodez.Sdmp.General.Controls
             return false;
         }
 
-        public Log GetLog(State state, TimeSpan elapsedTime) 
+        public StatusLog GetStatusLog(State state, TimeSpan elapsedTime) 
         {
             string relativeDualityGap = string.Format("{0:F2}%", Math.Round(BoundManager.Instance.RelativeDualityGap * 100, 2));
             string bestSolution = BoundManager.Instance.BestPrimalBound != Double.PositiveInfinity && BoundManager.Instance.BestPrimalBound != Double.NegativeInfinity ? string.Format("{0:F6}", BoundManager.Instance.BestPrimalBound) : string.Empty;
@@ -62,7 +62,7 @@ namespace Nodez.Sdmp.General.Controls
             string numSolutions = string.Format("{0}", SolutionManager.Instance.Solutions.Count);
             string time = elapsedTime.TotalSeconds.ToString();
 
-            Log log = new Log();
+            StatusLog log = new StatusLog();
 
             log.STATE_INDEX = state == null ? "Global dual bound update" : state.Index.ToString();
             log.STAGE_INDEX = state == null ? "Global dual bound update" : state.Stage.Index.ToString();
@@ -108,7 +108,7 @@ namespace Nodez.Sdmp.General.Controls
             Console.WriteLine(log);
         }
 
-        public void WriteLog(State state, TimeSpan elapsedTime)
+        public void WriteStatusLog(State state, TimeSpan elapsedTime)
         {
             string relativeDualityGap = string.Format("{0:F2}%", Math.Round(BoundManager.Instance.RelativeDualityGap * 100, 2));
             string bestSolution = BoundManager.Instance.BestPrimalBound != Double.PositiveInfinity && BoundManager.Instance.BestPrimalBound != Double.NegativeInfinity ? string.Format("{0:F6}", BoundManager.Instance.BestPrimalBound) : string.Empty;

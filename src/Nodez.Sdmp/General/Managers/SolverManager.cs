@@ -43,7 +43,9 @@ namespace Nodez.Sdmp.General.Managers
 
         private Dictionary<string, string> _outputDirectoryPath { get; set; }
 
-        private List<Log> _logs { get; set; }
+        private List<StatusLog> _statusLogs { get; set; }
+
+        private List<StateInfoLog> _stateInfoLogs { get; set; }
 
         private IRunConfig _runConfig { get; set; }
 
@@ -54,7 +56,8 @@ namespace Nodez.Sdmp.General.Managers
             this._bestSolutionDateTime = new Dictionary<string, DateTime>();
             this._rootSolutionDateTime = new Dictionary<string, DateTime>();
             this._outputDirectoryPath = new Dictionary<string, string>();
-            this._logs = new List<Log>();
+            this._statusLogs = new List<StatusLog>();
+            this._stateInfoLogs = new List<StateInfoLog>();
         }
 
         public void SetRunConfig(IRunConfig runConfig) 
@@ -82,25 +85,25 @@ namespace Nodez.Sdmp.General.Managers
             this.CurrentSolverName = solverName;
         }
 
-        public void ClearStateLogs() 
+        public void ClearLogs() 
         {
-            this._logs.Clear();
+            this._statusLogs.Clear();
         }
 
-        public void AddLog(Log log) 
+        public void AddStatusLog(StatusLog log) 
         {
-            this._logs.Add(log);
+            this._statusLogs.Add(log);
         }
 
-        public List<Log> GetLogs() 
+        public List<StatusLog> GetStatusLogs() 
         {
-            return this._logs;
+            return this._statusLogs;
         }
 
-        public void ExportLogs() 
+        public void ExportStatusLogs() 
         {
             OutputTable table = new OutputTable();
-            foreach (Log log in this._logs) 
+            foreach (StatusLog log in this._statusLogs) 
             {
                 table.AddRow(log);
             }

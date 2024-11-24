@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Nodez.Sdmp.General.DataModel
 {
-    public class Log : IOutputRow
+    public class StatusLog : IOutputRow
     {
         // Define columns here (NOTICE: The column name defined here and the column name defined in the data file must match.)
 
