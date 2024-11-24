@@ -497,6 +497,7 @@ namespace Nodez.Sdmp.Interfaces
             ControlManager.Instance.Reset();
             MachineLearningManager.Instance.Reset();
             SolutionManager.Instance.Reset();
+            SolverManager.Instance.Reset();
             StateManager.Instance.Reset();
             StateTransitionManager.Instance.Reset();
 
