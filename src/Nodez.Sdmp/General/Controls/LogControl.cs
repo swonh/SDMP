@@ -219,6 +219,17 @@ namespace Nodez.Sdmp.General.Controls
             Console.WriteLine(string.Format("Stop State Clustering..."));
         }
 
+        public virtual void WriteGlobalFilteringStartLog(int stageIndex, int totalStateCount)
+        {
+            int filterCount = ApproximationControl.Instance.GetGlobalTransitionCount();
+            Console.WriteLine(string.Format("Start Global Filtering... (Stage:{0}, Total State Count:{1}, Filtering Count:{2})", stageIndex, totalStateCount, filterCount));
+        }
+
+        public virtual void WriteGlobalFilteringEndLog()
+        {
+            Console.WriteLine(string.Format("Stop Global Filtering..."));
+        }
+
         public void WriteEndLog(string reason)
         {
             Console.WriteLine("Solver Ended...(Reason:{0})", reason);

@@ -702,6 +702,8 @@ namespace Nodez.Sdmp.Interfaces
 
         private void FilterGlobalStates(State currentState, FastPriorityQueue<State> transitionQueue, ObjectiveFunctionType objectiveFunctionType, double pruneTolerance, bool isApplyStateClustering)
         {
+            LogControl.Instance.WriteGlobalFilteringStartLog(currentState.Stage.Index, transitionQueue.Count);
+
             ApproximationControl approxControl = ApproximationControl.Instance;
             StateFilteringType filteringType = approxControl.GetStateFilteringType();
 
@@ -724,6 +726,8 @@ namespace Nodez.Sdmp.Interfaces
             this.TransitionQueue.Clear();
 
             this.AddNextStates(filteredList);
+
+            LogControl.Instance.WriteGlobalFilteringStartLog();
         }
 
         private void DoSolve()
