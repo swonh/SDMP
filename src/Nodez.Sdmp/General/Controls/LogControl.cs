@@ -75,7 +75,7 @@ namespace Nodez.Sdmp.General.Controls
             return log;
         }
 
-        public StateInfoLog GetStateInfoLog(State state)
+        public StateInfoLog GetStateInfoLog(State state, bool afterFiltering)
         {
             StateInfoLog log = new StateInfoLog();
 
@@ -86,11 +86,12 @@ namespace Nodez.Sdmp.General.Controls
             log.DUAL_BOUND = state.DualBound;
             log.PRIMAL_BOUND = state.PrimalBound;
             log.VALUE_FUNCTION_ESTIMATE = state.ValueFunctionEstimate;
+            log.IS_AFTER_FILTERING = afterFiltering;
 
             return log;
         }
 
-        public List<StateInfoLog> GetStateInfoLogs(List<State> states) 
+        public List<StateInfoLog> GetStateInfoLogs(List<State> states, bool afterFiltering) 
         {
             List<StateInfoLog> logs = new List<StateInfoLog>();
 
@@ -104,6 +105,7 @@ namespace Nodez.Sdmp.General.Controls
                 log.DUAL_BOUND = state.DualBound;
                 log.PRIMAL_BOUND = state.PrimalBound;
                 log.VALUE_FUNCTION_ESTIMATE = state.ValueFunctionEstimate;
+                log.IS_AFTER_FILTERING = afterFiltering;
 
                 logs.Add(log);
             }

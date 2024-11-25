@@ -721,7 +721,11 @@ namespace Nodez.Sdmp.Interfaces
 
             List<State> list = transitionQueue.ToList();
 
+            list.ForEach(x => SolverManager.Instance.AddStateInfoLog(LogControl.Instance.GetStateInfoLog(x, false)));
+
             List<State> filteredList = approxControl.FilterGlobalStates(list, globalMaximumTransitCount, objectiveFunctionType, pruneTolerance, isApplyStateClustering);
+
+            filteredList.ForEach(x => SolverManager.Instance.AddStateInfoLog(LogControl.Instance.GetStateInfoLog(x, true)));
 
             this.TransitionQueue.Clear();
 
@@ -857,12 +861,6 @@ namespace Nodez.Sdmp.Interfaces
                         state.SetPrimalBound(primalBound);
                         boundManager.UpdateBestPrimalBound(state, primalBound, objectiveFunctionType, StopWatch.Elapsed);
                     }
-                }
-
-                if (logControl.IsWriteStateInfoLog())
-                {
-                    StateInfoLog log = LogControl.Instance.GetStateInfoLog(state);
-                    SolverManager.Instance.AddStateInfoLog(log);
                 }
 
                 if (this.IsOnlineLearning && mlManager.IsFitModel(omlineTrainingPeriod, stageIndex)) 

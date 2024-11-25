@@ -177,6 +177,7 @@ namespace Nodez.Sdmp.General.Controls
                         break;
 
                     filtered.Add(state);
+
                     count++;
                 }
             }
