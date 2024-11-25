@@ -727,7 +727,7 @@ namespace Nodez.Sdmp.Interfaces
 
             this.AddNextStates(filteredList);
 
-            LogControl.Instance.WriteGlobalFilteringStartLog();
+            LogControl.Instance.WriteGlobalFilteringEndLog();
         }
 
         private void DoSolve()
