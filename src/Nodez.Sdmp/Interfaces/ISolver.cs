@@ -721,10 +721,9 @@ namespace Nodez.Sdmp.Interfaces
 
             List<State> list = transitionQueue.ToList();
 
-            list.ForEach(x => SolverManager.Instance.AddStateInfoLog(LogControl.Instance.GetStateInfoLog(x, false)));
-
             List<State> filteredList = approxControl.FilterGlobalStates(list, globalMaximumTransitCount, objectiveFunctionType, pruneTolerance, isApplyStateClustering);
 
+            list.ForEach(x => SolverManager.Instance.AddStateInfoLog(LogControl.Instance.GetStateInfoLog(x, false)));
             filteredList.ForEach(x => SolverManager.Instance.AddStateInfoLog(LogControl.Instance.GetStateInfoLog(x, true)));
 
             this.TransitionQueue.Clear();
