@@ -204,7 +204,7 @@ namespace Nodez.Sdmp.General.Controls
 
         public virtual void WriteRandomSolutionGenerationEndLog()
         {
-            Console.WriteLine(string.Format("Stop Random Solution Generation..."));
+            Console.WriteLine(string.Format("End Random Solution Generation..."));
         }
 
         public virtual void WriteStateClusteringStartLog(int totalStateCount) 
@@ -216,7 +216,7 @@ namespace Nodez.Sdmp.General.Controls
 
         public virtual void WriteStateClusteringEndLog()
         {
-            Console.WriteLine(string.Format("Stop State Clustering..."));
+            Console.WriteLine(string.Format("End State Clustering..."));
         }
 
         public virtual void WriteGlobalFilteringStartLog(int stageIndex, int totalStateCount)
@@ -227,7 +227,7 @@ namespace Nodez.Sdmp.General.Controls
 
         public virtual void WriteGlobalFilteringEndLog()
         {
-            Console.WriteLine(string.Format("Stop Global Filtering..."));
+            Console.WriteLine(string.Format("End Global Filtering..."));
         }
 
         public void WriteEndLog(string reason)
