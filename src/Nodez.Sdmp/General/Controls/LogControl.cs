@@ -115,6 +115,12 @@ namespace Nodez.Sdmp.General.Controls
             return logs;
         }
 
+        public void ShowProgress(int current, int total)
+        {
+            Console.SetCursorPosition(0, Console.CursorTop);
+            Console.WriteLine($"Progress: {current}/{total} ({(current * 100) / total}%)");
+        }
+
         public void WritePrimalBoundUpdateLog(State state, double primalBound, TimeSpan elapsedTime) 
         {
             if (primalBound == 0)

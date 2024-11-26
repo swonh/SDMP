@@ -41,15 +41,15 @@ namespace Nodez.Sdmp.General.Managers
 
         public Solution InitialSolution { get; private set; }
 
-        public HashSet<Solution> Solutions { get { return this._solutions; } }
+        public Dictionary<double, Solution> Solutions { get { return this._solutions; } }
 
-        private HashSet<Solution> _solutions;
+        private Dictionary<double, Solution> _solutions;
 
         private Solution _bestSolution;
 
         public SolutionManager() 
         {
-            this._solutions = new HashSet<Solution>();
+            this._solutions = new Dictionary<double, Solution>(10000);
         }
 
         public void SetObjectiveFunctionType(ObjectiveFunctionType objectiveFunctionType)
@@ -69,8 +69,8 @@ namespace Nodez.Sdmp.General.Managers
             if (solution == null)
                 return;
 
-            if (this._solutions.Contains(solution) == false)
-                this._solutions.Add(solution);
+            if (this._solutions.ContainsKey(solution.Value) == false)
+                this._solutions.Add(solution.Value, solution);
 
             this.UpdateBestSoltion(solution);
 
@@ -88,20 +88,22 @@ namespace Nodez.Sdmp.General.Managers
 
         private void UpdateBestSoltion(Solution solution)
         {
+            if (this._bestSolution == null)
+            {
+                this._bestSolution = solution;
+                return;
+            }
+
             if (this.ObjectiveFunctionType == ObjectiveFunctionType.Maximize)
             {
-                if (this._bestSolution == null)
-                    this._bestSolution = solution;
-                else if (this._bestSolution.Value < solution.Value)
+                if (this._bestSolution.Value < solution.Value)
                 {
                     this._bestSolution = solution;
                 }
             }
             else
             {
-                if (this._bestSolution == null)
-                    this._bestSolution = solution;                
-                else if (this._bestSolution.Value > solution.Value)
+                if (this._bestSolution.Value > solution.Value)
                 {
                     this._bestSolution = solution;
                 }
