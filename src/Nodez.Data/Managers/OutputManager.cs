@@ -81,6 +81,19 @@ namespace Nodez.Data.Managers
             return null;
         }
 
+        public void DeleteOutput(string key) 
+        {
+            if (_outputs == null)
+                return;
+
+            if (_outputs.ContainsKey(key))
+            {
+                _outputs.Remove(key);
+            }
+
+            return;
+        }
+
         public void SetOutput(string key, OutputTable output)
         {
             if (key == null)

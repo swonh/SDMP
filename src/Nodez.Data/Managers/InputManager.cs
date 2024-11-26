@@ -209,6 +209,19 @@ namespace Nodez.Data.Managers
             return null;
         }
 
+        public void DeleteInput(string key)
+        {
+            if (_inputs == null)
+                return;
+
+            if (_inputs.ContainsKey(key))
+            {
+                _inputs.Remove(key);
+            }
+
+            return;
+        }
+
         public void SetInput(string key, InputTable input)
         {
             if (_inputs == null)

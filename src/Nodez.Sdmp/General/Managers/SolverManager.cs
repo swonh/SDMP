@@ -220,6 +220,8 @@ namespace Nodez.Sdmp.General.Managers
             {
                 table.WriteToFile(dirPath, true, false, $"{Constants.Constants.STATE_INFO_LOG}_{RunConfig.RUN_SEQ}_{CurrentSolverName}_{engineStartTime}");
             }
+
+            OutputManager.Instance.DeleteOutput(Constants.Constants.STATE_INFO_LOG);
         }
 
         public void SetOutputDirectoryPath(string solverName, string outputDirectoryPath)
