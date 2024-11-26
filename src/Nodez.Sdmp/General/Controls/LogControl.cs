@@ -84,6 +84,7 @@ namespace Nodez.Sdmp.General.Controls
             log.STAGE_INDEX = state.Stage.Index;
             log.CURRENT_BEST_VALUE = state.CurrentBestValue;
             log.DUAL_BOUND = state.DualBound;
+            log.SUM_CURRENT_DUAL = state.CurrentBestValue + state.DualBound;
             log.PRIMAL_BOUND = state.PrimalBound;
             log.VALUE_FUNCTION_ESTIMATE = state.ValueFunctionEstimate;
             log.IS_AFTER_FILTERING = afterFiltering;
@@ -103,6 +104,7 @@ namespace Nodez.Sdmp.General.Controls
                 log.STAGE_INDEX = state.Stage.Index;
                 log.CURRENT_BEST_VALUE = state.CurrentBestValue;
                 log.DUAL_BOUND = state.DualBound;
+                log.SUM_CURRENT_DUAL = state.CurrentBestValue + state.DualBound;
                 log.PRIMAL_BOUND = state.PrimalBound;
                 log.VALUE_FUNCTION_ESTIMATE = state.ValueFunctionEstimate;
                 log.IS_AFTER_FILTERING = afterFiltering;

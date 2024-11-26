@@ -25,6 +25,8 @@ namespace Nodez.Sdmp.General.DataModel
 
         public double DUAL_BOUND { get; set; }
 
+        public double SUM_CURRENT_DUAL { get; set; }
+
         public double PRIMAL_BOUND { get; set; }
 
         public double VALUE_FUNCTION_ESTIMATE { get; set; }
