@@ -211,8 +211,15 @@ namespace Nodez.Sdmp.General.Managers
             if (Directory.Exists(dirPath) == false)
                 Directory.CreateDirectory(dirPath);
 
-            table.WriteToFile(dirPath, false, true, $"{Constants.Constants.STATE_INFO_LOG}_{RunConfig.RUN_SEQ}_{CurrentSolverName}_{engineStartTime}");
-            OutputManager.Instance.SetOutput(table.Name, table);
+            if (OutputManager.Instance.GetOutput(Constants.Constants.STATE_INFO_LOG) == null)
+            {
+                table.WriteToFile(dirPath, false, true, $"{Constants.Constants.STATE_INFO_LOG}_{RunConfig.RUN_SEQ}_{CurrentSolverName}_{engineStartTime}");
+                OutputManager.Instance.SetOutput(table.Name, table);
+            }
+            else
+            {
+                table.WriteToFile(dirPath, true, false, $"{Constants.Constants.STATE_INFO_LOG}_{RunConfig.RUN_SEQ}_{CurrentSolverName}_{engineStartTime}");
+            }
         }
 
         public void SetOutputDirectoryPath(string solverName, string outputDirectoryPath)

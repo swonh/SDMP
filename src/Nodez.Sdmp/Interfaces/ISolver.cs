@@ -506,6 +506,8 @@ namespace Nodez.Sdmp.Interfaces
             StateManager.Instance.Reset();
             StateTransitionManager.Instance.Reset();
 
+            OutputManager.Instance.ClearOutputs();
+
             GC.Collect();
         }
 
