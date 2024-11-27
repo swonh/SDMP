@@ -6,6 +6,7 @@ using Nodez.Sdmp.Constants;
 using Nodez.Sdmp.General.Controls;
 using Nodez.Sdmp.General.DataModel;
 using Nodez.Sdmp.General.Managers;
+using Nodez.Sdmp.LogHelper;
 using Nodez.Sdmp.Scheduling.DataModel;
 using Nodez.Sdmp.Scheduling.Managers;
 using System;
@@ -27,10 +28,10 @@ namespace Nodez.Project.SchedulingTemplate.Controls
             SolutionManager solutionManager = SolutionManager.Instance;
             Solution optSol = solutionManager.OptimalSolution;
 
-            Console.WriteLine(Constants.LINE);
-            Console.WriteLine(string.Format("Optimal Objective Value: {0}", optSol.Value));
+            LogWriter.WriteLine(Constants.LINE);
+            LogWriter.WriteLine(string.Format("Optimal Objective Value: {0}", optSol.Value));
             this.WriteSolution(optSol);
-            Console.WriteLine(Constants.LINE);
+            LogWriter.WriteLine(Constants.LINE);
         }
 
         public override void WriteBestSolutionLog()
@@ -38,10 +39,10 @@ namespace Nodez.Project.SchedulingTemplate.Controls
             SolutionManager solutionManager = SolutionManager.Instance;
             Solution bestSol = solutionManager.BestSolution;
 
-            Console.WriteLine(Constants.LINE);
-            Console.WriteLine(string.Format("Objective Value: {0}", bestSol.Value));
+            LogWriter.WriteLine(Constants.LINE);
+            LogWriter.WriteLine(string.Format("Objective Value: {0}", bestSol.Value));
             this.WriteSolution(bestSol);
-            Console.WriteLine(Constants.LINE);
+            LogWriter.WriteLine(Constants.LINE);
         }
 
         public override void WriteSolution(Solution solution)
@@ -79,7 +80,7 @@ namespace Nodez.Project.SchedulingTemplate.Controls
                 double setupTime = manager.GetSetupTime(eqp, lastJob, job);
                 double procTime = manager.GetProcTime(job, eqp);
 
-                Console.WriteLine("{0} (SETUP:{1}, PROC:{2})", item.Value, setupTime, procTime);
+                LogWriter.WriteLine("{0} (SETUP:{1}, PROC:{2})", item.Value, setupTime, procTime);
 
                 lastJob = job;
             }
@@ -87,7 +88,7 @@ namespace Nodez.Project.SchedulingTemplate.Controls
 
         public override void WritePruneLog(State state)
         {
-            //Console.WriteLine("Prune => StateIndex:{0}, State:{1}, Stage:{2}, DualBound:{3}, BestValue:{4}, BestPrimalBound:{5}", state.Index, state.ToString(), state.Stage.Index, state.DualBound, state.BestValue, BoundManager.Instance.BestPrimalBound);
+            //LogWriter.WriteLine("Prune => StateIndex:{0}, State:{1}, Stage:{2}, DualBound:{3}, BestValue:{4}, BestPrimalBound:{5}", state.Index, state.ToString(), state.Stage.Index, state.DualBound, state.BestValue, BoundManager.Instance.BestPrimalBound);
         }
     }
 }

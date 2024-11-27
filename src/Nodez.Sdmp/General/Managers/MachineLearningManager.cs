@@ -8,6 +8,7 @@ using Microsoft.ML.Trainers;
 using Nodez.Sdmp.General.Controls;
 using Nodez.Sdmp.General.DataModel;
 using Nodez.Sdmp.Interfaces;
+using Nodez.Sdmp.LogHelper;
 using Nodez.Sdmp.MachineLearningHelper;
 using System;
 using System.Collections.Generic;
@@ -186,10 +187,10 @@ namespace Nodez.Sdmp.General.Managers
 
             var trainingPipeline = dataProcessPipeline.Append(this.Trainer);
 
-            Console.WriteLine("=============== Training the model ===============");
+            LogWriter.WriteLine("=============== Training the model ===============");
             var trainedModel = trainingPipeline.Fit(trainingDataView);
 
-            Console.WriteLine("===== Evaluating Model's accuracy with Test data =====");
+            LogWriter.WriteLine("===== Evaluating Model's accuracy with Test data =====");
 
             IDataView predictions = trainedModel.Transform(testDataView);
 
@@ -227,10 +228,10 @@ namespace Nodez.Sdmp.General.Managers
 
             var trainingPipeline = dataProcessPipeline.Append(this.Trainer);
 
-            Console.WriteLine("=============== Training the model ===============");
+            LogWriter.WriteLine("=============== Training the model ===============");
             var trainedModel = trainingPipeline.Fit(trainingDataView);
 
-            Console.WriteLine("===== Evaluating Model's accuracy with Test data =====");
+            LogWriter.WriteLine("===== Evaluating Model's accuracy with Test data =====");
 
             IDataView predictions = trainedModel.Transform(testDataView);
 

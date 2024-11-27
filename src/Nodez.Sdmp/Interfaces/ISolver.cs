@@ -17,6 +17,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using Nodez.Sdmp.LogHelper;
 
 namespace Nodez.Sdmp.Interfaces
 {
@@ -164,15 +165,10 @@ namespace Nodez.Sdmp.Interfaces
         {
             string engineStartTime = SolverManager.Instance.GetEngineStartTime(this.Name).ToString("yyyyMMdd_HHmmss");
 
-            SolverManager.Instance.SetOriginalConsoleWriter(Console.Out);
-
             StreamWriter fileWriter = new StreamWriter($"{this.OutputDirectoryPath}{Path.DirectorySeparatorChar}{Constants.Constants.CONSOLE_OUTPUT_LOG}_{RunConfig.RUN_SEQ}_{this.Name}_{engineStartTime}.txt");
             fileWriter.AutoFlush = true;
 
-            DualTextWriter dualWriter = new DualTextWriter(Console.Out, fileWriter);
-
-            Console.SetOut(dualWriter);
-            SolverManager.Instance.SetConsoleWriter(dualWriter);
+            LogWriter.SetFileWriter(fileWriter);
         }
 
         protected void RegisterControls(List<object> controls)

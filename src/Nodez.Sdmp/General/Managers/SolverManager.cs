@@ -343,7 +343,6 @@ namespace Nodez.Sdmp.General.Managers
 
     public class DualTextWriter : TextWriter
     {
-        public TextWriter originalConsoleWriter;
         private TextWriter consoleWriter;
         private TextWriter fileWriter;
 
@@ -351,7 +350,6 @@ namespace Nodez.Sdmp.General.Managers
         {
             this.consoleWriter = consoleWriter;
             this.fileWriter = fileWriter;
-            this.originalConsoleWriter = Console.Out;
         }
 
         public override Encoding Encoding => consoleWriter.Encoding;
@@ -362,10 +360,20 @@ namespace Nodez.Sdmp.General.Managers
             fileWriter.Write(value);
         }
 
+        public void WriteConsoleOnly(string value)
+        {
+            consoleWriter.Write(value);
+        }
+
         public override void WriteLine(string value)
         {
             consoleWriter.WriteLine(value);
             fileWriter.WriteLine(value);
+        }
+
+        public void WriteLineConsoleOnly(string value)
+        {
+            consoleWriter.WriteLine(value);
         }
 
         public override void Flush()

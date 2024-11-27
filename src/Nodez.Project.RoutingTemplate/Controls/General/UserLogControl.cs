@@ -6,6 +6,7 @@ using Nodez.Sdmp.Constants;
 using Nodez.Sdmp.General.Controls;
 using Nodez.Sdmp.General.DataModel;
 using Nodez.Sdmp.General.Managers;
+using Nodez.Sdmp.LogHelper;
 using Nodez.Sdmp.Routing.DataModel;
 using Nodez.Sdmp.Routing.Managers;
 using System;
@@ -27,10 +28,10 @@ namespace Nodez.Project.RoutingTemplate.Controls
             SolutionManager solutionManager = SolutionManager.Instance;
             Solution optSol = solutionManager.OptimalSolution;
 
-            Console.WriteLine(Constants.LINE);
-            Console.WriteLine(string.Format("Optimal Objective Value: {0}", optSol.Value));
+            LogWriter.WriteLine(Constants.LINE);
+            LogWriter.WriteLine(string.Format("Optimal Objective Value: {0}", optSol.Value));
             this.WriteSolution(optSol);
-            Console.WriteLine(Constants.LINE);
+            LogWriter.WriteLine(Constants.LINE);
         }
 
         public override void WriteBestSolutionLog()
@@ -38,10 +39,10 @@ namespace Nodez.Project.RoutingTemplate.Controls
             SolutionManager solutionManager = SolutionManager.Instance;
             Solution bestSol = solutionManager.BestSolution;
 
-            Console.WriteLine(Constants.LINE);
-            Console.WriteLine(string.Format("Objective Value: {0}", bestSol.Value));
+            LogWriter.WriteLine(Constants.LINE);
+            LogWriter.WriteLine(string.Format("Objective Value: {0}", bestSol.Value));
             this.WriteSolution(bestSol);
-            Console.WriteLine(Constants.LINE);
+            LogWriter.WriteLine(Constants.LINE);
         }
 
         public override void WriteSolution(Solution solution)
@@ -72,8 +73,8 @@ namespace Nodez.Project.RoutingTemplate.Controls
 
             foreach (Vehicle vehicle in manager.RoutingProblem.Vehicles)
             {
-                Console.WriteLine(string.Format("[Route for {0}]", vehicle.Name));
-                Console.WriteLine("Routing Sequence: ");
+                LogWriter.WriteLine(string.Format("[Route for {0}]", vehicle.Name));
+                LogWriter.WriteLine("Routing Sequence: ");
 
                 StringBuilder routingStr = new StringBuilder();
                 Depot depot = RoutingDataManager.Instance.RoutingProblem.Depot;
@@ -124,18 +125,18 @@ namespace Nodez.Project.RoutingTemplate.Controls
                     }
                 }
 
-                Console.WriteLine(routingStr.ToString());
-                Console.WriteLine("Distance: {0}", vehicleDistance);
-                Console.WriteLine("Load: {0}\n", vehicleLoad);
+                LogWriter.WriteLine(routingStr.ToString());
+                LogWriter.WriteLine("Distance: {0}", vehicleDistance);
+                LogWriter.WriteLine("Load: {0}\n", vehicleLoad);
             }
 
-            Console.WriteLine("Total distance of all routes {0}", totalDistance);
-            Console.WriteLine("Total load of all routes {0}", totalLoad);
+            LogWriter.WriteLine("Total distance of all routes {0}", totalDistance);
+            LogWriter.WriteLine("Total load of all routes {0}", totalLoad);
         }
 
         public override void WritePruneLog(State state)
         {
-            //Console.WriteLine("Prune => StateIndex:{0}, State:{1}, Stage:{2}, DualBound:{3}, BestValue:{4}, BestPrimalBound:{5}", state.Index, state.ToString(), state.Stage.Index, state.DualBound, state.BestValue, BoundManager.Instance.BestPrimalBound);
+            //LogWriter.WriteLine("Prune => StateIndex:{0}, State:{1}, Stage:{2}, DualBound:{3}, BestValue:{4}, BestPrimalBound:{5}", state.Index, state.ToString(), state.Stage.Index, state.DualBound, state.BestValue, BoundManager.Instance.BestPrimalBound);
         }
     }
 }

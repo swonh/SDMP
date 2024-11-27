@@ -6,6 +6,7 @@ using Nodez.Sdmp.Constants;
 using Nodez.Sdmp.General.Controls;
 using Nodez.Sdmp.General.DataModel;
 using Nodez.Sdmp.General.Managers;
+using Nodez.Sdmp.LogHelper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,10 +26,10 @@ namespace Nodez.Project.GeneralTemplate.Controls
             SolutionManager solutionManager = SolutionManager.Instance;
             Solution optSol = solutionManager.OptimalSolution;
 
-            Console.WriteLine(Constants.LINE);
-            Console.WriteLine(string.Format("Optimal Objective Value: {0}", optSol.Value));
+            LogWriter.WriteLine(Constants.LINE);
+            LogWriter.WriteLine(string.Format("Optimal Objective Value: {0}", optSol.Value));
             this.WriteSolution(optSol);
-            Console.WriteLine(Constants.LINE);
+            LogWriter.WriteLine(Constants.LINE);
         }
 
         public override void WriteBestSolutionLog()
@@ -36,10 +37,10 @@ namespace Nodez.Project.GeneralTemplate.Controls
             SolutionManager solutionManager = SolutionManager.Instance;
             Solution bestSol = solutionManager.BestSolution;
 
-            Console.WriteLine(Constants.LINE);
-            Console.WriteLine(string.Format("Objective Value: {0}", bestSol.Value));
+            LogWriter.WriteLine(Constants.LINE);
+            LogWriter.WriteLine(string.Format("Objective Value: {0}", bestSol.Value));
             this.WriteSolution(bestSol);
-            Console.WriteLine(Constants.LINE);
+            LogWriter.WriteLine(Constants.LINE);
         }
 
         public override void WriteSolution(Solution solution)
@@ -49,7 +50,7 @@ namespace Nodez.Project.GeneralTemplate.Controls
 
         public override void WritePruneLog(State state)
         {
-            //Console.WriteLine("Prune => StateIndex:{0}, State:{1}, Stage:{2}, DualBound:{3}, BestValue:{4}, BestPrimalBound:{5}", state.Index, state.ToString(), state.Stage.Index, state.DualBound, state.BestValue, BoundManager.Instance.BestPrimalBound);
+            //LogWriter.WriteLine("Prune => StateIndex:{0}, State:{1}, Stage:{2}, DualBound:{3}, BestValue:{4}, BestPrimalBound:{5}", state.Index, state.ToString(), state.Stage.Index, state.DualBound, state.BestValue, BoundManager.Instance.BestPrimalBound);
         }
     }
 }

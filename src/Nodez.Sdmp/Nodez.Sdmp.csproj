@@ -142,6 +142,7 @@
     <Compile Include="General\Managers\SolverManager.cs" />
     <Compile Include="Interfaces\IRunConfig.cs" />
     <Compile Include="Interfaces\ISolver.cs" />
+    <Compile Include="LogHelper\LogWriter.cs" />
     <Compile Include="MachineLearningHelper\MLConsoleHelper.cs" />
     <Compile Include="Routing\Controls\NodeControl.cs" />
     <Compile Include="General\Controls\SolverControl.cs" />
