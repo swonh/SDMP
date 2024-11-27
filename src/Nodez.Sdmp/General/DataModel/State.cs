@@ -6,6 +6,7 @@ using Nodez.Sdmp.General.Managers;
 using Priority_Queue;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Nodez.Sdmp.General.DataModel
@@ -129,6 +130,26 @@ namespace Nodez.Sdmp.General.DataModel
             while (currState.IsInitial == false) 
             {
                 currState = currState.PrevBestState;
+                states.Add(currState);
+            }
+
+            return states;
+        }
+
+        public virtual List<State> GetBestStatesBackwardWithFirstPrevStates()
+        {
+            List<State> states = new List<State>();
+
+            if (this.PrevStates == null)
+                return states;
+
+            State currState = this.PrevStates.Values.First();
+
+            states.Add(currState);
+
+            while (currState.IsInitial == false)
+            {
+                currState = currState.PrevStates.Values.First();
                 states.Add(currState);
             }
 
