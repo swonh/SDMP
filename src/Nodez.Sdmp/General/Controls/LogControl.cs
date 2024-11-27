@@ -126,7 +126,7 @@ namespace Nodez.Sdmp.General.Controls
 
                 if (isLast)
                 {
-                    LogWriter.WriteLine();
+                    LogWriter.WriteLineConsoleOnly();
                 }
             }
         }
