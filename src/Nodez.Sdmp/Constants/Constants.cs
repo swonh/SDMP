@@ -60,6 +60,8 @@ namespace Nodez.Sdmp.Constants
 
         public static string STATE_INFO_LOG = "StateInfoLog";
 
+        public static string CONSOLE_OUTPUT_LOG = "ConsoleOutputLog";
+
         public static string RUN_CONFIG = "RunConfig";
 
         public static string Y = "Y";

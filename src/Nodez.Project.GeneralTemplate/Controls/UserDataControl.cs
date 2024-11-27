@@ -18,7 +18,7 @@ namespace Nodez.Project.GeneralTemplate.Controls
 
         public static new UserDataControl Instance { get { return lazy.Value; } }
 
-        public override IData GetData(dynamic[] args)
+        public override IData GetData()
         {
             return null;
         }

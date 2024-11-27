@@ -93,7 +93,7 @@ namespace Nodez.Project.SchedulingTemplate.Controls
 
             List<MLInputData> rows = new List<MLInputData>();
             int jobProcessStatusLength = 0;
-            foreach (Solution solution in SolutionManager.Instance.Solutions)
+            foreach (Solution solution in SolutionManager.Instance.Solutions.Values)
             {
                 IOrderedEnumerable<KeyValuePair<int, State>> states = solution.States.OrderBy(x => x.Key);
                 int makespan = (int)solution.Value;

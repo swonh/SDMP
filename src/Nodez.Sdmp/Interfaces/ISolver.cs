@@ -82,13 +82,93 @@ namespace Nodez.Sdmp.Interfaces
 
         public void Initialize(List<object> controls, List<object> managers)
         {
+            if (CheckRunConfig() == false)
+            {
+                LogControl.Instance.WriteEndLog(Messeges.INVALID_RUN_CONFIG);
+                return;
+            }
+
             this.RegisterControls(controls);
             this.RegisterManagers(managers);
+
+            SolverManager.Instance.SetRunConfig(this.RunConfig);
+            SolverManager.Instance.SetCurrentSolverName(this.RunConfig.SOLVER_NAME);
+            this.Name = SolverManager.Instance.CurrentSolverName;
+
+            this.StopWatch.Start();
+            this.EngineStartTime = DateTime.Now;
+
+            SolverManager.Instance.SetEngineStartTime(this.Name, this.EngineStartTime);
+            SolverManager.Instance.ClearStatusLogs();
+
+            IData data = DataControl.Instance.GetData();
+
+            if (data == null)
+            {
+                LogControl.Instance.WriteEndLog(Messeges.DATA_IS_NULL);
+                return;
+            }
+
+            DataManager.Instance.SetData(data);
+            EventControl.Instance.OnDataLoad();
+
+            this.SetOutputDirectory();
+            this.SetConsole();
         }
 
         public void Initialize(List<object> controls)
         {
+            if (CheckRunConfig() == false)
+            {
+                LogControl.Instance.WriteEndLog(Messeges.INVALID_RUN_CONFIG);
+                return;
+            }
+
             this.RegisterControls(controls);
+
+            SolverManager.Instance.SetRunConfig(this.RunConfig);
+            SolverManager.Instance.SetCurrentSolverName(this.RunConfig.SOLVER_NAME);
+            this.Name = SolverManager.Instance.CurrentSolverName;
+
+            this.StopWatch.Start();
+            this.EngineStartTime = DateTime.Now;
+
+            SolverManager.Instance.SetEngineStartTime(this.Name, this.EngineStartTime);
+            SolverManager.Instance.ClearStatusLogs();
+
+            IData data = DataControl.Instance.GetData();
+
+            if (data == null)
+            {
+                LogControl.Instance.WriteEndLog(Messeges.DATA_IS_NULL);
+                return;
+            }
+
+            DataManager.Instance.SetData(data);
+            EventControl.Instance.OnDataLoad();
+
+            this.SetOutputDirectory();
+            this.SetConsole();
+        }
+
+        protected void SetOutputDirectory() 
+        {
+            this.OutputDirectoryPath = SolverControl.Instance.GetOutputDirectoryPath(this.Name);
+            SolverManager.Instance.SetOutputDirectoryPath(this.Name, this.OutputDirectoryPath);
+
+            if (Directory.Exists(this.OutputDirectoryPath) == false)
+                Directory.CreateDirectory(this.OutputDirectoryPath);
+        }
+
+        protected void SetConsole() 
+        {
+            string engineStartTime = SolverManager.Instance.GetEngineStartTime(this.Name).ToString("yyyyMMdd_HHmmss");
+
+            StreamWriter fileWriter = new StreamWriter($"{Constants.Constants.CONSOLE_OUTPUT_LOG}_{RunConfig.RUN_SEQ}_{this.Name}_{engineStartTime}.txt");
+
+            DualTextWriter dualWriter = new DualTextWriter(Console.Out, fileWriter);
+
+            Console.SetOut(dualWriter);
         }
 
         protected void RegisterControls(List<object> controls)
@@ -235,13 +315,10 @@ namespace Nodez.Sdmp.Interfaces
             return isValid;
         }
 
-        public void Run(dynamic[] args = null)
+        public void Run()
         {
             if (this.RunConfig.IS_RUN == false)
                 return;
-
-            this.StopWatch.Start();
-            this.EngineStartTime = DateTime.Now;
 
             StateControl stateControl = StateControl.Instance;
             ActionControl transitionControl = ActionControl.Instance;
@@ -264,31 +341,7 @@ namespace Nodez.Sdmp.Interfaces
 
             try
             {
-                if (CheckRunConfig() == false)
-                {
-                    logControl.WriteEndLog(Messeges.INVALID_RUN_CONFIG);
-                    return;
-                }
-
-                solverManager.SetRunConfig(this.RunConfig);
-                solverManager.SetCurrentSolverName(this.RunConfig.SOLVER_NAME);
-                this.Name = solverManager.CurrentSolverName;
-                solverManager.SetEngineStartTime(this.Name, this.EngineStartTime);
-                solverManager.ClearStatusLogs();
-
                 eventControl.OnBeginSolve();
-
-                IData data = dataControl.GetData(args);
-
-                if (data == null)
-                {
-                    logControl.WriteEndLog(Messeges.DATA_IS_NULL);
-                    return;
-                }
-
-                dataManager.SetData(data);
-
-                eventControl.OnDataLoad();
 
                 ObjectiveFunctionType objectiveFunctionType = solverControl.GetObjectiveFuntionType(this.RunConfig);
                 SetObjectiveFunctionType(objectiveFunctionType);
@@ -318,9 +371,6 @@ namespace Nodez.Sdmp.Interfaces
                 this.IsOnlineLearning = mlControl.IsOnlineLearning();
                 this.IsOfflineLearning = mlControl.IsOfflineLearning();
                 this.IsApplyStateClustering = mlControl.IsApplyStateClustering();
-
-                this.OutputDirectoryPath = solverControl.GetOutputDirectoryPath(this.Name);
-                solverManager.SetOutputDirectoryPath(this.Name, this.OutputDirectoryPath);
 
                 if (this.IsOnlineLearning || this.IsOfflineLearning || this.IsApplyStateClustering)
                     this.IsApplyMachineLearning = true;

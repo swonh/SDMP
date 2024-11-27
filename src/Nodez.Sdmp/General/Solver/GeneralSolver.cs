@@ -30,6 +30,5 @@ namespace Nodez.Sdmp.General.Solver
             this.TransitionQueue = new FastPriorityQueue<State>(Convert.ToInt32(9 * Math.Pow(10, 7)));
             //FastPriorityQueue - Convert.ToInt32(9 * Math.Pow(10, 7)
         }
-
     }
 }

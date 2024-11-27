@@ -33,7 +33,7 @@ namespace Nodez.Sdmp.General.Controls
             }
         }
 
-        public virtual IData GetData(dynamic[] args) 
+        public virtual IData GetData() 
         {
             return null;
         }

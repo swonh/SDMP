@@ -326,4 +326,36 @@ namespace Nodez.Sdmp.General.Managers
             return path;
         }
     }
+
+    public class DualTextWriter : TextWriter
+    {
+        private TextWriter consoleWriter;
+        private TextWriter fileWriter;
+
+        public DualTextWriter(TextWriter consoleWriter, TextWriter fileWriter)
+        {
+            this.consoleWriter = consoleWriter;
+            this.fileWriter = fileWriter;
+        }
+
+        public override Encoding Encoding => consoleWriter.Encoding;
+
+        public override void Write(char value)
+        {
+            consoleWriter.Write(value);
+            fileWriter.Write(value);
+        }
+
+        public override void WriteLine(string value)
+        {
+            consoleWriter.WriteLine(value);
+            fileWriter.WriteLine(value);
+        }
+
+        public override void Flush()
+        {
+            consoleWriter.Flush();
+            fileWriter.Flush();
+        }
+    }
 }
