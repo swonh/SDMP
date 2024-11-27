@@ -117,6 +117,8 @@ namespace Nodez.Sdmp.General.Controls
 
         public void ShowProgress(int current, int total, bool isLast)
         {
+            Console.SetOut(SolverManager.Instance.OriginalConsoleWriter);
+
             const int updateInterval = 10;
             if (current % updateInterval == 0 || current == total)
             {
@@ -126,6 +128,7 @@ namespace Nodez.Sdmp.General.Controls
                 if (isLast)
                 {
                     Console.WriteLine();
+                    Console.SetOut(SolverManager.Instance.ConsoleWriter);
                 }
             }
         }

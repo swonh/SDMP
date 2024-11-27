@@ -164,11 +164,15 @@ namespace Nodez.Sdmp.Interfaces
         {
             string engineStartTime = SolverManager.Instance.GetEngineStartTime(this.Name).ToString("yyyyMMdd_HHmmss");
 
-            StreamWriter fileWriter = new StreamWriter($"{Constants.Constants.CONSOLE_OUTPUT_LOG}_{RunConfig.RUN_SEQ}_{this.Name}_{engineStartTime}.txt");
+            SolverManager.Instance.SetOriginalConsoleWriter(Console.Out);
+
+            StreamWriter fileWriter = new StreamWriter($"{this.OutputDirectoryPath}{Path.DirectorySeparatorChar}{Constants.Constants.CONSOLE_OUTPUT_LOG}_{RunConfig.RUN_SEQ}_{this.Name}_{engineStartTime}.txt");
+            fileWriter.AutoFlush = true;
 
             DualTextWriter dualWriter = new DualTextWriter(Console.Out, fileWriter);
 
             Console.SetOut(dualWriter);
+            SolverManager.Instance.SetConsoleWriter(dualWriter);
         }
 
         protected void RegisterControls(List<object> controls)
