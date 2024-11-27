@@ -20,6 +20,11 @@ namespace Nodez.Sdmp.LogHelper
             _fileWriter = fileWriter;
         }
 
+        public static void DisposeFileWriter()
+        {
+            _fileWriter.Dispose();
+        }
+
         public static void Write(string value) 
         {
             Console.Write(value);

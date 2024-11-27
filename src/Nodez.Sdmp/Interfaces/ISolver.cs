@@ -556,6 +556,8 @@ namespace Nodez.Sdmp.Interfaces
             StateManager.Instance.Reset();
             StateTransitionManager.Instance.Reset();
 
+            LogWriter.DisposeFileWriter();
+
             GC.Collect();
         }
 
