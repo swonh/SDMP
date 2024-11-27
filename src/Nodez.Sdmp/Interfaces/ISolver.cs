@@ -991,7 +991,9 @@ namespace Nodez.Sdmp.Interfaces
                 toState.Stage = nextStage;
 
                 if (toState.IsLastStage)
+                {
                     toState.Stage.SetIsLastStage(true);
+                }
 
                 if (toState.IsFinal)
                 {
@@ -999,7 +1001,9 @@ namespace Nodez.Sdmp.Interfaces
                     toState.Stage.SetIsFinalStage(true);
                 }
                 else
+                {
                     toState.SetKey(stateControl.GetKey(toState));
+                }
 
                 double cost = nextTran.Cost;
                 double nextValue = state.CurrentBestValue + cost;
