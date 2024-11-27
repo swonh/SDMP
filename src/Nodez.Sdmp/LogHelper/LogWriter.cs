@@ -26,11 +26,6 @@ namespace Nodez.Sdmp.LogHelper
             _fileWriter.Write(value);
         }
 
-        public static void WriteConsoleOnly(string value)
-        {
-            Console.Write(value);
-        }
-
         public static void WriteLine(string value)
         {
             Console.WriteLine(value);
@@ -43,20 +38,30 @@ namespace Nodez.Sdmp.LogHelper
             _fileWriter.WriteLine(string.Format(Console.Out.FormatProvider, format, arg));
         }
 
-        public static void WriteLineConsoleOnly(string value)
-        {
-            Console.WriteLine(value);
-        }
-
         public static void WriteLine()
         {
             Console.WriteLine();
             _fileWriter.WriteLine();
         }
 
+        public static void WriteConsoleOnly(string value)
+        {
+            Console.Write(value);
+        }
+
+        public static void WriteLineConsoleOnly(string value)
+        {
+            Console.WriteLine(value);
+        }
+
         public static void WriteLineConsoleOnly()
         {
             Console.WriteLine();
+        }
+
+        public static void WriteLineConsoleOnly(string format, params object[] arg)
+        {
+            Console.WriteLine(format, arg);
         }
     }
 }
