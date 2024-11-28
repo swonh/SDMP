@@ -896,16 +896,6 @@ namespace Nodez.Sdmp.Interfaces
 
                 eventControl.OnVisitState(state);
 
-                if (state.IsValueFunctionCalulated) 
-                {
-                    stateManager.AddValueFunctionCalculatedState(state);
-                }
-
-                if (state.IsSetValueFunctionEstimate)
-                {
-                    stateManager.AddValueFunctionEstimatedState(state);
-                }
-
                 if (state.IsSetDualBound) 
                 {
                     stateManager.AddDualBoundCalculatedState(state);
