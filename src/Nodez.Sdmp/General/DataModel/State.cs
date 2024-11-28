@@ -138,7 +138,7 @@ namespace Nodez.Sdmp.General.DataModel
             return states;
         }
 
-        public virtual List<State> GetBestStatesBackwardWithFirstPrevStates()
+        public virtual List<State> GetFirstStatesBackward()
         {
             List<State> states = new List<State>();
 
