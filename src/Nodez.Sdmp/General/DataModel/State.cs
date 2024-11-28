@@ -158,7 +158,7 @@ namespace Nodez.Sdmp.General.DataModel
             return states;
         }
 
-        public State Clone()
+        public virtual State Clone()
         {
             State clone = (State)this.MemberwiseClone();
 

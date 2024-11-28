@@ -241,7 +241,7 @@ namespace Nodez.Sdmp.Scheduling.DataModel
             }
         }
 
-        public new SchedulingState Clone()
+        public override State Clone()
         {
             SchedulingState clone = (SchedulingState)this.MemberwiseClone();       
 

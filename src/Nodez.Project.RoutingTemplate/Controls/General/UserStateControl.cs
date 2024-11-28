@@ -47,7 +47,7 @@ namespace Nodez.Project.RoutingTemplate.Controls
             RoutingDataManager manager = RoutingDataManager.Instance;
 
             RoutingState routingState = state as RoutingState;
-            RoutingState copiedState = routingState.Clone();
+            RoutingState copiedState = routingState.Clone() as RoutingState;
             copiedState.IsInitial = false;
 
             List<RoutingState> states = new List<RoutingState>();
@@ -109,7 +109,7 @@ namespace Nodez.Project.RoutingTemplate.Controls
                 }
 
                 states.Add(copiedState);
-                copiedState = copiedState.Clone();
+                copiedState = copiedState.Clone() as RoutingState;
             }
 
             foreach (KeyValuePair<int, VehicleStateInfo> item in copiedState.VehicleStateInfos)
@@ -119,7 +119,7 @@ namespace Nodez.Project.RoutingTemplate.Controls
                 if (info.IsActive == false)
                     continue;
 
-                copiedState = copiedState.Clone();
+                copiedState = copiedState.Clone() as RoutingState;
                 copiedState.IsInitial = false;
 
                 Stage stage = new Stage(copiedState.Stage.Index + 1);
