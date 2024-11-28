@@ -143,6 +143,8 @@ namespace Nodez.Sdmp.General.Controls
             string time = elapsedTime.ToString("hh\\:mm\\:ss");
 
             string log = string.Format(" * {0,8} {1,9} {2,16} {3,16} {4,8} {5,7} {6,10}", state.Index, state.Stage.Index, bestSolution, bestDualBound, numSolutions, relativeDualityGap, time);
+
+            Console.SetCursorPosition(0, Console.CursorTop);
             LogWriter.WriteLine(log);
         }
 
