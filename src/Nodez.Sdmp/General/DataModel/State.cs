@@ -47,6 +47,8 @@ namespace Nodez.Sdmp.General.DataModel
 
         public bool IsSetValueFunctionEstimate { get; set; }
 
+        public bool IsValueFunctionCalulated { get; set; }
+
         public State PreActionState { get; set; }
 
         public Dictionary<string, State> PrevBestStates { get; set; }
