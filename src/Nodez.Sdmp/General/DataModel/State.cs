@@ -65,6 +65,8 @@ namespace Nodez.Sdmp.General.DataModel
         public State(string key)
         {
             this.Key = key;
+            this.PrevStates = new Dictionary<string, State>();
+            this.PrevBestStates = new Dictionary<string, State>();
             this.DualBound = BoundManager.Instance.RootDualBound;
         }
 

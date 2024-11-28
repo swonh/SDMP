@@ -42,17 +42,6 @@ namespace Nodez.Sdmp.Scheduling.DataModel
 
         public int RemainTargetValue { get; set; }
 
-        public SchedulingState(string key)
-        {
-            this.Key = key;
-        }
-
-        public SchedulingState()
-        {
-            this.PrevStates = new Dictionary<string, State>();
-            this.PrevBestStates = new Dictionary<string, State>();
-        }
-
         public virtual void Initialize()
         {
             this.InitJobProcessStatus();
@@ -254,7 +243,11 @@ namespace Nodez.Sdmp.Scheduling.DataModel
 
         public new SchedulingState Clone()
         {
+            State state = base.Clone();
+
             SchedulingState clone = (SchedulingState)this.MemberwiseClone();
+
+            
 
             clone.CopyStateInfo(this);
 

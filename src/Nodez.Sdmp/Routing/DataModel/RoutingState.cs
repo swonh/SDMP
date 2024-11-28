@@ -24,16 +24,8 @@ namespace Nodez.Sdmp.Routing.DataModel
 
         public int CurrentNodeIndex { get; set; }
 
-        public RoutingState(string key)
+        public RoutingState() : base()
         {
-            this.Key = key;
-        }
-
-        public RoutingState()
-        {
-            this.PrevStates = new Dictionary<string, State>();
-            this.PrevBestStates = new Dictionary<string, State>();
-
             this.VehicleStateInfos = new Dictionary<int, VehicleStateInfo>();
         }
 
