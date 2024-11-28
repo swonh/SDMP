@@ -896,11 +896,32 @@ namespace Nodez.Sdmp.Interfaces
 
                 eventControl.OnVisitState(state);
 
+                if (state.IsValueFunctionCalulated) 
+                {
+                    stateManager.AddValueFunctionCalculatedState(state);
+                }
+
+                if (state.IsSetValueFunctionEstimate)
+                {
+                    stateManager.AddValueFunctionEstimatedState(state);
+                }
+
+                if (state.IsSetDualBound) 
+                {
+                    stateManager.AddDualBoundCalculatedState(state);
+                }
+
+                if (state.IsSetPrimalBound)
+                {
+                    stateManager.AddPrimalBoundCalculatedState(state);
+                }
+
                 bool isCalcDualBound = boundManager.IsCalculateDualBound(isUseDualBound, dualBoundUpdatePeriod, stageIndex, loopCount);
                 if (isCalcDualBound && state.IsSetDualBound == false)
                 {
                     double dualBound = boundControl.GetDualBound(state);
                     state.SetDualBound(dualBound);
+                    stateManager.AddDualBoundCalculatedState(state);
                 }
 
                 bool isCalcValueFunctionEstimate = approxManager.IsCalculateValueFunctionEstimate(isUseValueFuctionEstimate, valueFunctionEstimateUpdatePeriod, stageIndex, loopCount);
@@ -908,6 +929,7 @@ namespace Nodez.Sdmp.Interfaces
                 {
                     double valueFunctionEstimate = approxControl.GetValueFunctionEstimate(state);
                     state.SetValueFunctionEstimate(valueFunctionEstimate);
+                    stateManager.AddValueFunctionEstimatedState(state);
                 }
 
                 bool isCalcPrimalBound = boundManager.IsCalculatePrimalBound(isUsePrimalBound, primalSolutionUpdatePeriod, stageIndex, loopCount);
@@ -922,6 +944,7 @@ namespace Nodez.Sdmp.Interfaces
                         double primalBound = boundControl.GetPrimalBound(feasibleSol);
                         state.SetPrimalBound(primalBound);
                         boundManager.UpdateBestPrimalBound(state, primalBound, objectiveFunctionType, StopWatch.Elapsed);
+                        stateManager.AddPrimalBoundCalculatedState(state);
                     }
                 }
 
@@ -946,6 +969,7 @@ namespace Nodez.Sdmp.Interfaces
                 if (stateControl.CanPruneByOptimality(state, objectiveFunctionType, pruneTolerance))
                 {
                     logControl.WritePruneLog(state);
+                    stateManager.PruneState(state);
                     continue;
                 }
 
@@ -975,12 +999,6 @@ namespace Nodez.Sdmp.Interfaces
                 }
 
                 this.DoTransitions(state, trans);
-
-                int stateCount = stateManager.GetStateCount();
-                if (stateCount > 10000)
-                {
-                    stateManager.ClearStageStateMappings();
-                }
             }
         }
 

@@ -32,25 +32,39 @@ namespace Nodez.Sdmp.General.Managers
             }
         }
 
+        public StateManager() 
+        {
+            this._valueFunctionEstimatedStateCount = new Dictionary<int, int>();
+            this._valueFunctionCalculatedStateCount = new Dictionary<int, int>();
+        }
+
         public State InitialState { get; private set; }
 
         public State FinalState { get; private set; }
 
-        public int StateCount { get; private set; }
+        public int ExploredStateCount { get { return this._exploredStateCount; } }
 
-        private Dictionary<int, List<State>> _stageStateMappings { get; set; }
+        public int PrunedStateCount { get { return this._prunedStateCount; } }
 
-        public List<State> GetStates(int stageNum) 
-        {
-            List<State> states = new List<State>();
+        public int DualBoundCalculatedStateCount { get { return this._dualBoundCalculatedStateCount; } }
 
-            if (this._stageStateMappings.TryGetValue(stageNum, out List<State> val)) 
-            {
-                states = val;
-            }
+        public int PrimalBoundCalculatedStateCount { get { return this._primalBoundCalculatedStateCount; } }
 
-            return states;
-        }
+        public int ValueFunctionEstimatedStateCount { get { return this._valueFunctionEstimatedStateCount.Values.Count; } }
+
+        public int ValueFunctionCalculatedStateCount { get { return this._valueFunctionCalculatedStateCount.Values.Count; } }
+
+        private int _exploredStateCount { get; set; }
+
+        private int _prunedStateCount { get; set; }
+
+        private int _primalBoundCalculatedStateCount { get; set; }
+
+        private int _dualBoundCalculatedStateCount { get; set; }
+
+        private Dictionary<int, int> _valueFunctionEstimatedStateCount { get; set; }
+
+        private Dictionary<int, int> _valueFunctionCalculatedStateCount { get; set; }
 
         public void SetInitialState(State state) 
         {
@@ -62,41 +76,49 @@ namespace Nodez.Sdmp.General.Managers
             this.FinalState = state;
         }
 
-        public void ClearStageStateMappings() 
-        {
-            this._stageStateMappings.Clear();
-        }
-
-        public int GetStateCount() 
-        {
-            int count = 0;
-            //foreach (List<State> item in this._stageStateMappings.Values)
-            //{
-            //    count += item.Count;
-            //}
-
-            return count;
-        }
-
         public void AddState(State state, Stage stage)
         {
             state.Stage = stage;
+            this._exploredStateCount++;
+        }
 
-            //stage.AddState(state);
+        public void PruneState(State state) 
+        {
+            this._prunedStateCount++;
+        }
 
-            //if (this._stageStateMappings == null)
-            //    this._stageStateMappings = new Dictionary<int, List<State>>();
+        public void AddValueFunctionEstimatedState(State state)
+        {
+            if (this._valueFunctionEstimatedStateCount.ContainsKey(state.Stage.Index))
+            {
+                this._valueFunctionEstimatedStateCount[state.Stage.Index]++;
+            }
+            else
+            {
+                this._valueFunctionEstimatedStateCount[state.Stage.Index] = 1;
+            }
+        }
 
-            //if (this._stageStateMappings.TryGetValue(stage.Index, out List<State> states))
-            //{
-            //    states.Add(state);
-            //    this.StateCount++;
-            //}
-            //else
-            //{
-            //    this._stageStateMappings.Add(stage.Index, new List<State>() { state });
-            //    this.StateCount++;
-            //}
+        public void AddValueFunctionCalculatedState(State state)
+        {
+            if (this._valueFunctionCalculatedStateCount.ContainsKey(state.Stage.Index))
+            {
+                this._valueFunctionCalculatedStateCount[state.Stage.Index]++;
+            }
+            else
+            {
+                this._valueFunctionCalculatedStateCount[state.Stage.Index] = 1;
+            }
+        }
+
+        public void AddDualBoundCalculatedState(State state)
+        {
+            this._dualBoundCalculatedStateCount++;
+        }
+
+        public void AddPrimalBoundCalculatedState(State state)
+        {
+            this._primalBoundCalculatedStateCount++;
         }
 
         public void SetLinks(DataModel.StateTransition transition) 
