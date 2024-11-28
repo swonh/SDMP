@@ -896,16 +896,6 @@ namespace Nodez.Sdmp.Interfaces
 
                 eventControl.OnVisitState(state);
 
-                if (state.IsSetDualBound) 
-                {
-                    stateManager.AddDualBoundCalculatedState(state);
-                }
-
-                if (state.IsSetPrimalBound)
-                {
-                    stateManager.AddPrimalBoundCalculatedState(state);
-                }
-
                 bool isCalcDualBound = boundManager.IsCalculateDualBound(isUseDualBound, dualBoundUpdatePeriod, stageIndex, loopCount);
                 if (isCalcDualBound && state.IsSetDualBound == false)
                 {
