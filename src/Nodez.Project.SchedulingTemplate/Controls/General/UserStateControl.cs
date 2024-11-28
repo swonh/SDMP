@@ -47,7 +47,7 @@ namespace Nodez.Project.SchedulingTemplate.Controls
             SchedulingDataManager dataManager = SchedulingDataManager.Instance;
 
             SchedulingState schedulingState = state as SchedulingState;
-            SchedulingState copiedState = schedulingState.Clone();
+            SchedulingState copiedState = schedulingState.Clone() as SchedulingState;
             copiedState.IsInitial = false;
 
             List<SchedulingState> states = new List<SchedulingState>();
@@ -129,7 +129,7 @@ namespace Nodez.Project.SchedulingTemplate.Controls
                 copiedState.SetKey(copiedState.GetKey());
 
                 states.Add(copiedState);
-                copiedState = copiedState.Clone();
+                copiedState = copiedState.Clone() as SchedulingState;
             }
 
             Solution feasibleSol = new Solution(states);
