@@ -33,10 +33,6 @@ namespace Nodez.Sdmp.General.Managers
 
         public Stopwatch StopWatch { get; private set; }
 
-        public TextWriter OriginalConsoleWriter { get; private set; }
-
-        public TextWriter ConsoleWriter { get; private set; }
-
         private Dictionary<string, DateTime> _engineStartTime { get; set; }
 
         private Dictionary<string, DateTime> _engineEndTime { get; set; }
@@ -92,16 +88,6 @@ namespace Nodez.Sdmp.General.Managers
         public void ClearStatusLogs() 
         {
             this._statusLogs.Clear();
-        }
-
-        public void SetOriginalConsoleWriter(TextWriter textWriter) 
-        {
-            this.OriginalConsoleWriter = textWriter;
-        }
-
-        public void SetConsoleWriter(TextWriter textWriter)
-        {
-            this.ConsoleWriter = textWriter;
         }
 
         public void ClearStateInfoLogs()
