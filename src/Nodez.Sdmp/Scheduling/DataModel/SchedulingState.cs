@@ -243,11 +243,7 @@ namespace Nodez.Sdmp.Scheduling.DataModel
 
         public new SchedulingState Clone()
         {
-            State state = base.Clone();
-
-            SchedulingState clone = (SchedulingState)this.MemberwiseClone();
-
-            
+            SchedulingState clone = (SchedulingState)this.MemberwiseClone();       
 
             clone.CopyStateInfo(this);
 
