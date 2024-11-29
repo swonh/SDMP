@@ -81,33 +81,45 @@ namespace Nodez.Sdmp.General.DataModel
 
         public virtual void SetDualBound(double value)
         {
+            if (this.IsSetDualBound == false)
+            {
+                StateManager.Instance.AddDualBoundCalculatedState(this);
+            }
+
             this.DualBound = value;
             this.IsSetDualBound = true;
-
-            StateManager.Instance.AddDualBoundCalculatedState(this);
         }
 
         public virtual void SetPrimalBound(double value)
         {
+            if (this.IsSetPrimalBound == false) 
+            {
+                StateManager.Instance.AddPrimalBoundCalculatedState(this);
+            }
+
             this.PrimalBound = value;
             this.IsSetPrimalBound = true;
-
-            StateManager.Instance.AddPrimalBoundCalculatedState(this);
         }
 
         public virtual void SetValueFunctionEstimate(double value) 
         {
+            if (this.IsSetValueFunctionEstimate == false) 
+            {
+                StateManager.Instance.AddValueFunctionEstimatedState(this);
+            }
+
             this.ValueFunctionEstimate = value;
             this.IsSetValueFunctionEstimate = true;
-
-            StateManager.Instance.AddValueFunctionEstimatedState(this);
         }
 
         public virtual void SetIsValueFunctionCalculated(bool isCalculated)
         {
-            this.IsValueFunctionCalulated = isCalculated;
+            if (this.IsValueFunctionCalulated == false) 
+            {
+                StateManager.Instance.AddValueFunctionCalculatedState(this);
+            }
 
-            StateManager.Instance.AddValueFunctionCalculatedState(this);
+            this.IsValueFunctionCalulated = isCalculated;
         }
 
         public virtual void SetKey(string key)
