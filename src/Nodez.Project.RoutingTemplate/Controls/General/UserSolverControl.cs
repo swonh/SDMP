@@ -11,6 +11,8 @@ using System.Text;
 using Nodez.Sdmp.Interfaces;
 using Nodez.Sdmp;
 using System.Reflection;
+using Nodez.Sdmp.Scheduling.Managers;
+using Nodez.Sdmp.General.Managers;
 
 namespace Nodez.Project.RoutingTemplate.Controls
 {
@@ -39,7 +41,13 @@ namespace Nodez.Project.RoutingTemplate.Controls
 
         public override string GetOutputDirectoryPath(string solverName)
         {
-            return null;
+            string engineStartTime = SolverManager.Instance.GetEngineStartTime(solverName).ToString("yyyyMMdd_HHmmss");
+
+            string dirName = string.Format("{0}", engineStartTime);
+
+            string dirPath = string.Format(@"..\..\Output\{0}\", dirName);
+
+            return dirPath;
         }
     }
 }

@@ -102,17 +102,6 @@ namespace Nodez.Sdmp.Interfaces
             SolverManager.Instance.SetEngineStartTime(this.Name, this.EngineStartTime);
             SolverManager.Instance.ClearStatusLogs();
 
-            IData data = DataControl.Instance.GetData();
-
-            if (data == null)
-            {
-                LogControl.Instance.WriteEndLog(Messeges.DATA_IS_NULL);
-                return;
-            }
-
-            DataManager.Instance.SetData(data);
-            EventControl.Instance.OnDataLoad();
-
             this.SetOutputDirectory();
             this.SetConsole();
         }
@@ -136,17 +125,6 @@ namespace Nodez.Sdmp.Interfaces
 
             SolverManager.Instance.SetEngineStartTime(this.Name, this.EngineStartTime);
             SolverManager.Instance.ClearStatusLogs();
-
-            IData data = DataControl.Instance.GetData();
-
-            if (data == null)
-            {
-                LogControl.Instance.WriteEndLog(Messeges.DATA_IS_NULL);
-                return;
-            }
-
-            DataManager.Instance.SetData(data);
-            EventControl.Instance.OnDataLoad();
 
             this.SetOutputDirectory();
             this.SetConsole();
@@ -342,6 +320,17 @@ namespace Nodez.Sdmp.Interfaces
             try
             {
                 eventControl.OnBeginSolve();
+
+                IData data = DataControl.Instance.GetData();
+
+                if (data == null)
+                {
+                    logControl.WriteEndLog(Messeges.DATA_IS_NULL);
+                    return;
+                }
+
+                DataManager.Instance.SetData(data);
+                EventControl.Instance.OnDataLoad();
 
                 ObjectiveFunctionType objectiveFunctionType = solverControl.GetObjectiveFuntionType(this.RunConfig);
                 SetObjectiveFunctionType(objectiveFunctionType);
