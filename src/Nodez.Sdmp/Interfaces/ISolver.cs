@@ -83,11 +83,13 @@ namespace Nodez.Sdmp.Interfaces
 
         public bool IsInitialized { get; protected set; }
 
+        public string SolverEndMessage { get; protected set; }
+
         public void Initialize(List<object> controls, List<object> managers)
         {
             if (CheckRunConfig() == false)
             {
-                LogControl.Instance.WriteEndLog(Messeges.INVALID_RUN_CONFIG);
+                LogWriter.WriteLineConsoleOnly(Messages.INVALID_RUN_CONFIG);
                 return;
             }
 
@@ -105,7 +107,7 @@ namespace Nodez.Sdmp.Interfaces
         {
             if (CheckRunConfig() == false)
             {
-                LogControl.Instance.WriteEndLog(Messeges.INVALID_RUN_CONFIG);
+                LogWriter.WriteLineConsoleOnly(Messages.INVALID_RUN_CONFIG);
                 return;
             }
 
@@ -281,6 +283,11 @@ namespace Nodez.Sdmp.Interfaces
             return isValid;
         }
 
+        private void SetSolverEnd(string endMessage) 
+        {
+            this.SolverEndMessage = endMessage;
+        }
+
         public void Run()
         {
             if (this.RunConfig.IS_RUN == false)
@@ -307,7 +314,7 @@ namespace Nodez.Sdmp.Interfaces
 
             if (this.IsInitialized == false)
             {
-                logControl.WriteEndLog(Messeges.SOLVER_IS_NOT_INITIALIZED, true);
+                LogWriter.WriteConsoleOnly(Messages.SOLVER_IS_NOT_INITIALIZED);
                 return;
             }
 
@@ -326,7 +333,7 @@ namespace Nodez.Sdmp.Interfaces
 
             if (data == null)
             {
-                logControl.WriteEndLog(Messeges.DATA_IS_NULL);
+                LogWriter.WriteLine(Messages.DATA_IS_NULL);
                 return;
             }
 
@@ -396,7 +403,7 @@ namespace Nodez.Sdmp.Interfaces
 
                 if (initialState == null)
                 {
-                    logControl.WriteEndLog(Messeges.INITIAL_STATE_IS_NULL);
+                    this.SetSolverEnd(Messages.INITIAL_STATE_IS_NULL);
                     return;
                 }
 
@@ -457,18 +464,19 @@ namespace Nodez.Sdmp.Interfaces
                 {
                     solutionManager.AddSolution(initialFeasibleSol, true);
                     logControl.WriteStatusLog(initialState, StopWatch.Elapsed);
-                    logControl.WriteOptimalLog();
-                    logControl.WriteEndLog(Messeges.FOUND_OPTIMAL_SOLUTION);
 
                     StatusLog log = LogControl.Instance.GetStatusLog(initialState, StopWatch.Elapsed);
                     SolverManager.Instance.AddStatusLog(log);
 
+                    this.SetSolverEnd(Messages.FOUND_OPTIMAL_SOLUTION);
                     return;
                 }
 
                 this.DoInitialStateTransitions(initialState);
 
                 this.DoSolve();
+
+                this.SetSolverEnd(Messages.SEARCH_FINISHED);
             }
             finally
             {
@@ -476,7 +484,11 @@ namespace Nodez.Sdmp.Interfaces
                 solverManager.SetEngineEndTime(this.Name, this.EngineEndTime);
                 this.StopWatch.Reset();
 
-                if (stateManager.FinalState != null)
+                if (solutionManager.OptimalSolution != null) 
+                {
+                    LogWriter.WriteLine($"{Messages.FOUND_OPTIMAL_SOLUTION} (Obj. Val.: {solutionManager.BestSolution.Value})");
+                }
+                else if (stateManager.FinalState != null)
                 {
                     Solution sol = solutionManager.GetSolution(stateManager.FinalState);
 
@@ -499,22 +511,22 @@ namespace Nodez.Sdmp.Interfaces
                     }
 
                     solutionManager.AddSolution(sol, true);
-                    logControl.WriteBestSolutionLog();
-                    logControl.WriteEndLog(Messeges.FOUND_SOLUTION);
+                    LogWriter.WriteLine($"{Messages.FOUND_SOLUTION} (Obj. Val.: {solutionManager.BestSolution.Value})");
                 }
                 else if (solutionManager.BestSolution != null && solutionManager.OptimalSolution == null)
                 {
                     Solution bestSol = solutionManager.BestSolution;
 
                     solutionManager.AddSolution(bestSol);
-                    logControl.WriteBestSolutionLog();
-                    logControl.WriteEndLog(Messeges.FOUND_SOLUTION);
+                    LogWriter.WriteLine($"{Messages.FOUND_SOLUTION} (Obj. Val.: {solutionManager.BestSolution.Value})");
                 }
                 else if (solutionManager.BestSolution == null && solutionManager.OptimalSolution == null)
                 {
-                    logControl.WriteEndLog(Messeges.NO_SOLUTION_EXIST);
+                    LogWriter.WriteLine(Messages.NO_SOLUTION_EXIST);
                 }
 
+                LogControl.Instance.WriteEndLog(this.SolverEndMessage);
+                
                 if (this.IsOfflineLearning) 
                 {
                     mlManager.FitValuePredictionModel(true);
@@ -862,7 +874,7 @@ namespace Nodez.Sdmp.Interfaces
             {
                 if (this.StopWatch.Elapsed.TotalSeconds >= RunMaxTime)
                 {
-                    logControl.WriteEndLog($"{Messeges.MAX_TIME_LIMIT} RunMaxTime={this.RunMaxTime} sec.");
+                    this.SetSolverEnd($"{Messages.MAX_TIME_LIMIT} RunMaxTime={this.RunMaxTime} sec.");
                     return;
                 }
 
@@ -914,7 +926,6 @@ namespace Nodez.Sdmp.Interfaces
                 if (state.IsFinal)
                 {
                     stateManager.SetFinalState(state);
-
                     continue;
                 }
 
@@ -958,12 +969,11 @@ namespace Nodez.Sdmp.Interfaces
                 {
                     solutionManager.AddSolution(solutionManager.BestSolution, true);
                     logControl.WriteStatusLog(state, StopWatch.Elapsed);
-                    logControl.WriteOptimalLog();
-                    logControl.WriteEndLog(Messeges.FOUND_OPTIMAL_SOLUTION);
 
                     StatusLog log = LogControl.Instance.GetStatusLog(state, StopWatch.Elapsed);
                     SolverManager.Instance.AddStatusLog(log);
 
+                    this.SetSolverEnd(Messages.FOUND_OPTIMAL_SOLUTION);
                     return;
                 }
 

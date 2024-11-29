@@ -201,22 +201,6 @@ namespace Nodez.Sdmp.General.Controls
             LogWriter.WriteLine("   {0,8} {1,9} {2,16} {3,16} {4,8} {5,7} {6,10}", col1, col2, col3, col4, col5, col6, col7);
         }
 
-        public virtual void WriteBestSolutionLog() 
-        {
-            SolutionManager solutionManager = SolutionManager.Instance;
-            Solution bestSol = solutionManager.BestSolution;
-
-            LogWriter.WriteLine(string.Format("Best Objective Value: {0}", bestSol.Value));
-        }
-
-        public virtual void WriteOptimalLog()
-        {
-            SolutionManager solutionManager = SolutionManager.Instance;
-            Solution optSol = solutionManager.OptimalSolution;
-
-            LogWriter.WriteLine(string.Format("Optimal Objective Value: {0}", optSol.Value));
-        }
-
         public virtual void WritePruneLog(State state)
         {
             //LogWriter.WriteLine("Prune => StateIndex:{0}, State:{1}, Stage:{2}, DualBound:{3}, BestValue:{4}, BestPrimalBound:{5}", state.Index, state.ToString(), state.Stage.Index, state.DualBound, state.BestValue, BoundManager.Instance.BestPrimalBound);
@@ -277,10 +261,11 @@ namespace Nodez.Sdmp.General.Controls
             double bestDualBound = boundManager.BestDualBound;
             string relativeDualityGap = string.Format("{0:F2}%", Math.Round(BoundManager.Instance.RelativeDualityGap * 100, 2));
 
-            double runTime = Math.Round(solverManager.GetRunTime(solverManager.CurrentSolverName).TotalSeconds, 2);
+            double runTime = Math.Max(0, Math.Round(solverManager.GetRunTime(solverManager.CurrentSolverName).TotalSeconds, 2));
 
             if (consoleOnly)
             {
+                LogWriter.WriteLineConsoleOnly(Constants.Constants.LINE);
                 LogWriter.WriteLineConsoleOnly("Solver Ended (Reason:{0})", reason);
                 LogWriter.WriteLineConsoleOnly(">> Run Time: {0} sec.", runTime);
                 LogWriter.WriteLineConsoleOnly(">> Primal Bound: {0}, Dual Bound: {1}, Gap: {2}", bestPrimalBound, bestDualBound, relativeDualityGap);
@@ -289,6 +274,7 @@ namespace Nodez.Sdmp.General.Controls
             }
             else
             {
+                LogWriter.WriteLine(Constants.Constants.LINE);
                 LogWriter.WriteLine("Solver Ended (Reason:{0})", reason);
                 LogWriter.WriteLine(">> Run Time: {0} sec.", runTime);
                 LogWriter.WriteLine(">> Primal Bound: {0}, Dual Bound: {1}, Gap: {2}", bestPrimalBound, bestDualBound, relativeDualityGap);

@@ -123,7 +123,7 @@
   <ItemGroup>
     <Compile Include="Comparer\StateTransitionComparer.cs" />
     <Compile Include="Constants\Constants.cs" />
-    <Compile Include="Constants\Messeges.cs" />
+    <Compile Include="Constants\Messages.cs" />
     <Compile Include="Enum\StateFilteringType.cs" />
     <Compile Include="Enum\ControlType.cs" />
     <Compile Include="Enum\ManagerType.cs" />

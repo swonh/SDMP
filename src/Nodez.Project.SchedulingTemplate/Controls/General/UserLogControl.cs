@@ -23,28 +23,6 @@ namespace Nodez.Project.SchedulingTemplate.Controls
 
         public static new UserLogControl Instance { get { return lazy.Value; } }
 
-        public override void WriteOptimalLog()
-        {
-            SolutionManager solutionManager = SolutionManager.Instance;
-            Solution optSol = solutionManager.OptimalSolution;
-
-            LogWriter.WriteLine(Constants.LINE);
-            LogWriter.WriteLine(string.Format("Optimal Objective Value: {0}", optSol.Value));
-            this.WriteSolution(optSol);
-            LogWriter.WriteLine(Constants.LINE);
-        }
-
-        public override void WriteBestSolutionLog()
-        {
-            SolutionManager solutionManager = SolutionManager.Instance;
-            Solution bestSol = solutionManager.BestSolution;
-
-            LogWriter.WriteLine(Constants.LINE);
-            LogWriter.WriteLine(string.Format("Objective Value: {0}", bestSol.Value));
-            this.WriteSolution(bestSol);
-            LogWriter.WriteLine(Constants.LINE);
-        }
-
         public override void WriteSolution(Solution solution)
         {
             // Default Logic
