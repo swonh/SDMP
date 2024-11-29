@@ -305,34 +305,33 @@ namespace Nodez.Sdmp.Interfaces
             StateTransitionManager transitionManager = StateTransitionManager.Instance;
             MachineLearningManager mlManager = MachineLearningManager.Instance;
 
+            if (this.IsInitialized == false)
+            {
+                logControl.WriteEndLog(Messeges.SOLVER_IS_NOT_INITIALIZED, true);
+                return;
+            }
+
+            IData data = dataControl.GetData();
+            dataManager.SetData(data);
+            eventControl.OnDataLoad();
+
+            this.StopWatch.Start();
+            this.EngineStartTime = DateTime.Now;
+
+            solverManager.SetEngineStartTime(this.Name, this.EngineStartTime);
+            solverManager.ClearStatusLogs();
+
+            this.SetOutputDirectory();
+            this.SetConsole();
+
+            if (data == null)
+            {
+                logControl.WriteEndLog(Messeges.DATA_IS_NULL);
+                return;
+            }
+
             try
             {
-                if (this.IsInitialized == false)
-                {
-                    logControl.WriteEndLog(Messeges.SOLVER_IS_NOT_INITIALIZED);
-                    return;
-                }
-
-                IData data = dataControl.GetData();
-
-                dataManager.SetData(data);
-                eventControl.OnDataLoad();
-
-                this.StopWatch.Start();
-                this.EngineStartTime = DateTime.Now;
-
-                solverManager.SetEngineStartTime(this.Name, this.EngineStartTime);
-                solverManager.ClearStatusLogs();
-
-                this.SetOutputDirectory();
-                this.SetConsole();
-
-                if (data == null)
-                {
-                    logControl.WriteEndLog(Messeges.DATA_IS_NULL);
-                    return;
-                }
-
                 eventControl.OnBeginSolve();
 
                 ObjectiveFunctionType objectiveFunctionType = solverControl.GetObjectiveFuntionType(this.RunConfig);

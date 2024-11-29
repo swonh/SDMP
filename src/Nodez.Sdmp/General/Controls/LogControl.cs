@@ -256,10 +256,18 @@ namespace Nodez.Sdmp.General.Controls
             LogWriter.WriteLine(string.Format("End Global Filtering"));
         }
 
-        public void WriteEndLog(string reason)
+        public void WriteEndLog(string reason, bool consoleOnly = false)
         {
-            LogWriter.WriteLine("Solver Ended (Reason:{0})", reason);
-            LogWriter.WriteLine(string.Format("End Solver {0}", DateTime.Now));
+            if (consoleOnly)
+            {
+                LogWriter.WriteLineConsoleOnly("Solver Ended (Reason:{0})", reason);
+                LogWriter.WriteLineConsoleOnly(string.Format("End Solver {0}", DateTime.Now));
+            }
+            else
+            {
+                LogWriter.WriteLine("Solver Ended (Reason:{0})", reason);
+                LogWriter.WriteLine(string.Format("End Solver {0}", DateTime.Now));
+            }
         }
     }
 }
