@@ -591,19 +591,21 @@ namespace Nodez.Sdmp.Interfaces
             }
         }
 
-        private void FilterStatesByApproximation(ObjectiveFunctionType objectiveFunctionType, double pruneTolerance) 
+        private void FilterStatesByApproximation(State currentState, FastPriorityQueue<State> transitionQueue, ObjectiveFunctionType objectiveFunctionType, double pruneTolerance) 
         {
             BoundControl boundControl = BoundControl.Instance;
             ApproximationControl approxControl = ApproximationControl.Instance;
+            SolverManager solverManager = SolverManager.Instance;
+            StateManager stateManager = StateManager.Instance;
 
-            List<State> states = this.TransitionQueue.ToList();
+            List<State> stateList = transitionQueue.ToList();
 
             int loopCount = 0;
             double minEstimationValue = double.MaxValue;
 
-            for (int i = 0; i < states.Count; i++)
+            for (int i = 0; i < stateList.Count; i++)
             {
-                State state = states.ElementAt(i);
+                State state = stateList.ElementAt(i);
 
                 if (state.IsFinal)
                     continue;
@@ -621,17 +623,17 @@ namespace Nodez.Sdmp.Interfaces
                 return;
 
             if (objectiveFunctionType == ObjectiveFunctionType.Minimize)
-                states = states.OrderBy(x => x.ValueFunctionEstimate).ToList();
+                stateList = stateList.OrderBy(x => x.ValueFunctionEstimate).ToList();
             else
-                states = states.OrderByDescending(x => x.ValueFunctionEstimate).ToList();
+                stateList = stateList.OrderByDescending(x => x.ValueFunctionEstimate).ToList();
 
             double minTransitionCost = approxControl.GetMinimumTransitionCost();
             double multiplier = approxControl.GetMultiplier();
             int transitionCount = approxControl.GetApproximationTransitionCount();
 
-            List<State> filteredStates = new List<State>();
+            List<State> selectedStateList = new List<State>();
             int count = 0;
-            foreach (State state in states)
+            foreach (State state in stateList)
             {
                 if (approxControl.CanPruneByApproximation(state, objectiveFunctionType, minEstimationValue, minTransitionCost, multiplier, pruneTolerance))
                     continue;
@@ -639,12 +641,54 @@ namespace Nodez.Sdmp.Interfaces
                 if (transitionCount <= count)
                     break;
 
-                filteredStates.Add(state);
+                selectedStateList.Add(state);
                 count++;
             }
 
+            foreach (State state in stateList)
+            {
+                if (state.IsInitial == false && state.IsFinal == false)
+                {
+                    solverManager.AddStateInfoLog(LogControl.Instance.GetStateInfoLog(state, false));
+                }
+
+                if (state.IsSetDualBound)
+                {
+                    stateManager.AddDualBoundCalculatedState(state);
+                }
+
+                if (state.IsSetPrimalBound)
+                {
+                    stateManager.AddPrimalBoundCalculatedState(state);
+                }
+
+                if (state.IsValueFunctionCalulated)
+                {
+                    stateManager.AddValueFunctionCalculatedState(state);
+                }
+
+                if (state.IsSetValueFunctionEstimate)
+                {
+                    stateManager.AddValueFunctionEstimatedState(state);
+                }
+            }
+
+            foreach (State state in selectedStateList)
+            {
+                if (state.IsInitial == false && state.IsFinal == false)
+                {
+                    solverManager.AddStateInfoLog(LogControl.Instance.GetStateInfoLog(state, true));
+                }
+            }
+
+            int totalStateCount = stateList != null ? stateList.Count : 0;
+            int selectedStateCount = selectedStateList != null ? selectedStateList.Count : 0;
+            int filteredStateCount = totalStateCount - selectedStateCount;
+
+            stateManager.SetFilteredStateCount(currentState.Stage.Index, filteredStateCount);
+
             this.TransitionQueue.Clear();
-            this.AddNextStates(filteredStates);
+            this.AddNextStates(selectedStateList);
         }
 
         private bool CheckApproximationCondition(int stageIndex)
@@ -755,6 +799,9 @@ namespace Nodez.Sdmp.Interfaces
             LogControl.Instance.WriteGlobalFilteringStartLog(currentState.Stage.Index, transitionQueue.Count);
 
             ApproximationControl approxControl = ApproximationControl.Instance;
+            SolverManager solverManager = SolverManager.Instance;
+            StateManager stateManager = StateManager.Instance;
+
             StateFilteringType filteringType = approxControl.GetStateFilteringType();
 
             if (filteringType == StateFilteringType.Local)
@@ -769,29 +816,55 @@ namespace Nodez.Sdmp.Interfaces
 
             int globalMaximumTransitCount = approxControl.GetGlobalTransitionCount();
 
-            List<State> list = transitionQueue.ToList();
+            List<State> stateList = transitionQueue.ToList();
 
-            List<State> filteredList = approxControl.FilterGlobalStates(list, globalMaximumTransitCount, objectiveFunctionType, pruneTolerance, isApplyStateClustering);
+            List<State> selectedStateList = approxControl.FilterGlobalStates(stateList, globalMaximumTransitCount, objectiveFunctionType, pruneTolerance, isApplyStateClustering);
 
-            foreach (State state in list)
+            foreach (State state in stateList)
             {
                 if (state.IsInitial == false && state.IsFinal == false)
                 {
-                    SolverManager.Instance.AddStateInfoLog(LogControl.Instance.GetStateInfoLog(state, false));
+                    solverManager.AddStateInfoLog(LogControl.Instance.GetStateInfoLog(state, false));
+                }
+
+                if (state.IsSetDualBound) 
+                {
+                    stateManager.AddDualBoundCalculatedState(state);
+                }
+
+                if (state.IsSetPrimalBound)
+                {
+                    stateManager.AddPrimalBoundCalculatedState(state);
+                }
+
+                if (state.IsValueFunctionCalulated)
+                {
+                    stateManager.AddValueFunctionCalculatedState(state);
+                }
+
+                if (state.IsSetValueFunctionEstimate)
+                {
+                    stateManager.AddValueFunctionEstimatedState(state);
                 }
             }
 
-            foreach (State state in filteredList)
+            foreach (State state in selectedStateList)
             {
                 if (state.IsInitial == false && state.IsFinal == false)
                 {
-                    SolverManager.Instance.AddStateInfoLog(LogControl.Instance.GetStateInfoLog(state, true));
+                    solverManager.AddStateInfoLog(LogControl.Instance.GetStateInfoLog(state, true));
                 }
             }
+
+            int totalStateCount = stateList != null ? stateList.Count : 0;
+            int selectedStateCount = selectedStateList != null ? selectedStateList.Count : 0;
+            int filteredStateCount = totalStateCount - selectedStateCount;
+
+            stateManager.SetFilteredStateCount(currentState.Stage.Index, filteredStateCount);
 
             this.TransitionQueue.Clear();
 
-            this.AddNextStates(filteredList);
+            this.AddNextStates(selectedStateList);
 
             LogControl.Instance.WriteGlobalFilteringEndLog();
         }
@@ -860,7 +933,7 @@ namespace Nodez.Sdmp.Interfaces
 
                 if (this.CheckApproximationCondition(stageIndex))
                 {
-                    this.FilterStatesByApproximation(objectiveFunctionType, pruneTolerance);
+                    this.FilterStatesByApproximation(peek, transitionQueue, objectiveFunctionType, pruneTolerance);
                 }
                 
                 if (transitionQueue.Count == 0)

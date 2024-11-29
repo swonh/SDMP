@@ -7,6 +7,7 @@ using Nodez.Sdmp.Enum;
 using Nodez.Sdmp.General.DataModel;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Nodez.Sdmp.General.Managers
@@ -46,13 +47,15 @@ namespace Nodez.Sdmp.General.Managers
 
         public int PrunedStateCount { get { return this._prunedStateCount; } }
 
+        public int FilteredStateCount { get { return this._filteredStateCount.Values.Sum(); } }
+
         public int DualBoundCalculatedStateCount { get { return this._dualBoundCalculatedStateCount; } }
 
         public int PrimalBoundCalculatedStateCount { get { return this._primalBoundCalculatedStateCount; } }
 
-        public int ValueFunctionEstimatedStateCount { get { return this._valueFunctionEstimatedStateCount.Values.Count; } }
+        public int ValueFunctionEstimatedStateCount { get { return this._valueFunctionEstimatedStateCount.Values.Sum(); } }
 
-        public int ValueFunctionCalculatedStateCount { get { return this._valueFunctionCalculatedStateCount.Values.Count; } }
+        public int ValueFunctionCalculatedStateCount { get { return this._valueFunctionCalculatedStateCount.Values.Sum(); } }
 
         private int _exploredStateCount { get; set; }
 
@@ -61,6 +64,8 @@ namespace Nodez.Sdmp.General.Managers
         private int _primalBoundCalculatedStateCount { get; set; }
 
         private int _dualBoundCalculatedStateCount { get; set; }
+
+        private Dictionary<int, int> _filteredStateCount { get; set; }
 
         private Dictionary<int, int> _valueFunctionEstimatedStateCount { get; set; }
 
@@ -85,6 +90,14 @@ namespace Nodez.Sdmp.General.Managers
         public void PruneState(State state) 
         {
             this._prunedStateCount++;
+        }
+
+        public void SetFilteredStateCount(int stageIndex, int filteredCount) 
+        {
+            if (this._filteredStateCount.ContainsKey(stageIndex) == false)
+            {
+                this._filteredStateCount[stageIndex] = filteredCount;
+            }
         }
 
         public void AddValueFunctionEstimatedState(State state)
