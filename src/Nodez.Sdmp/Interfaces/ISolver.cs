@@ -81,6 +81,8 @@ namespace Nodez.Sdmp.Interfaces
 
         public IRunConfig RunConfig { get; protected set; }
 
+        public bool IsInitialized { get; protected set; }
+
         public void Initialize(List<object> controls, List<object> managers)
         {
             if (CheckRunConfig() == false)
@@ -96,14 +98,15 @@ namespace Nodez.Sdmp.Interfaces
             SolverManager.Instance.SetCurrentSolverName(this.RunConfig.SOLVER_NAME);
             this.Name = SolverManager.Instance.CurrentSolverName;
 
-            this.StopWatch.Start();
-            this.EngineStartTime = DateTime.Now;
+            IData data = DataControl.Instance.GetData();
 
-            SolverManager.Instance.SetEngineStartTime(this.Name, this.EngineStartTime);
-            SolverManager.Instance.ClearStatusLogs();
+            DataManager.Instance.SetData(data);
+            EventControl.Instance.OnDataLoad();
 
             this.SetOutputDirectory();
             this.SetConsole();
+
+            this.IsInitialized = true;
         }
 
         public void Initialize(List<object> controls)
@@ -120,14 +123,15 @@ namespace Nodez.Sdmp.Interfaces
             SolverManager.Instance.SetCurrentSolverName(this.RunConfig.SOLVER_NAME);
             this.Name = SolverManager.Instance.CurrentSolverName;
 
-            this.StopWatch.Start();
-            this.EngineStartTime = DateTime.Now;
+            IData data = DataControl.Instance.GetData();
 
-            SolverManager.Instance.SetEngineStartTime(this.Name, this.EngineStartTime);
-            SolverManager.Instance.ClearStatusLogs();
+            DataManager.Instance.SetData(data);
+            EventControl.Instance.OnDataLoad();
 
             this.SetOutputDirectory();
             this.SetConsole();
+
+            this.IsInitialized = true;
         }
 
         protected void SetOutputDirectory() 
@@ -319,18 +323,27 @@ namespace Nodez.Sdmp.Interfaces
 
             try
             {
+                if (this.IsInitialized == false)
+                {
+                    logControl.WriteEndLog(Messeges.SOLVER_IS_NOT_INITIALIZED);
+                    return;
+                }
+
+                this.StopWatch.Start();
+                this.EngineStartTime = DateTime.Now;
+
+                SolverManager.Instance.SetEngineStartTime(this.Name, this.EngineStartTime);
+                SolverManager.Instance.ClearStatusLogs();
+
                 eventControl.OnBeginSolve();
 
-                IData data = DataControl.Instance.GetData();
+                IData data = dataManager.GetData();
 
-                if (data == null)
+                if (data == null) 
                 {
                     logControl.WriteEndLog(Messeges.DATA_IS_NULL);
                     return;
                 }
-
-                DataManager.Instance.SetData(data);
-                EventControl.Instance.OnDataLoad();
 
                 ObjectiveFunctionType objectiveFunctionType = solverControl.GetObjectiveFuntionType(this.RunConfig);
                 SetObjectiveFunctionType(objectiveFunctionType);

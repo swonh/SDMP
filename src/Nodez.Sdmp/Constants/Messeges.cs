@@ -20,6 +20,8 @@ namespace Nodez.Sdmp.Constants
 
         public static string DATA_IS_NULL = "DATA IS NULL";
 
+        public static string SOLVER_IS_NOT_INITIALIZED = "SOLVER IS NOT INITIALIZED";
+
         public static string INVALID_RUN_CONFIG = "INVALID RUN CONFIG";
 
         public static string MAX_TIME_LIMIT = "MAX TIME LIMIT REACHED";
