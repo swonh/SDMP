@@ -261,6 +261,8 @@ namespace Nodez.Sdmp.General.Controls
             StateManager stateManager = StateManager.Instance;
 
             int explored = stateManager.ExploredStateCount;
+            int valueFunctionEstimated = stateManager.ValueFunctionEstimatedStateCount;
+            int valueFunctionCalculated = stateManager.ValueFunctionCalculatedStateCount;
             int selected = stateManager.ExploredStateCount - stateManager.FilteredStateCount;
             int pruned = stateManager.PrunedStateCount;
 
@@ -270,13 +272,13 @@ namespace Nodez.Sdmp.General.Controls
             if (consoleOnly)
             {
                 LogWriter.WriteLineConsoleOnly("Solver Ended (Reason:{0})", reason);
-                LogWriter.WriteLineConsoleOnly("State Statistics (Explored: {0} Selected: {1}({2}%) Pruned: {3}({4}%))", explored, selected, selectedPercent, pruned, prunedPercent);
+                LogWriter.WriteLineConsoleOnly("State Statistics (Explored: {0} Selected: {1}({2}%) Pruned: {3}({4}%) VF Estimated: {5} VF Calculated: {6})", explored, selected, selectedPercent, pruned, prunedPercent, valueFunctionEstimated, valueFunctionCalculated);
                 LogWriter.WriteLineConsoleOnly("End Solver {0}", DateTime.Now);
             }
             else
             {
                 LogWriter.WriteLine("Solver Ended (Reason:{0})", reason);
-                LogWriter.WriteLineConsoleOnly("State Statistics (Explored: {0} Selected: {1}({2}%) Pruned: {3}({4}%))", explored, selected, selectedPercent, pruned, prunedPercent);
+                LogWriter.WriteLine("State Statistics (Explored: {0} Selected: {1}({2}%) Pruned: {3}({4}%) VF Estimated: {5} VF Calculated: {6})", explored, selected, selectedPercent, pruned, prunedPercent, valueFunctionEstimated, valueFunctionCalculated);
                 LogWriter.WriteLine("End Solver {0}", DateTime.Now);
             }
         }
