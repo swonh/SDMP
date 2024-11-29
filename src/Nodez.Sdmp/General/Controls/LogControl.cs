@@ -258,15 +258,26 @@ namespace Nodez.Sdmp.General.Controls
 
         public void WriteEndLog(string reason, bool consoleOnly = false)
         {
+            StateManager stateManager = StateManager.Instance;
+
+            int explored = stateManager.ExploredStateCount;
+            int selected = stateManager.ExploredStateCount - stateManager.FilteredStateCount;
+            int pruned = stateManager.PrunedStateCount;
+
+            double selectedPercent = explored == 0 ? 0 : Math.Round((double)selected / explored * 100);
+            double prunedPercent = explored == 0 ? 0 : Math.Round((double)pruned / explored * 100);
+
             if (consoleOnly)
             {
                 LogWriter.WriteLineConsoleOnly("Solver Ended (Reason:{0})", reason);
-                LogWriter.WriteLineConsoleOnly(string.Format("End Solver {0}", DateTime.Now));
+                LogWriter.WriteLineConsoleOnly("State Statistics (Explored: {0} Selected: {1}({2}%) Pruned: {3}({4}%))", explored, selected, selectedPercent, pruned, prunedPercent);
+                LogWriter.WriteLineConsoleOnly("End Solver {0}", DateTime.Now);
             }
             else
             {
                 LogWriter.WriteLine("Solver Ended (Reason:{0})", reason);
-                LogWriter.WriteLine(string.Format("End Solver {0}", DateTime.Now));
+                LogWriter.WriteLineConsoleOnly("State Statistics (Explored: {0} Selected: {1}({2}%) Pruned: {3}({4}%))", explored, selected, selectedPercent, pruned, prunedPercent);
+                LogWriter.WriteLine("End Solver {0}", DateTime.Now);
             }
         }
     }
