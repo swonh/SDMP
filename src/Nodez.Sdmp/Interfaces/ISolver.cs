@@ -98,14 +98,6 @@ namespace Nodez.Sdmp.Interfaces
             SolverManager.Instance.SetCurrentSolverName(this.RunConfig.SOLVER_NAME);
             this.Name = SolverManager.Instance.CurrentSolverName;
 
-            IData data = DataControl.Instance.GetData();
-
-            DataManager.Instance.SetData(data);
-            EventControl.Instance.OnDataLoad();
-
-            this.SetOutputDirectory();
-            this.SetConsole();
-
             this.IsInitialized = true;
         }
 
@@ -122,14 +114,6 @@ namespace Nodez.Sdmp.Interfaces
             SolverManager.Instance.SetRunConfig(this.RunConfig);
             SolverManager.Instance.SetCurrentSolverName(this.RunConfig.SOLVER_NAME);
             this.Name = SolverManager.Instance.CurrentSolverName;
-
-            IData data = DataControl.Instance.GetData();
-
-            DataManager.Instance.SetData(data);
-            EventControl.Instance.OnDataLoad();
-
-            this.SetOutputDirectory();
-            this.SetConsole();
 
             this.IsInitialized = true;
         }
@@ -329,21 +313,27 @@ namespace Nodez.Sdmp.Interfaces
                     return;
                 }
 
+                IData data = dataControl.GetData();
+
+                dataManager.SetData(data);
+                eventControl.OnDataLoad();
+
                 this.StopWatch.Start();
                 this.EngineStartTime = DateTime.Now;
 
-                SolverManager.Instance.SetEngineStartTime(this.Name, this.EngineStartTime);
-                SolverManager.Instance.ClearStatusLogs();
+                solverManager.SetEngineStartTime(this.Name, this.EngineStartTime);
+                solverManager.ClearStatusLogs();
 
-                eventControl.OnBeginSolve();
+                this.SetOutputDirectory();
+                this.SetConsole();
 
-                IData data = dataManager.GetData();
-
-                if (data == null) 
+                if (data == null)
                 {
                     logControl.WriteEndLog(Messeges.DATA_IS_NULL);
                     return;
                 }
+
+                eventControl.OnBeginSolve();
 
                 ObjectiveFunctionType objectiveFunctionType = solverControl.GetObjectiveFuntionType(this.RunConfig);
                 SetObjectiveFunctionType(objectiveFunctionType);
