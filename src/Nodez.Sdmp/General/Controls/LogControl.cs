@@ -266,7 +266,7 @@ namespace Nodez.Sdmp.General.Controls
             if (consoleOnly)
             {
                 LogWriter.WriteLineConsoleOnly(Constants.Constants.LINE);
-                LogWriter.WriteLineConsoleOnly("Solver Ended (Reason:{0})", reason);
+                LogWriter.WriteLineConsoleOnly("Solver Ended (Reason: {0})", reason);
                 LogWriter.WriteLineConsoleOnly(">> Run Time: {0} sec.", runTime);
                 LogWriter.WriteLineConsoleOnly(">> Primal Bound: {0}, Dual Bound: {1}, Gap: {2}", bestPrimalBound, bestDualBound, relativeDualityGap);
                 LogWriter.WriteLineConsoleOnly(">> Explored: {0}, Selected: {1}({2}%), Pruned: {3}({4}%) | Primal: {5}, Dual: {6}, VF Est.: {7}, VF Calc.: {8}", explored, selected, selectedPercent, pruned, prunedPercent, primalBoundCalculated, dualBoundCalculated, valueFunctionEstimated, valueFunctionCalculated);
@@ -275,7 +275,7 @@ namespace Nodez.Sdmp.General.Controls
             else
             {
                 LogWriter.WriteLine(Constants.Constants.LINE);
-                LogWriter.WriteLine("Solver Ended (Reason:{0})", reason);
+                LogWriter.WriteLine("Solver Ended (Reason: {0})", reason);
                 LogWriter.WriteLine(">> Run Time: {0} sec.", runTime);
                 LogWriter.WriteLine(">> Primal Bound: {0}, Dual Bound: {1}, Gap: {2}", bestPrimalBound, bestDualBound, relativeDualityGap);
                 LogWriter.WriteLine(">> Explored: {0}, Selected: {1}({2}%), Pruned: {3}({4}%) | Primal: {5}, Dual: {6}, VF Est.: {7}, VF Calc.: {8}", explored, selected, selectedPercent, pruned, prunedPercent, primalBoundCalculated, dualBoundCalculated, valueFunctionEstimated, valueFunctionCalculated);
