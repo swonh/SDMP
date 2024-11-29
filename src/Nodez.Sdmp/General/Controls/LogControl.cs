@@ -282,17 +282,17 @@ namespace Nodez.Sdmp.General.Controls
             if (consoleOnly)
             {
                 LogWriter.WriteLineConsoleOnly("Solver Ended (Reason:{0})", reason);
-                LogWriter.WriteLineConsoleOnly(">> Run Time:{0} sec.", runTime);
-                LogWriter.WriteLineConsoleOnly(">> Primal Bound:{0}  Dual Bound:{1}  Gap:{2}", bestPrimalBound, bestDualBound, relativeDualityGap);
-                LogWriter.WriteLineConsoleOnly(">> Explored:{0}  Selected:{1}({2}%)  Pruned:{3}({4}%) | Primal:{5}  Dual:{6}  VF Est.:{7}  VF Calc.:{8}", explored, selected, selectedPercent, pruned, prunedPercent, primalBoundCalculated, dualBoundCalculated, valueFunctionEstimated, valueFunctionCalculated);
+                LogWriter.WriteLineConsoleOnly(">> Run Time: {0} sec.", runTime);
+                LogWriter.WriteLineConsoleOnly(">> Primal Bound: {0}, Dual Bound: {1}, Gap: {2}", bestPrimalBound, bestDualBound, relativeDualityGap);
+                LogWriter.WriteLineConsoleOnly(">> Explored: {0}, Selected: {1}({2}%), Pruned: {3}({4}%) | Primal: {5}, Dual: {6}, VF Est.: {7}, VF Calc.: {8}", explored, selected, selectedPercent, pruned, prunedPercent, primalBoundCalculated, dualBoundCalculated, valueFunctionEstimated, valueFunctionCalculated);
                 LogWriter.WriteLineConsoleOnly("End Solver {0}", DateTime.Now);
             }
             else
             {
                 LogWriter.WriteLine("Solver Ended (Reason:{0})", reason);
-                LogWriter.WriteLine(">> Run Time:{0} sec.", runTime);
-                LogWriter.WriteLine(">> Primal Bound:{0}  Dual Bound:{1}  Gap:{2}", bestPrimalBound, bestDualBound, relativeDualityGap);
-                LogWriter.WriteLine(">> Explored:{0}  Selected:{1}({2}%)  Pruned:{3}({4}%) | Primal:{5}  Dual:{6}  VF Est.:{7}  VF Calc.:{8}", explored, selected, selectedPercent, pruned, prunedPercent, primalBoundCalculated, dualBoundCalculated, valueFunctionEstimated, valueFunctionCalculated);
+                LogWriter.WriteLine(">> Run Time: {0} sec.", runTime);
+                LogWriter.WriteLine(">> Primal Bound: {0}, Dual Bound: {1}, Gap: {2}", bestPrimalBound, bestDualBound, relativeDualityGap);
+                LogWriter.WriteLine(">> Explored: {0}, Selected: {1}({2}%), Pruned: {3}({4}%) | Primal: {5}, Dual: {6}, VF Est.: {7}, VF Calc.: {8}", explored, selected, selectedPercent, pruned, prunedPercent, primalBoundCalculated, dualBoundCalculated, valueFunctionEstimated, valueFunctionCalculated);
                 LogWriter.WriteLine("End Solver {0}", DateTime.Now);
             }
         }
