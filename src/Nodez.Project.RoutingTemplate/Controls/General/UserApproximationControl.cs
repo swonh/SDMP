@@ -54,7 +54,7 @@ namespace Nodez.Project.RoutingTemplate.Controls
 
         public override int GetGlobalTransitionCount()
         {
-            return 1000;
+            return 5000;
         }
 
         public override int GetLocalTransitionCount()

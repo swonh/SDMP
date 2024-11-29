@@ -87,7 +87,7 @@ namespace Nodez.Project.RoutingTemplate.Controls
 
         public override int GetPrimalSolutionUpdatePeriod()
         {
-            return 1000;
+            return 1;
         }
 
         public override int GetDualBoundUpdatePeriod()

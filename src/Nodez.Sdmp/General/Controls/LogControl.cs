@@ -259,26 +259,40 @@ namespace Nodez.Sdmp.General.Controls
         public void WriteEndLog(string reason, bool consoleOnly = false)
         {
             StateManager stateManager = StateManager.Instance;
+            BoundManager boundManager = BoundManager.Instance;
+            SolverManager solverManager = SolverManager.Instance;
 
             int explored = stateManager.ExploredStateCount;
             int valueFunctionEstimated = stateManager.ValueFunctionEstimatedStateCount;
             int valueFunctionCalculated = stateManager.ValueFunctionCalculatedStateCount;
+            int primalBoundCalculated = stateManager.PrimalBoundCalculatedStateCount;
+            int dualBoundCalculated = stateManager.DualBoundCalculatedStateCount;
             int selected = stateManager.ExploredStateCount - stateManager.FilteredStateCount;
             int pruned = stateManager.PrunedStateCount;
 
             double selectedPercent = explored == 0 ? 0 : Math.Round((double)selected / explored * 100);
             double prunedPercent = explored == 0 ? 0 : Math.Round((double)pruned / explored * 100);
 
+            double bestPrimalBound = boundManager.BestPrimalBound;
+            double bestDualBound = boundManager.BestDualBound;
+            string relativeDualityGap = string.Format("{0:F2}%", Math.Round(BoundManager.Instance.RelativeDualityGap * 100, 2));
+
+            double runTime = Math.Round(solverManager.GetRunTime(solverManager.CurrentSolverName).TotalSeconds, 2);
+
             if (consoleOnly)
             {
                 LogWriter.WriteLineConsoleOnly("Solver Ended (Reason:{0})", reason);
-                LogWriter.WriteLineConsoleOnly("State Statistics (Explored: {0} Selected: {1}({2}%) Pruned: {3}({4}%) VF Estimated: {5} VF Calculated: {6})", explored, selected, selectedPercent, pruned, prunedPercent, valueFunctionEstimated, valueFunctionCalculated);
+                LogWriter.WriteLineConsoleOnly(">> Run Time:{0} sec.", runTime);
+                LogWriter.WriteLineConsoleOnly(">> Best Primal Bound:{0}  Best Dual Bound:{1}  Optimality Gap:{2}", bestPrimalBound, bestDualBound, relativeDualityGap);
+                LogWriter.WriteLineConsoleOnly(">> Explored:{0}  Selected:{1}({2}%)  Pruned:{3}({4}%) | Primal:{5}  Dual:{6}  VF Estimated:{7}  VF Calculated:{8}", explored, selected, selectedPercent, pruned, prunedPercent, primalBoundCalculated, dualBoundCalculated, valueFunctionEstimated, valueFunctionCalculated);
                 LogWriter.WriteLineConsoleOnly("End Solver {0}", DateTime.Now);
             }
             else
             {
                 LogWriter.WriteLine("Solver Ended (Reason:{0})", reason);
-                LogWriter.WriteLine("State Statistics (Explored: {0} Selected: {1}({2}%) Pruned: {3}({4}%) VF Estimated: {5} VF Calculated: {6})", explored, selected, selectedPercent, pruned, prunedPercent, valueFunctionEstimated, valueFunctionCalculated);
+                LogWriter.WriteLine(">> Run Time:{0} sec.", runTime);
+                LogWriter.WriteLine(">> Best Primal Bound:{0}  Best Dual Bound:{1}  Optimality Gap:{2}", bestPrimalBound, bestDualBound, relativeDualityGap);
+                LogWriter.WriteLine(">> Explored:{0}  Selected:{1}({2}%)  Pruned:{3}({4}%) | Primal:{5}  Dual:{6}  VF Estimated:{7}  VF Calculated:{8}", explored, selected, selectedPercent, pruned, prunedPercent, primalBoundCalculated, dualBoundCalculated, valueFunctionEstimated, valueFunctionCalculated);
                 LogWriter.WriteLine("End Solver {0}", DateTime.Now);
             }
         }
