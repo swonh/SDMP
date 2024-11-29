@@ -5,6 +5,7 @@
 using Nodez.Sdmp.Enum;
 using Nodez.Sdmp.General.Controls;
 using Nodez.Sdmp.General.DataModel;
+using Nodez.Sdmp.General.Managers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -98,6 +99,7 @@ namespace Nodez.Project.SchedulingTemplate.Controls
         {
             double estimatedValue = 0;
             estimatedValue = state.CurrentBestValue + state.DualBound;
+            state.SetIsValueFunctionCalculated(true);
 
             return estimatedValue;
         }
@@ -130,7 +132,7 @@ namespace Nodez.Project.SchedulingTemplate.Controls
                     int count = 0;
                     foreach (State st in list)
                     {
-                        if (count >= maxCount)
+                        if (count > maxCount)
                             break;
 
                         filtered.Add(st);
@@ -141,17 +143,13 @@ namespace Nodez.Project.SchedulingTemplate.Controls
             }
             else
             {
-                //states = states.OrderBy(x => 0 + (x.BestValue - x.PrevBestState.BestValue) + x.BestValue).ToList();
-                //states = states.OrderBy(x => x.PrevBestState.DualBound + (x.BestValue - x.PrevBestState.BestValue) + x.BestValue).ToList();
-                //states = states.OrderBy(x => x.PrevBestState.EstimationValue + (x.BestValue - x.PrevBestState.BestValue) + x.BestValue).ToList();
-                //states = states.OrderBy(x => x.EstimationValue).ToList();
                 foreach (State state in states)
                 {
                     if (state.IsFinal)
                         continue;
 
                     double estimatedValue = GetValueFunctionEstimate(state);
-                    state.ValueFunctionEstimate = estimatedValue;
+                    state.SetValueFunctionEstimate(estimatedValue);
                 }
 
                 if (objectiveFunctionType == ObjectiveFunctionType.Minimize)
@@ -166,6 +164,7 @@ namespace Nodez.Project.SchedulingTemplate.Controls
                         break;
 
                     filtered.Add(state);
+
                     count++;
                 }
             }
@@ -173,11 +172,11 @@ namespace Nodez.Project.SchedulingTemplate.Controls
             return filtered;
         }
 
-        public override List<State> FilterLocalStates(List<State> states, int maxTransitionCount)
+        public override List<State> FilterLocalStates(State currentState, List<State> states, int maxTransitionCount)
         {
             states = states.OrderBy(x => x.PrevBestState.DualBound + (x.CurrentBestValue - x.PrevBestState.CurrentBestValue) + x.CurrentBestValue).ToList();
 
-            List<State> filtered = new List<State>();
+            List<State> selectedStateList = new List<State>();
 
             int count = 0;
             foreach (State state in states)
@@ -185,11 +184,17 @@ namespace Nodez.Project.SchedulingTemplate.Controls
                 if (maxTransitionCount <= count)
                     break;
 
-                filtered.Add(state);
+                selectedStateList.Add(state);
                 count++;
             }
 
-            return filtered;
+            int totalStateCount = states != null ? states.Count : 0;
+            int selectedStateCount = selectedStateList != null ? selectedStateList.Count : 0;
+            int filteredStateCount = totalStateCount - selectedStateCount;
+
+            StateManager.Instance.SetFilteredStateCount(currentState.Stage.Index, filteredStateCount);
+
+            return selectedStateList;
         }
 
         public override bool CanPruneByApproximation(State state, ObjectiveFunctionType objFuncType, double minEstimationValue, double minTransitionCost, double multiplier, double pruneTolerance)

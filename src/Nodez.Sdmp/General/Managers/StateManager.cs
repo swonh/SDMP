@@ -35,6 +35,7 @@ namespace Nodez.Sdmp.General.Managers
 
         public StateManager() 
         {
+            this._filteredStateCount = new Dictionary<int, int>();
             this._valueFunctionEstimatedStateCount = new Dictionary<int, int>();
             this._valueFunctionCalculatedStateCount = new Dictionary<int, int>();
         }

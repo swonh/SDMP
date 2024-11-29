@@ -84,7 +84,7 @@ namespace Nodez.Sdmp.Routing.Solver
                 int maximumTransitionCount = approxControl.GetLocalTransitionCount();
                 int approximationStartStageIndex = approxControl.GetApproximationStartStageIndex();
 
-                newStates = approxControl.FilterLocalStates(newStates, maximumTransitionCount);
+                newStates = approxControl.FilterLocalStates(initialState, newStates, maximumTransitionCount);
             }
 
             this.AddNextStates(newStates);

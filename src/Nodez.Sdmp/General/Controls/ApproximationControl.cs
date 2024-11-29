@@ -113,6 +113,7 @@ namespace Nodez.Sdmp.General.Controls
         {
             double dualBound = BoundControl.Instance.GetDualBound(state);
             state.SetDualBound(dualBound);
+            state.SetIsValueFunctionCalculated(true);
 
             return state.CurrentBestValue + state.DualBound;
         }
@@ -162,7 +163,7 @@ namespace Nodez.Sdmp.General.Controls
                         continue;
 
                     double estimatedValue = GetValueFunctionEstimate(state);
-                    state.ValueFunctionEstimate = estimatedValue;
+                    state.SetValueFunctionEstimate(estimatedValue);
                 }
 
                 if (objectiveFunctionType == ObjectiveFunctionType.Minimize)
@@ -185,11 +186,11 @@ namespace Nodez.Sdmp.General.Controls
             return filtered;
         }
 
-        public virtual List<State> FilterLocalStates(List<State> states, int maxTransitionCount)
+        public virtual List<State> FilterLocalStates(State currentState, List<State> states, int maxTransitionCount)
         {
             states = states.OrderBy(x => x.PrevBestState.DualBound + (x.CurrentBestValue - x.PrevBestState.CurrentBestValue) + x.CurrentBestValue).ToList();
 
-            List<State> filtered = new List<State>();
+            List<State> selectedStateList = new List<State>();
 
             int count = 0;
             foreach (State state in states)
@@ -197,11 +198,17 @@ namespace Nodez.Sdmp.General.Controls
                 if (maxTransitionCount <= count)
                     break;
 
-                filtered.Add(state);
+                selectedStateList.Add(state);
                 count++;
             }
 
-            return filtered;
+            int totalStateCount = states != null ? states.Count : 0;
+            int selectedStateCount = selectedStateList != null ? selectedStateList.Count : 0;
+            int filteredStateCount = totalStateCount - selectedStateCount;
+
+            StateManager.Instance.SetFilteredStateCount(currentState.Stage.Index, filteredStateCount);
+
+            return selectedStateList;
         }
 
         public virtual bool CanPruneByApproximation(State state, ObjectiveFunctionType objFuncType, double minEstimationValue, double minTransitionCost, double multiplier, double pruneTolerance)

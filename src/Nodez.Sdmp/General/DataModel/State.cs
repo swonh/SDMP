@@ -103,7 +103,7 @@ namespace Nodez.Sdmp.General.DataModel
             StateManager.Instance.AddValueFunctionEstimatedState(this);
         }
 
-        public virtual void SetValueFunctionCalculated(bool isCalculated)
+        public virtual void SetIsValueFunctionCalculated(bool isCalculated)
         {
             this.IsValueFunctionCalulated = isCalculated;
 
