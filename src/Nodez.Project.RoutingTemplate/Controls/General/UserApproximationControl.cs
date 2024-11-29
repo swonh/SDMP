@@ -145,13 +145,22 @@ namespace Nodez.Project.RoutingTemplate.Controls
             }
             else
             {
+                int total = states.Count;
+                int current = 1;
+                bool isLast = false;
                 foreach (State state in states)
                 {
                     if (state.IsFinal)
                         continue;
 
-                    double estimatedValue = GetValueFunctionEstimate(state);
-                    state.SetValueFunctionEstimate(estimatedValue);
+                    if (total == current)
+                        isLast = true;
+
+                    double valueFunctionEstimate = GetValueFunctionEstimate(state);
+                    state.SetValueFunctionEstimate(valueFunctionEstimate);
+
+                    LogControl.Instance.ShowProgress(current, total, isLast);
+                    current++;
                 }
 
                 if (objectiveFunctionType == ObjectiveFunctionType.Minimize)
