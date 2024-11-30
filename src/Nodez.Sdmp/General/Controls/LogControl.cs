@@ -65,7 +65,7 @@ namespace Nodez.Sdmp.General.Controls
             }
 
             double bestPrimalBoundVal = BoundManager.Instance.BestPrimalBound;
-            string bestPrimalBoundStr = string.Empty;
+            string bestPrimalBoundStr;
             if (bestPrimalBoundVal == Double.MinValue || bestPrimalBoundVal == Double.MaxValue)
             {
                 bestPrimalBoundStr = bestPrimalBoundVal.ToString("E2");
@@ -76,7 +76,7 @@ namespace Nodez.Sdmp.General.Controls
             }
 
             double bestDualBoundVal = BoundManager.Instance.BestDualBound;
-            string bestDualBoundStr = string.Empty;
+            string bestDualBoundStr;
             if (bestDualBoundVal == Double.MinValue || bestDualBoundVal == Double.MaxValue)
             {
                 bestDualBoundStr = bestDualBoundVal.ToString("E2");
@@ -170,8 +170,8 @@ namespace Nodez.Sdmp.General.Controls
             }
 
             double bestPrimalBoundVal = BoundManager.Instance.BestPrimalBound;
-            string bestPrimalBoundStr = string.Empty;
-            if (bestPrimalBoundVal == Double.MinValue || bestPrimalBoundVal == Double.MaxValue) 
+            string bestPrimalBoundStr;
+            if (bestPrimalBoundVal == Double.MinValue || bestPrimalBoundVal == Double.MaxValue)
             {
                 bestPrimalBoundStr = bestPrimalBoundVal.ToString("E2");
             }
@@ -181,7 +181,7 @@ namespace Nodez.Sdmp.General.Controls
             }
 
             double bestDualBoundVal = BoundManager.Instance.BestDualBound;
-            string bestDualBoundStr = string.Empty;
+            string bestDualBoundStr;
             if (bestDualBoundVal == Double.MinValue || bestDualBoundVal == Double.MaxValue)
             {
                 bestDualBoundStr = bestDualBoundVal.ToString("E2");
@@ -216,7 +216,7 @@ namespace Nodez.Sdmp.General.Controls
             }
 
             double bestPrimalBoundVal = BoundManager.Instance.BestPrimalBound;
-            string bestPrimalBoundStr = string.Empty;
+            string bestPrimalBoundStr;
             if (bestPrimalBoundVal == Double.MinValue || bestPrimalBoundVal == Double.MaxValue)
             {
                 bestPrimalBoundStr = bestPrimalBoundVal.ToString("E2");
@@ -227,7 +227,7 @@ namespace Nodez.Sdmp.General.Controls
             }
 
             double bestDualBoundVal = BoundManager.Instance.BestDualBound;
-            string bestDualBoundStr = string.Empty;
+            string bestDualBoundStr;
             if (bestDualBoundVal == Double.MinValue || bestDualBoundVal == Double.MaxValue)
             {
                 bestDualBoundStr = bestDualBoundVal.ToString("E2");
@@ -256,7 +256,7 @@ namespace Nodez.Sdmp.General.Controls
             }
 
             double bestPrimalBoundVal = BoundManager.Instance.BestPrimalBound;
-            string bestPrimalBoundStr = string.Empty;
+            string bestPrimalBoundStr;
             if (bestPrimalBoundVal == Double.MinValue || bestPrimalBoundVal == Double.MaxValue)
             {
                 bestPrimalBoundStr = bestPrimalBoundVal.ToString("E2");
@@ -267,7 +267,7 @@ namespace Nodez.Sdmp.General.Controls
             }
 
             double bestDualBoundVal = BoundManager.Instance.BestDualBound;
-            string bestDualBoundStr = string.Empty;
+            string bestDualBoundStr;
             if (bestDualBoundVal == Double.MinValue || bestDualBoundVal == Double.MaxValue)
             {
                 bestDualBoundStr = bestDualBoundVal.ToString("E2");
@@ -370,25 +370,25 @@ namespace Nodez.Sdmp.General.Controls
             }
 
             double bestPrimalBoundVal = BoundManager.Instance.BestPrimalBound;
-            string bestPrimalBoundStr = string.Empty;
+            string bestPrimalBoundStr;
             if (bestPrimalBoundVal == Double.MinValue || bestPrimalBoundVal == Double.MaxValue)
             {
                 bestPrimalBoundStr = bestPrimalBoundVal.ToString("E2");
             }
             else
             {
-                bestPrimalBoundStr = string.Format("{0:F6}", bestPrimalBoundVal);
+                bestPrimalBoundStr = string.Format("{0:F2}", bestPrimalBoundVal);
             }
 
             double bestDualBoundVal = BoundManager.Instance.BestDualBound;
-            string bestDualBoundStr = string.Empty;
+            string bestDualBoundStr;
             if (bestDualBoundVal == Double.MinValue || bestDualBoundVal == Double.MaxValue)
             {
                 bestDualBoundStr = bestDualBoundVal.ToString("E2");
             }
             else
             {
-                bestDualBoundStr = string.Format("{0:F6}", bestDualBoundVal);
+                bestDualBoundStr = string.Format("{0:F2}", bestDualBoundVal);
             }
 
             double runTime = Math.Max(0, Math.Round(solverManager.GetRunTime(solverName).TotalSeconds, 2));
