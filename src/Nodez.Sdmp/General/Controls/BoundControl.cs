@@ -72,11 +72,11 @@ namespace Nodez.Sdmp.General.Controls
 
             if (objectiveFunctionType == ObjectiveFunctionType.Maximize)
             {
-                primalBound = Double.NegativeInfinity;
+                primalBound = Double.MinValue;
             }
             else if (objectiveFunctionType == ObjectiveFunctionType.Minimize)
             {
-                primalBound = Double.PositiveInfinity;
+                primalBound = Double.MaxValue;
             }
 
             return primalBound;
@@ -88,11 +88,11 @@ namespace Nodez.Sdmp.General.Controls
 
             if (objectiveFunctionType == ObjectiveFunctionType.Maximize)
             {
-                dualBound = Double.PositiveInfinity;
+                dualBound = Double.MaxValue;
             }
             else if (objectiveFunctionType == ObjectiveFunctionType.Minimize)
             {
-                dualBound = Double.NegativeInfinity;
+                dualBound = Double.MinValue;
             }
 
             return dualBound;
