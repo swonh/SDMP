@@ -61,7 +61,7 @@ namespace Nodez.Sdmp.General.Controls
             string bestSolution = BoundManager.Instance.BestPrimalBound != Double.PositiveInfinity ? string.Format("{0:F6}", BoundManager.Instance.BestPrimalBound) : string.Empty;
             string bestDualBound = BoundManager.Instance.BestDualBound != Double.PositiveInfinity ? string.Format("{0:F6}", BoundManager.Instance.BestDualBound) : string.Empty;
             string numSolutions = string.Format("{0}", SolutionManager.Instance.Solutions.Count);
-            string time = elapsedTime.TotalSeconds.ToString();
+            string time = Math.Max(0, elapsedTime.TotalSeconds).ToString();
 
             StatusLog log = new StatusLog();
 
