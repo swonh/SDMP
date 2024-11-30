@@ -181,9 +181,9 @@ namespace Nodez.Sdmp.General.Controls
                 }
 
                 if (objectiveFunctionType == ObjectiveFunctionType.Minimize)
-                    states = states.OrderBy(x => x.ValueFunctionEstimate).ToList();
+                    states = states.Where(x => x.IsSetValueFunctionEstimate).OrderBy(x => x.ValueFunctionEstimate).ToList();
                 else if (objectiveFunctionType == ObjectiveFunctionType.Maximize)
-                    states = states.OrderByDescending(x => x.ValueFunctionEstimate).ToList();
+                    states = states.Where(x => x.IsSetValueFunctionEstimate).OrderByDescending(x => x.ValueFunctionEstimate).ToList();
 
                 int count = 0;
                 foreach (State state in states)

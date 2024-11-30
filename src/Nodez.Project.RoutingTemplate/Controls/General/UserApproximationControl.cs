@@ -108,7 +108,9 @@ namespace Nodez.Project.RoutingTemplate.Controls
 
         public override List<State> FilterGlobalStates(List<State> states, int maxTransitionCount, ObjectiveFunctionType objectiveFunctionType, double pruneTolerance, bool isApplyStateClustering)
         {
-            List<State> filtered = new List<State>();
+            SolutionManager solutionManager = SolutionManager.Instance;
+
+            List<State> selectedStateList = new List<State>();
 
             if (isApplyStateClustering)
             {
@@ -137,7 +139,7 @@ namespace Nodez.Project.RoutingTemplate.Controls
                         if (count > maxCount)
                             break;
 
-                        filtered.Add(st);
+                        selectedStateList.Add(st);
 
                         count++;
                     }
@@ -159,14 +161,17 @@ namespace Nodez.Project.RoutingTemplate.Controls
                     double valueFunctionEstimate = GetValueFunctionEstimate(state);
                     state.SetValueFunctionEstimate(valueFunctionEstimate);
 
+                    if (solutionManager.CheckOptimalityCondition())
+                        break;
+
                     LogControl.Instance.ShowProgress(current, total, isLast);
                     current++;
                 }
 
                 if (objectiveFunctionType == ObjectiveFunctionType.Minimize)
-                    states = states.OrderBy(x => x.ValueFunctionEstimate).ToList();
+                    states = states.Where(x => x.IsSetValueFunctionEstimate).OrderBy(x => x.ValueFunctionEstimate).ToList();
                 else if (objectiveFunctionType == ObjectiveFunctionType.Maximize)
-                    states = states.OrderByDescending(x => x.ValueFunctionEstimate).ToList();
+                    states = states.Where(x => x.IsSetValueFunctionEstimate).OrderByDescending(x => x.ValueFunctionEstimate).ToList();
 
                 int count = 0;
                 foreach (State state in states)
@@ -174,13 +179,13 @@ namespace Nodez.Project.RoutingTemplate.Controls
                     if (maxTransitionCount <= count)
                         break;
 
-                    filtered.Add(state);
+                    selectedStateList.Add(state);
 
                     count++;
                 }
             }
 
-            return filtered;
+            return selectedStateList;
         }
 
         public override List<State> FilterLocalStates(State currentState, List<State> states, int maxTransitionCount)
