@@ -33,6 +33,8 @@ namespace Nodez.Sdmp.General.Managers
 
         public Stopwatch StopWatch { get; private set; }
 
+        public TimeSpan TimeLimit { get; private set; }
+
         private Dictionary<string, DateTime> _engineStartTime { get; set; }
 
         private Dictionary<string, DateTime> _engineEndTime { get; set; }
@@ -68,6 +70,11 @@ namespace Nodez.Sdmp.General.Managers
         public IRunConfig GetRunConfig() 
         {
             return _runConfig;
+        }
+
+        public void SetTimeLimit(TimeSpan timeLimit) 
+        {
+            this.TimeLimit = timeLimit;
         }
 
         public void SetObjectiveFunctionType(ObjectiveFunctionType objectiveFunctionType) 

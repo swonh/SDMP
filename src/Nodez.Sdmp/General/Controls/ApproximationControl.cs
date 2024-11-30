@@ -120,6 +120,7 @@ namespace Nodez.Sdmp.General.Controls
 
         public virtual List<State> FilterGlobalStates(List<State> states, int maxTransitionCount, ObjectiveFunctionType objectiveFunctionType, double pruneTolerance, bool isApplyStateClustering)
         {
+            SolverManager solverManager = SolverManager.Instance;
             SolutionManager solutionManager = SolutionManager.Instance;
 
             List<State> selectedStateList = new List<State>();
@@ -174,6 +175,9 @@ namespace Nodez.Sdmp.General.Controls
                     state.SetValueFunctionEstimate(valueFunctionEstimate);
 
                     if (solutionManager.CheckOptimalityCondition())
+                        break;
+
+                    if (solverManager.StopWatch.Elapsed.TotalSeconds >= solverManager.TimeLimit.TotalSeconds)
                         break;
 
                     LogControl.Instance.ShowProgress(current, total, isLast);

@@ -24,7 +24,7 @@ namespace Nodez.Sdmp.Constants
 
         public static string INVALID_RUN_CONFIG = "INVALID RUN CONFIG";
 
-        public static string MAX_TIME_LIMIT = "MAX TIME LIMIT REACHED";
+        public static string TIME_LIMIT = "TIME LIMIT REACHED";
 
         public static string SEARCH_FINISHED = "SEARCH FINISHED";
 

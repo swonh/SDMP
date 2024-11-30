@@ -35,7 +35,7 @@ namespace Nodez.Sdmp.Interfaces
 
         public Stopwatch StopWatch { get; protected set; }
 
-        public int RunMaxTime { get; protected set; }
+        public TimeSpan TimeLimit { get; protected set; }
 
         public ObjectiveFunctionType ObjectiveFunctionType { get; protected set; }
 
@@ -344,6 +344,8 @@ namespace Nodez.Sdmp.Interfaces
                 ObjectiveFunctionType objectiveFunctionType = solverControl.GetObjectiveFuntionType(this.RunConfig);
                 SetObjectiveFunctionType(objectiveFunctionType);
 
+                this.TimeLimit = TimeSpan.FromSeconds(solverControl.GetRunMaxTime());
+                solverManager.SetTimeLimit(this.TimeLimit);
                 solverManager.SetObjectiveFunctionType(objectiveFunctionType);
                 solverManager.SetStopWatch(this.StopWatch);
 
@@ -351,10 +353,9 @@ namespace Nodez.Sdmp.Interfaces
 
                 solutionManager.SetObjectiveFunctionType(objectiveFunctionType);
                 boundManager.SetPrimalBound(boundControl.GetInitialPrimalBound(objectiveFunctionType));
-                boundManager.SetDualBound(boundControl.GetInitialDualBound(objectiveFunctionType));   
+                boundManager.SetDualBound(boundControl.GetInitialDualBound(objectiveFunctionType));
 
                 this.ProjectName = solverControl.GetProjectName();
-                this.RunMaxTime = solverControl.GetRunMaxTime();
                 this.PrimalSolutionUpdatePeriod = boundControl.GetPrimalSolutionUpdatePeriod();
                 this.DualBoundUpdatePeriod = boundControl.GetDualBoundUpdatePeriod();
                 this.ValueFuctionEstimateUpdatePeriod = approxControl.GetValueFunctionEstimateUpdatePeriod();
@@ -476,7 +477,10 @@ namespace Nodez.Sdmp.Interfaces
 
                 this.DoSolve();
 
-                this.SetSolverEnd(Messages.SEARCH_FINISHED);
+                if (string.IsNullOrEmpty(this.SolverEndMessage))
+                {
+                    this.SetSolverEnd(Messages.SEARCH_FINISHED);
+                }
             }
             finally
             {
@@ -872,9 +876,9 @@ namespace Nodez.Sdmp.Interfaces
 
             while (transitionQueue.Count > 0)
             {
-                if (this.StopWatch.Elapsed.TotalSeconds >= RunMaxTime)
+                if (this.StopWatch.Elapsed.TotalSeconds >= this.TimeLimit.TotalSeconds)
                 {
-                    this.SetSolverEnd($"{Messages.MAX_TIME_LIMIT} RunMaxTime={this.RunMaxTime} sec.");
+                    this.SetSolverEnd($"{Messages.TIME_LIMIT} Time Limit={this.TimeLimit.TotalSeconds} sec.");
                     return;
                 }
 
