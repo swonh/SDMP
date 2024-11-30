@@ -68,18 +68,7 @@ namespace Nodez.Sdmp.General.Controls
 
         public virtual double GetInitialPrimalBound(ObjectiveFunctionType objectiveFunctionType) 
         {
-            double primalBound = 0;
-
-            if (objectiveFunctionType == ObjectiveFunctionType.Maximize)
-            {
-                primalBound = Double.NegativeInfinity;
-            }
-            else if (objectiveFunctionType == ObjectiveFunctionType.Minimize) 
-            {
-                primalBound = Double.PositiveInfinity;
-            }
-
-            return primalBound;
+            return 0;
         }
 
         public virtual double GetInitialDualBound(ObjectiveFunctionType objectiveFunctionType)

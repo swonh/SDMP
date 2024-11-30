@@ -58,8 +58,8 @@ namespace Nodez.Sdmp.General.Controls
         public StatusLog GetStatusLog(State state, TimeSpan elapsedTime) 
         {
             string relativeDualityGap = string.Format("{0:F2}%", Math.Round(BoundManager.Instance.RelativeDualityGap * 100, 2));
-            string bestSolution = BoundManager.Instance.BestPrimalBound != Double.PositiveInfinity && BoundManager.Instance.BestPrimalBound != Double.NegativeInfinity ? string.Format("{0:F6}", BoundManager.Instance.BestPrimalBound) : string.Empty;
-            string bestDualBound = BoundManager.Instance.BestDualBound != Double.PositiveInfinity && BoundManager.Instance.BestDualBound != Double.NegativeInfinity ? string.Format("{0:F6}", BoundManager.Instance.BestDualBound) : string.Empty;
+            string bestSolution = BoundManager.Instance.BestPrimalBound != Double.PositiveInfinity ? string.Format("{0:F6}", BoundManager.Instance.BestPrimalBound) : string.Empty;
+            string bestDualBound = BoundManager.Instance.BestDualBound != Double.PositiveInfinity ? string.Format("{0:F6}", BoundManager.Instance.BestDualBound) : string.Empty;
             string numSolutions = string.Format("{0}", SolutionManager.Instance.Solutions.Count);
             string time = elapsedTime.TotalSeconds.ToString();
 
@@ -136,9 +136,9 @@ namespace Nodez.Sdmp.General.Controls
             if (primalBound == 0)
                 return;
 
-            string relativeDualityGap = BoundManager.Instance.RelativeDualityGap != Double.PositiveInfinity && BoundManager.Instance.RelativeDualityGap != Double.NegativeInfinity ? string.Format("{0:F2}%", Math.Round(BoundManager.Instance.RelativeDualityGap * 100, 2)) : string.Empty;
-            string bestSolution = BoundManager.Instance.BestPrimalBound != Double.PositiveInfinity && BoundManager.Instance.BestPrimalBound != Double.NegativeInfinity ? string.Format("{0:F6}", BoundManager.Instance.BestPrimalBound) : string.Empty;
-            string bestDualBound = BoundManager.Instance.BestDualBound != Double.PositiveInfinity && BoundManager.Instance.BestDualBound != Double.NegativeInfinity ? string.Format("{0:F6}", BoundManager.Instance.BestDualBound) : string.Empty;
+            string relativeDualityGap = BoundManager.Instance.RelativeDualityGap != Double.PositiveInfinity ? string.Format("{0:F2}%", Math.Round(BoundManager.Instance.RelativeDualityGap * 100, 2)) : string.Empty;
+            string bestSolution = BoundManager.Instance.BestPrimalBound != Double.PositiveInfinity ? string.Format("{0:F6}", BoundManager.Instance.BestPrimalBound) : string.Empty;
+            string bestDualBound = BoundManager.Instance.BestDualBound != Double.PositiveInfinity ? string.Format("{0:F6}", BoundManager.Instance.BestDualBound) : string.Empty;
             string numSolutions = string.Format("{0}", SolutionManager.Instance.Solutions.Count);
             string time = elapsedTime.ToString("hh\\:mm\\:ss");
 
@@ -156,9 +156,9 @@ namespace Nodez.Sdmp.General.Controls
             if (state == null)
                 return;
 
-            string relativeDualityGap = BoundManager.Instance.RelativeDualityGap != Double.PositiveInfinity && BoundManager.Instance.RelativeDualityGap != Double.NegativeInfinity ? string.Format("{0:F2}%", Math.Round(BoundManager.Instance.RelativeDualityGap * 100, 2)) : string.Empty;
-            string bestSolution = BoundManager.Instance.BestPrimalBound != Double.PositiveInfinity && BoundManager.Instance.BestPrimalBound != Double.NegativeInfinity ? string.Format("{0:F6}", BoundManager.Instance.BestPrimalBound) : string.Empty;
-            string bestDualBound = BoundManager.Instance.BestDualBound != Double.PositiveInfinity && BoundManager.Instance.BestDualBound != Double.NegativeInfinity ? string.Format("{0:F6}", BoundManager.Instance.BestDualBound) : string.Empty;
+            string relativeDualityGap = BoundManager.Instance.RelativeDualityGap != Double.PositiveInfinity ? string.Format("{0:F2}%", Math.Round(BoundManager.Instance.RelativeDualityGap * 100, 2)) : string.Empty;
+            string bestSolution = BoundManager.Instance.BestPrimalBound != Double.PositiveInfinity ? string.Format("{0:F6}", BoundManager.Instance.BestPrimalBound) : string.Empty;
+            string bestDualBound = BoundManager.Instance.BestDualBound != Double.PositiveInfinity ? string.Format("{0:F6}", BoundManager.Instance.BestDualBound) : string.Empty;
             string numSolutions = string.Format("{0}", SolutionManager.Instance.Solutions.Count);
             string time = elapsedTime.ToString("hh\\:mm\\:ss");
 
@@ -170,9 +170,9 @@ namespace Nodez.Sdmp.General.Controls
 
         public void WriteStatusLog(State state, TimeSpan elapsedTime)
         {
-            string relativeDualityGap = BoundManager.Instance.RelativeDualityGap != Double.PositiveInfinity && BoundManager.Instance.RelativeDualityGap != Double.NegativeInfinity ? string.Format("{0:F2}%", Math.Round(BoundManager.Instance.RelativeDualityGap * 100, 2)) : string.Empty;
-            string bestSolution = BoundManager.Instance.BestPrimalBound != Double.PositiveInfinity && BoundManager.Instance.BestPrimalBound != Double.NegativeInfinity ? string.Format("{0:F6}", BoundManager.Instance.BestPrimalBound) : string.Empty;
-            string bestDualBound = BoundManager.Instance.BestDualBound != Double.PositiveInfinity && BoundManager.Instance.BestDualBound != Double.NegativeInfinity ? string.Format("{0:F6}", BoundManager.Instance.BestDualBound) : string.Empty;
+            string relativeDualityGap = BoundManager.Instance.RelativeDualityGap != Double.PositiveInfinity ? string.Format("{0:F2}%", Math.Round(BoundManager.Instance.RelativeDualityGap * 100, 2)) : string.Empty;
+            string bestSolution = BoundManager.Instance.BestPrimalBound != Double.PositiveInfinity ? string.Format("{0:F6}", BoundManager.Instance.BestPrimalBound) : string.Empty;
+            string bestDualBound = BoundManager.Instance.BestDualBound != Double.PositiveInfinity ? string.Format("{0:F6}", BoundManager.Instance.BestDualBound) : string.Empty;
             string numSolutions = string.Format("{0}", SolutionManager.Instance.Solutions.Count);
             string time =  elapsedTime.ToString("hh\\:mm\\:ss");
 
