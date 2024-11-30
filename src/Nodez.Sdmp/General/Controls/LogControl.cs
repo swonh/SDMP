@@ -57,9 +57,35 @@ namespace Nodez.Sdmp.General.Controls
 
         public StatusLog GetStatusLog(State state, TimeSpan elapsedTime) 
         {
-            string relativeDualityGap = string.Format("{0:F2}%", Math.Round(BoundManager.Instance.RelativeDualityGap * 100, 2));
-            string bestSolution = BoundManager.Instance.BestPrimalBound != Double.MaxValue && BoundManager.Instance.BestPrimalBound != Double.MinValue ? string.Format("{0:F6}", BoundManager.Instance.BestPrimalBound) : string.Empty;
-            string bestDualBound = BoundManager.Instance.BestDualBound != Double.MaxValue && BoundManager.Instance.BestDualBound != Double.MinValue ? string.Format("{0:F6}", BoundManager.Instance.BestDualBound) : string.Empty;
+            double relativeDualityGapVal = BoundManager.Instance.RelativeDualityGap;
+            string relativeDualityGapStr = string.Empty;
+            if (relativeDualityGapVal != Double.PositiveInfinity)
+            {
+                relativeDualityGapStr = relativeDualityGapVal > Math.Pow(10, 4) ? relativeDualityGapVal.ToString("E2") : string.Format("{0:F2}%", Math.Round(BoundManager.Instance.RelativeDualityGap * 100, 2));
+            }
+
+            double bestPrimalBoundVal = BoundManager.Instance.BestPrimalBound;
+            string bestPrimalBoundStr = string.Empty;
+            if (bestPrimalBoundVal == Double.MinValue || bestPrimalBoundVal == Double.MaxValue)
+            {
+                bestPrimalBoundStr = bestPrimalBoundVal.ToString("E2");
+            }
+            else
+            {
+                bestPrimalBoundStr = string.Format("{0:F6}", bestPrimalBoundVal);
+            }
+
+            double bestDualBoundVal = BoundManager.Instance.BestDualBound;
+            string bestDualBoundStr = string.Empty;
+            if (bestDualBoundVal == Double.MinValue || bestDualBoundVal == Double.MaxValue)
+            {
+                bestDualBoundStr = bestDualBoundVal.ToString("E2");
+            }
+            else
+            {
+                bestDualBoundStr = string.Format("{0:F6}", bestDualBoundVal);
+            }
+
             string numSolutions = string.Format("{0}", SolutionManager.Instance.Solutions.Count);
             string time = Math.Max(0, elapsedTime.TotalSeconds).ToString();
 
@@ -67,10 +93,10 @@ namespace Nodez.Sdmp.General.Controls
 
             log.STATE_INDEX = state == null ? "Global dual bound update" : state.Index.ToString();
             log.STAGE_INDEX = state == null ? "Global dual bound update" : state.Stage.Index.ToString();
-            log.BEST_SOLUTION = bestSolution;
-            log.BEST_DUAL_BOUND = bestDualBound;
+            log.BEST_SOLUTION = bestPrimalBoundStr;
+            log.BEST_DUAL_BOUND = bestDualBoundStr;
             log.SOLUTION_COUNT = numSolutions;
-            log.RELATIVE_DUALITY_GAP = relativeDualityGap;
+            log.RELATIVE_DUALITY_GAP = relativeDualityGapStr;
             log.TIME = time;
 
             return log;
@@ -136,13 +162,39 @@ namespace Nodez.Sdmp.General.Controls
             if (primalBound == 0)
                 return;
 
-            string relativeDualityGap = BoundManager.Instance.RelativeDualityGap != Double.PositiveInfinity ? string.Format("{0:F2}%", Math.Round(BoundManager.Instance.RelativeDualityGap * 100, 2)) : string.Empty;
-            string bestSolution = BoundManager.Instance.BestPrimalBound != Double.MaxValue && BoundManager.Instance.BestPrimalBound != Double.MinValue ? string.Format("{0:F6}", BoundManager.Instance.BestPrimalBound) : string.Empty;
-            string bestDualBound = BoundManager.Instance.BestDualBound != Double.MaxValue && BoundManager.Instance.BestDualBound != Double.MinValue ? string.Format("{0:F6}", BoundManager.Instance.BestDualBound) : string.Empty;
+            double relativeDualityGapVal = BoundManager.Instance.RelativeDualityGap;
+            string relativeDualityGapStr = string.Empty;
+            if (relativeDualityGapVal != Double.PositiveInfinity)
+            {
+                relativeDualityGapStr = relativeDualityGapVal > Math.Pow(10, 4) ? relativeDualityGapVal.ToString("E2") : string.Format("{0:F2}%", Math.Round(BoundManager.Instance.RelativeDualityGap * 100, 2));
+            }
+
+            double bestPrimalBoundVal = BoundManager.Instance.BestPrimalBound;
+            string bestPrimalBoundStr = string.Empty;
+            if (bestPrimalBoundVal == Double.MinValue || bestPrimalBoundVal == Double.MaxValue) 
+            {
+                bestPrimalBoundStr = bestPrimalBoundVal.ToString("E2");
+            }
+            else
+            {
+                bestPrimalBoundStr = string.Format("{0:F6}", bestPrimalBoundVal);
+            }
+
+            double bestDualBoundVal = BoundManager.Instance.BestDualBound;
+            string bestDualBoundStr = string.Empty;
+            if (bestDualBoundVal == Double.MinValue || bestDualBoundVal == Double.MaxValue)
+            {
+                bestDualBoundStr = bestDualBoundVal.ToString("E2");
+            }
+            else
+            {
+                bestDualBoundStr = string.Format("{0:F6}", bestDualBoundVal);
+            }
+
             string numSolutions = string.Format("{0}", SolutionManager.Instance.Solutions.Count);
             string time = elapsedTime.ToString("hh\\:mm\\:ss");
 
-            string log = string.Format(" * {0,8} {1,9} {2,16} {3,16} {4,8} {5,7} {6,10}", state.Index, state.Stage.Index, bestSolution, bestDualBound, numSolutions, relativeDualityGap, time);
+            string log = string.Format(" * {0,8} {1,9} {2,16} {3,16} {4,8} {5,7} {6,10}", state.Index, state.Stage.Index, bestPrimalBoundStr, bestDualBoundStr, numSolutions, relativeDualityGapStr, time);
 
             Console.SetCursorPosition(0, Console.CursorTop);
             LogWriter.WriteLine(log);
@@ -156,13 +208,39 @@ namespace Nodez.Sdmp.General.Controls
             if (state == null)
                 return;
 
-            string relativeDualityGap = BoundManager.Instance.RelativeDualityGap != Double.PositiveInfinity ? string.Format("{0:F2}%", Math.Round(BoundManager.Instance.RelativeDualityGap * 100, 2)) : string.Empty;
-            string bestSolution = BoundManager.Instance.BestPrimalBound != Double.MaxValue && BoundManager.Instance.BestPrimalBound != Double.MinValue ? string.Format("{0:F6}", BoundManager.Instance.BestPrimalBound) : string.Empty;
-            string bestDualBound = BoundManager.Instance.BestDualBound != Double.MaxValue && BoundManager.Instance.BestDualBound != Double.MinValue ? string.Format("{0:F6}", BoundManager.Instance.BestDualBound) : string.Empty;
+            double relativeDualityGapVal = BoundManager.Instance.RelativeDualityGap;
+            string relativeDualityGapStr = string.Empty;
+            if (relativeDualityGapVal != Double.PositiveInfinity)
+            {
+                relativeDualityGapStr = relativeDualityGapVal > Math.Pow(10, 4) ? relativeDualityGapVal.ToString("E2") : string.Format("{0:F2}%", Math.Round(BoundManager.Instance.RelativeDualityGap * 100, 2));
+            }
+
+            double bestPrimalBoundVal = BoundManager.Instance.BestPrimalBound;
+            string bestPrimalBoundStr = string.Empty;
+            if (bestPrimalBoundVal == Double.MinValue || bestPrimalBoundVal == Double.MaxValue)
+            {
+                bestPrimalBoundStr = bestPrimalBoundVal.ToString("E2");
+            }
+            else
+            {
+                bestPrimalBoundStr = string.Format("{0:F6}", bestPrimalBoundVal);
+            }
+
+            double bestDualBoundVal = BoundManager.Instance.BestDualBound;
+            string bestDualBoundStr = string.Empty;
+            if (bestDualBoundVal == Double.MinValue || bestDualBoundVal == Double.MaxValue)
+            {
+                bestDualBoundStr = bestDualBoundVal.ToString("E2");
+            }
+            else
+            {
+                bestDualBoundStr = string.Format("{0:F6}", bestDualBoundVal);
+            }
+
             string numSolutions = string.Format("{0}", SolutionManager.Instance.Solutions.Count);
             string time = elapsedTime.ToString("hh\\:mm\\:ss");
 
-            string log = string.Format(" d {0,8} {1,9} {2,16} {3,16} {4,8} {5,7} {6,10}", state.Index, state.Stage.Index, bestSolution, bestDualBound, numSolutions, relativeDualityGap, time);
+            string log = string.Format(" d {0,8} {1,9} {2,16} {3,16} {4,8} {5,7} {6,10}", state.Index, state.Stage.Index, bestPrimalBoundStr, bestDualBoundStr, numSolutions, relativeDualityGapStr, time);
 
             Console.SetCursorPosition(0, Console.CursorTop);
             LogWriter.WriteLine(log);
@@ -170,13 +248,39 @@ namespace Nodez.Sdmp.General.Controls
 
         public void WriteStatusLog(State state, TimeSpan elapsedTime)
         {
-            string relativeDualityGap = BoundManager.Instance.RelativeDualityGap != Double.PositiveInfinity ? string.Format("{0:F2}%", Math.Round(BoundManager.Instance.RelativeDualityGap * 100, 2)) : string.Empty;
-            string bestSolution = BoundManager.Instance.BestPrimalBound != Double.MaxValue && BoundManager.Instance.BestPrimalBound != Double.MinValue ? string.Format("{0:F6}", BoundManager.Instance.BestPrimalBound) : string.Empty;
-            string bestDualBound = BoundManager.Instance.BestDualBound != Double.MaxValue && BoundManager.Instance.BestDualBound != Double.MinValue ? string.Format("{0:F6}", BoundManager.Instance.BestDualBound) : string.Empty;
+            double relativeDualityGapVal = BoundManager.Instance.RelativeDualityGap;
+            string relativeDualityGapStr = string.Empty;
+            if (relativeDualityGapVal != Double.PositiveInfinity)
+            {
+                relativeDualityGapStr = relativeDualityGapVal > Math.Pow(10, 4) ? relativeDualityGapVal.ToString("E2") : string.Format("{0:F2}%", Math.Round(BoundManager.Instance.RelativeDualityGap * 100, 2));
+            }
+
+            double bestPrimalBoundVal = BoundManager.Instance.BestPrimalBound;
+            string bestPrimalBoundStr = string.Empty;
+            if (bestPrimalBoundVal == Double.MinValue || bestPrimalBoundVal == Double.MaxValue)
+            {
+                bestPrimalBoundStr = bestPrimalBoundVal.ToString("E2");
+            }
+            else
+            {
+                bestPrimalBoundStr = string.Format("{0:F6}", bestPrimalBoundVal);
+            }
+
+            double bestDualBoundVal = BoundManager.Instance.BestDualBound;
+            string bestDualBoundStr = string.Empty;
+            if (bestDualBoundVal == Double.MinValue || bestDualBoundVal == Double.MaxValue)
+            {
+                bestDualBoundStr = bestDualBoundVal.ToString("E2");
+            }
+            else
+            {
+                bestDualBoundStr = string.Format("{0:F6}", bestDualBoundVal);
+            }
+
             string numSolutions = string.Format("{0}", SolutionManager.Instance.Solutions.Count);
             string time =  elapsedTime.ToString("hh\\:mm\\:ss");
 
-            string log = string.Format("   {0,8} {1,9} {2,16} {3,16} {4,8} {5,7} {6,10}", state.Index, state.Stage.Index, bestSolution, bestDualBound, numSolutions, relativeDualityGap, time);
+            string log = string.Format("   {0,8} {1,9} {2,16} {3,16} {4,8} {5,7} {6,10}", state.Index, state.Stage.Index, bestPrimalBoundStr, bestDualBoundStr, numSolutions, relativeDualityGapStr, time);
 
             Console.SetCursorPosition(0, Console.CursorTop);
             LogWriter.WriteLine(log);
@@ -258,9 +362,34 @@ namespace Nodez.Sdmp.General.Controls
             double selectedPercent = explored == 0 ? 0 : Math.Round((double)selected / explored * 100);
             double prunedPercent = explored == 0 ? 0 : Math.Round((double)pruned / explored * 100);
 
-            double bestPrimalBound = boundManager.BestPrimalBound;
-            double bestDualBound = boundManager.BestDualBound;
-            string relativeDualityGap = string.Format("{0:F2}%", Math.Round(BoundManager.Instance.RelativeDualityGap * 100, 2));
+            double relativeDualityGapVal = BoundManager.Instance.RelativeDualityGap;
+            string relativeDualityGapStr = string.Empty;
+            if (relativeDualityGapVal != Double.PositiveInfinity)
+            {
+                relativeDualityGapStr = relativeDualityGapVal > Math.Pow(10, 4) ? relativeDualityGapVal.ToString("E2") : string.Format("{0:F2}%", Math.Round(BoundManager.Instance.RelativeDualityGap * 100, 2));
+            }
+
+            double bestPrimalBoundVal = BoundManager.Instance.BestPrimalBound;
+            string bestPrimalBoundStr = string.Empty;
+            if (bestPrimalBoundVal == Double.MinValue || bestPrimalBoundVal == Double.MaxValue)
+            {
+                bestPrimalBoundStr = bestPrimalBoundVal.ToString("E2");
+            }
+            else
+            {
+                bestPrimalBoundStr = string.Format("{0:F6}", bestPrimalBoundVal);
+            }
+
+            double bestDualBoundVal = BoundManager.Instance.BestDualBound;
+            string bestDualBoundStr = string.Empty;
+            if (bestDualBoundVal == Double.MinValue || bestDualBoundVal == Double.MaxValue)
+            {
+                bestDualBoundStr = bestDualBoundVal.ToString("E2");
+            }
+            else
+            {
+                bestDualBoundStr = string.Format("{0:F6}", bestDualBoundVal);
+            }
 
             double runTime = Math.Max(0, Math.Round(solverManager.GetRunTime(solverName).TotalSeconds, 2));
 
@@ -269,7 +398,7 @@ namespace Nodez.Sdmp.General.Controls
                 LogWriter.WriteLineConsoleOnly(Constants.Constants.LINE);
                 LogWriter.WriteLineConsoleOnly("Solver Ended (Name: {0}, Reason: {1})", solverName, reason);
                 LogWriter.WriteLineConsoleOnly(">> Run Time: {0} sec.", runTime);
-                LogWriter.WriteLineConsoleOnly(">> Primal Bound: {0}, Dual Bound: {1}, Gap: {2}", bestPrimalBound, bestDualBound, relativeDualityGap);
+                LogWriter.WriteLineConsoleOnly(">> Primal Bound: {0}, Dual Bound: {1}, Gap: {2}", bestPrimalBoundStr, bestDualBoundStr, relativeDualityGapStr);
                 LogWriter.WriteLineConsoleOnly(">> Explored: {0}, Selected: {1}({2}%), Pruned: {3}({4}%) | Primal: {5}, Dual: {6}, VF Est.: {7}, VF Calc.: {8}", explored, selected, selectedPercent, pruned, prunedPercent, primalBoundCalculated, dualBoundCalculated, valueFunctionEstimated, valueFunctionCalculated);
                 LogWriter.WriteLineConsoleOnly("End Solver {0}", DateTime.Now);
             }
@@ -278,7 +407,7 @@ namespace Nodez.Sdmp.General.Controls
                 LogWriter.WriteLine(Constants.Constants.LINE);
                 LogWriter.WriteLine("Solver Ended (Name: {0}, Reason: {1})", solverName, reason);
                 LogWriter.WriteLine(">> Run Time: {0} sec.", runTime);
-                LogWriter.WriteLine(">> Primal Bound: {0}, Dual Bound: {1}, Gap: {2}", bestPrimalBound, bestDualBound, relativeDualityGap);
+                LogWriter.WriteLine(">> Primal Bound: {0}, Dual Bound: {1}, Gap: {2}", bestPrimalBoundStr, bestDualBoundStr, relativeDualityGapStr);
                 LogWriter.WriteLine(">> Explored: {0}, Selected: {1}({2}%), Pruned: {3}({4}%) | Primal: {5}, Dual: {6}, VF Est.: {7}, VF Calc.: {8}", explored, selected, selectedPercent, pruned, prunedPercent, primalBoundCalculated, dualBoundCalculated, valueFunctionEstimated, valueFunctionCalculated);
                 LogWriter.WriteLine("End Solver {0}", DateTime.Now);
             }
