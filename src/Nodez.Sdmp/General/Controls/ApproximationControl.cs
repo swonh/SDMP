@@ -120,7 +120,9 @@ namespace Nodez.Sdmp.General.Controls
 
         public virtual List<State> FilterGlobalStates(List<State> states, int maxTransitionCount, ObjectiveFunctionType objectiveFunctionType, double pruneTolerance, bool isApplyStateClustering)
         {
-            List<State> filtered = new List<State>();
+            SolutionManager solutionManager = SolutionManager.Instance;
+
+            List<State> selectedStateList = new List<State>();
 
             if (isApplyStateClustering)
             {
@@ -131,7 +133,7 @@ namespace Nodez.Sdmp.General.Controls
                     {
                         clusters.Add(state.ClusterID, new List<State>() { state });
                     }
-                    else 
+                    else
                     {
                         list.Add(state);
                     }
@@ -149,7 +151,7 @@ namespace Nodez.Sdmp.General.Controls
                         if (count > maxCount)
                             break;
 
-                        filtered.Add(st);
+                        selectedStateList.Add(st);
 
                         count++;
                     }
@@ -157,13 +159,25 @@ namespace Nodez.Sdmp.General.Controls
             }
             else
             {
+                int total = states.Count;
+                int current = 1;
+                bool isLast = false;
                 foreach (State state in states)
                 {
                     if (state.IsFinal)
                         continue;
 
-                    double estimatedValue = GetValueFunctionEstimate(state);
-                    state.SetValueFunctionEstimate(estimatedValue);
+                    if (total == current)
+                        isLast = true;
+
+                    double valueFunctionEstimate = GetValueFunctionEstimate(state);
+                    state.SetValueFunctionEstimate(valueFunctionEstimate);
+
+                    if (solutionManager.CheckOptimalityCondition())
+                        break;
+
+                    LogControl.Instance.ShowProgress(current, total, isLast);
+                    current++;
                 }
 
                 if (objectiveFunctionType == ObjectiveFunctionType.Minimize)
@@ -177,13 +191,13 @@ namespace Nodez.Sdmp.General.Controls
                     if (maxTransitionCount <= count)
                         break;
 
-                    filtered.Add(state);
+                    selectedStateList.Add(state);
 
                     count++;
                 }
             }
 
-            return filtered;
+            return selectedStateList;
         }
 
         public virtual List<State> FilterLocalStates(State currentState, List<State> states, int maxTransitionCount)
