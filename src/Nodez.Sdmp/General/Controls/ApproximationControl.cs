@@ -122,6 +122,9 @@ namespace Nodez.Sdmp.General.Controls
         {
             SolverManager solverManager = SolverManager.Instance;
             SolutionManager solutionManager = SolutionManager.Instance;
+            StateManager stateManager = StateManager.Instance;
+            StateControl stateControl = StateControl.Instance;
+            LogControl logControl = LogControl.Instance;
 
             List<State> selectedStateList = new List<State>();
 
@@ -194,6 +197,13 @@ namespace Nodez.Sdmp.General.Controls
                 {
                     if (maxTransitionCount <= count)
                         break;
+
+                    if (stateControl.CanPruneByOptimality(state, objectiveFunctionType, pruneTolerance))
+                    {
+                        logControl.WritePruneLog(state);
+                        stateManager.PruneState(state);
+                        continue;
+                    }
 
                     selectedStateList.Add(state);
 
