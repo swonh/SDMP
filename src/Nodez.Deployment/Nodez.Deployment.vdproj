@@ -363,6 +363,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_7391FC5CDE5D4B04AA10484D1817BF4A"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_81A86B2AA1E46694735790234011F0E7"
         "OwnerKey" = "8:_D813E5255138421EB30BEA191D068FF5"
         "MsmSig" = "8:_UNDEFINED"
@@ -437,12 +443,6 @@
         {
         "MsmKey" = "8:_B56775AB4301D28308CF075CBAA23379"
         "OwnerKey" = "8:_D813E5255138421EB30BEA191D068FF5"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_BFDAA0C6220F4BEAB5E4BF66F89326D4"
-        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -1423,6 +1423,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7391FC5CDE5D4B04AA10484D1817BF4A"
+            {
+            "SourcePath" = "8:C:\\Users\\OptLab_Dell2\\Desktop\\SDMP.General.CRP.zip"
+            "TargetName" = "8:SDMP.General.CRP.zip"
+            "Tag" = "8:"
+            "Folder" = "8:_3194FFB128984F85A5432A1678084E97"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_81A86B2AA1E46694735790234011F0E7"
             {
             "AssemblyRegister" = "3:1"
@@ -1545,26 +1565,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BFDAA0C6220F4BEAB5E4BF66F89326D4"
-            {
-            "SourcePath" = "8:..\\..\\..\\Nodez\\Nodez\\UserProjects\\SDMP.General.CRP.zip"
-            "TargetName" = "8:SDMP.General.CRP.zip"
-            "Tag" = "8:"
-            "Folder" = "8:_3194FFB128984F85A5432A1678084E97"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D9FC459510F1973B7701706EB9DA4262"
@@ -1852,7 +1852,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SDMP"
         "ProductCode" = "8:{0F7E3E67-C595-4A5E-832E-84D6653B9ED9}"
-        "PackageCode" = "8:{9FE42186-FF7E-4E92-B5F3-39DEA720449B}"
+        "PackageCode" = "8:{57DAE6DA-5FA4-4EE8-BA6F-C775DA13E5D7}"
         "UpgradeCode" = "8:{68B95BE9-A50E-4263-965E-B5A5C213D91E}"
         "AspNetVersion" = "8:"
         "RestartWWWService" = "11:FALSE"
