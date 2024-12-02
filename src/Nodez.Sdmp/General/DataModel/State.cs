@@ -152,6 +152,9 @@ namespace Nodez.Sdmp.General.DataModel
             if (this.PrevBestState == null)
                 return states;
 
+            if (this.PrevStates.Count == 0)
+                return states;
+
             State currState = this.PrevBestState;
 
             states.Add(currState);
@@ -170,6 +173,9 @@ namespace Nodez.Sdmp.General.DataModel
             List<State> states = new List<State>();
 
             if (this.PrevStates == null)
+                return states;
+
+            if (this.PrevStates.Count == 0)
                 return states;
 
             State currState = this.PrevStates.Values.First();
