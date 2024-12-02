@@ -87,6 +87,16 @@ namespace Nodez.Sdmp.General.Managers
             this.StopWatch = stopWatch;
         }
 
+        public void StopStopWatch() 
+        {
+            this.StopWatch.Stop();
+        }
+
+        public void StartStopWatch()
+        {
+            this.StopWatch.Start();
+        }
+
         public void SetCurrentSolverName(string solverName) 
         {
             this.CurrentSolverName = solverName;
