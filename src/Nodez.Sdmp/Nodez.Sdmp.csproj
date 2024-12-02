@@ -238,7 +238,11 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy "$(ProjectDir)bin\Debug\Nodez.Sdmp.*" "C:\Program Files (x86)\Nodez\SDMP\" /D /C /V /Y /R
+    <PostBuildEvent>IF "$(ConfigurationName)" == "Debug" (
+    xcopy "$(ProjectDir)bin\Debug\Nodez.Sdmp.*" "C:\Program Files (x86)\Nodez\SDMP\" /D /C /V /Y /R
+) ELSE (
+    xcopy "$(ProjectDir)bin\Release\Nodez.Sdmp.*" "C:\Program Files (x86)\Nodez\SDMP\" /D /C /V /Y /R
+)
 CD $(TargetDir)
 "$(Obfuscar)" obfuscar.xml</PostBuildEvent>
   </PropertyGroup>

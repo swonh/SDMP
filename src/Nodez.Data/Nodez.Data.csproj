@@ -60,6 +60,10 @@
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy "$(ProjectDir)bin\Debug\Nodez.Data.*" "C:\Program Files (x86)\Nodez\SDMP\" /D /C /V /Y /R</PostBuildEvent>
+    <PostBuildEvent>IF "$(ConfigurationName)" == "Debug" (
+    xcopy "$(ProjectDir)bin\Debug\Nodez.Data.*" "C:\Program Files (x86)\Nodez\SDMP\" /D /C /V /Y /R
+) ELSE (
+    xcopy "$(ProjectDir)bin\Release\Nodez.Data.*" "C:\Program Files (x86)\Nodez\SDMP\" /D /C /V /Y /R
+)</PostBuildEvent>
   </PropertyGroup>
 </Project>
