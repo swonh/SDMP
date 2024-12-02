@@ -51,12 +51,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_0F9F9AAFFA3C4D8D9477E7A2E0BDC161"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_24B0306615BB549E3CB7386E42989A34"
         "OwnerKey" = "8:_5232734D894D454D8FA91E4E1F03F784"
         "MsmSig" = "8:_UNDEFINED"
@@ -339,6 +333,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_669D4A9BEB4A9AED56A91F7DDAFA9618"
+        "OwnerKey" = "8:_D813E5255138421EB30BEA191D068FF5"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_68A4543087A0C01015DE045C73B1EBB7"
         "OwnerKey" = "8:_97E3D9BBF943DF7EFC231EB72B737728"
         "MsmSig" = "8:_UNDEFINED"
@@ -435,14 +435,14 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_A868CA9AD7872662E46D82A9C521C0FA"
+        "MsmKey" = "8:_B56775AB4301D28308CF075CBAA23379"
         "OwnerKey" = "8:_D813E5255138421EB30BEA191D068FF5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_B56775AB4301D28308CF075CBAA23379"
-        "OwnerKey" = "8:_D813E5255138421EB30BEA191D068FF5"
+        "MsmKey" = "8:_BFDAA0C6220F4BEAB5E4BF66F89326D4"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -634,6 +634,12 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_669D4A9BEB4A9AED56A91F7DDAFA9618"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_D813E5255138421EB30BEA191D068FF5"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -683,12 +689,6 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_2548E3E416EB77061EE3F6E110B3EBD2"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_A868CA9AD7872662E46D82A9C521C0FA"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -894,26 +894,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0F9F9AAFFA3C4D8D9477E7A2E0BDC161"
-            {
-            "SourcePath" = "8:..\\..\\..\\Nodez\\Nodez\\UserProjects\\SDMP.General.CRP.zip"
-            "TargetName" = "8:SDMP.General.CRP.zip"
-            "Tag" = "8:"
-            "Folder" = "8:_3194FFB128984F85A5432A1678084E97"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_24B0306615BB549E3CB7386E42989A34"
@@ -1319,6 +1299,37 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_669D4A9BEB4A9AED56A91F7DDAFA9618"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Nodez.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_669D4A9BEB4A9AED56A91F7DDAFA9618"
+                    {
+                    "Name" = "8:Nodez.Data.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Nodez.Data.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_5390619F96B749169957E27A3BBC2B46"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_68A4543087A0C01015DE045C73B1EBB7"
             {
             "AssemblyRegister" = "3:1"
@@ -1505,37 +1516,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_A868CA9AD7872662E46D82A9C521C0FA"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Nodez.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_A868CA9AD7872662E46D82A9C521C0FA"
-                    {
-                    "Name" = "8:Nodez.Data.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Nodez.Data.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_5390619F96B749169957E27A3BBC2B46"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_B56775AB4301D28308CF075CBAA23379"
             {
             "AssemblyRegister" = "3:1"
@@ -1565,6 +1545,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BFDAA0C6220F4BEAB5E4BF66F89326D4"
+            {
+            "SourcePath" = "8:..\\..\\..\\Nodez\\Nodez\\UserProjects\\SDMP.General.CRP.zip"
+            "TargetName" = "8:SDMP.General.CRP.zip"
+            "Tag" = "8:"
+            "Folder" = "8:_3194FFB128984F85A5432A1678084E97"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D9FC459510F1973B7701706EB9DA4262"
@@ -1852,7 +1852,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SDMP"
         "ProductCode" = "8:{0F7E3E67-C595-4A5E-832E-84D6653B9ED9}"
-        "PackageCode" = "8:{21932EEE-0364-4F69-B1EC-9B7FB2D19CBF}"
+        "PackageCode" = "8:{9FE42186-FF7E-4E92-B5F3-39DEA720449B}"
         "UpgradeCode" = "8:{68B95BE9-A50E-4263-965E-B5A5C213D91E}"
         "AspNetVersion" = "8:"
         "RestartWWWService" = "11:FALSE"
@@ -2373,7 +2373,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_5232734D894D454D8FA91E4E1F03F784"
             {
-            "SourcePath" = "8:"
+            "SourcePath" = "8:..\\Nodez.Data\\obj\\Release\\Nodez.Data.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_5390619F96B749169957E27A3BBC2B46"
@@ -2401,7 +2401,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_D813E5255138421EB30BEA191D068FF5"
             {
-            "SourcePath" = "8:"
+            "SourcePath" = "8:..\\Nodez.Sdmp\\obj\\Release\\Nodez.Sdmp.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_5390619F96B749169957E27A3BBC2B46"
