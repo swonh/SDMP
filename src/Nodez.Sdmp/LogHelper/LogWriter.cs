@@ -28,25 +28,33 @@ namespace Nodez.Sdmp.LogHelper
         public static void Write(string value) 
         {
             Console.Write(value);
-            _fileWriter.Write(value);
+
+            if (_fileWriter != null)
+                _fileWriter.Write(value);
         }
 
         public static void WriteLine(string value)
         {
             Console.WriteLine(value);
-            _fileWriter.WriteLine(value);
+
+            if (_fileWriter != null)
+                _fileWriter.WriteLine(value);
         }
 
         public static void WriteLine(string format, params object[] arg)
         {
             Console.WriteLine(format, arg);
-            _fileWriter.WriteLine(string.Format(Console.Out.FormatProvider, format, arg));
+
+            if (_fileWriter != null)
+                _fileWriter.WriteLine(string.Format(Console.Out.FormatProvider, format, arg));
         }
 
         public static void WriteLine()
         {
             Console.WriteLine();
-            _fileWriter.WriteLine();
+
+            if (_fileWriter != null)
+                _fileWriter.WriteLine();
         }
 
         public static void WriteConsoleOnly(string value)
