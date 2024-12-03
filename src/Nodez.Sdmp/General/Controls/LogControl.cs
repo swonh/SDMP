@@ -107,6 +107,7 @@ namespace Nodez.Sdmp.General.Controls
             StateInfoLog log = new StateInfoLog();
 
             log.STATE_INDEX = state.Index;
+            log.PREV_BEST_STATE_INDEX = state.PrevBestState == null ? 0 : state.PrevBestState.Index;
             log.STATE_KEY = state.Key;
             log.STAGE_INDEX = state.Stage.Index;
             log.CURRENT_BEST_VALUE = state.CurrentBestValue;
@@ -128,6 +129,7 @@ namespace Nodez.Sdmp.General.Controls
             {
                 StateInfoLog log = new StateInfoLog();
                 log.STATE_INDEX = state.Index;
+                log.PREV_BEST_STATE_INDEX = state.PrevBestState == null ? 0 : state.PrevBestState.Index;
                 log.STATE_KEY = state.Key;
                 log.STAGE_INDEX = state.Stage.Index;
                 log.CURRENT_BEST_VALUE = state.CurrentBestValue;

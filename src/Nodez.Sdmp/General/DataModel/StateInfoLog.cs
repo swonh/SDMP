@@ -17,6 +17,8 @@ namespace Nodez.Sdmp.General.DataModel
 
         public int STATE_INDEX { get; set; }
 
+        public int PREV_BEST_STATE_INDEX { get; set; }
+
         public string STATE_KEY { get; set; }
 
         public int STAGE_INDEX { get; set; }
