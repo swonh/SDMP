@@ -113,6 +113,7 @@ namespace Nodez.Sdmp.General.Controls
             log.DUAL_BOUND = state.DualBound;
             log.SUM_CURRENT_DUAL = state.CurrentBestValue + state.DualBound;
             log.PRIMAL_BOUND = state.PrimalBound;
+            log.ACTION_VALUE = state.ActionValue;
             log.VALUE_FUNCTION_ESTIMATE = state.ValueFunctionEstimate;
             log.IS_AFTER_FILTERING = afterFiltering;
 
@@ -133,6 +134,7 @@ namespace Nodez.Sdmp.General.Controls
                 log.DUAL_BOUND = state.DualBound;
                 log.SUM_CURRENT_DUAL = state.CurrentBestValue + state.DualBound;
                 log.PRIMAL_BOUND = state.PrimalBound;
+                log.ACTION_VALUE = state.ActionValue;
                 log.VALUE_FUNCTION_ESTIMATE = state.ValueFunctionEstimate;
                 log.IS_AFTER_FILTERING = afterFiltering;
 

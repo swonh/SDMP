@@ -29,6 +29,8 @@ namespace Nodez.Sdmp.General.DataModel
 
         public double PRIMAL_BOUND { get; set; }
 
+        public double ACTION_VALUE { get; set; }
+
         public double VALUE_FUNCTION_ESTIMATE { get; set; }
 
         public bool IS_AFTER_FILTERING { get; set; }

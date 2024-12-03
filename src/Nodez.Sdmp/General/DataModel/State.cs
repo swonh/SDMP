@@ -25,6 +25,8 @@ namespace Nodez.Sdmp.General.DataModel
 
         public double ValueFunctionEstimate { get; set; }
 
+        public double ActionValue { get; set; }
+
         public double PrimalBound { get; set; }
 
         public bool IsInitial { get; set; }
