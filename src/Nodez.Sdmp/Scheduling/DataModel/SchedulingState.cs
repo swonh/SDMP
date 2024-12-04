@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -71,31 +72,31 @@ namespace Nodez.Sdmp.Scheduling.DataModel
 
         public string GetKey()
         {
-            int key = this.ConvertToUniqueKey(this.JobAssignedEqp, this.EqpAvailableTime, this.LastJobIndex);
+            string key = this.ComputeSHA256Hash(this.JobAssignedEqp, this.EqpAvailableTime, this.LastJobIndex);
 
-            return key.ToString();
+            return key;
         }
 
-        public int ConvertToUniqueKey(int[] intArray, double[] realArray, int extraInt)
+        public string ComputeSHA256Hash(int[] intArray, double[] realArray, int extraInt)
         {
-            // 1. Generate a unique integer key for the integer array
-            int intArrayKey = 0;
-            foreach (var num in intArray)
+            using (SHA256 sha256 = SHA256.Create())
             {
-                intArrayKey = (intArrayKey * 31) + num; // Combine using multiplication and addition
-            }
+                // Combine the input data into a single string
+                string input = $"{string.Join(",", intArray)}|{string.Join(",", realArray)}|{extraInt}";
 
-            // 2. Generate a unique integer key for the double array
-            int realArrayKey = 0;
-            foreach (var real in realArray)
-            {
-                realArrayKey ^= real.GetHashCode(); // Combine using XOR
-            }
+                // Compute the SHA256 hash
+                byte[] hashBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(input));
 
-            // 3. Combine all keys to create the final unique key
-            return ((intArrayKey * 31) ^ realArrayKey) * 31 + extraInt;
+                // Convert the hash to a hexadecimal string
+                StringBuilder hashString = new StringBuilder();
+                foreach (byte b in hashBytes)
+                {
+                    hashString.Append(b.ToString("x2"));
+                }
+
+                return hashString.ToString();
+            }
         }
-
 
         public void InitMakeSpan()
         {
