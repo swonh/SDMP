@@ -7,6 +7,7 @@ using Nodez.Sdmp.Scheduling.Managers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -70,27 +71,31 @@ namespace Nodez.Sdmp.Scheduling.DataModel
 
         public string GetKey()
         {
-            StringBuilder str = new StringBuilder();
+            int key = this.ConvertToUniqueKey(this.JobAssignedEqp, this.JobStartTime, this.LastEqpIndex, this.LastJobIndex);
 
-            str.AppendFormat("Last Eqp:{0}@", this.LastEqpIndex);
-            str.AppendFormat("Last Job:{0}@", this.LastJobIndex);
-
-            str.AppendFormat("|");
-
-            foreach (var item in this.JobProcessStatus)
-            {
-                str.AppendFormat("{0}@", item);
-            }
-
-            str.AppendFormat("|");
-
-            foreach (var item in this.EqpAvailableTime)
-            {
-                str.AppendFormat("{0}@", item);
-            }
-
-            return str.ToString();
+            return key.ToString();
         }
+
+        public int ConvertToUniqueKey(int[] intArray, double[] realArray, int extraInt1, int extraInt2)
+        {
+            // 1. Generate a unique integer key for the integer array
+            int intArrayKey = 0;
+            foreach (var num in intArray)
+            {
+                intArrayKey = (intArrayKey * 31) + num; // Combine using multiplication and addition
+            }
+
+            // 2. Generate a unique integer key for the double array
+            int realArrayKey = 0;
+            foreach (var real in realArray)
+            {
+                realArrayKey ^= real.GetHashCode(); // Combine using XOR
+            }
+
+            // 3. Combine all keys to create the final unique key
+            return (((intArrayKey * 31) ^ realArrayKey) * 31 + extraInt1) * 31 + extraInt2;
+        }
+
 
         public void InitMakeSpan()
         {
