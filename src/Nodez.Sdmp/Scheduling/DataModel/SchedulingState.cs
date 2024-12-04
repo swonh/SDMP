@@ -71,12 +71,12 @@ namespace Nodez.Sdmp.Scheduling.DataModel
 
         public string GetKey()
         {
-            int key = this.ConvertToUniqueKey(this.JobAssignedEqp, this.JobStartTime, this.LastEqpIndex, this.LastJobIndex);
+            int key = this.ConvertToUniqueKey(this.JobAssignedEqp, this.EqpAvailableTime, this.LastJobIndex);
 
             return key.ToString();
         }
 
-        public int ConvertToUniqueKey(int[] intArray, double[] realArray, int extraInt1, int extraInt2)
+        public int ConvertToUniqueKey(int[] intArray, double[] realArray, int extraInt)
         {
             // 1. Generate a unique integer key for the integer array
             int intArrayKey = 0;
@@ -93,7 +93,7 @@ namespace Nodez.Sdmp.Scheduling.DataModel
             }
 
             // 3. Combine all keys to create the final unique key
-            return (((intArrayKey * 31) ^ realArrayKey) * 31 + extraInt1) * 31 + extraInt2;
+            return ((intArrayKey * 31) ^ realArrayKey) * 31 + extraInt;
         }
 
 
