@@ -352,8 +352,8 @@ namespace Nodez.Sdmp.Scheduling.Managers
             foreach (Job job in jobs)
             {
                 double minProcTime = double.MaxValue;
-                double maxProcTime = double.MinValue;
-                double maxBundleProcTime = double.MinValue;
+                double maxProcTime = 0;
+                double maxBundleProcTime = 0;
                 foreach (Equipment eqp in manager.SchedulingProblem.EqpList)
                 {
                     Arrange arr = manager.GetArrange(job, eqp);
