@@ -328,8 +328,11 @@ namespace Nodez.Sdmp.Interfaces
             solverManager.SetEngineStartTime(this.Name, this.EngineStartTime);
             solverManager.ClearStatusLogs();
 
-            this.SetOutputDirectory();
-            this.SetConsole();
+            if (solverControl.IsWriteOutput())
+            {
+                this.SetOutputDirectory();
+                this.SetConsole();
+            }
 
             if (data == null)
             {

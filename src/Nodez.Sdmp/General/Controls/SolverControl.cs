@@ -50,6 +50,11 @@ namespace Nodez.Sdmp.General.Controls
             return Assembly.GetExecutingAssembly().GetName().Name;
         }
 
+        public virtual bool IsWriteOutput() 
+        {
+            return false;
+        }
+
         public virtual string GetOutputDirectoryPath(string solverName) 
         {
             return null;
