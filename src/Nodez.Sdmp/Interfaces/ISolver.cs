@@ -131,7 +131,7 @@ namespace Nodez.Sdmp.Interfaces
 
         protected void SetConsole() 
         {
-            string engineStartTime = SolverManager.Instance.GetEngineStartTime(this.Name).ToString("yyyyMMdd_HHmmss_fff");
+            string engineStartTime = SolverManager.Instance.GetEngineStartTime(this.Name).ToString("yyyyMMdd_HHmmss");
 
             StreamWriter fileWriter = new StreamWriter($"{this.OutputDirectoryPath}{Path.DirectorySeparatorChar}{Constants.Constants.CONSOLE_OUTPUT_LOG}_{RunConfig.RUN_SEQ}_{this.Name}_{engineStartTime}.txt");
             fileWriter.AutoFlush = true;
