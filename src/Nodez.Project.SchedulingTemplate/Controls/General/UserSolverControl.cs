@@ -47,7 +47,7 @@ namespace Nodez.Project.SchedulingTemplate.Controls
             int clusterCount = dataManager.SchedulingProblem.EqpGroupList.Count;
             int chamberCount = dataManager.SchedulingProblem.EqpList.Count;
 
-            string engineStartTime = SolverManager.Instance.GetEngineStartTime(solverName).ToString("yyyyMMdd_HHmmss");
+            string engineStartTime = SolverManager.Instance.GetEngineStartTime(solverName).ToString("yyyyMMdd_HHmmss_fff");
 
             string dirName = string.Format("{0} (Job{1} Cluster{2} Chamber{3})", engineStartTime, jobCount, clusterCount, chamberCount);
 

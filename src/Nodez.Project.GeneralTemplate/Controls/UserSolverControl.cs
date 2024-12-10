@@ -40,7 +40,7 @@ namespace Nodez.Project.GeneralTemplate.Controls
 
         public override string GetOutputDirectoryPath(string solverName)
         {
-            string engineStartTime = SolverManager.Instance.GetEngineStartTime(solverName).ToString("yyyyMMdd_HHmmss");
+            string engineStartTime = SolverManager.Instance.GetEngineStartTime(solverName).ToString("yyyyMMdd_HHmmss_fff");
 
             string dirName = string.Format("{0}", engineStartTime);
 
