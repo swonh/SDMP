@@ -52,7 +52,7 @@ namespace Nodez.Sdmp.General.Controls
 
         public virtual bool IsWriteOutput() 
         {
-            return false;
+            return true;
         }
 
         public virtual string GetOutputDirectoryPath(string solverName) 
