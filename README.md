@@ -28,7 +28,7 @@ You can find the documentation at
 
 To use `SDMP`, you must first install it.
 
-<b>Download latest version:</b> [SDMP-2.0.0-win64.zip](https://github.com/swonh/SDMP/releases/download/v2.0.0/SDMP-2.0.0-win64.zip)
+<b>Download latest version:</b> [SDMP-2.0.1-win64.zip](https://github.com/swonh/SDMP/releases/download/v2.0.1/SDMP-2.0.1-win64.zip)
 
 > **Note**
 > Run the <b>Install.bat</b> file, and it will install automatically. (Do not run any other files.)
