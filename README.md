@@ -46,7 +46,7 @@ Contact: swonhong.github@gmail.com
 ## Acknowledgment
 This work was supported in part by a grant from the National Research Foundation of Korea (NRF), funded by the Korean government.
 
-This work is based on the following publication:
+It is based on the following publication:
 
 **Accelerated Dynamic Programming Algorithms for a Car Resequencing Problem in Automotive Paint Shops**  
 Sungwon Hong, Jinyoung Choi, Jinil Han, Kyungsik Lee  
