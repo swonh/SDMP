@@ -44,7 +44,7 @@ We welcome collaborators! If you want to work with us to improve and expand our 
 Contact: swonhong.github@gmail.com
 
 ## Acknowledgment
-This work was supported in part by a grant from the National Research Foundation of Korea (NRF), funded by the Korean government.
+This work was supported in part by the National Research Foundation of Korea (NRF) grant funded by the Korean Government under Grant 2021R1A2C2005531.
 
 This implementation is based on the following paper:
 
