@@ -42,3 +42,10 @@ If you need help, please [open a GitHub issue](https://github.com/swonh/SDMP/iss
 We welcome collaborators! If you want to work with us to improve and expand our software, please contact us! (You can also submit a pull request directly.)
 
 Contact: swonhong.github@gmail.com
+
+## Acknowledgement
+
+This work was supported in part by the National Research Foundation of Korea (NRF) grant funded by the Korean Government.
+
+Related Paper: Accelerated Dynamic Programming Algorithms for a Car Resequencing Problem in Automotive Paint Shops Sungwon Hong, Jinyoung Choi, Jinil Han, Kyungsik Lee, Applied Mathematical Modeling, 64, 285-297, 2018.
+
