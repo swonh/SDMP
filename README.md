@@ -51,4 +51,4 @@ Related Publication:
 **Accelerated Dynamic Programming Algorithms for a Car Resequencing Problem in Automotive Paint Shops**  
 Sungwon Hong, Jinyoung Choi, Jinil Han, Kyungsik Lee  
 *Applied Mathematical Modeling*, **64**, 285–297, 2018.  
-<a href="https://doi.org/10.1016/j.apm.2018.07.035" target="_blank">https://doi.org/10.1016/j.apm.2018.07.035</a>
+[https://doi.org/10.1016/j.apm.2018.07.035](https://doi.org/10.1016/j.apm.2018.07.035)
