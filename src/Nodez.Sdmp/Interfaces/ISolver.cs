@@ -911,6 +911,12 @@ namespace Nodez.Sdmp.Interfaces
 
                 State state = this.GetNextState();
 
+                if (state.IsFinal)
+                {
+                    stateManager.SetFinalState(state);
+                    break;
+                }
+
                 state.IsFixed = true;
 
                 this.UpdateGlobalDualBound(fixedStateBounds, stageIndex, objectiveFunctionType, StopWatch.Elapsed);
@@ -929,12 +935,6 @@ namespace Nodez.Sdmp.Interfaces
                 }
 
                 this.RemoveVisitedStates(fixedStateBounds, stageIndex, memoryClearPeriod);
-
-                if (state.IsFinal)
-                {
-                    stateManager.SetFinalState(state);
-                    continue;
-                }
 
                 eventControl.OnVisitState(state);
 
