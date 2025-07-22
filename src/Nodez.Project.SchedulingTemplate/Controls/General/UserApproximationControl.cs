@@ -154,9 +154,6 @@ namespace Nodez.Project.SchedulingTemplate.Controls
                 bool isLast = false;
                 foreach (State state in states)
                 {
-                    if (state.IsFinal)
-                        continue;
-
                     if (total == current)
                         isLast = true;
 

@@ -168,9 +168,6 @@ namespace Nodez.Sdmp.General.Controls
                 bool isLast = false;
                 foreach (State state in states)
                 {
-                    if (state.IsFinal)
-                        continue;
-
                     if (total == current)
                         isLast = true;
 
