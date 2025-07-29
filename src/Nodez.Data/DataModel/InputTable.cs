@@ -190,7 +190,7 @@ namespace Nodez.Data.DataModel
 
                     this.Init(row);
 
-                    return;
+                    continue;
                 }
 
                 this._rows.Add(row);
