@@ -172,6 +172,31 @@ namespace Nodez.Data.DataModel
             this._rows.Add(row);
         }
 
+        public void AddRows(List<IInputRow> rows)
+        {
+            foreach (IInputRow row in rows)
+            {
+                foreach (KeyValuePair<int, HashSet<string>> value in row.KeyMappings)
+                {
+                    IComparable rowKey = row.GetKey(value.Key);
+
+                    this.AddToView(value.Key, rowKey, row);
+                }
+
+                if (this._rows == null)
+                {
+                    this._rows = new List<IInputRow>();
+                    this._rows.Add(row);
+
+                    this.Init(row);
+
+                    return;
+                }
+
+                this._rows.Add(row);
+            }
+        }
+
         public List<IInputRow> FindRows(int viewNum, params object[] keys)
         {
             if (this._rows == null || this._rows.Count == 0)
