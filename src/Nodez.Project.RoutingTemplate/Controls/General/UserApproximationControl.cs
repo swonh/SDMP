@@ -140,6 +140,12 @@ namespace Nodez.Project.RoutingTemplate.Controls
                     int count = 0;
                     foreach (State st in list)
                     {
+                        if (st.IsFinal)
+                        {
+                            selectedStateList.Add(st);
+                            continue;
+                        }
+
                         if (count > maxCount)
                             break;
 
@@ -156,6 +162,12 @@ namespace Nodez.Project.RoutingTemplate.Controls
                 bool isLast = false;
                 foreach (State state in states)
                 {
+                    if (state.IsFinal)
+                    {
+                        selectedStateList.Add(state);
+                        continue;
+                    }
+
                     if (total == current)
                         isLast = true;
 
