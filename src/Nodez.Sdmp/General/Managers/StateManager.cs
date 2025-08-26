@@ -1,14 +1,12 @@
-﻿// Copyright (c) 2021-24, Sungwon Hong. All Rights Reserved. 
+﻿// Copyright (c) 2021-25, Sungwon Hong. All Rights Reserved. 
 // This Source Code Form is subject to the terms of the Mozilla Public License, Version 2.0. 
 // If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-using Nodez.Sdmp.Constants;
 using Nodez.Sdmp.Enum;
 using Nodez.Sdmp.General.DataModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Nodez.Sdmp.General.Managers
 {
@@ -33,7 +31,7 @@ namespace Nodez.Sdmp.General.Managers
             }
         }
 
-        public StateManager() 
+        public StateManager()
         {
             this._filteredStateCount = new Dictionary<int, int>();
             this._valueFunctionEstimatedStateCount = new Dictionary<int, int>();
@@ -72,7 +70,7 @@ namespace Nodez.Sdmp.General.Managers
 
         private Dictionary<int, int> _valueFunctionCalculatedStateCount { get; set; }
 
-        public void SetInitialState(State state) 
+        public void SetInitialState(State state)
         {
             this.InitialState = state;
         }
@@ -88,12 +86,12 @@ namespace Nodez.Sdmp.General.Managers
             this._exploredStateCount++;
         }
 
-        public void PruneState(State state) 
+        public void PruneState(State state)
         {
             this._prunedStateCount++;
         }
 
-        public void SetFilteredStateCount(int stageIndex, int filteredCount) 
+        public void SetFilteredStateCount(int stageIndex, int filteredCount)
         {
             if (this._filteredStateCount.ContainsKey(stageIndex) == false)
             {
@@ -135,7 +133,7 @@ namespace Nodez.Sdmp.General.Managers
             this._primalBoundCalculatedStateCount++;
         }
 
-        public void SetLinks(DataModel.StateTransition transition) 
+        public void SetLinks(DataModel.StateTransition transition)
         {
             State from = transition.FromState;
             State to = transition.ToState;

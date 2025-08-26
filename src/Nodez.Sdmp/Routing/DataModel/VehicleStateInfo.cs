@@ -1,12 +1,9 @@
-﻿// Copyright (c) 2021-24, Sungwon Hong. All Rights Reserved. 
+﻿// Copyright (c) 2021-25, Sungwon Hong. All Rights Reserved. 
 // This Source Code Form is subject to the terms of the Mozilla Public License, Version 2.0. 
 // If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Nodez.Sdmp.Routing.DataModel
 {
@@ -34,7 +31,7 @@ namespace Nodez.Sdmp.Routing.DataModel
 
         public bool IsFinished { get { return VisitedNodeCount > 0 && PickupCount == DeliveryCount; } }
 
-        public bool IsDoneVisitNodes() 
+        public bool IsDoneVisitNodes()
         {
             bool isDoneVisit = false;
 
@@ -47,7 +44,7 @@ namespace Nodez.Sdmp.Routing.DataModel
             return isDoneVisit;
         }
 
-        public VehicleStateInfo Clone() 
+        public VehicleStateInfo Clone()
         {
             VehicleStateInfo clone = new VehicleStateInfo();
 
@@ -70,14 +67,14 @@ namespace Nodez.Sdmp.Routing.DataModel
             return clone;
         }
 
-        public override string ToString() 
+        public override string ToString()
         {
             StringBuilder str = new StringBuilder();
 
             str.AppendFormat("C:{0}", this.CurrentNodeIndex);
 
             str.Append("@V:");
-            foreach (int flag in this.VisitedNodeFlag) 
+            foreach (int flag in this.VisitedNodeFlag)
             {
                 str.Append(flag);
             }

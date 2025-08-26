@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2021-24, Sungwon Hong. All Rights Reserved. 
+﻿// Copyright (c) 2021-25, Sungwon Hong. All Rights Reserved. 
 // This Source Code Form is subject to the terms of the Mozilla Public License, Version 2.0. 
 // If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
@@ -11,9 +11,6 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Nodez.Sdmp.General.Managers
 {
@@ -51,7 +48,7 @@ namespace Nodez.Sdmp.General.Managers
 
         private IRunConfig _runConfig { get; set; }
 
-        public SolverManager() 
+        public SolverManager()
         {
             this._engineStartTime = new Dictionary<string, DateTime>();
             this._engineEndTime = new Dictionary<string, DateTime>();
@@ -62,32 +59,32 @@ namespace Nodez.Sdmp.General.Managers
             this._stateInfoLogs = new List<StateInfoLog>();
         }
 
-        public void SetRunConfig(IRunConfig runConfig) 
+        public void SetRunConfig(IRunConfig runConfig)
         {
             this._runConfig = runConfig;
         }
 
-        public IRunConfig GetRunConfig() 
+        public IRunConfig GetRunConfig()
         {
             return _runConfig;
         }
 
-        public void SetTimeLimit(TimeSpan timeLimit) 
+        public void SetTimeLimit(TimeSpan timeLimit)
         {
             this.TimeLimit = timeLimit;
         }
 
-        public void SetObjectiveFunctionType(ObjectiveFunctionType objectiveFunctionType) 
+        public void SetObjectiveFunctionType(ObjectiveFunctionType objectiveFunctionType)
         {
             this.ObjectiveFunctionType = objectiveFunctionType;
         }
 
-        public void SetStopWatch(Stopwatch stopWatch) 
+        public void SetStopWatch(Stopwatch stopWatch)
         {
             this.StopWatch = stopWatch;
         }
 
-        public void StopStopWatch() 
+        public void StopStopWatch()
         {
             this.StopWatch.Stop();
         }
@@ -97,12 +94,12 @@ namespace Nodez.Sdmp.General.Managers
             this.StopWatch.Start();
         }
 
-        public void SetCurrentSolverName(string solverName) 
+        public void SetCurrentSolverName(string solverName)
         {
             this.CurrentSolverName = solverName;
         }
 
-        public void ClearStatusLogs() 
+        public void ClearStatusLogs()
         {
             this._statusLogs.Clear();
         }
@@ -112,7 +109,7 @@ namespace Nodez.Sdmp.General.Managers
             this._stateInfoLogs.Clear();
         }
 
-        public void AddStatusLog(StatusLog log) 
+        public void AddStatusLog(StatusLog log)
         {
             this._statusLogs.Add(log);
         }
@@ -154,7 +151,7 @@ namespace Nodez.Sdmp.General.Managers
             }
         }
 
-        public void AddStateInfoLogs(List<StateInfoLog> logs, bool autoFlush = true) 
+        public void AddStateInfoLogs(List<StateInfoLog> logs, bool autoFlush = true)
         {
             this._stateInfoLogs.AddRange(logs);
 
@@ -163,8 +160,8 @@ namespace Nodez.Sdmp.General.Managers
                 if (this._stateInfoLogs.Count >= 5000)
                 {
                     OutputTable stateInfoLogTable = new OutputTable();
-                                                     
-                    foreach (StateInfoLog log in _stateInfoLogs) 
+
+                    foreach (StateInfoLog log in _stateInfoLogs)
                     {
                         stateInfoLogTable.AddRow(log);
                     }
@@ -180,7 +177,7 @@ namespace Nodez.Sdmp.General.Managers
                         stateInfoLogTable.WriteToFile(dirPath, false, true, $"{Constants.Constants.STATE_INFO_LOG}_{RunConfig.RUN_SEQ}_{CurrentSolverName}_{engineStartTime}");
                         OutputManager.Instance.SetOutput(stateInfoLogTable.Name, stateInfoLogTable);
                     }
-                    else 
+                    else
                     {
                         stateInfoLogTable.WriteToFile(dirPath, true, false, $"{Constants.Constants.STATE_INFO_LOG}_{RunConfig.RUN_SEQ}_{CurrentSolverName}_{engineStartTime}");
                     }
@@ -191,15 +188,15 @@ namespace Nodez.Sdmp.General.Managers
             }
         }
 
-        public List<StatusLog> GetStatusLogs() 
+        public List<StatusLog> GetStatusLogs()
         {
             return this._statusLogs;
         }
 
-        public void WriteStatusLogs() 
+        public void WriteStatusLogs()
         {
             OutputTable table = new OutputTable();
-            foreach (StatusLog log in this._statusLogs) 
+            foreach (StatusLog log in this._statusLogs)
             {
                 table.AddRow(log);
             }
@@ -271,7 +268,7 @@ namespace Nodez.Sdmp.General.Managers
                 this._engineEndTime.Add(solverName, engineEndTime);
         }
 
-        public void SetBestSolutionDateTime(string solverName, DateTime bestSolutionDateTime) 
+        public void SetBestSolutionDateTime(string solverName, DateTime bestSolutionDateTime)
         {
             if (solverName == null)
                 return;
@@ -307,7 +304,7 @@ namespace Nodez.Sdmp.General.Managers
             return engineEndTime;
         }
 
-        public DateTime GetBestSolutionDateTime(string solverName) 
+        public DateTime GetBestSolutionDateTime(string solverName)
         {
             this._bestSolutionDateTime.TryGetValue(solverName, out DateTime bestSolutionDateTime);
 
@@ -321,7 +318,7 @@ namespace Nodez.Sdmp.General.Managers
             return rootSolutionDateTime;
         }
 
-        public TimeSpan GetRunTime(string solverName) 
+        public TimeSpan GetRunTime(string solverName)
         {
             return this.GetEngineEndTime(solverName).Subtract(this.GetEngineStartTime(solverName));
         }

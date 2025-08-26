@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2021-24, Sungwon Hong. All Rights Reserved. 
+﻿// Copyright (c) 2021-25, Sungwon Hong. All Rights Reserved. 
 // This Source Code Form is subject to the terms of the Mozilla Public License, Version 2.0. 
 // If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
@@ -7,7 +7,6 @@ using Nodez.Data.Interface;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
 
 namespace Nodez.Data.Controls
 {
@@ -53,7 +52,7 @@ namespace Nodez.Data.Controls
             }
         }
 
-        public Dictionary<string, string> GetInputsPathMappings(string inputPath, List<string> tableNames) 
+        public Dictionary<string, string> GetInputsPathMappings(string inputPath, List<string> tableNames)
         {
             if (inputPath == null)
                 inputPath = $@"..{Path.DirectorySeparatorChar}..{Path.DirectorySeparatorChar}InputData";
@@ -110,12 +109,12 @@ namespace Nodez.Data.Controls
             return mappings;
         }
 
-        public virtual IInputRow PersistInputData(IInputRow inputRow) 
+        public virtual IInputRow PersistInputData(IInputRow inputRow)
         {
             return inputRow;
         }
 
-        public virtual string PersistInputDataLoad(string tableName, string columnName, int rowNum, string data) 
+        public virtual string PersistInputDataLoad(string tableName, string columnName, int rowNum, string data)
         {
             return data;
         }

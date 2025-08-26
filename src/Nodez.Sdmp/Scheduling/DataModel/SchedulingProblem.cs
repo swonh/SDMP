@@ -1,12 +1,10 @@
-﻿// Copyright (c) 2021-24, Sungwon Hong. All Rights Reserved. 
+﻿// Copyright (c) 2021-25, Sungwon Hong. All Rights Reserved. 
 // This Source Code Form is subject to the terms of the Mozilla Public License, Version 2.0. 
 // If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Nodez.Sdmp.Scheduling.DataModel
 {
@@ -48,7 +46,7 @@ namespace Nodez.Sdmp.Scheduling.DataModel
 
         public Dictionary<ValueTuple<string, string>, Arrange> ArrangeMappings { get; private set; }
 
-        public Dictionary<ValueTuple<string ,string, string>, SetupInfo> SetupInfoMappings { get; private set; }
+        public Dictionary<ValueTuple<string, string, string>, SetupInfo> SetupInfoMappings { get; private set; }
 
         public Dictionary<ValueTuple<string, string>, TargetInfo> TargetInfoMappings { get; private set; }
 
@@ -56,7 +54,7 @@ namespace Nodez.Sdmp.Scheduling.DataModel
 
         public Dictionary<int, List<Job>> PriorityJobGroups { get; private set; }
 
-        public SchedulingProblem() 
+        public SchedulingProblem()
         {
             this.JobList = new List<Job>();
             this.PrioritySortedJobList = new List<Job>();
@@ -112,7 +110,7 @@ namespace Nodez.Sdmp.Scheduling.DataModel
             }
         }
 
-        public void SetPlanInfoObjects(List<PlanInfo> planInfoList) 
+        public void SetPlanInfoObjects(List<PlanInfo> planInfoList)
         {
             this.PlanInfo = planInfoList.FirstOrDefault();
         }
@@ -125,7 +123,7 @@ namespace Nodez.Sdmp.Scheduling.DataModel
             this.PrioritySortedJobList = jobList.OrderBy(x => x.Priority).ToList();
         }
 
-        public void SetParentJobObjects(List<Job> parentJobList) 
+        public void SetParentJobObjects(List<Job> parentJobList)
         {
             this.ParentJobList = parentJobList;
             this.SetParentJobMappings();
@@ -133,7 +131,7 @@ namespace Nodez.Sdmp.Scheduling.DataModel
             this.SetPriorityJobGroups();
         }
 
-        public void SetEquipmentObjects(List<Equipment> eqpList) 
+        public void SetEquipmentObjects(List<Equipment> eqpList)
         {
             this.EqpList = eqpList;
             this.SetEqpMappings();
@@ -145,7 +143,7 @@ namespace Nodez.Sdmp.Scheduling.DataModel
             this.SetEqpGroupMappings();
         }
 
-        public void SetProcessObjects(List<Process> processList) 
+        public void SetProcessObjects(List<Process> processList)
         {
             this.ProcessList = processList;
             this.SetProcessMappings();
@@ -157,7 +155,7 @@ namespace Nodez.Sdmp.Scheduling.DataModel
             this.SetArrangeMappings();
         }
 
-        public void SetSetupInfoObjects(List<SetupInfo> setupInfoList) 
+        public void SetSetupInfoObjects(List<SetupInfo> setupInfoList)
         {
             this.SetupInfoList = setupInfoList;
             this.SetSetupInfoMappings();
@@ -187,7 +185,7 @@ namespace Nodez.Sdmp.Scheduling.DataModel
             }
         }
 
-        private void SetPriorityJobGroups() 
+        private void SetPriorityJobGroups()
         {
             Dictionary<int, List<Job>> group = new Dictionary<int, List<Job>>();
 
@@ -196,7 +194,7 @@ namespace Nodez.Sdmp.Scheduling.DataModel
             {
                 double releaseTime = parentJob.ReleaseTime;
 
-                foreach (Job otherJob in this.ParentJobList) 
+                foreach (Job otherJob in this.ParentJobList)
                 {
                     if (parentJob.Index == otherJob.Index)
                         continue;
@@ -221,9 +219,9 @@ namespace Nodez.Sdmp.Scheduling.DataModel
             this.PriorityJobGroups = group;
         }
 
-        public void SetSetupInfoMappings() 
+        public void SetSetupInfoMappings()
         {
-            foreach (SetupInfo setupInfo in this.SetupInfoList) 
+            foreach (SetupInfo setupInfo in this.SetupInfoList)
             {
                 if (this.SetupInfoMappings.ContainsKey((setupInfo.EqpID, setupInfo.FromRecipeID, setupInfo.ToRecipeID)))
                     continue;
@@ -243,9 +241,9 @@ namespace Nodez.Sdmp.Scheduling.DataModel
             }
         }
 
-        public void SetArrangeMappings() 
+        public void SetArrangeMappings()
         {
-            foreach (Arrange arrange in this.ArrangeList) 
+            foreach (Arrange arrange in this.ArrangeList)
             {
                 if (this.ArrangeMappings.ContainsKey((arrange.RecipeID, arrange.EqpID)))
                     continue;
@@ -254,7 +252,7 @@ namespace Nodez.Sdmp.Scheduling.DataModel
             }
         }
 
-        public void SetJobMappings() 
+        public void SetJobMappings()
         {
             foreach (Job job in this.JobList)
             {

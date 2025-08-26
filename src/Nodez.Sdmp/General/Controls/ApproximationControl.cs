@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2021-24, Sungwon Hong. All Rights Reserved. 
+﻿// Copyright (c) 2021-25, Sungwon Hong. All Rights Reserved. 
 // This Source Code Form is subject to the terms of the Mozilla Public License, Version 2.0. 
 // If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
@@ -10,8 +10,6 @@ using Nodez.Sdmp.Routing.Managers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Nodez.Sdmp.General.Controls
 {
@@ -34,7 +32,7 @@ namespace Nodez.Sdmp.General.Controls
             }
         }
 
-        public virtual bool IsApplyStateFiltering() 
+        public virtual bool IsApplyStateFiltering()
         {
             return false;
         }
@@ -59,7 +57,7 @@ namespace Nodez.Sdmp.General.Controls
             return Int32.MaxValue;
         }
 
-        public virtual StateFilteringType GetStateFilteringType() 
+        public virtual StateFilteringType GetStateFilteringType()
         {
             return StateFilteringType.Global;
         }
@@ -69,17 +67,17 @@ namespace Nodez.Sdmp.General.Controls
             return 10;
         }
 
-        public virtual int GetApproximationTransitionCount() 
+        public virtual int GetApproximationTransitionCount()
         {
             return 10;
         }
 
-        public virtual int GetClusterTransitionCount() 
+        public virtual int GetClusterTransitionCount()
         {
             return 2;
         }
 
-        public virtual int GetLocalTransitionCount() 
+        public virtual int GetLocalTransitionCount()
         {
             return 1;
         }
@@ -94,22 +92,22 @@ namespace Nodez.Sdmp.General.Controls
             return 0;
         }
 
-        public virtual int GetApproximationStartStageIndex() 
+        public virtual int GetApproximationStartStageIndex()
         {
             return 0;
         }
 
-        public virtual double GetMinimumTransitionCost() 
+        public virtual double GetMinimumTransitionCost()
         {
             return RoutingDataManager.Instance.DistanceInfoTable.Rows().Cast<IDistanceInfoData>().Where(x => x.DISTANCE > 0).Min(x => x.DISTANCE);
         }
 
-        public virtual double GetMultiplier() 
+        public virtual double GetMultiplier()
         {
             return 2;
         }
 
-        public virtual double GetValueFunctionEstimate(State state) 
+        public virtual double GetValueFunctionEstimate(State state)
         {
             double dualBound = BoundControl.Instance.GetDualBound(state);
             state.SetDualBound(dualBound);
@@ -152,7 +150,7 @@ namespace Nodez.Sdmp.General.Controls
                     int count = 0;
                     foreach (State st in list)
                     {
-                        if (st.IsFinal) 
+                        if (st.IsFinal)
                         {
                             selectedStateList.Add(st);
                             continue;

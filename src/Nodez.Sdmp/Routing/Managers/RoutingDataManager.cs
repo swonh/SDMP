@@ -1,18 +1,15 @@
-﻿// Copyright (c) 2021-24, Sungwon Hong. All Rights Reserved. 
+﻿// Copyright (c) 2021-25, Sungwon Hong. All Rights Reserved. 
 // This Source Code Form is subject to the terms of the Mozilla Public License, Version 2.0. 
 // If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 using Nodez.Data.DataModel;
 using Nodez.Data.Interface;
 using Nodez.Data.Managers;
-using Nodez.Sdmp.Constants;
 using Nodez.Sdmp.Routing.DataModel;
 using Nodez.Sdmp.Routing.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Nodez.Sdmp.Routing.Managers
 {
@@ -67,7 +64,7 @@ namespace Nodez.Sdmp.Routing.Managers
                 routingData.SetNodeDataList(NodeTable.Rows().Cast<INodeData>().ToList());
             }
 
-            if (DistanceInfoTable != null) 
+            if (DistanceInfoTable != null)
             {
                 routingData.SetDistanceInfoDataList(DistanceInfoTable.Rows().Cast<IDistanceInfoData>().ToList());
             }
@@ -92,7 +89,7 @@ namespace Nodez.Sdmp.Routing.Managers
                 routingData.SetOrderDataList(OrderTable.Rows().Cast<IOrderData>().ToList());
             }
 
-            if (RunOptionTable != null) 
+            if (RunOptionTable != null)
             {
                 routingData.SetRunOptionData(RunOptionTable.Rows().Cast<IRunOptionData>().ToList());
             }
@@ -141,14 +138,14 @@ namespace Nodez.Sdmp.Routing.Managers
             this.RoutingProblem.SetVehicleObjects(this.CreateVehicles(this.RoutingData.VehicleDataList));
         }
 
-        public string GetRunOptionValue(string optionName) 
+        public string GetRunOptionValue(string optionName)
         {
             this.RoutingProblem.RunOptionMappings.TryGetValue(optionName, out string value);
 
             return value;
         }
 
-        private List<RunOption> CreateRunOptions(List<IRunOptionData> runOptionDataList) 
+        private List<RunOption> CreateRunOptions(List<IRunOptionData> runOptionDataList)
         {
             List<RunOption> runOptions = new List<RunOption>();
 
@@ -331,7 +328,7 @@ namespace Nodez.Sdmp.Routing.Managers
             return nodes;
         }
 
-        private List<Order> CreateOrders(List<IOrderData> orderDataList) 
+        private List<Order> CreateOrders(List<IOrderData> orderDataList)
         {
             List<Order> orders = new List<Order>();
 
@@ -350,7 +347,7 @@ namespace Nodez.Sdmp.Routing.Managers
                 order.ProcessTime = item.PROCESS_TIME;
                 order.Deadline = item.DEADLINE;
                 order.Quantity = item.ORDER_QTY;
-          
+
                 orders.Add(order);
 
                 index++;
@@ -429,7 +426,7 @@ namespace Nodez.Sdmp.Routing.Managers
             return product;
         }
 
-        public Node GetNode(int nodeIndex) 
+        public Node GetNode(int nodeIndex)
         {
             this.RoutingProblem.NodeIndexMappings.TryGetValue(nodeIndex, out Node node);
 
@@ -464,7 +461,7 @@ namespace Nodez.Sdmp.Routing.Managers
             return vehicle;
         }
 
-        public double GetDistance(int fromNodeIndex, int toNodeIndex) 
+        public double GetDistance(int fromNodeIndex, int toNodeIndex)
         {
             ValueTuple<int, int> key = (fromNodeIndex, toNodeIndex);
             if (this.RoutingProblem.DistanceInfoIndexMappings.TryGetValue(key, out DistanceInfo info))
@@ -478,7 +475,7 @@ namespace Nodez.Sdmp.Routing.Managers
             ValueTuple<int, int> key = (fromNodeIndex, toNodeIndex);
             if (this.RoutingProblem.DistanceInfoIndexMappings.TryGetValue(key, out DistanceInfo info))
             {
-                 return Math.Round((info.Distance / vehicle.Speed) + vehicle.ServiceTime);
+                return Math.Round((info.Distance / vehicle.Speed) + vehicle.ServiceTime);
             }
 
             return 0;

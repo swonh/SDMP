@@ -1,13 +1,11 @@
-﻿// Copyright (c) 2021-24, Sungwon Hong. All Rights Reserved. 
+﻿// Copyright (c) 2021-25, Sungwon Hong. All Rights Reserved. 
 // This Source Code Form is subject to the terms of the Mozilla Public License, Version 2.0. 
 // If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 using Nodez.Sdmp.General.Managers;
 using Priority_Queue;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Nodez.Sdmp.General.DataModel
 {
@@ -37,7 +35,7 @@ namespace Nodez.Sdmp.General.DataModel
 
         public bool IsLastStage { get; set; }
 
-        public bool IsVisited { get; set; } 
+        public bool IsVisited { get; set; }
 
         public bool IsFixed { get; set; }
 
@@ -94,7 +92,7 @@ namespace Nodez.Sdmp.General.DataModel
 
         public virtual void SetPrimalBound(double value)
         {
-            if (this.IsSetPrimalBound == false) 
+            if (this.IsSetPrimalBound == false)
             {
                 StateManager.Instance.AddPrimalBoundCalculatedState(this);
             }
@@ -103,9 +101,9 @@ namespace Nodez.Sdmp.General.DataModel
             this.IsSetPrimalBound = true;
         }
 
-        public virtual void SetValueFunctionEstimate(double value) 
+        public virtual void SetValueFunctionEstimate(double value)
         {
-            if (this.IsSetValueFunctionEstimate == false) 
+            if (this.IsSetValueFunctionEstimate == false)
             {
                 StateManager.Instance.AddValueFunctionEstimatedState(this);
             }
@@ -116,7 +114,7 @@ namespace Nodez.Sdmp.General.DataModel
 
         public virtual void SetIsValueFunctionCalculated(bool isCalculated)
         {
-            if (this.IsValueFunctionCalulated == false) 
+            if (this.IsValueFunctionCalulated == false)
             {
                 StateManager.Instance.AddValueFunctionCalculatedState(this);
             }
@@ -147,7 +145,7 @@ namespace Nodez.Sdmp.General.DataModel
             }
         }
 
-        public virtual List<State> GetBestStatesBackward() 
+        public virtual List<State> GetBestStatesBackward()
         {
             List<State> states = new List<State>();
 
@@ -161,7 +159,7 @@ namespace Nodez.Sdmp.General.DataModel
 
             states.Add(currState);
 
-            while (currState.IsInitial == false) 
+            while (currState.IsInitial == false)
             {
                 currState = currState.PrevBestState;
                 states.Add(currState);

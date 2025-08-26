@@ -1,13 +1,9 @@
-﻿// Copyright (c) 2021-24, Sungwon Hong. All Rights Reserved. 
+﻿// Copyright (c) 2021-25, Sungwon Hong. All Rights Reserved. 
 // This Source Code Form is subject to the terms of the Mozilla Public License, Version 2.0. 
 // If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 using Nodez.Sdmp.Routing.Managers;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Nodez.Sdmp.Routing.DataModel
 {
@@ -51,17 +47,17 @@ namespace Nodez.Sdmp.Routing.DataModel
             return clone.VisitedVehicle.Clone();
         }
 
-        public void ReplaceOrder(Order order) 
+        public void ReplaceOrder(Order order)
         {
             this.Order = order;
         }
 
-        public void ReplaceVisitedVehicle(Vehicle visitedVehicle) 
+        public void ReplaceVisitedVehicle(Vehicle visitedVehicle)
         {
             this.VisitedVehicle = visitedVehicle;
         }
 
-        public double GetDistance(Node toNode) 
+        public double GetDistance(Node toNode)
         {
             RoutingDataManager manager = RoutingDataManager.Instance;
 
@@ -85,7 +81,7 @@ namespace Nodez.Sdmp.Routing.DataModel
             return clone;
         }
 
-        public override string ToString() 
+        public override string ToString()
         {
             return this.ID;
         }

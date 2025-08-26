@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2021-24, Sungwon Hong. All Rights Reserved. 
+﻿// Copyright (c) 2021-25, Sungwon Hong. All Rights Reserved. 
 // This Source Code Form is subject to the terms of the Mozilla Public License, Version 2.0. 
 // If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
@@ -9,9 +9,6 @@ using Nodez.Sdmp.General.DataModel;
 using Nodez.Sdmp.General.Managers;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Nodez.Sdmp.General.Controls
 {
@@ -54,17 +51,17 @@ namespace Nodez.Sdmp.General.Controls
             return null;
         }
 
-        public virtual bool IsApplyStateClustering() 
+        public virtual bool IsApplyStateClustering()
         {
             return false;
         }
 
-        public virtual int GetClusterCount() 
+        public virtual int GetClusterCount()
         {
             return 3;
         }
 
-        public virtual int GetStateClusteringStartStageIndex() 
+        public virtual int GetStateClusteringStartStageIndex()
         {
             return 0;
         }
@@ -79,7 +76,7 @@ namespace Nodez.Sdmp.General.Controls
             return 100;
         }
 
-        public virtual int GetRandomSolutionGenerationCount() 
+        public virtual int GetRandomSolutionGenerationCount()
         {
             return 1000;
         }
@@ -104,7 +101,7 @@ namespace Nodez.Sdmp.General.Controls
             return null;
         }
 
-        public virtual IEstimator<ITransformer> GetValuePredictionTrainer() 
+        public virtual IEstimator<ITransformer> GetValuePredictionTrainer()
         {
             return MachineLearningManager.Instance.MLContext.Regression.Trainers.Sdca();
         }
@@ -129,7 +126,7 @@ namespace Nodez.Sdmp.General.Controls
             return MachineLearningManager.Instance.MLContext.Clustering.Trainers.KMeans("Features", numberOfClusters: numberOfClusters);
         }
 
-        public virtual bool IsExportOutputs() 
+        public virtual bool IsExportOutputs()
         {
             return false;
         }

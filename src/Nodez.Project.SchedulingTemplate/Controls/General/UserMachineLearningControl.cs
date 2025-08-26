@@ -1,23 +1,18 @@
-﻿// Copyright (c) 2021-24, Sungwon Hong. All Rights Reserved. 
+﻿// Copyright (c) 2021-25, Sungwon Hong. All Rights Reserved. 
 // This Source Code Form is subject to the terms of the Mozilla Public License, Version 2.0. 
 // If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 using Microsoft.ML;
 using Microsoft.ML.Data;
-using Microsoft.ML.Trainers;
-using Microsoft.ML.Transforms;
 using Nodez.Project.SchedulingTemplate.MyObjects;
 using Nodez.Sdmp;
 using Nodez.Sdmp.General.Controls;
 using Nodez.Sdmp.General.DataModel;
 using Nodez.Sdmp.General.Managers;
-using Nodez.Sdmp.MachineLearningHelper;
 using Nodez.Sdmp.Scheduling.DataModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Nodez.Project.SchedulingTemplate.Controls
 {
@@ -27,22 +22,22 @@ namespace Nodez.Project.SchedulingTemplate.Controls
 
         public static new UserMachineLearningControl Instance { get { return lazy.Value; } }
 
-        public override bool IsOnlineLearning() 
-        {
-            return false;        
-        }
-
-        public override bool IsOfflineLearning() 
+        public override bool IsOnlineLearning()
         {
             return false;
         }
 
-        public override bool IsLoadModelFile() 
+        public override bool IsOfflineLearning()
         {
             return false;
         }
 
-        public override string GetModelFilePath() 
+        public override bool IsLoadModelFile()
+        {
+            return false;
+        }
+
+        public override string GetModelFilePath()
         {
             return @"";
         }
@@ -52,12 +47,12 @@ namespace Nodez.Project.SchedulingTemplate.Controls
             return false;
         }
 
-        public override int GetOnlineTrainingPeriod() 
+        public override int GetOnlineTrainingPeriod()
         {
             return 100;
         }
 
-        public override double GetPredictedValue(State state) 
+        public override double GetPredictedValue(State state)
         {
             MachineLearningManager mlManager = MachineLearningManager.Instance;
 
@@ -87,7 +82,7 @@ namespace Nodez.Project.SchedulingTemplate.Controls
 
         }
 
-        public override IDataView CreateValuePredictionTrainData() 
+        public override IDataView CreateValuePredictionTrainData()
         {
             MachineLearningManager mlManager = MachineLearningManager.Instance;
 

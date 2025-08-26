@@ -1,8 +1,7 @@
-﻿// Copyright (c) 2021-24, Sungwon Hong. All Rights Reserved. 
+﻿// Copyright (c) 2021-25, Sungwon Hong. All Rights Reserved. 
 // This Source Code Form is subject to the terms of the Mozilla Public License, Version 2.0. 
 // If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-using Priority_Queue;
 using Nodez.Data.Interface;
 using Nodez.Data.Managers;
 using Nodez.Sdmp.Constants;
@@ -10,19 +9,18 @@ using Nodez.Sdmp.Enum;
 using Nodez.Sdmp.General.Controls;
 using Nodez.Sdmp.General.DataModel;
 using Nodez.Sdmp.General.Managers;
+using Nodez.Sdmp.LogHelper;
+using Priority_Queue;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
-using Nodez.Sdmp.LogHelper;
+using System.Linq;
 
 namespace Nodez.Sdmp.Interfaces
 {
     public abstract class ISolver
-    { 
+    {
         public string ProjectName { get; protected set; }
 
         public string OutputDirectoryPath { get; protected set; }
@@ -120,7 +118,7 @@ namespace Nodez.Sdmp.Interfaces
             this.IsInitialized = true;
         }
 
-        protected void SetOutputDirectory() 
+        protected void SetOutputDirectory()
         {
             this.OutputDirectoryPath = SolverControl.Instance.GetOutputDirectoryPath(this.Name);
             SolverManager.Instance.SetOutputDirectoryPath(this.Name, this.OutputDirectoryPath);
@@ -129,7 +127,7 @@ namespace Nodez.Sdmp.Interfaces
                 Directory.CreateDirectory(this.OutputDirectoryPath);
         }
 
-        protected void SetConsole() 
+        protected void SetConsole()
         {
             string engineStartTime = SolverManager.Instance.GetEngineStartTime(this.Name).ToString("yyyyMMdd_HHmmss");
 
@@ -188,7 +186,7 @@ namespace Nodez.Sdmp.Interfaces
 
         }
 
-        protected virtual List<General.DataModel.StateActionMap> GetStateActionMaps(State state) 
+        protected virtual List<General.DataModel.StateActionMap> GetStateActionMaps(State state)
         {
             ActionControl actionControl = ActionControl.Instance;
 
@@ -197,7 +195,7 @@ namespace Nodez.Sdmp.Interfaces
             return maps;
         }
 
-        protected virtual List<General.DataModel.StateTransition> GetStateTransitions(List<General.DataModel.StateActionMap> stateActionMaps)        
+        protected virtual List<General.DataModel.StateTransition> GetStateTransitions(List<General.DataModel.StateActionMap> stateActionMaps)
         {
             StateTransitionControl stateTransitionControl = StateTransitionControl.Instance;
 
@@ -206,11 +204,11 @@ namespace Nodez.Sdmp.Interfaces
             {
                 trans.AddRange(stateTransitionControl.GetStateTransitions(map));
             }
-              
+
             return trans;
         }
 
-        protected virtual void DoInitialStateTransitions(State initialState) 
+        protected virtual void DoInitialStateTransitions(State initialState)
         {
             ActionControl transitionControl = ActionControl.Instance;
             StateManager stateManager = StateManager.Instance;
@@ -220,7 +218,7 @@ namespace Nodez.Sdmp.Interfaces
             List<State> newStates = new List<State>();
 
             List<General.DataModel.StateActionMap> initStateActionMaps = this.GetStateActionMaps(initialState);
-            foreach (StateActionMap map in initStateActionMaps) 
+            foreach (StateActionMap map in initStateActionMaps)
             {
                 map.PostActionState.SetKey(stateControl.GetKey(map.PostActionState));
                 map.PostActionState.IsPostActionState = true;
@@ -267,7 +265,7 @@ namespace Nodez.Sdmp.Interfaces
             this.AddNextStates(newStates);
         }
 
-        private bool CheckRunConfig() 
+        private bool CheckRunConfig()
         {
             bool isValid = true;
 
@@ -283,7 +281,7 @@ namespace Nodez.Sdmp.Interfaces
             return isValid;
         }
 
-        private void SetSolverEnd(string endMessage) 
+        private void SetSolverEnd(string endMessage)
         {
             this.SolverEndMessage = endMessage;
         }
@@ -394,7 +392,7 @@ namespace Nodez.Sdmp.Interfaces
                         mlManager.SetModel(trainedModel);
                     }
                 }
-                
+
                 State initialState = stateControl.GetInitialState();
                 initialState.Index = 0;
                 initialState.IsInitial = true;
@@ -430,7 +428,7 @@ namespace Nodez.Sdmp.Interfaces
                     }
                 }
 
-                if (this.IsOfflineLearning) 
+                if (this.IsOfflineLearning)
                 {
                     logControl.WriteRandomSolutionGenerationStartLog();
 
@@ -459,7 +457,7 @@ namespace Nodez.Sdmp.Interfaces
                     boundManager.SetRootDualBound(firstDualBound);
                 }
 
-                if (this.IsUseValueFunctionEstimate) 
+                if (this.IsUseValueFunctionEstimate)
                 {
                     double firstEstimationValue = approxControl.GetValueFunctionEstimate(initialState);
 
@@ -493,7 +491,7 @@ namespace Nodez.Sdmp.Interfaces
                 solverManager.SetEngineEndTime(this.Name, this.EngineEndTime);
                 this.StopWatch.Reset();
 
-                if (solutionManager.OptimalSolution != null) 
+                if (solutionManager.OptimalSolution != null)
                 {
                     LogWriter.WriteLine($"{Messages.FOUND_OPTIMAL_SOLUTION} (Obj. Val.: {solutionManager.BestSolution.Value})");
                 }
@@ -501,7 +499,7 @@ namespace Nodez.Sdmp.Interfaces
                 {
                     Solution sol = solutionManager.GetSolution(stateManager.FinalState);
 
-                    if (solutionManager.BestSolution != null) 
+                    if (solutionManager.BestSolution != null)
                     {
                         if (ObjectiveFunctionType == ObjectiveFunctionType.Maximize)
                         {
@@ -510,7 +508,7 @@ namespace Nodez.Sdmp.Interfaces
                                 sol = solutionManager.BestSolution;
                             }
                         }
-                        else 
+                        else
                         {
                             if (sol.Value > solutionManager.BestSolution.Value)
                             {
@@ -535,13 +533,13 @@ namespace Nodez.Sdmp.Interfaces
                 }
 
                 LogControl.Instance.WriteEndLog(this.SolverEndMessage);
-                
-                if (this.IsOfflineLearning) 
+
+                if (this.IsOfflineLearning)
                 {
                     mlManager.FitValuePredictionModel(true);
                 }
 
-                if (logControl.IsWriteStatusLog()) 
+                if (logControl.IsWriteStatusLog())
                 {
                     solverManager.WriteStatusLogs();
                 }
@@ -557,7 +555,7 @@ namespace Nodez.Sdmp.Interfaces
             }
         }
 
-        private void Reset() 
+        private void Reset()
         {
             ApproximationManager.Instance.Reset();
             BoundManager.Instance.Reset();
@@ -603,7 +601,7 @@ namespace Nodez.Sdmp.Interfaces
             }
         }
 
-        private void FilterStatesByApproximation(State currentState, FastPriorityQueue<State> transitionQueue, ObjectiveFunctionType objectiveFunctionType, double pruneTolerance) 
+        private void FilterStatesByApproximation(State currentState, FastPriorityQueue<State> transitionQueue, ObjectiveFunctionType objectiveFunctionType, double pruneTolerance)
         {
             BoundControl boundControl = BoundControl.Instance;
             ApproximationControl approxControl = ApproximationControl.Instance;
@@ -700,7 +698,7 @@ namespace Nodez.Sdmp.Interfaces
             return true;
         }
 
-        private bool CheckStateClusteringCondition(int stageIndex) 
+        private bool CheckStateClusteringCondition(int stageIndex)
         {
             if (this.IsApplyStateClustering == false)
                 return false;
@@ -721,7 +719,7 @@ namespace Nodez.Sdmp.Interfaces
             return true;
         }
 
-        private bool CheckGlobalFilteringCondition(int stageIndex) 
+        private bool CheckGlobalFilteringCondition(int stageIndex)
         {
             if (this.IsApplyStateFiltering == false)
                 return false;
@@ -760,7 +758,7 @@ namespace Nodez.Sdmp.Interfaces
             return true;
         }
 
-        private void ClusterGlobalStates(FastPriorityQueue<State> transitionQueue) 
+        private void ClusterGlobalStates(FastPriorityQueue<State> transitionQueue)
         {
             LogControl.Instance.WriteStateClusteringStartLog(transitionQueue.Count);
 
@@ -773,7 +771,7 @@ namespace Nodez.Sdmp.Interfaces
             if (mlManager.Model == null)
                 return;
 
-            foreach (State state in transitionQueue) 
+            foreach (State state in transitionQueue)
             {
                 if (state.IsFinal)
                     continue;
@@ -893,7 +891,7 @@ namespace Nodez.Sdmp.Interfaces
 
                 int stageIndex = peek.Stage.Index;
 
-                if (this.CheckStateClusteringCondition(stageIndex)) 
+                if (this.CheckStateClusteringCondition(stageIndex))
                 {
                     this.ClusterGlobalStates(transitionQueue);
                 }
@@ -907,7 +905,7 @@ namespace Nodez.Sdmp.Interfaces
                 {
                     this.FilterStatesByApproximation(peek, transitionQueue, objectiveFunctionType, pruneTolerance);
                 }
-                
+
                 if (transitionQueue.Count == 0)
                     break;
 
@@ -948,7 +946,7 @@ namespace Nodez.Sdmp.Interfaces
                 }
 
                 bool isCalcValueFunctionEstimate = approxManager.IsCalculateValueFunctionEstimate(isUseValueFuctionEstimate, valueFunctionEstimateUpdatePeriod, stageIndex, loopCount);
-                if (isCalcValueFunctionEstimate && state.IsSetValueFunctionEstimate == false) 
+                if (isCalcValueFunctionEstimate && state.IsSetValueFunctionEstimate == false)
                 {
                     double valueFunctionEstimate = approxControl.GetValueFunctionEstimate(state);
                     state.SetValueFunctionEstimate(valueFunctionEstimate);
@@ -969,7 +967,7 @@ namespace Nodez.Sdmp.Interfaces
                     }
                 }
 
-                if (this.IsOnlineLearning && mlManager.IsFitModel(omlineTrainingPeriod, stageIndex)) 
+                if (this.IsOnlineLearning && mlManager.IsFitModel(omlineTrainingPeriod, stageIndex))
                 {
                     mlManager.FitValuePredictionModel();
                 }
@@ -998,7 +996,7 @@ namespace Nodez.Sdmp.Interfaces
                     if (fixedStateBounds.ContainsKey(state.Key) == false)
                         fixedStateBounds.Add(state.Key, state.CurrentBestValue + state.DualBound);
                 }
-                
+
                 List<General.DataModel.StateTransition> trans = new List<General.DataModel.StateTransition>();
                 if (state.IsLastStage)
                 {
@@ -1078,7 +1076,7 @@ namespace Nodez.Sdmp.Interfaces
                             visited.SetPrevBestState(state);
                         }
                     }
-                    else if (this.ObjectiveFunctionType == ObjectiveFunctionType.Maximize) 
+                    else if (this.ObjectiveFunctionType == ObjectiveFunctionType.Maximize)
                     {
                         if (nextValue > visited.CurrentBestValue)
                         {
@@ -1126,7 +1124,7 @@ namespace Nodez.Sdmp.Interfaces
             this.AddNextStates(newStates);
         }
 
-        public TimeSpan GetRunTime() 
+        public TimeSpan GetRunTime()
         {
             return this.StopWatch.Elapsed;
         }
@@ -1136,32 +1134,32 @@ namespace Nodez.Sdmp.Interfaces
             this.ObjectiveFunctionType = objectiveFunctionType;
         }
 
-        public SolutionManager GetSolutionManager() 
+        public SolutionManager GetSolutionManager()
         {
             return SolutionManager.Instance;
         }
 
-        public BoundManager GetBoundManager() 
+        public BoundManager GetBoundManager()
         {
             return BoundManager.Instance;
         }
 
-        public ControlManager GetControlManager() 
+        public ControlManager GetControlManager()
         {
             return ControlManager.Instance;
         }
 
-        public StateTransitionManager GetStateTransitionManager() 
+        public StateTransitionManager GetStateTransitionManager()
         {
             return StateTransitionManager.Instance;
         }
 
-        public StateManager GetStateManager() 
+        public StateManager GetStateManager()
         {
             return StateManager.Instance;
         }
 
-        public DataManager GetDataManager() 
+        public DataManager GetDataManager()
         {
             return DataManager.Instance;
         }

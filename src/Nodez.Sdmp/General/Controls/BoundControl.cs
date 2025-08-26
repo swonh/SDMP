@@ -1,14 +1,11 @@
-﻿// Copyright (c) 2021-24, Sungwon Hong. All Rights Reserved. 
+﻿// Copyright (c) 2021-25, Sungwon Hong. All Rights Reserved. 
 // This Source Code Form is subject to the terms of the Mozilla Public License, Version 2.0. 
 // If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-using Nodez.Sdmp.Constants;
-using Nodez.Sdmp.General.DataModel;
 using Nodez.Sdmp.Enum;
+using Nodez.Sdmp.General.DataModel;
 using Nodez.Sdmp.General.Managers;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Nodez.Sdmp.General.Controls
 {
@@ -31,7 +28,7 @@ namespace Nodez.Sdmp.General.Controls
             }
         }
 
-        public virtual bool IsUsePrimalBound() 
+        public virtual bool IsUsePrimalBound()
         {
             return true;
         }
@@ -41,17 +38,17 @@ namespace Nodez.Sdmp.General.Controls
             return false;
         }
 
-        public virtual double GetPruneTolerance() 
+        public virtual double GetPruneTolerance()
         {
             return Math.Pow(10, -4);
         }
 
-        public virtual int GetPrimalBoundStopStageIndex() 
+        public virtual int GetPrimalBoundStopStageIndex()
         {
             return 0;
         }
 
-        public virtual double GetPrimalBoundStopRelativeGap() 
+        public virtual double GetPrimalBoundStopRelativeGap()
         {
             return 0;
         }
@@ -66,7 +63,7 @@ namespace Nodez.Sdmp.General.Controls
             return 0;
         }
 
-        public virtual double GetInitialPrimalBound(ObjectiveFunctionType objectiveFunctionType) 
+        public virtual double GetInitialPrimalBound(ObjectiveFunctionType objectiveFunctionType)
         {
             double primalBound = 0;
 
@@ -120,7 +117,7 @@ namespace Nodez.Sdmp.General.Controls
 
         public virtual double GetPrimalBound(Solution solution)
         {
-            return 0;  
+            return 0;
         }
 
         public virtual int GetPrimalSolutionUpdatePeriod()

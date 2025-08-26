@@ -1,20 +1,16 @@
-﻿// Copyright (c) 2021-24, Sungwon Hong. All Rights Reserved. 
+﻿// Copyright (c) 2021-25, Sungwon Hong. All Rights Reserved. 
 // This Source Code Form is subject to the terms of the Mozilla Public License, Version 2.0. 
 // If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-using Nodez.Data;
 using Nodez.Data.Controls;
 using Nodez.Data.DataModel;
-using Nodez.Data.Interface;
 using Nodez.Data.Managers;
 using Nodez.Project.GeneralTemplate.Controls;
 using Nodez.Project.GeneralTemplate.MyInputs;
 using Nodez.Sdmp.Constants;
 using Nodez.Sdmp.General.Solver;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 
 namespace Nodez.Project.GeneralTemplate
 {

@@ -1,13 +1,8 @@
-﻿// Copyright (c) 2021-24, Sungwon Hong. All Rights Reserved. 
+﻿// Copyright (c) 2021-25, Sungwon Hong. All Rights Reserved. 
 // This Source Code Form is subject to the terms of the Mozilla Public License, Version 2.0. 
 // If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-using Nodez.Sdmp.Routing.Controls;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Nodez.Sdmp.Routing.DataModel
 {
@@ -65,7 +60,7 @@ namespace Nodez.Sdmp.Routing.DataModel
             return copied;
         }
 
-        public Node CopyCurrentNode(Vehicle clone) 
+        public Node CopyCurrentNode(Vehicle clone)
         {
             if (this.CurrentNode == null)
                 return null;
@@ -73,17 +68,17 @@ namespace Nodez.Sdmp.Routing.DataModel
             return clone.CurrentNode.Clone();
         }
 
-        public void ReplaceResources(Dictionary<string, Resource> resources) 
+        public void ReplaceResources(Dictionary<string, Resource> resources)
         {
             this.Resources = resources;
         }
 
-        public void ReplaceCurrentNode(Node currentNode) 
+        public void ReplaceCurrentNode(Node currentNode)
         {
             this.CurrentNode = currentNode;
         }
 
-        public Vehicle Clone() 
+        public Vehicle Clone()
         {
             Vehicle clone = (Vehicle)this.MemberwiseClone();
 

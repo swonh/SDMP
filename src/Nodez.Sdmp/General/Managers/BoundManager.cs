@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2021-24, Sungwon Hong. All Rights Reserved. 
+﻿// Copyright (c) 2021-25, Sungwon Hong. All Rights Reserved. 
 // This Source Code Form is subject to the terms of the Mozilla Public License, Version 2.0. 
 // If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
@@ -6,8 +6,6 @@ using Nodez.Sdmp.Enum;
 using Nodez.Sdmp.General.Controls;
 using Nodez.Sdmp.General.DataModel;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Nodez.Sdmp.General.Managers
 {
@@ -32,7 +30,7 @@ namespace Nodez.Sdmp.General.Managers
 
         public double AbsoluteDualityGap { get { return this.GetAbsoluteDualityGap(); } }
 
-        private double GetRelativeDualityGap() 
+        private double GetRelativeDualityGap()
         {
             if (this.BestDualBound == 0 && this.BestPrimalBound == 0)
                 return 0;
@@ -48,12 +46,12 @@ namespace Nodez.Sdmp.General.Managers
             return Math.Round(Math.Abs(this.BestPrimalBound - this.BestDualBound), 6);
         }
 
-        public void SetPrimalBound(double value) 
+        public void SetPrimalBound(double value)
         {
             this.BestPrimalBound = value;
         }
 
-        public void SetDualBound(double value) 
+        public void SetDualBound(double value)
         {
             this.BestDualBound = value;
         }
@@ -119,7 +117,7 @@ namespace Nodez.Sdmp.General.Managers
             this.RootDualBound = rootDualBound;
         }
 
-        public void SetRootPrimalBound(double rootPrimalBound) 
+        public void SetRootPrimalBound(double rootPrimalBound)
         {
             this.RootPrimalBound = rootPrimalBound;
         }

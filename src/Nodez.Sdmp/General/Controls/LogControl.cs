@@ -1,18 +1,14 @@
-﻿// Copyright (c) 2021-24, Sungwon Hong. All Rights Reserved. 
+﻿// Copyright (c) 2021-25, Sungwon Hong. All Rights Reserved. 
 // This Source Code Form is subject to the terms of the Mozilla Public License, Version 2.0. 
 // If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-using Nodez.Data.DataModel;
-using Nodez.Sdmp.Constants;
 using Nodez.Sdmp.Enum;
 using Nodez.Sdmp.General.DataModel;
 using Nodez.Sdmp.General.Managers;
-using Nodez.Sdmp.General.Solver;
 using Nodez.Sdmp.Interfaces;
 using Nodez.Sdmp.LogHelper;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Nodez.Sdmp.General.Controls
 {
@@ -40,22 +36,22 @@ namespace Nodez.Sdmp.General.Controls
             return 5000;
         }
 
-        public virtual void WriteSolution(Solution solution) 
+        public virtual void WriteSolution(Solution solution)
         {
-            
+
         }
 
-        public virtual bool IsWriteStatusLog() 
-        {
-            return false;
-        }
-
-        public virtual bool IsWriteStateInfoLog() 
+        public virtual bool IsWriteStatusLog()
         {
             return false;
         }
 
-        public StatusLog GetStatusLog(State state, TimeSpan elapsedTime) 
+        public virtual bool IsWriteStateInfoLog()
+        {
+            return false;
+        }
+
+        public StatusLog GetStatusLog(State state, TimeSpan elapsedTime)
         {
             double relativeDualityGapVal = BoundManager.Instance.RelativeDualityGap;
             string relativeDualityGapStr = string.Empty;
@@ -121,11 +117,11 @@ namespace Nodez.Sdmp.General.Controls
             return log;
         }
 
-        public List<StateInfoLog> GetStateInfoLogs(List<State> states, bool afterFiltering) 
+        public List<StateInfoLog> GetStateInfoLogs(List<State> states, bool afterFiltering)
         {
             List<StateInfoLog> logs = new List<StateInfoLog>();
 
-            foreach (State state in states) 
+            foreach (State state in states)
             {
                 StateInfoLog log = new StateInfoLog();
                 log.STATE_INDEX = state.Index;
@@ -161,7 +157,7 @@ namespace Nodez.Sdmp.General.Controls
             }
         }
 
-        public void WritePrimalBoundUpdateLog(State state, double primalBound, TimeSpan elapsedTime) 
+        public void WritePrimalBoundUpdateLog(State state, double primalBound, TimeSpan elapsedTime)
         {
             if (primalBound == 0)
                 return;
@@ -282,7 +278,7 @@ namespace Nodez.Sdmp.General.Controls
             }
 
             string numSolutions = string.Format("{0}", SolutionManager.Instance.Solutions.Count);
-            string time =  elapsedTime.ToString("hh\\:mm\\:ss");
+            string time = elapsedTime.ToString("hh\\:mm\\:ss");
 
             string log = string.Format("   {0,8} {1,9} {2,16} {3,16} {4,8} {5,7} {6,10}", state.Index, state.Stage.Index, bestPrimalBoundStr, bestDualBoundStr, numSolutions, relativeDualityGapStr, time);
 
@@ -314,7 +310,7 @@ namespace Nodez.Sdmp.General.Controls
             //LogWriter.WriteLine("Prune => StateIndex:{0}, State:{1}, Stage:{2}, DualBound:{3}, BestValue:{4}, BestPrimalBound:{5}", state.Index, state.ToString(), state.Stage.Index, state.DualBound, state.BestValue, BoundManager.Instance.BestPrimalBound);
         }
 
-        public virtual void WriteRandomSolutionGenerationStartLog() 
+        public virtual void WriteRandomSolutionGenerationStartLog()
         {
             int count = MachineLearningControl.Instance.GetRandomSolutionGenerationCount();
             LogWriter.WriteLine(string.Format("Start Random Solution Generation... ({0} Solutions)", count));
@@ -325,7 +321,7 @@ namespace Nodez.Sdmp.General.Controls
             LogWriter.WriteLine(string.Format("End Random Solution Generation"));
         }
 
-        public virtual void WriteStateClusteringStartLog(int totalStateCount) 
+        public virtual void WriteStateClusteringStartLog(int totalStateCount)
         {
             int clusterCount = MachineLearningControl.Instance.GetClusterCount();
             int clusterTransitionCount = ApproximationControl.Instance.GetClusterTransitionCount();

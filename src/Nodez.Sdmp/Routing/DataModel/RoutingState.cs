@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2021-24, Sungwon Hong. All Rights Reserved. 
+﻿// Copyright (c) 2021-25, Sungwon Hong. All Rights Reserved. 
 // This Source Code Form is subject to the terms of the Mozilla Public License, Version 2.0. 
 // If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
@@ -6,9 +6,7 @@ using Nodez.Sdmp.General.DataModel;
 using Nodez.Sdmp.Routing.Managers;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Nodez.Sdmp.Routing.DataModel
 {
@@ -29,19 +27,19 @@ namespace Nodez.Sdmp.Routing.DataModel
             this.VehicleStateInfos = new Dictionary<int, VehicleStateInfo>();
         }
 
-        public void Initialize() 
+        public void Initialize()
         {
             this.InitVehicleStateInfos();
             this.InitActiveNodes();
         }
 
-        public void InitVehicleStateInfos() 
+        public void InitVehicleStateInfos()
         {
             RoutingDataManager manager = RoutingDataManager.Instance;
             int nodeCount = manager.RoutingProblem.Nodes.Count;
 
             Dictionary<int, VehicleStateInfo> infos = new Dictionary<int, VehicleStateInfo>();
-            foreach (Vehicle vehicle in manager.RoutingProblem.Vehicles) 
+            foreach (Vehicle vehicle in manager.RoutingProblem.Vehicles)
             {
                 VehicleStateInfo info = new VehicleStateInfo();
                 info.CurrentNodeIndex = manager.RoutingProblem.Depot.Index;
@@ -50,7 +48,7 @@ namespace Nodez.Sdmp.Routing.DataModel
                 info.RemainCapacity = new double[manager.RoutingProblem.Resources.Count + 1];
                 info.IsActive = true;
 
-                for (int i = 1; i < nodeCount; i++) 
+                for (int i = 1; i < nodeCount; i++)
                 {
                     info.NextVistableNodeFlag[i] = 1;
                 }
@@ -69,7 +67,7 @@ namespace Nodez.Sdmp.Routing.DataModel
             this.VehicleStateInfos = infos;
         }
 
-        public void InitActiveNodes() 
+        public void InitActiveNodes()
         {
             RoutingDataManager manager = RoutingDataManager.Instance;
             int nodeCount = manager.RoutingProblem.Nodes.Count;
@@ -85,11 +83,11 @@ namespace Nodez.Sdmp.Routing.DataModel
             this.ActiveCount = nodeCount - 1;
         }
 
-        public void CopyStateInfo(RoutingState state) 
+        public void CopyStateInfo(RoutingState state)
         {
             Dictionary<int, VehicleStateInfo> infos = new Dictionary<int, VehicleStateInfo>();
 
-            foreach (KeyValuePair<int, VehicleStateInfo> info in state.VehicleStateInfos) 
+            foreach (KeyValuePair<int, VehicleStateInfo> info in state.VehicleStateInfos)
             {
                 infos.Add(info.Key, info.Value.Clone());
             }
@@ -115,11 +113,11 @@ namespace Nodez.Sdmp.Routing.DataModel
             return true;
         }
 
-        public bool CheckTimeWindow(Node nextNode, Vehicle vehicle) 
+        public bool CheckTimeWindow(Node nextNode, Vehicle vehicle)
         {
             bool check = false;
 
-            if (nextNode.TimeWindow.Item1 >= this.VehicleStateInfos[vehicle.Index].AvailableTime) 
+            if (nextNode.TimeWindow.Item1 >= this.VehicleStateInfos[vehicle.Index].AvailableTime)
             {
                 check = true;
             }
@@ -155,7 +153,7 @@ namespace Nodez.Sdmp.Routing.DataModel
                 this.VehicleStateInfos[vehicleIndex].RemainCapacity[resource.Index] += nextNode.Order.Quantity;
                 this.VehicleStateInfos[vehicleIndex].DeliveryCount++;
             }
-            else 
+            else
             {
                 this.VehicleStateInfos[vehicleIndex].RemainCapacity[resource.Index] -= nextNode.Order.Quantity;
                 this.VehicleStateInfos[vehicleIndex].PickupCount++;
@@ -163,7 +161,7 @@ namespace Nodez.Sdmp.Routing.DataModel
 
             this.CurrentVehicleIndex = vehicleIndex;
             this.CurrentNodeIndex = nextNodeIndex;
-            
+
             this.ActiveCount--;
         }
 
@@ -197,7 +195,7 @@ namespace Nodez.Sdmp.Routing.DataModel
             return str.ToString();
         }
 
-        public override State Clone() 
+        public override State Clone()
         {
             RoutingState clone = (RoutingState)this.MemberwiseClone();
 
@@ -206,7 +204,7 @@ namespace Nodez.Sdmp.Routing.DataModel
             return clone;
         }
 
-        public override string ToString() 
+        public override string ToString()
         {
             return this.Key;
         }

@@ -1,22 +1,16 @@
-﻿// Copyright (c) 2021-24, Sungwon Hong. All Rights Reserved. 
+﻿// Copyright (c) 2021-25, Sungwon Hong. All Rights Reserved. 
 // This Source Code Form is subject to the terms of the Mozilla Public License, Version 2.0. 
 // If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 using Microsoft.ML;
 using Microsoft.ML.Data;
-using Microsoft.ML.Trainers;
 using Nodez.Sdmp.General.Controls;
 using Nodez.Sdmp.General.DataModel;
-using Nodez.Sdmp.Interfaces;
 using Nodez.Sdmp.LogHelper;
 using Nodez.Sdmp.MachineLearningHelper;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Nodez.Sdmp.General.Managers
 {
@@ -75,7 +69,7 @@ namespace Nodez.Sdmp.General.Managers
             this.Trainer = trainer;
         }
 
-        public void SetModel(ITransformer model) 
+        public void SetModel(ITransformer model)
         {
             this.Model = model;
         }
@@ -104,7 +98,7 @@ namespace Nodez.Sdmp.General.Managers
                 var model = trainPipeline.Fit(this.DataView);
                 this.SetModel(model);
             }
-            catch 
+            catch
             {
                 return false;
             }

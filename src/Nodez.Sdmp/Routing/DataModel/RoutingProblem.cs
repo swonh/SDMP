@@ -1,12 +1,9 @@
-﻿// Copyright (c) 2021-24, Sungwon Hong. All Rights Reserved. 
+﻿// Copyright (c) 2021-25, Sungwon Hong. All Rights Reserved. 
 // This Source Code Form is subject to the terms of the Mozilla Public License, Version 2.0. 
 // If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Nodez.Sdmp.Routing.DataModel
 {
@@ -54,7 +51,7 @@ namespace Nodez.Sdmp.Routing.DataModel
 
         public Dictionary<string, string> RunOptionMappings { get; private set; }
 
-        public RoutingProblem() 
+        public RoutingProblem()
         {
             this.Vehicles = new List<Vehicle>();
             this.Resources = new List<Resource>();
@@ -85,7 +82,7 @@ namespace Nodez.Sdmp.Routing.DataModel
             this.SetRunOptionMappings();
         }
 
-        public void SetVehicleObjects(List<Vehicle> vehicles) 
+        public void SetVehicleObjects(List<Vehicle> vehicles)
         {
             this.Vehicles = vehicles;
             this.SetVehicleMappings();
@@ -143,9 +140,9 @@ namespace Nodez.Sdmp.Routing.DataModel
             }
         }
 
-        private void SetDistanceInfoMappings() 
+        private void SetDistanceInfoMappings()
         {
-            foreach (DistanceInfo info in this.DistanceInfos) 
+            foreach (DistanceInfo info in this.DistanceInfos)
             {
                 ValueTuple<string, string> key = (info.FromNodeID, info.ToNodeID);
 
@@ -180,7 +177,7 @@ namespace Nodez.Sdmp.Routing.DataModel
             }
         }
 
-        private void SetVehicleIndexMappings() 
+        private void SetVehicleIndexMappings()
         {
             foreach (Vehicle vehicle in this.Vehicles)
             {
@@ -213,7 +210,7 @@ namespace Nodez.Sdmp.Routing.DataModel
             }
         }
 
-        private void SetPickupNodeOrderIDMappings() 
+        private void SetPickupNodeOrderIDMappings()
         {
             foreach (Node node in this.Nodes)
             {
