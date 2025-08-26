@@ -3,6 +3,7 @@
 
 [![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
 [![CodeFactor](https://www.codefactor.io/repository/github/swonh/sdmp/badge)](https://www.codefactor.io/repository/github/swonh/sdmp)
+[![codecov](https://codecov.io/gh/swonh/SDMP/graph/badge.svg?token=VQ0NBXI2UK)](https://codecov.io/gh/swonh/SDMP)
 
 [SDMP](https://github.com/swonh/SDMP) is an optimization software package for solving sequential decision problems using approximate dynamic programming.
 
