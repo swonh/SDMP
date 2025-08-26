@@ -315,6 +315,7 @@ namespace Nodez.Sdmp.Interfaces
             if (this.IsInitialized == false)
             {
                 LogWriter.WriteConsoleOnly(Messages.SOLVER_IS_NOT_INITIALIZED);
+                eventControl.OnDoneSolve();
                 return;
             }
 
@@ -337,6 +338,7 @@ namespace Nodez.Sdmp.Interfaces
             if (data == null)
             {
                 LogWriter.WriteLine(Messages.DATA_IS_NULL);
+                eventControl.OnDoneSolve();
                 return;
             }
 
