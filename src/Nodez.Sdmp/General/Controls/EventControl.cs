@@ -39,7 +39,12 @@ namespace Nodez.Sdmp.General.Controls
 
         }
 
-        public virtual void OnFilteredStates(IEnumerable<State> filteredStates) 
+        public virtual void OnBeforeFilteredStates(IEnumerable<State> states)
+        {
+
+        }
+
+        public virtual void OnAfterFilteredStates(IEnumerable<State> filteredStates) 
         {
         
         }

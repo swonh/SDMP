@@ -893,20 +893,23 @@ namespace Nodez.Sdmp.Interfaces
 
                 if (this.CheckStateClusteringCondition(stageIndex))
                 {
+                    eventControl.OnBeforeFilteredStates(transitionQueue.AsEnumerable());
                     this.ClusterGlobalStates(transitionQueue);
-                    eventControl.OnFilteredStates(transitionQueue.AsEnumerable());
+                    eventControl.OnAfterFilteredStates(transitionQueue.AsEnumerable());
                 }
 
                 if (this.CheckGlobalFilteringCondition(stageIndex))
                 {
+                    eventControl.OnBeforeFilteredStates(transitionQueue.AsEnumerable());
                     this.FilterGlobalStates(peek, transitionQueue, objectiveFunctionType, pruneTolerance, IsApplyStateClustering);
-                    eventControl.OnFilteredStates(transitionQueue.AsEnumerable());
+                    eventControl.OnAfterFilteredStates(transitionQueue.AsEnumerable());
                 }
 
                 if (this.CheckApproximationCondition(stageIndex))
                 {
+                    eventControl.OnBeforeFilteredStates(transitionQueue.AsEnumerable());
                     this.FilterStatesByApproximation(peek, transitionQueue, objectiveFunctionType, pruneTolerance);
-                    eventControl.OnFilteredStates(transitionQueue.AsEnumerable());
+                    eventControl.OnAfterFilteredStates(transitionQueue.AsEnumerable());
                 }
 
                 if (transitionQueue.Count == 0)
