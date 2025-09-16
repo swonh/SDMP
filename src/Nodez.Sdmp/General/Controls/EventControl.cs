@@ -6,6 +6,7 @@ using Nodez.Sdmp.Enum;
 using Nodez.Sdmp.General.DataModel;
 using Nodez.Sdmp.General.Managers;
 using System;
+using System.Collections.Generic;
 
 namespace Nodez.Sdmp.General.Controls
 {
@@ -36,6 +37,11 @@ namespace Nodez.Sdmp.General.Controls
         public virtual void OnDataLoad()
         {
 
+        }
+
+        public virtual void OnFilteredStates(IEnumerable<State> filteredStates) 
+        {
+        
         }
 
         public virtual void OnVisitState(State state)

@@ -909,6 +909,8 @@ namespace Nodez.Sdmp.Interfaces
                 if (transitionQueue.Count == 0)
                     break;
 
+                eventControl.OnFilteredStates(transitionQueue.AsEnumerable());
+
                 State state = this.GetNextState();
 
                 if (state.IsFinal)
