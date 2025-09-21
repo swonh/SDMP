@@ -319,7 +319,7 @@ namespace Nodez.Sdmp.Interfaces
 
             IData data = dataControl.GetData();
             dataManager.SetData(data);
-            eventControl.OnDataLoad();
+            eventControl.OnDoneDataLoad();
 
             this.StopWatch.Start();
             this.EngineStartTime = DateTime.Now;

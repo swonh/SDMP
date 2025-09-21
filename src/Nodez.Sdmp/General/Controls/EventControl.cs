@@ -34,7 +34,7 @@ namespace Nodez.Sdmp.General.Controls
 
         }
 
-        public virtual void OnDataLoad()
+        public virtual void OnDoneDataLoad()
         {
 
         }

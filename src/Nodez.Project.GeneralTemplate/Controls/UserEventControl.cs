@@ -20,7 +20,7 @@ namespace Nodez.Project.GeneralTemplate.Controls
 
         }
 
-        public override void OnDataLoad()
+        public override void OnDoneDataLoad()
         {
 
         }

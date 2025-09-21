@@ -20,7 +20,7 @@ namespace Nodez.Project.SchedulingTemplate.Controls
 
         }
 
-        public override void OnDataLoad()
+        public override void OnDoneDataLoad()
         {
 
         }
