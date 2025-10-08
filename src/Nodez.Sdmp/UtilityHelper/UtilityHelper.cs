@@ -9,6 +9,8 @@ namespace Nodez.Sdmp
 {
     public static class UtilityHelper
     {
+        public static string IdentityNull = "-";
+
         public static T StringToEnum<T>(this string src, T defValue)
         {
             if (string.IsNullOrEmpty(src))
