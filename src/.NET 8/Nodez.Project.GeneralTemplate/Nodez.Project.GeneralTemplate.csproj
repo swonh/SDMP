@@ -19,7 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Nodez.Data\Nodez.Data.csproj" />
-    <ProjectReference Include="..\Nodez.sdmp\Nodez.sdmp.csproj" />
+    <ProjectReference Include="..\Nodez.sdmp\Nodez.Sdmp.csproj" />
   </ItemGroup>
 
 </Project>

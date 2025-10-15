@@ -8,18 +8,16 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <NoWarn>1701;1702;8600;8618;8603;8602</NoWarn>
     <WarningLevel>1</WarningLevel>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <NoWarn>1701;1702;8600;8618;8603;8602</NoWarn>
     <WarningLevel>1</WarningLevel>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Nodez.Data\Nodez.Data.csproj" />
-    <ProjectReference Include="..\Nodez.sdmp\Nodez.sdmp.csproj" />
+    <ProjectReference Include="..\Nodez.sdmp\Nodez.Sdmp.csproj" />
   </ItemGroup>
 
 </Project>
