@@ -55,7 +55,7 @@ namespace Nodez.Data.Controls
         public Dictionary<string, string> GetInputsPathMappings(string inputPath, List<string> tableNames)
         {
             if (inputPath == null)
-                inputPath = $@"..{Path.DirectorySeparatorChar}..{Path.DirectorySeparatorChar}InputData";
+                inputPath = $@"..{Path.DirectorySeparatorChar}..{Path.DirectorySeparatorChar}..{Path.DirectorySeparatorChar}InputData";
 
             Dictionary<string, string> mappings = new Dictionary<string, string>();
 
@@ -85,7 +85,7 @@ namespace Nodez.Data.Controls
 
         public List<string> GetInputFileNames()
         {
-            string inputPath = $@"..{Path.DirectorySeparatorChar}..{Path.DirectorySeparatorChar}InputData";
+            string inputPath = $@"..{Path.DirectorySeparatorChar}..{Path.DirectorySeparatorChar}..{Path.DirectorySeparatorChar}InputData";
             List<string> fileNames = new List<string>();
 
             if (Directory.Exists(inputPath))
