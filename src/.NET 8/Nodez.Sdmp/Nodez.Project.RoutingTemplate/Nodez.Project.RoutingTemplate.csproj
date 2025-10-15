@@ -15,4 +15,9 @@
     <WarningLevel>1</WarningLevel>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Nodez.Data\Nodez.Data.csproj" />
+    <ProjectReference Include="..\Nodez.sdmp\Nodez.sdmp.csproj" />
+  </ItemGroup>
+
 </Project>
