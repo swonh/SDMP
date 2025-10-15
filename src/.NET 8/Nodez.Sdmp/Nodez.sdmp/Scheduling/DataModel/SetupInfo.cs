@@ -1,0 +1,21 @@
+﻿// Copyright (c) 2021-25, Sungwon Hong. All Rights Reserved. 
+// This Source Code Form is subject to the terms of the Mozilla Public License, Version 2.0. 
+// If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+using Nodez.Sdmp.Scheduling.Interfaces;
+
+namespace Nodez.Sdmp.Scheduling.DataModel
+{
+    public class SetupInfo
+    {
+        public string EqpID { get; set; }
+
+        public string FromRecipeID { get; set; }
+
+        public string ToRecipeID { get; set; }
+
+        public double SetupTime { get; set; }
+
+        public ISetupInfoData SetupInfoData { get; set; }
+    }
+}

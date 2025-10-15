@@ -1,0 +1,81 @@
+﻿// Copyright (c) 2021-25, Sungwon Hong. All Rights Reserved. 
+// This Source Code Form is subject to the terms of the Mozilla Public License, Version 2.0. 
+// If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+using Nodez.Sdmp.Enum;
+using Nodez.Sdmp.General.DataModel;
+using Nodez.Sdmp.General.Managers;
+using System;
+
+namespace Nodez.Sdmp.General.Controls
+{
+    public class StateControl
+    {
+        private static readonly Lazy<StateControl> lazy = new Lazy<StateControl>(() => new StateControl());
+
+        public static StateControl Instance
+        {
+            get
+            {
+                if (ControlManager.Instance.RegisteredControls.TryGetValue(ControlType.StateControl.ToString(), out object control))
+                {
+                    return (StateControl)control;
+                }
+                else
+                {
+                    return lazy.Value;
+                }
+            }
+        }
+
+        public virtual Solution GetFeasibleSolution(State state)
+        {
+            return null;
+        }
+
+        public virtual string GetKey(State state)
+        {
+            return state.Index.ToString();
+        }
+
+        public virtual State GetInitialState()
+        {
+            return null;
+        }
+
+        public virtual bool CanPruneByOptimality(State state, ObjectiveFunctionType objFuncType, double pruneTolerance)
+        {
+            BoundManager boundManager = BoundManager.Instance;
+
+            double bestPrimalBound = boundManager.BestPrimalBound;
+            double dualBound = state.DualBound;
+            double bestValue = state.CurrentBestValue;
+
+            double rootDualBound = boundManager.RootDualBound;
+
+            if (objFuncType == ObjectiveFunctionType.Minimize)
+            {
+                if (dualBound < rootDualBound - bestValue)
+                    dualBound = rootDualBound - bestValue;
+
+                if (bestPrimalBound + pruneTolerance <= bestValue + dualBound)
+                    return true;
+                else
+                    return false;
+            }
+            else
+            {
+                if (dualBound > rootDualBound - bestValue)
+                    dualBound = rootDualBound - bestValue;
+
+                if (bestPrimalBound >= bestValue + dualBound + pruneTolerance)
+                    return true;
+                else
+                    return false;
+            }
+
+        }
+    }
+}
+
+

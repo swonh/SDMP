@@ -1,0 +1,72 @@
+﻿// Copyright (c) 2021-25, Sungwon Hong. All Rights Reserved. 
+// This Source Code Form is subject to the terms of the Mozilla Public License, Version 2.0. 
+// If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+using Nodez.Sdmp.Enum;
+using Nodez.Sdmp.General.DataModel;
+using Nodez.Sdmp.General.Managers;
+using System;
+using System.Collections.Generic;
+
+namespace Nodez.Sdmp.General.Controls
+{
+    public class EventControl
+    {
+        private static readonly Lazy<EventControl> lazy = new Lazy<EventControl>(() => new EventControl());
+
+        public static EventControl Instance
+        {
+            get
+            {
+                if (ControlManager.Instance.RegisteredControls.TryGetValue(ControlType.EventControl.ToString(), out object control))
+                {
+                    return (EventControl)control;
+                }
+                else
+                {
+                    return lazy.Value;
+                }
+            }
+        }
+
+        public virtual void OnBeginSolve()
+        {
+
+        }
+
+        public virtual void OnDoneDataLoad()
+        {
+
+        }
+
+        public virtual void OnBeforeFilterStates(IEnumerable<State> states)
+        {
+
+        }
+
+        public virtual void OnAfterFilterStates(IEnumerable<State> filteredStates) 
+        {
+        
+        }
+
+        public virtual void OnVisitState(State state)
+        {
+
+        }
+
+        public virtual void OnVisitToState(State fromState, State toState)
+        {
+
+        }
+
+        public virtual void OnStageChanged(Stage stage)
+        {
+
+        }
+
+        public virtual void OnDoneSolve()
+        {
+
+        }
+    }
+}
