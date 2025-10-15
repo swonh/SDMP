@@ -26,7 +26,7 @@
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="IF &quot;$(ConfigurationName)&quot; == &quot;Debug&quot; (&#xD;&#xA;    xcopy &quot;$(ProjectDir)bin\Debug\Nodez.Sdmp.*&quot; &quot;C:\Program Files (x86)\Nodez\SDMP\&quot; /D /C /V /Y /R&#xD;&#xA;) ELSE (&#xD;&#xA;    xcopy &quot;$(ProjectDir)bin\Release\Nodez.Sdmp.*&quot; &quot;C:\Program Files (x86)\Nodez\SDMP\&quot; /D /C /V /Y /R&#xD;&#xA;)" />
+    <Exec Command="xcopy &quot;$(TargetDir)Nodez.Sdmp.*&quot; &quot;C:\Program Files (x86)\Nodez\SDMP\&quot; /D /C /V /Y /R" />
   </Target>
 
 </Project>
