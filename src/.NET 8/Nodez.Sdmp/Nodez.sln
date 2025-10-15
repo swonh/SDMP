@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nodez.sdmp", "Nodez.sdmp\No
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nodez.Data", "Nodez.Data\Nodez.Data.csproj", "{9CDFB863-35FD-4602-AFE5-DC0154AB1B95}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nodez.Package", "Nodez.Package\Nodez.Package.csproj", "{A638A8CF-7659-42B6-A4FD-684A81AFF6A6}"
-EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Nodez.Deployment", "Nodez.Deployment\Nodez.Deployment.vdproj", "{1EB5A6D7-9A5D-C686-8406-9C0231AF60D2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nodez.Project.GeneralTemplate", "Nodez.Project.GeneralTemplate\Nodez.Project.GeneralTemplate.csproj", "{CF045909-F26A-4943-A92B-11306EE492E3}"
@@ -31,10 +29,6 @@ Global
 		{9CDFB863-35FD-4602-AFE5-DC0154AB1B95}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9CDFB863-35FD-4602-AFE5-DC0154AB1B95}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9CDFB863-35FD-4602-AFE5-DC0154AB1B95}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A638A8CF-7659-42B6-A4FD-684A81AFF6A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A638A8CF-7659-42B6-A4FD-684A81AFF6A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A638A8CF-7659-42B6-A4FD-684A81AFF6A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A638A8CF-7659-42B6-A4FD-684A81AFF6A6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1EB5A6D7-9A5D-C686-8406-9C0231AF60D2}.Debug|Any CPU.ActiveCfg = Debug
 		{1EB5A6D7-9A5D-C686-8406-9C0231AF60D2}.Release|Any CPU.ActiveCfg = Release
 		{CF045909-F26A-4943-A92B-11306EE492E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
