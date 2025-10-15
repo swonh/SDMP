@@ -69,7 +69,7 @@ namespace Nodez.Data.DataModel
 
             string exportPath = null;
             if (path == null)
-                exportPath = $@"..{Path.DirectorySeparatorChar}..{Path.DirectorySeparatorChar}..{Path.DirectorySeparatorChar}{projectName}\Output";
+                exportPath = $@"..{Path.DirectorySeparatorChar}..{Path.DirectorySeparatorChar}..{Path.DirectorySeparatorChar}..{Path.DirectorySeparatorChar}{projectName}\Output";
             else
                 exportPath = path;
 

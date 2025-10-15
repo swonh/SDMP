@@ -25,7 +25,7 @@ namespace Nodez.Data.Managers
         public void DeleteOutputFiles()
         {
             string projectName = Assembly.GetCallingAssembly().GetName().Name;
-            string outputPath = $@"..{Path.DirectorySeparatorChar}..{Path.DirectorySeparatorChar}..{Path.DirectorySeparatorChar}{projectName}{Path.DirectorySeparatorChar}Output";
+            string outputPath = $@"..{Path.DirectorySeparatorChar}..{Path.DirectorySeparatorChar}..{Path.DirectorySeparatorChar}..{Path.DirectorySeparatorChar}{projectName}{Path.DirectorySeparatorChar}Output";
 
             if (Directory.Exists(outputPath) == false)
                 return;
