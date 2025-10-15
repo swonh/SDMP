@@ -1,5 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -25,8 +32,8 @@
     <ProjectReference Include="..\Nodez.Data\Nodez.Data.csproj" />
   </ItemGroup>
 
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="xcopy &quot;$(TargetDir)Nodez.Sdmp.*&quot; &quot;C:\Program Files (x86)\Nodez\SDMP\&quot; /D /C /V /Y /R" />
+  <Target Name="CopyToProgramFiles" AfterTargets="Build" Condition="'$(OS)'=='Windows_NT'">
+    <Exec Command='xcopy "$(TargetDir)Nodez.Sdmp.*" "C:\Program Files (x86)\Nodez\SDMP\" /D /C /V /Y /R' />
   </Target>
 
 </Project>
