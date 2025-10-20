@@ -65,11 +65,12 @@ namespace Nodez.Data.DataModel
             if (_rows == null)
                 return;
 
-            string projectName = Assembly.GetCallingAssembly().GetName().Name;
-
             string exportPath = null;
             if (path == null)
+            {
+                string projectName = Assembly.GetCallingAssembly().GetName().Name;
                 exportPath = $@"..{Path.DirectorySeparatorChar}..{Path.DirectorySeparatorChar}..{Path.DirectorySeparatorChar}..{Path.DirectorySeparatorChar}{projectName}\Output";
+            }
             else
                 exportPath = path;
 
