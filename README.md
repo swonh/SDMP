@@ -45,9 +45,18 @@ We welcome collaborators! If you want to work with us to improve and expand our 
 Contact: swonhong.github@gmail.com
 
 ## Acknowledgment
-This work was supported in part by the National Research Foundation of Korea (NRF) grant funded by the Korean Government under Grant 2021R1A2C2005531.
+This work was supported in part by the National Research Foundation of Korea (NRF) grant funded by the Korean Government under Grant 2021R1A2C2005531 (PI: Kyungsik Lee).
 
-Related Publication:
+**Related Publication:**
+
+**An Approximate Dynamic Programming Approach to Wafer-Lot Scheduling for Parallel Multi-Chamber Equipment in Semiconductor Fabrication Lines**
+Sungwon Hong, Younsoo Lee, Kyungsik Lee
+*International Journal of Production Research*, 2025. (To Appear)
+
+**New Integer Optimization Models and an Approximate Dynamic Programming Algorithm for the Lot-sizing and Scheduling Problem with Sequence-dependent Setups**
+Younsoo Lee, Kyungsik Lee
+*European Journal of Operational Research*, 302(1), 230-243, 2022.
+[https://doi.org/10.1016/j.ejor.2021.12.032](https://doi.org/10.1016/j.ejor.2021.12.032)
 
 **Accelerated Dynamic Programming Algorithms for a Car Resequencing Problem in Automotive Paint Shops**  
 Sungwon Hong, Jinyoung Choi, Jinil Han, Kyungsik Lee  
