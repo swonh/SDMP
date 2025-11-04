@@ -56,7 +56,7 @@ Sungwon Hong, Younsoo Lee, Kyungsik Lee<br>
 **New Integer Optimization Models and an Approximate Dynamic Programming Algorithm for the Lot-sizing and Scheduling Problem with Sequence-dependent Setups**<br>
 Younsoo Lee, Kyungsik Lee<br>
 *European Journal of Operational Research*, 302(1), 230-243, 2022.<br>
-<a href="https://doi.org/10.1016/j.ejor.2021.12.032" target="_blank" rel="noopener noreferrer">https://doi.org/10.1016/j.ejor.2021.12.032</a>
+[https://doi.org/10.1016/j.ejor.2021.12.032](https://doi.org/10.1016/j.ejor.2021.12.032)
 
 **Accelerated Dynamic Programming Algorithms for a Car Resequencing Problem in Automotive Paint Shops**<br>
 Sungwon Hong, Jinyoung Choi, Jinil Han, Kyungsik Lee<br>
