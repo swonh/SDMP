@@ -52,14 +52,14 @@ This work was supported in part by the National Research Foundation of Korea (NR
 **An Approximate Dynamic Programming Approach to Wafer-Lot Scheduling for Parallel Multi-Chamber Equipment in Semiconductor Fabrication Lines**<br>
 Sungwon Hong, Younsoo Lee, Kyungsik Lee<br>
 *International Journal of Production Research*, 2025.<br>
-[https://doi.org/10.1080/00207543.2025.2584726](10.1080/00207543.2025.2584726)
+[10.1080/00207543.2025.2584726](https://doi.org/10.1080/00207543.2025.2584726)
 
 **New Integer Optimization Models and an Approximate Dynamic Programming Algorithm for the Lot-sizing and Scheduling Problem with Sequence-dependent Setups**<br>
 Younsoo Lee, Kyungsik Lee<br>
 *European Journal of Operational Research*, 302(1), 230-243, 2022.<br>
-[https://doi.org/10.1016/j.ejor.2021.12.032](10.1016/j.ejor.2021.12.032)
+[10.1016/j.ejor.2021.12.032](https://doi.org/10.1016/j.ejor.2021.12.032)
 
 **Accelerated Dynamic Programming Algorithms for a Car Resequencing Problem in Automotive Paint Shops**<br>
 Sungwon Hong, Jinyoung Choi, Jinil Han, Kyungsik Lee<br>
 *Applied Mathematical Modeling*, 64, 285–297, 2018.<br>
-[https://doi.org/10.1016/j.apm.2018.07.035](10.1016/j.apm.2018.07.035)
+[10.1016/j.apm.2018.07.035](https://doi.org/10.1016/j.apm.2018.07.035)
