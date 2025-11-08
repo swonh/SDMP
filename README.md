@@ -51,7 +51,7 @@ This work was supported in part by the National Research Foundation of Korea (NR
 
 **An Approximate Dynamic Programming Approach to Wafer-Lot Scheduling for Parallel Multi-Chamber Equipment in Semiconductor Fabrication Lines**<br>
 Sungwon Hong, Younsoo Lee, Kyungsik Lee<br>
-*International Journal of Production Research*, 2025.
+*International Journal of Production Research*, 2025.<br>
 [https://doi.org/10.1080/00207543.2025.2584726](https://doi.org/10.1080/00207543.2025.2584726)
 
 **New Integer Optimization Models and an Approximate Dynamic Programming Algorithm for the Lot-sizing and Scheduling Problem with Sequence-dependent Setups**<br>
