@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nodez.Project.RoutingTempla
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nodez.Project.SchedulingTemplate", "Nodez.Project.SchedulingTemplate\Nodez.Project.SchedulingTemplate.csproj", "{1277B075-7D7B-4653-8C20-96C10CDC948D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nodez.Package", "Nodez.Package\Nodez.Package.csproj", "{A638A8CF-7659-42B6-A4FD-684A81AFF6A6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nodez.Package", "Nodez.Package\Nodez.Package.csproj", "{F11038EB-EA50-4B96-BF4D-9B799E6E1302}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,10 +45,10 @@ Global
 		{1277B075-7D7B-4653-8C20-96C10CDC948D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1277B075-7D7B-4653-8C20-96C10CDC948D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1277B075-7D7B-4653-8C20-96C10CDC948D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A638A8CF-7659-42B6-A4FD-684A81AFF6A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A638A8CF-7659-42B6-A4FD-684A81AFF6A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A638A8CF-7659-42B6-A4FD-684A81AFF6A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A638A8CF-7659-42B6-A4FD-684A81AFF6A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F11038EB-EA50-4B96-BF4D-9B799E6E1302}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F11038EB-EA50-4B96-BF4D-9B799E6E1302}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F11038EB-EA50-4B96-BF4D-9B799E6E1302}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F11038EB-EA50-4B96-BF4D-9B799E6E1302}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
