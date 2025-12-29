@@ -15,13 +15,13 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_849A4D44E712429D9E297B574E03825E"
+        "MsmKey" = "8:_4C117E22574D45FEA6AE5B22216AB148"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_8ACC9DA2B1DE400AB9AED49E6110E351"
+        "MsmKey" = "8:_E82105069A6E4B3191421DEFD8065289"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -698,7 +698,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_849A4D44E712429D9E297B574E03825E"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_4C117E22574D45FEA6AE5B22216AB148"
             {
             "SourcePath" = "8:..\\Nodez.sdmp\\obj\\Release\\net8.0\\Nodez.Sdmp.dll"
             "TargetName" = "8:"
@@ -726,7 +726,7 @@
                 {
                 }
             }
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_8ACC9DA2B1DE400AB9AED49E6110E351"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_E82105069A6E4B3191421DEFD8065289"
             {
             "SourcePath" = "8:..\\Nodez.Data\\obj\\Release\\net8.0\\Nodez.Data.dll"
             "TargetName" = "8:"
