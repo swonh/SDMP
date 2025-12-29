@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36518.9 d17.14
+VisualStudioVersion = 17.14.36518.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nodez.Sdmp", "Nodez.sdmp\Nodez.Sdmp.csproj", "{CFDA7DCA-4DDC-4A57-B7D4-FFECADC9FA38}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nodez.Project.RoutingTemplate", "Nodez.Project.RoutingTemplate\Nodez.Project.RoutingTemplate.csproj", "{968AF6ED-766A-4D36-BF3B-D837176CCFA2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nodez.Project.SchedulingTemplate", "Nodez.Project.SchedulingTemplate\Nodez.Project.SchedulingTemplate.csproj", "{1277B075-7D7B-4653-8C20-96C10CDC948D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nodez.Package", "Nodez.Package\Nodez.Package.csproj", "{A638A8CF-7659-42B6-A4FD-684A81AFF6A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +45,10 @@ Global
 		{1277B075-7D7B-4653-8C20-96C10CDC948D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1277B075-7D7B-4653-8C20-96C10CDC948D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1277B075-7D7B-4653-8C20-96C10CDC948D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A638A8CF-7659-42B6-A4FD-684A81AFF6A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A638A8CF-7659-42B6-A4FD-684A81AFF6A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A638A8CF-7659-42B6-A4FD-684A81AFF6A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A638A8CF-7659-42B6-A4FD-684A81AFF6A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
