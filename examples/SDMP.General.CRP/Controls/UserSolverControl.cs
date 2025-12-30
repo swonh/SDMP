@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2021-23, Sungwon Hong. All Rights Reserved. 
+﻿// Copyright (c) 2021-25, Sungwon Hong. All Rights Reserved. 
 // This Source Code Form is subject to the terms of the Mozilla Public License, Version 2.0. 
 // If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
@@ -6,6 +6,7 @@ using Nodez.Sdmp;
 using Nodez.Sdmp.Constants;
 using Nodez.Sdmp.Enum;
 using Nodez.Sdmp.General.Controls;
+using Nodez.Sdmp.General.Managers;
 using Nodez.Sdmp.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -39,7 +40,13 @@ namespace SDMP.General.CRP.Controls
 
         public override string GetOutputDirectoryPath(string solverName)
         {
-            return null;
+            string engineStartTime = SolverManager.Instance.GetEngineStartTime(solverName).ToString("yyyyMMdd_HHmmss");
+
+            string dirName = string.Format("{0}", engineStartTime);
+
+            string dirPath = string.Format(@"..\..\Output\{0}\", dirName);
+
+            return dirPath;
         }
     }
 }

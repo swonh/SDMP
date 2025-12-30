@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2021-23, Sungwon Hong. All Rights Reserved. 
+﻿// Copyright (c) 2021-25, Sungwon Hong. All Rights Reserved. 
 // This Source Code Form is subject to the terms of the Mozilla Public License, Version 2.0. 
 // If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
@@ -20,28 +20,6 @@ namespace SDMP.General.CRP.Controls
         private static readonly Lazy<UserLogControl> lazy = new Lazy<UserLogControl>(() => new UserLogControl());
 
         public static new UserLogControl Instance { get { return lazy.Value; } }
-
-        public override void WriteOptimalLog()
-        {
-            SolutionManager solutionManager = SolutionManager.Instance;
-            Solution optSol = solutionManager.OptimalSolution;
-
-            Console.WriteLine(Constants.LINE);
-            Console.WriteLine(string.Format("Optimal Objective Value: {0}", optSol.Value));
-            this.WriteSolution(optSol);
-            Console.WriteLine(Constants.LINE);
-        }
-
-        public override void WriteBestSolutionLog()
-        {
-            SolutionManager solutionManager = SolutionManager.Instance;
-            Solution bestSol = solutionManager.BestSolution;
-
-            Console.WriteLine(Constants.LINE);
-            Console.WriteLine(string.Format("Objective Value: {0}", bestSol.Value));
-            this.WriteSolution(bestSol);
-            Console.WriteLine(Constants.LINE);
-        }
 
         public override void WriteSolution(Solution solution)
         {

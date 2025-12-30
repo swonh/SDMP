@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2021-23, Sungwon Hong. All Rights Reserved. 
+﻿// Copyright (c) 2021-25, Sungwon Hong. All Rights Reserved. 
 // This Source Code Form is subject to the terms of the Mozilla Public License, Version 2.0. 
 // If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
@@ -150,7 +150,7 @@ namespace SDMP.General.CRP.Controls
             }
 
             MLClusteringInputData inputData = new MLClusteringInputData();
-            inputData.BestValue = (float)crpState.BestValue;
+            inputData.BestValue = (float)crpState.CurrentBestValue;
             inputData.JobCount = Array.ConvertAll<int, float>(jobCountValue, new Converter<int, float>(Nodez.Sdmp.UtilityHelper.IntToFloat));
             inputData.ColorCount = Array.ConvertAll<int, float>(colorCountValue, new Converter<int, float>(Nodez.Sdmp.UtilityHelper.IntToFloat));
 
@@ -190,7 +190,7 @@ namespace SDMP.General.CRP.Controls
                 }
 
                 MLClusteringInputData row = new MLClusteringInputData();
-                row.BestValue = (float)crpState.BestValue;
+                row.BestValue = (float)crpState.CurrentBestValue;
                 row.JobCount = Array.ConvertAll<int, float>(jobCountValue, new Converter<int, float>(Nodez.Sdmp.UtilityHelper.IntToFloat));
                 row.ColorCount = Array.ConvertAll<int, float>(colorCountValue, new Converter<int, float>(Nodez.Sdmp.UtilityHelper.IntToFloat));
 

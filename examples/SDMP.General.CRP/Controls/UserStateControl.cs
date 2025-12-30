@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2021-23, Sungwon Hong. All Rights Reserved. 
+﻿// Copyright (c) 2021-25, Sungwon Hong. All Rights Reserved. 
 // This Source Code Form is subject to the terms of the Mozilla Public License, Version 2.0. 
 // If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
@@ -92,7 +92,7 @@ namespace SDMP.General.CRP.Controls
                 if (lastJob != null && lastJob.Color.ColorNumber != retrievedJob.Color.ColorNumber)
                     cost = 1;
 
-                copiedState.BestValue += cost;
+                copiedState.CurrentBestValue += cost;
 
                 states.Add(copiedState);
                 copiedState = copiedState.Clone();
@@ -109,7 +109,7 @@ namespace SDMP.General.CRP.Controls
 
             double bestPrimalBound = boundManager.BestPrimalBound;
             double dualBound = state.DualBound;
-            double bestValue = state.BestValue;
+            double bestValue = state.CurrentBestValue;
 
             double rootDualBound = boundManager.RootDualBound;
 

@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2021-23, Sungwon Hong. All Rights Reserved. 
+﻿// Copyright (c) 2021-25, Sungwon Hong. All Rights Reserved. 
 // This Source Code Form is subject to the terms of the Mozilla Public License, Version 2.0. 
 // If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
@@ -22,7 +22,7 @@ namespace SDMP.General.CRP.Controls
 
         public override bool IsApplyStateFiltering()
         {
-            return true;
+            return false;
         }
 
         public override bool IsApplyApproximation()
@@ -30,17 +30,17 @@ namespace SDMP.General.CRP.Controls
             return false;
         }
 
-        public override bool IsUseEstimationValue()
+        public override bool IsUseValueFunctionEstimate()
         {
             return false;
         }
 
-        public override int GetEstimationValueUpdatePeriod()
+        public override int GetValueFunctionEstimateUpdatePeriod()
         {
             return 1;
         }
 
-        public override int GetEstimationValueStopStageIndex()
+        public override int GetValueFunctionEstimateStopStageIndex()
         {
             return Int32.MaxValue;
         }
@@ -95,17 +95,20 @@ namespace SDMP.General.CRP.Controls
             return 0.1;
         }
 
-        public override double GetEstimatedValue(State state)
+        public override double GetValueFunctionEstimate(State state)
         {
             double estimatedValue = 0;
-            estimatedValue = state.BestValue + state.DualBound;
+            estimatedValue = state.CurrentBestValue + state.DualBound;
 
             return estimatedValue;
         }
 
         public override List<State> FilterGlobalStates(List<State> states, int maxTransitionCount, ObjectiveFunctionType objectiveFunctionType, double pruneTolerance, bool isApplyStateClustering)
         {
-            List<State> filtered = new List<State>();
+            SolverManager solverManager = SolverManager.Instance;
+            SolutionManager solutionManager = SolutionManager.Instance;
+
+            List<State> selectedStateList = new List<State>();
 
             if (isApplyStateClustering)
             {
@@ -131,10 +134,10 @@ namespace SDMP.General.CRP.Controls
                     int count = 0;
                     foreach (State st in list)
                     {
-                        if (count >= maxCount)
+                        if (count > maxCount)
                             break;
 
-                        filtered.Add(st);
+                        selectedStateList.Add(st);
 
                         count++;
                     }
@@ -142,23 +145,34 @@ namespace SDMP.General.CRP.Controls
             }
             else
             {
-                //states = states.OrderBy(x => 0 + (x.BestValue - x.PrevBestState.BestValue) + x.BestValue).ToList();
-                //states = states.OrderBy(x => x.PrevBestState.DualBound + (x.BestValue - x.PrevBestState.BestValue) + x.BestValue).ToList();
-                //states = states.OrderBy(x => x.PrevBestState.EstimationValue + (x.BestValue - x.PrevBestState.BestValue) + x.BestValue).ToList();
-                //states = states.OrderBy(x => x.EstimationValue).ToList();
+                int total = states.Count;
+                int current = 1;
+                bool isLast = false;
                 foreach (State state in states)
                 {
                     if (state.IsFinal)
                         continue;
 
-                    double estimatedValue = GetEstimatedValue(state);
-                    state.EstimationValue = estimatedValue;
+                    if (total == current)
+                        isLast = true;
+
+                    double valueFunctionEstimate = GetValueFunctionEstimate(state);
+                    state.SetValueFunctionEstimate(valueFunctionEstimate);
+
+                    if (solutionManager.CheckOptimalityCondition())
+                        break;
+
+                    if (solverManager.StopWatch.Elapsed.TotalSeconds >= solverManager.TimeLimit.TotalSeconds)
+                        break;
+
+                    LogControl.Instance.ShowProgress(current, total, isLast);
+                    current++;
                 }
 
                 if (objectiveFunctionType == ObjectiveFunctionType.Minimize)
-                    states = states.OrderBy(x => x.EstimationValue).ToList();
+                    states = states.Where(x => x.IsSetValueFunctionEstimate).OrderBy(x => x.ValueFunctionEstimate).ToList();
                 else if (objectiveFunctionType == ObjectiveFunctionType.Maximize)
-                    states = states.OrderByDescending(x => x.EstimationValue).ToList();
+                    states = states.Where(x => x.IsSetValueFunctionEstimate).OrderByDescending(x => x.ValueFunctionEstimate).ToList();
 
                 int count = 0;
                 foreach (State state in states)
@@ -166,19 +180,20 @@ namespace SDMP.General.CRP.Controls
                     if (maxTransitionCount <= count)
                         break;
 
-                    filtered.Add(state);
+                    selectedStateList.Add(state);
+
                     count++;
                 }
             }
 
-            return filtered;
+            return selectedStateList;
         }
 
-        public override List<State> FilterLocalStates(List<State> states, int maxTransitionCount)
+        public override List<State> FilterLocalStates(State currentState, List<State> states, int maxTransitionCount)
         {
-            states = states.OrderBy(x => x.PrevBestState.DualBound + (x.BestValue - x.PrevBestState.BestValue) + x.BestValue).ToList();
+            states = states.OrderBy(x => x.PrevBestState.DualBound + (x.CurrentBestValue - x.PrevBestState.CurrentBestValue) + x.CurrentBestValue).ToList();
 
-            List<State> filtered = new List<State>();
+            List<State> selectedStateList = new List<State>();
 
             int count = 0;
             foreach (State state in states)
@@ -186,11 +201,17 @@ namespace SDMP.General.CRP.Controls
                 if (maxTransitionCount <= count)
                     break;
 
-                filtered.Add(state);
+                selectedStateList.Add(state);
                 count++;
             }
 
-            return filtered;
+            int totalStateCount = states != null ? states.Count : 0;
+            int selectedStateCount = selectedStateList != null ? selectedStateList.Count : 0;
+            int filteredStateCount = totalStateCount - selectedStateCount;
+
+            StateManager.Instance.SetFilteredStateCount(currentState.Stage.Index, filteredStateCount);
+
+            return selectedStateList;
         }
 
         public override bool CanPruneByApproximation(State state, ObjectiveFunctionType objFuncType, double minEstimationValue, double minTransitionCost, double multiplier, double pruneTolerance)
@@ -200,14 +221,14 @@ namespace SDMP.General.CRP.Controls
 
             if (objFuncType == ObjectiveFunctionType.Minimize)
             {
-                if (state.EstimationValue + pruneTolerance > minEstimationValue + (minTransitionCost * multiplier))
+                if (state.ValueFunctionEstimate + pruneTolerance > minEstimationValue + (minTransitionCost * multiplier))
                     return true;
                 else
                     return false;
             }
             else
             {
-                if (state.EstimationValue + pruneTolerance < minEstimationValue + (minTransitionCost * multiplier))
+                if (state.ValueFunctionEstimate + pruneTolerance < minEstimationValue + (minTransitionCost * multiplier))
                     return true;
                 else
                     return false;

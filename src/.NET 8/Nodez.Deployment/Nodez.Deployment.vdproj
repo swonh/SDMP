@@ -13,18 +13,6 @@
 "SccProvider" = "8:"
     "Hierarchy"
     {
-        "Entry"
-        {
-        "MsmKey" = "8:_4C117E22574D45FEA6AE5B22216AB148"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_E82105069A6E4B3191421DEFD8065289"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
     }
     "Configurations"
     {
@@ -698,9 +686,9 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_4C117E22574D45FEA6AE5B22216AB148"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_2A38A54434A54410A06ABFB25A5971F1"
             {
-            "SourcePath" = "8:..\\Nodez.sdmp\\obj\\Release\\net8.0\\Nodez.Sdmp.dll"
+            "SourcePath" = "8:"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_6DB8F3FFF9C245C8A1287B149322CCB9"
@@ -719,16 +707,16 @@
             "IsolateTo" = "8:"
             "ProjectOutputGroupRegister" = "3:1"
             "OutputConfiguration" = "8:Release|Any CPU"
-            "OutputGroupCanonicalName" = "8:Built"
+            "OutputGroupCanonicalName" = "8:PublishItems"
             "OutputProjectGuid" = "8:{CFDA7DCA-4DDC-4A57-B7D4-FFECADC9FA38}"
             "ShowKeyOutput" = "11:TRUE"
                 "ExcludeFilters"
                 {
                 }
             }
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_E82105069A6E4B3191421DEFD8065289"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_A9480503959E4EBEAEA1E373F374C16B"
             {
-            "SourcePath" = "8:..\\Nodez.Data\\obj\\Release\\net8.0\\Nodez.Data.dll"
+            "SourcePath" = "8:"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_6DB8F3FFF9C245C8A1287B149322CCB9"
@@ -747,7 +735,7 @@
             "IsolateTo" = "8:"
             "ProjectOutputGroupRegister" = "3:1"
             "OutputConfiguration" = "8:Release|Any CPU"
-            "OutputGroupCanonicalName" = "8:Built"
+            "OutputGroupCanonicalName" = "8:PublishItems"
             "OutputProjectGuid" = "8:{9CDFB863-35FD-4602-AFE5-DC0154AB1B95}"
             "ShowKeyOutput" = "11:TRUE"
                 "ExcludeFilters"
