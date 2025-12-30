@@ -18,8 +18,48 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Nodez.Data\Nodez.Data.csproj" />
-    <ProjectReference Include="..\Nodez.sdmp\Nodez.Sdmp.csproj" />
+    <Reference Include="Microsoft.ML.Core">
+      <HintPath>C:\Program Files (x86)\Nodez\SDMP\Microsoft.ML.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ML.CpuMath">
+      <HintPath>C:\Program Files (x86)\Nodez\SDMP\Microsoft.ML.CpuMath.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ML.Data">
+      <HintPath>C:\Program Files (x86)\Nodez\SDMP\Microsoft.ML.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ML.DataView">
+      <HintPath>C:\Program Files (x86)\Nodez\SDMP\Microsoft.ML.DataView.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ML.KMeansClustering">
+      <HintPath>C:\Program Files (x86)\Nodez\SDMP\Microsoft.ML.KMeansClustering.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ML.PCA">
+      <HintPath>C:\Program Files (x86)\Nodez\SDMP\Microsoft.ML.PCA.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ML.StandardTrainers">
+      <HintPath>C:\Program Files (x86)\Nodez\SDMP\Microsoft.ML.StandardTrainers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ML.Transforms">
+      <HintPath>C:\Program Files (x86)\Nodez\SDMP\Microsoft.ML.Transforms.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>C:\Program Files (x86)\Nodez\SDMP\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Nodez.Data">
+      <HintPath>C:\Program Files (x86)\Nodez\SDMP\Nodez.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Nodez.Sdmp">
+      <HintPath>C:\Program Files (x86)\Nodez\SDMP\Nodez.Sdmp.dll</HintPath>
+    </Reference>
+    <Reference Include="PriorityQueue">
+      <HintPath>C:\Program Files (x86)\Nodez\SDMP\PriorityQueue.dll</HintPath>
+    </Reference>
+    <Reference Include="System.CodeDom">
+      <HintPath>C:\Program Files (x86)\Nodez\SDMP\System.CodeDom.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics.Tensors">
+      <HintPath>C:\Program Files (x86)\Nodez\SDMP\System.Numerics.Tensors.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
