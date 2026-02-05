@@ -889,6 +889,11 @@ namespace Nodez.Sdmp.Interfaces
 
                 State peek = transitionQueue.First();
 
+                if (peek.IsFinal)
+                {
+                    stateManager.SetFinalState(peek);
+                }
+
                 int stageIndex = peek.Stage.Index;
 
                 if (this.CheckStateClusteringCondition(stageIndex))
@@ -916,12 +921,6 @@ namespace Nodez.Sdmp.Interfaces
                     break;
 
                 State state = this.GetNextState();
-
-                if (state.IsFinal)
-                {
-                    stateManager.SetFinalState(state);
-                    break;
-                }
 
                 state.IsFixed = true;
 
