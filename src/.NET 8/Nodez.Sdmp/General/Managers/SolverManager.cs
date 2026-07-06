@@ -114,6 +114,19 @@ namespace Nodez.Sdmp.General.Managers
             this._statusLogs.Add(log);
         }
 
+        private bool TryEnsureOutputDirectory(out string dirPath)
+        {
+            dirPath = SolverManager.Instance.GetOutputDirectoryPath(CurrentSolverName);
+
+            if (string.IsNullOrWhiteSpace(dirPath))
+                return false;
+
+            if (Directory.Exists(dirPath) == false)
+                Directory.CreateDirectory(dirPath);
+
+            return true;
+        }
+
         public void AddStateInfoLog(StateInfoLog log, bool autoFlush = true)
         {
             this._stateInfoLogs.Add(log);
@@ -130,10 +143,12 @@ namespace Nodez.Sdmp.General.Managers
                     }
 
                     string engineStartTime = SolverManager.Instance.GetEngineStartTime(CurrentSolverName).ToString("yyyyMMdd_HHmmss");
-                    string dirPath = SolverManager.Instance.GetOutputDirectoryPath(CurrentSolverName);
-
-                    if (Directory.Exists(dirPath) == false)
-                        Directory.CreateDirectory(dirPath);
+                    if (TryEnsureOutputDirectory(out string dirPath) == false)
+                    {
+                        this.ClearStateInfoLogs();
+                        stateInfoLogTable.Clear();
+                        return;
+                    }
 
                     if (OutputManager.Instance.GetOutput(Constants.Constants.STATE_INFO_LOG) == null)
                     {
@@ -167,10 +182,12 @@ namespace Nodez.Sdmp.General.Managers
                     }
 
                     string engineStartTime = SolverManager.Instance.GetEngineStartTime(CurrentSolverName).ToString("yyyyMMdd_HHmmss");
-                    string dirPath = SolverManager.Instance.GetOutputDirectoryPath(CurrentSolverName);
-
-                    if (Directory.Exists(dirPath) == false)
-                        Directory.CreateDirectory(dirPath);
+                    if (TryEnsureOutputDirectory(out string dirPath) == false)
+                    {
+                        this.ClearStateInfoLogs();
+                        stateInfoLogTable.Clear();
+                        return;
+                    }
 
                     if (OutputManager.Instance.GetOutput(Constants.Constants.STATE_INFO_LOG) == null)
                     {
@@ -202,10 +219,8 @@ namespace Nodez.Sdmp.General.Managers
             }
 
             string engineStartTime = SolverManager.Instance.GetEngineStartTime(CurrentSolverName).ToString("yyyyMMdd_HHmmss");
-            string dirPath = SolverManager.Instance.GetOutputDirectoryPath(CurrentSolverName);
-
-            if (Directory.Exists(dirPath) == false)
-                Directory.CreateDirectory(dirPath);
+            if (TryEnsureOutputDirectory(out string dirPath) == false)
+                return;
 
             table.WriteToFile(dirPath, false, true, $"{Constants.Constants.STATUS_LOG}_{RunConfig.RUN_SEQ}_{CurrentSolverName}_{engineStartTime}");
             OutputManager.Instance.SetOutput(table.Name, table);
@@ -220,10 +235,12 @@ namespace Nodez.Sdmp.General.Managers
             }
 
             string engineStartTime = SolverManager.Instance.GetEngineStartTime(CurrentSolverName).ToString("yyyyMMdd_HHmmss");
-            string dirPath = SolverManager.Instance.GetOutputDirectoryPath(CurrentSolverName);
-
-            if (Directory.Exists(dirPath) == false)
-                Directory.CreateDirectory(dirPath);
+            if (TryEnsureOutputDirectory(out string dirPath) == false)
+            {
+                this.ClearStateInfoLogs();
+                table.Clear();
+                return;
+            }
 
             if (OutputManager.Instance.GetOutput(Constants.Constants.STATE_INFO_LOG) == null)
             {
