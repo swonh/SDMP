@@ -9,12 +9,30 @@ using Nodez.Sdmp.Interfaces;
 using Nodez.Sdmp.LogHelper;
 using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace Nodez.Sdmp.General.Controls
 {
     public class LogControl
     {
         private static readonly Lazy<LogControl> lazy = new Lazy<LogControl>(() => new LogControl());
+
+        private static bool _disableCursorControl;
+
+        private static void TryResetCursorLine()
+        {
+            if (_disableCursorControl || Console.IsOutputRedirected)
+                return;
+
+            try
+            {
+                Console.SetCursorPosition(0, Console.CursorTop);
+            }
+            catch (IOException)
+            {
+                _disableCursorControl = true;
+            }
+        }
 
         public static LogControl Instance
         {
@@ -147,7 +165,7 @@ namespace Nodez.Sdmp.General.Controls
             const int updateInterval = 10;
             if (current % updateInterval == 0 || current == total)
             {
-                Console.SetCursorPosition(0, Console.CursorTop);
+                TryResetCursorLine();
                 LogWriter.WriteConsoleOnly($"Progress: {current}/{total} ({(current * 100) / total}%)");
 
                 if (isLast)
@@ -196,7 +214,7 @@ namespace Nodez.Sdmp.General.Controls
 
             string log = string.Format(" * {0,8} {1,9} {2,16} {3,16} {4,8} {5,7} {6,10}", state.Index, state.Stage.Index, bestPrimalBoundStr, bestDualBoundStr, numSolutions, relativeDualityGapStr, time);
 
-            Console.SetCursorPosition(0, Console.CursorTop);
+            TryResetCursorLine();
             LogWriter.WriteLine(log);
         }
 
@@ -242,7 +260,7 @@ namespace Nodez.Sdmp.General.Controls
 
             string log = string.Format(" d {0,8} {1,9} {2,16} {3,16} {4,8} {5,7} {6,10}", state.Index, state.Stage.Index, bestPrimalBoundStr, bestDualBoundStr, numSolutions, relativeDualityGapStr, time);
 
-            Console.SetCursorPosition(0, Console.CursorTop);
+            TryResetCursorLine();
             LogWriter.WriteLine(log);
         }
 
@@ -282,7 +300,7 @@ namespace Nodez.Sdmp.General.Controls
 
             string log = string.Format("   {0,8} {1,9} {2,16} {3,16} {4,8} {5,7} {6,10}", state.Index, state.Stage.Index, bestPrimalBoundStr, bestDualBoundStr, numSolutions, relativeDualityGapStr, time);
 
-            Console.SetCursorPosition(0, Console.CursorTop);
+            TryResetCursorLine();
             LogWriter.WriteLine(log);
         }
 
